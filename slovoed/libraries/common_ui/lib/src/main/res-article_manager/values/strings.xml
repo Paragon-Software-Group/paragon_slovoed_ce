@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="article_manager_ui_download_pictures_base_description">Download full-size images?</string>
+    <string name="article_manager_ui_share_error_missing_purchases_msg">No purchased dictionaries found</string>
+    <string name="article_manager_ui_share_error_missing_downloaded_db_msg">No downloaded dictionaries found</string>
+    <string name="article_manager_ui_share_progress_fetch_dictionaries_msg">Updating the dictionary list</string>
+    <string name="article_manager_ui_share_switch_direction_two_lang_template">%1$s - %2$s</string>
+</resources>

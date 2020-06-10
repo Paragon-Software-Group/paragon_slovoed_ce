@@ -1,0 +1,21 @@
+apply from:  '../../gradle/local_build.gradle'
+
+buildscript {
+    apply from: "../../gradle/build-version.gradle"
+
+    repositories {
+        maven {
+            url uri("http://maven.ufsd.paragon-software.com/repository/google/")
+        }
+        maven {
+            url uri("http://maven.ufsd.paragon-software.com/repository/jcenter/")
+        }
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${gradlePluginVersion}"
+        classpath "com.google.gms:google-services:${googleServicesVersion}"
+    }
+}
+apply from:  '../slovoed/build-init.gradle'

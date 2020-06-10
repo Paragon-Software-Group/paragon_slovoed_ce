@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ArticleManagerTheme" parent="Theme.AppCompat.Light">
+        <item name="android:actionBarStyle">@style/ArticleManagerTheme.ActionBarStyle</item>
+        <item name="actionBarStyle">@style/ArticleManagerTheme.ActionBarStyle</item>
+
+        <item name="android:actionBarTheme">@style/ArticleManagerTheme.ActionBarTheme</item>
+        <item name="actionBarTheme">@style/ArticleManagerTheme.ActionBarTheme</item>
+    </style>
+
+    <style name="ArticleManagerTheme.ActionBarStyle" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/article_manager_ui_actionbar_bkg_color</item>
+        <item name="background">@color/article_manager_ui_actionbar_bkg_color</item>
+    </style>
+
+    <style name="ArticleManagerTheme.ActionBarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:colorControlNormal">@color/article_manager_ui_actionbar_back_arrow_color</item>
+        <item name="colorControlNormal">@color/article_manager_ui_actionbar_back_arrow_color</item>
+    </style>
+
+    <style name="TitleTextView">
+        <item name="android:textSize">@dimen/article_manager_ui_dict_title_text_size</item>
+        <item name="android:textColor">@color/article_manager_ui_dict_title_text_color</item>
+    </style>
+
+    <style name="DescriptionTextView">
+        <item name="android:textSize">@dimen/article_manager_ui_dict_description_text_size</item>
+        <item name="android:textColor">@color/article_manager_ui_dict_description_text_color</item>
+        <item name="android:fontFamily">@string/article_manager_ui_condensed_font_family</item>
+        <item name="android:paddingRight">@dimen/article_manager_ui_dict_title_margin_horizontal</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="DictionaryStatusTextStyle">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/article_manager_ui_dict_status_text_size</item>
+        <item name="android:textColor">@color/article_manager_ui_dict_status_text_color</item>
+    </style>
+
+    <style name="ShareTabsTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="ShareQueryTextViewStyle">
+        <item name="android:layout_marginStart">@dimen/share_query_text_view_margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/share_query_text_view_margin_end</item>
+        <item name="android:lineSpacingExtra">@dimen/share_query_text_view_spacing_extra</item>
+        <item name="android:lineSpacingMultiplier">1</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">@dimen/share_query_text_view_text_size</item>
+        <item name="android:textColor">@color/share_query_unrecognized_text_color</item>
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="ShareQueryScrollViewStyle">
+        <item name="android:requiresFadingEdge">vertical</item>
+        <item name="android:layout_marginTop">@dimen/share_query_scroll_view_margin_top</item>
+        <item name="android:scrollbarStyle">insideOverlay</item>
+    </style>
+
+    <style name="ShareDirectionClickableViewStyle">
+        <item name="android:layout_marginStart">@dimen/share_sliding_panel_direction_layout_margin_start</item>
+        <item name="android:layout_marginEnd">@dimen/share_sliding_panel_direction_layout_margin_end</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="ShareDirectionImageSwitcherStyle">
+        <item name="android:paddingTop">@dimen/share_sliding_panel_chevron_padding_top</item>
+        <item name="android:paddingStart">@dimen/share_sliding_panel_chevron_padding_start</item>
+        <item name="android:paddingEnd">@dimen/share_sliding_panel_chevron_padding_end</item>
+        <item name="android:paddingBottom">@dimen/share_sliding_panel_chevron_padding_bottom</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="ShareNoResultViewStyle">
+        <item name="android:layout_marginTop">@dimen/share_no_result_view_margin_top</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textSize">@dimen/share_no_result_view_text_size</item>
+    </style>
+
+    <style name="ShareTabLayoutStyle">
+        <item name="android:visibility">gone</item>
+        <item name="android:background">@color/share_tabs_background</item>
+        <item name="android:elevation">@dimen/share_tabs_and_toolbar_elevation</item>
+    </style>
+
+    <style name="ShareToolbarSpinnerStyle">
+        <item name="android:layout_marginEnd">@dimen/share_toolbar_dictionaries_spinner_padding_end</item>
+        <item name="android:dropDownWidth">@dimen/share_toolbar_dictionaries_spinner_drop_down_width</item>
+    </style>
+
+    <style name="GenericButton" parent="Widget.AppCompat.Button">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="NavigationButton" parent="GenericButton">
+        <item name="android:fontFamily">@string/article_manager_ui_condensed_font_family</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/navigation_button</item>
+        <item name="android:textSize">@dimen/article_manager_ui_navigation_button_text_size</item>
+        <item name="android:paddingTop">@dimen/article_manager_ui_navigation_button_padding_top</item>
+        <item name="android:paddingLeft">@dimen/article_manager_ui_navigation_button_padding_horizontal</item>
+        <item name="android:paddingRight">@dimen/article_manager_ui_navigation_button_padding_horizontal</item>
+    </style>
+
+</resources>

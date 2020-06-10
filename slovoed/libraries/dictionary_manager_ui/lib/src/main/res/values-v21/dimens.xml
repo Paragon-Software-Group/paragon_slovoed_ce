@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dictionary_card_icon_elevation">5dp</dimen>
+    <dimen name="dictionary_card_icon_corners">16dp</dimen>
+    <dimen name="dictionary_view_deal_label_text_elevation">8dp</dimen>
+</resources>

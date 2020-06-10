@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/search_text_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="1dp"
+                    android:elevation="4dp">
+
+                    <RelativeLayout android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                        <ImageButton android:layout_width="50dp"
+                                     android:layout_height="50dp"
+                                     android:id="@+id/searchType"
+                                     android:src="@drawable/ic_search_headwords_24dp"
+                                     android:background="@color/transparent"
+                                     android:tint="@color/darkgray"
+                                     android:layout_alignParentLeft="true"
+                                     android:layout_alignParentStart="true"
+                                     android:layout_centerVertical="true"
+                        />
+
+                        <ImageButton android:layout_width="50dp"
+                                     android:layout_height="50dp"
+                                     android:id="@+id/clearSearchText"
+                                     android:src="@drawable/ic_clear_black_24dp"
+                                     android:background="@color/transparent"
+                                     android:tint="@color/darkgray"
+                                     android:layout_alignParentRight="true"
+                                     android:layout_alignParentEnd="true"
+                                     android:layout_centerVertical="true"
+                        />
+
+                        <EditText android:layout_width="match_parent"
+                                  android:layout_height="wrap_content"
+                                  android:id="@+id/searchText"
+                                  android:layout_marginLeft="5dp"
+                                  android:layout_marginStart="5dp"
+                                  android:layout_marginRight="5dp"
+                                  android:layout_marginEnd="5dp"
+                                  android:hint="@string/utils_slovoed_ui_common_search"
+                                  android:background="@color/transparent"
+                                  android:inputType="text"
+                                  android:maxLines="1"
+                                  android:maxLength="200"
+                                  android:imeOptions="actionSearch"
+                                  android:layout_toEndOf="@+id/searchType"
+                                  android:layout_toRightOf="@+id/searchType"
+                                  android:layout_toStartOf="@id/clearSearchText"
+                                  android:layout_toLeftOf="@id/clearSearchText"
+                                  android:layout_centerVertical="true"
+                        />
+
+                    </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/filter_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:visibility="gone"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/download_all_dictionaries"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:visibility="gone">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/download_all_dictionaries_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/utils_slovoed_ui_common_download"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/download_all_dictionaries_button"
+                android:layout_toStartOf="@+id/download_all_dictionaries_button"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="@string/search_manager_ui_download_all_dictionaries_title"
+                />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/morphoView"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/morphoList"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"/>
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+                android:id="@+id/search_query_hint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <ImageView android:layout_width="100dp"
+                       android:layout_height="100dp"
+                       android:src="@drawable/ic_search_black_48dp"
+                       android:layout_gravity="center"
+                       android:layout_marginBottom="20dp"
+                       android:tint="@color/darkgray"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/search_query_hint_text"
+                      android:text="@string/search_manager_ui_search_hint"
+                      android:layout_gravity="center"
+                      android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+                android:id="@+id/search_result_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/normal_result_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="2dp"
+                    android:visibility="visible"
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/normal_result_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                    android:id="@+id/special_search_result_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    >
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/special_search_result_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"/>
+
+                <androidx.cardview.widget.CardView
+                        android:id="@+id/special_search_group_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginTop="1dp"
+                        android:visibility="gone">
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="15dp">
+                        <TextView
+                                android:id="@+id/special_search_group_header"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="15dp"
+                                android:textColor="@color/orange"
+                                android:textStyle="bold"
+                                android:layout_alignParentTop="true"
+                        />
+                        <TextView
+                                android:id="@+id/special_search_group_collapse_results"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/search_manager_ui_collapse_results"
+                                android:gravity="center_vertical"
+                                android:textStyle="italic"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginTop="15dp"
+                        />
+                        <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/special_search_group_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_below="@id/special_search_group_header"
+                                android:layout_above="@id/special_search_group_collapse_results"
+                        />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </FrameLayout>
+
+            <androidx.cardview.widget.CardView
+                    android:id="@+id/no_data_result_hint"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="2dp"
+                    android:visibility="gone"
+                    android:background="@color/white"
+                    android:layout_marginTop="1dp">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="100dp"
+                        android:gravity="center_horizontal"
+                        android:text="@string/utils_slovoed_ui_common_no_result_found"
+                        android:textSize="20sp"
+                />
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.settings_manager_ui')
+  getTeamCityProperty('setApplicationName', 'settings_manager_ui')
+  getTeamCityProperty('setApplicationDescription', 'Settings manager UI')
+
+  getPackageVersion('SM')
+}

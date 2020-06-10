@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.paragon_software.flash_cards_manager_ui"
+    >
+
+    <application>
+
+        <activity
+            android:name="com.paragon_software.flash_cards_manager.FcQuizActivity"
+            android:label="@string/flash_cards_manager_ui_start_quiz_title"
+            android:theme="@style/SlovoedAppTheme"
+            />
+
+        <activity
+            android:name="com.paragon_software.flash_cards_manager.FcSelectActivity"
+            android:label="@string/flash_cards_manager_ui_select_cards_title"
+            android:theme="@style/SlovoedAppTheme"
+            />
+
+    </application>
+
+</manifest>

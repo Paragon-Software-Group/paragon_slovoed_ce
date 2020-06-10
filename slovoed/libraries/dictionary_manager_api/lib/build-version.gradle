@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.dictionary_manager_api')
+  getTeamCityProperty('setApplicationName', 'dictionary_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'API for dictionary manager')
+
+  getPackageVersion('UTILSCORE')
+}

@@ -1,0 +1,20 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.dictionary_manager_paragon')
+  getTeamCityProperty('setApplicationName', 'dictionary_manager_paragon')
+  getTeamCityProperty('setApplicationDescription', 'Our Dictionary Manager realisation')
+
+  //for jacoco coverage
+  getTeamCityProperty('setCoveragePackage', 'com.paragon_software.dictionary_manager')
+
+  getPackageVersion('NE')
+  getPackageVersion('DM')
+  getPackageVersion('LM')
+  getPackageVersion('SM')
+  getPackageVersion('AI')
+  getPackageVersion('SCREEN_OPENER_API')
+  getPackageVersion('TMA')
+  getPackageVersion('UTILSSLOVOED')
+  getPackageVersion('USERCOREMANAGERAPI')
+}

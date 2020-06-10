@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.testmode_ui')
+  getTeamCityProperty('setApplicationName', 'testmode_ui')
+  getTeamCityProperty('setApplicationDescription', 'Testmode UI')
+
+  getPackageVersion('TSM')
+}

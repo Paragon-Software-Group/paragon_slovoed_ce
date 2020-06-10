@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/favorites_toolbar_sorting_action"
+          android:icon="@drawable/ic_action_sort"
+          android:title="@string/favorites_manager_ui_sort"
+          app:showAsAction="always"/>
+    <item android:id="@+id/favorites_toolbar_delete_all_action"
+          android:icon="@drawable/ic_action_delete"
+          android:title="@string/favorites_manage_ui_clear_favorites"
+          app:showAsAction="always"/>
+</menu>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.paragon_software.article_manager.SearchInArticleInputField
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/text_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ellipsize="end"
+            android:imeOptions="flagNoExtractUi|actionSearch"
+            android:singleLine="true"
+            android:textColor="@color/article_manager_ui_search_in_article_input_text_color"
+            android:textCursorDrawable="@drawable/search_in_article_cursor"
+            app:backgroundTint="@color/article_manager_ui_search_in_article_cursor_color"
+            android:drawableLeft="@drawable/ic_search_orange_24dp"
+            android:drawablePadding="@dimen/article_manager_ui_search_in_article_input_field_drawable_padding"/>
+
+    <TextView
+            android:id="@+id/search_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/article_manager_ui_search_in_article_result_text_color"
+            android:textSize="@dimen/article_manager_ui_search_in_article_result_text_size"
+            android:textStyle="bold"
+            android:background="@drawable/search_in_article_result_background"
+            android:layout_alignParentRight="true"
+            android:layout_alignBaseline="@id/text_input"
+            android:paddingLeft="@dimen/article_manager_ui_search_in_article_result_horizontal_padding"
+            android:paddingRight="@dimen/article_manager_ui_search_in_article_result_horizontal_padding"
+            android:paddingTop="@dimen/article_manager_ui_search_in_article_result_vertical_padding"
+            android:paddingBottom="@dimen/article_manager_ui_search_in_article_result_vertical_padding"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/article_manager_ui_search_in_article_result_left_margin"
+            android:layout_marginRight="@dimen/article_manager_ui_search_in_article_result_right_margin"/>
+</com.paragon_software.article_manager.SearchInArticleInputField>

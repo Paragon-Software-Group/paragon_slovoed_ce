@@ -1,0 +1,124 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css" media="screen">
+a { text-decoration: none; }
+.S2 {  font-family: 'DejaVu Sans'; font-size: medium; line-height: 160%; font-style: normal; font-weight: normal; text-decoration: none; color: rgba(0,0,0,1); vertical-align: baseline; unicode-bidi: embed; direction: ltr; }
+.S149 {  font-family: 'DejaVu Sans'; font-size: medium; line-height: 160%; font-style: normal; font-weight: normal; text-decoration: underline; color: rgba(0,0,255,1); vertical-align: baseline; unicode-bidi: embed; direction: ltr; }
+</style>
+<script type="text/javascript">
+function VerifyTest()
+{
+    var str = "test:";
+    for (var i=0;i<document.forms.length;i++) {
+        for (var j=0;j<document.forms[i].elements.length;j++)
+            str += "[formid]" + document.forms[i].id +
+                   "[inputid]" + document.forms[i].elements[j].id +
+                   "[inputvalue]" + document.forms[i].elements[j].value +
+                   "[inputend]";
+    }
+    window.location.href = str;
+}
+function sld2_hideControl_onClick(headID, bodyID)
+{
+	var div = document.getElementById(bodyID);
+	div.style.display = div.style.display == "none" ? "inline" : "none";
+}
+
+function sld2_switchState_onClick(blockId, numStates)
+{
+	var firstBlock = document.querySelector('div[id="' + blockId + '-state0"][title="radio-button"]');
+	if(firstBlock)
+	{
+		var radioButtons = document.querySelectorAll('div[class="' + firstBlock.className + '"][title="radio-button"]');
+		var blockDisplay;
+		for(var blockIndex = 0; blockIndex < radioButtons.length; blockIndex++)
+		{
+			if(radioButtons[blockIndex].style.display != 'none'){
+				blockDisplay = radioButtons[blockIndex].style.display;
+				break;}
+		}
+		
+		for(var blockIndex = 0; blockIndex < radioButtons.length; blockIndex++)
+		{
+			if(radioButtons[blockIndex] == firstBlock)
+			{
+				radioButtons[blockIndex++].style.display = blockDisplay;
+				radioButtons[blockIndex].style.display = 'none';
+			}
+			else if(blockIndex % 2 == 0)
+				radioButtons[blockIndex].style.display = 'none';
+			else
+				radioButtons[blockIndex].style.display = blockDisplay;
+		}
+	}
+	else
+	{
+		function findSwitch(index)
+		{
+			var fullId = blockId + "-state" + index;
+			return document.getElementById(fullId);
+		}
+
+		for (var stateIndex = 0; stateIndex < numStates; stateIndex++)
+		{
+			var block = findSwitch(stateIndex);
+			if (block.style.display != "none")
+			{
+				var styleDisplay = block.style.display;
+				block.style.display = "none";
+				stateIndex++;
+				break;
+			}
+		}
+		if (stateIndex == numStates)
+			stateIndex = 0;
+		var block = findSwitch(stateIndex);
+		block.style.display = styleDisplay;
+	}
+}
+
+function sld2_crossRef_onClick(e)
+{
+	var selection = 0;
+	if('getSelection' in window)
+		var selection = window.getSelection();
+	else
+		return;
+
+	var node = selection.anchorNode.parentNode;
+	if(!node || node != e.target || !node.hasAttribute('sld-ref'))
+		return;
+
+	var langCode = node.getAttribute('lang');
+	while(node.previousElementSibling && node.previousElementSibling.hasAttribute('sld-ref') && node.previousElementSibling.getAttribute('lang') == langCode){
+		node = node.previousElementSibling;
+	}
+
+	var textValue = '';
+	var offset = selection.anchorOffset;
+	var afterTargetNode = false;
+	while(node && node.hasAttribute('sld-ref') && node.getAttribute('lang') == langCode){
+		if(!afterTargetNode){
+			if(node === selection.anchorNode.parentNode)
+				afterTargetNode = true;
+			else
+				offset += node.textContent.length;
+		}
+		textValue += node.textContent;
+		node = node.nextElementSibling;
+	}
+
+	window.location.href = 'sld-ref:'+ langCode + ':' + offset + ':' + textValue;
+}
+
+
+function sld2_crossRef_onInit()
+{
+	document.addEventListener('click', sld2_crossRef_onClick, false);
+	document.addEventListener('touchend', sld2_crossRef_onClick, false);
+}
+
+</script>
+</head>
+<body onload="sld2_crossRef_onInit(event); "><img src="source/info.png" border="0"><span sld-ref="" class="S2 sld-text" style="white-space:pre-wrap" lang="en"><br></span><table style="border-collapse:collapse;width:100%" cellpadding="2%"><tbody><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:2815:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">back</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:5017:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">break</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:8218:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">come</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:10287:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">cut</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:12641:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">do</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:13104:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">draw</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:15449:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">fall</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:17242:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">from</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:17983:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">get</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:18080:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">give</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:18254:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">go</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:19256:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">hand</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:19517:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">have</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:19565:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">head</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:20218:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">hold</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:21353:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">in</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:23347:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">keep</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:24138:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">lay</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:24164:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">lead</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:24222:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">leave</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:24532:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">light</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:24630:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">line</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:24972:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">look</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:25482:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">make</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:29014:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">of</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:29015:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">off</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:29207:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">on</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:29291:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">open</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:29615:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">out</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:29782:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">over</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:30664:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">pass</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:32140:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">play</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:33924:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">pull</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:34105:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">put</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:36492:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">round</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:36623:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">run</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:37739:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">see</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:38200:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">set</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:40554:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">stand</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:41158:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">strike</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:42283:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">take</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:43210:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">throw</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:43365:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">time</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:43512:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">to</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:43802:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">touch</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:44595:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">turn</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:45892:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">up</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:47235:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">way</span></a></td></tr><tr><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:47797:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">wind</span></a></td><td style="border-style:none;border-color:rgba(0,0,0,1);background:transparent;text-align:left;vertical-align:middle" width="50%"><a href="sld-link:0:0:48070:"><span class="S149 sld-text" style="white-space:pre-wrap" lang="en">work</span></a></td></tr></tbody></table>
+</body></html>

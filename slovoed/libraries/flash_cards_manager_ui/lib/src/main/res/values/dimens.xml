@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tick_icon_size">32dp</dimen>
+    <dimen name="toolbar_font_size">18sp</dimen>
+    <dimen name="quiz_margin">8dp</dimen>
+    <dimen name="quiz_button_font_size">16sp</dimen>
+    <dimen name="card_circle_size">24dp</dimen>
+    <dimen name="card_circe_margin">4dp</dimen>
+    <dimen name="no_cards_margin">24dp</dimen>
+    <dimen name="empty_view_font_size">17sp</dimen>
+</resources>

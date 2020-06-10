@@ -1,0 +1,16 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.paragon_software.agreement_slovoed_ui">
+
+    <application>
+        <!-- Information activities  -->
+        <activity
+            android:name="com.paragon_software.splash_screen_manager.AgreementPrivacyPolicyActivity"
+            android:theme="@style/SlovoedInformationActivityTheme"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.paragon_software.splash_screen_manager.AgreementEULAActivity"
+            android:theme="@style/SlovoedInformationActivityTheme"
+            android:launchMode="singleTop" />
+    </application>
+</manifest>

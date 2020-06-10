@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.firebase_analytics_paragon')
+  getTeamCityProperty('setApplicationName', 'firebase_analytics_paragon')
+  getTeamCityProperty('setApplicationDescription', 'FirebaseAnalyticsParagon')
+  
+  getPackageVersion('ANALYTICSMANAGERAPI')
+}

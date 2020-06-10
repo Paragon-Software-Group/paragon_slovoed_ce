@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="article_manager_ui_find_next" type="id"/>
+    <item name="article_manager_ui_find_previous" type="id"/>
+    <item name="article_manager_ui_play_sound" type="id"/>
+    <item name="article_manager_ui_toggle_hide_or_switch_blocks_state" type="id"/>
+    <item name="article_manager_ui_search_in_article" type="id"/>
+    <item name="article_manager_ui_add_to_favorites" type="id"/>
+    <item name="share_go_to_dictionary" type="id"/>
+    <item name="article_manager_ui_pronunciation_practice" type="id"/>
+    <item name="article_manager_ui_go_to_history" type="id"/>
+    <item name="article_manager_ui_add_to_flashcards" type="id"/>
+    <item name="article_manager_ui_morphological_table" type="id"/>
+</resources>

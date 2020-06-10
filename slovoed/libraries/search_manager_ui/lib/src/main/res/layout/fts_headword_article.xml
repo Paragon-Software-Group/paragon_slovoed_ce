@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:minHeight="40dp"
+              android:layout_marginTop="5dp"
+              android:layout_marginBottom="5dp">
+
+    <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@id/sound"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"/>
+    <TextView
+            android:id="@+id/fts_headword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/sound"
+            android:gravity="center_vertical"
+            android:layout_below="@+id/text"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/darkgray"
+            android:textStyle="italic"/>
+
+    <ImageButton
+            android:id="@+id/sound"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_volume_up_black_48dp"
+            android:tint="@color/darkgray"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:visibility="gone"
+    />
+</RelativeLayout>

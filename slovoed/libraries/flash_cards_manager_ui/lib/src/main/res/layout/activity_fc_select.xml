@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.paragon_software.flash_cards_manager.FcSelectActivity"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_normal"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="?attr/colorPrimaryDark"
+        app:titleTextAppearance="@style/ToolbarTitle"
+        />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_delete"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:background="@color/toolbar_selection_mode_background_color"
+        app:titleTextColor="@color/fc_white"
+        app:titleTextAppearance="@style/ToolbarTitle"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/sort_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabTextColor="@color/tabs_text_color"
+        app:tabSelectedTextColor="@color/tabs_highlight_color"
+        app:tabIndicatorColor="@color/tabs_highlight_color"
+        app:tabMaxWidth="0dp"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flash_cards_manager_ui_alphabetically"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flash_cards_manager_ui_by_progress"
+            />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/card_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="com.paragon_software.utils_slovoed_ui_common.GoodLinearLayoutManager"
+        />
+
+</LinearLayout>

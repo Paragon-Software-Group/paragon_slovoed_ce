@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="article_manager_ui_actionbar_bkg_color">#FFFFFF</color>
+    <color name="article_manager_ui_actionbar_back_arrow_color">#757575</color>
+    <color name="article_manager_ui_bkg_color">#EFEFEF</color>
+    <color name="article_manager_ui_dict_title_text_color">#181818</color>
+    <color name="article_manager_ui_dict_description_text_color">@color/article_manager_ui_dict_title_text_color</color>
+    <color name="article_manager_ui_accent_color">#FFF37400</color>
+    <color name="article_manager_ui_buy_button_color">#1FB429</color>
+
+    <color name="article_manager_ui_navigation_button_pressed_text_color">#4CF37400</color>
+    <color name="article_manager_ui_dict_status_text_color">#1b9b24</color>
+    <color name="article_manager_ui_buy_button_text_color">@android:color/white</color>
+    <color name="article_manager_ui_progress_bar_background_color">#10000000</color>
+    <color name="article_manager_ui_search_in_article_result_background_color">#E1E5E8</color>
+    <color name="article_manager_ui_search_in_article_cursor_color">#F26300</color>
+
+    <color name="share_tabs_indicator_color">#FFF37400</color>
+    <color name="share_sliding_panel_background">#FFFFFF</color>
+    <color name="share_tabs_background">#FFFFFF</color>
+    <color name="share_query_unrecognized_text_color">#B1C0C8</color>
+
+</resources>

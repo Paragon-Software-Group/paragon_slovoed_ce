@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="settings_manager_ui_card_view_margin_bottom">30dp</dimen>
+    <dimen name="settings_manager_ui_vertical_margin">8dp</dimen>
+    <dimen name="settings_manager_ui_horizontal_margin">28dp</dimen>
+    <dimen name="settings_manager_ui_title_margin_top">22dp</dimen>
+    <dimen name="settings_manager_ui_preference_margin_top">20dp</dimen>
+    <dimen name="settings_manager_ui_seekbar_horizontal_margin">8dp</dimen>
+    <dimen name="settings_manager_ui_delimiter_margin_top">28dp</dimen>
+    <dimen name="settings_manager_ui_delimiter_height">2dp</dimen>
+    <dimen name="settings_manager_ui_switch_track_min_width">50dp</dimen>
+</resources>

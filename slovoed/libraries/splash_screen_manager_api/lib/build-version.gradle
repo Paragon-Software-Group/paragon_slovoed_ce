@@ -1,0 +1,7 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.splash_screen_manager_api')
+  getTeamCityProperty('setApplicationName', 'splash_screen_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'Interfaces for Splash Screen Manager')
+}

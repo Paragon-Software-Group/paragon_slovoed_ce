@@ -1,0 +1,14 @@
+// *** IMPORTANT NOTE ***
+//
+// Please, do not change this file. 
+// Read the project documentation for more details.
+
+ext {
+    packageSummary = '%MANIFEST_SUMMARY%'
+    packageDescription = """%MANIFEST_DESCRIPTION%"""
+    packageOwners = '%MANIFEST_OWNERS%'
+    packageAuthors = '%MANIFEST_AUTHORS%'
+    packageUrl = '%MANIFEST_URL%'
+    packageLicense = """%MANIFEST_LICENSE%"""
+    releaseNotes = """%MANIFEST_RELEASE_NOTES%"""
+}

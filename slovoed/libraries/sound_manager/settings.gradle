@@ -1,0 +1,14 @@
+apply from: '../../gradle/local_build_settings.gradle'
+
+include ':lib'
+
+slovoedProjects (
+        'sound_manager_api',
+        'native_engine_api',
+        'dictionary_manager_api'
+)
+
+slovoedProjects (
+        'utils_slovoed',
+        'article_item'
+)

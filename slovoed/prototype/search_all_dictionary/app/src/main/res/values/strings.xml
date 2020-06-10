@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SearchAllDictionary</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="search">Search</string>
+    <string name="online_search">Online search</string>
+</resources>

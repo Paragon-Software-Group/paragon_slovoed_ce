@@ -1,0 +1,16 @@
+This is template of Android Studio project for separate local build of specified slovoed product.
+
+
+How to use it:
+
+1. Make a copy of the *_local_slovoed* in the <slovoed_root>\products\ folder.
+
+      e.g. copy/paste *_local_slovoed* -> to *_local_slovoed_copy*
+
+
+2. Rename *_local_slovoed_copy* to *local_[appBrand]* (list of supported 'appBrand's see in  <slovoed_root>\products\slovoed\prebuild-options.gradle).
+
+     e.g. rename *_local_slovoed_copy* -> to *local_oald10* (if you want to build oald10)
+
+
+3. Open the *local_oald10* in Android Studio by "Import project" and then try to build it.

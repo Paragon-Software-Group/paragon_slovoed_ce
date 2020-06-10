@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/consent_dlg_padding"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/consent_dlg_padding"
+        android:layout_marginEnd="@dimen/consent_dlg_padding"
+        android:text="@string/dictionary_manager_ui_consent_dlg_title1"
+        android:textStyle="bold"
+        android:textSize="@dimen/consent_dlg_title_text_size"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/consent_dlg_padding"
+        android:layout_marginEnd="@dimen/consent_dlg_padding"
+        android:text="@string/dictionary_manager_ui_consent_dlg_body1"
+        android:textSize="@dimen/consent_dlg_body_text_size"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/consent_dlg_padding"
+        android:layout_marginEnd="@dimen/consent_dlg_padding"
+        android:text="@string/dictionary_manager_ui_consent_dlg_title2"
+        android:textStyle="bold"
+        android:textSize="@dimen/consent_dlg_title_text_size"
+        />
+
+    <TextView
+        android:id="@+id/consent_body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/consent_dlg_padding"
+        android:layout_marginEnd="@dimen/consent_dlg_padding"
+        android:textSize="@dimen/consent_dlg_body_text_size"
+        />
+
+    <CheckBox
+        android:id="@+id/agree_checkbox1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/consent_dlg_padding"
+        android:text="@string/dictionary_manager_ui_consent_dlg_checkbox1"
+        android:checked="false"
+        />
+
+    <CheckBox
+        android:id="@+id/agree_checkbox2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/consent_dlg_padding"
+        android:text="@string/dictionary_manager_ui_consent_dlg_checkbox2"
+        android:checked="false"
+        />
+
+</LinearLayout>

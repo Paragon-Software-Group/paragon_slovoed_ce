@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="article_manager_ui_find_next">Find next</string>
+    <string name="article_manager_ui_find_previous">Find previous</string>
+    <string name="article_manager_ui_play_sound">Play sound</string>
+    <string name="article_manager_ui_show_hide_or_switch_blocks">Show extra blocks</string>
+    <string name="article_manager_ui_hide_hide_or_switch_blocks">Hide extra blocks</string>
+    <string name="article_manager_ui_search_in_article_hint">Search in article</string>
+    <string name="article_manager_ui_close_search_interface">Close search interface</string>
+    <string name="article_manager_ui_add_to_favorites_hint">Add to Favorites</string>
+    <string name="article_manager_ui_remove_from_favorites_hint">Remove from Favorites</string>
+    <string name="article_manager_ui_remove_from_flashcards_hint">Delete a flashcard</string>
+    <string name="article_manager_ui_condensed_font_family" translatable="false">sans-serif-condensed</string>
+    <string name="article_manager_ui_back">back</string>
+    <string name="article_manager_ui_forward">forward</string>
+    <string name="article_manager_ui_dict_purchase_description">You need to purchase or subscribe to the dictionary to view all entries</string>
+    <string name="article_manager_ui_download_full_base_description">You need to download full base to view all entries</string>
+    <!--
+     The article_manager_ui_find_on_page_edit_text_hint string is used as EditText hint. On some devices it does not fit
+     on screen and its size need to be reduced. Size should be reduce only for hint string, not for other EditText content.
+     So to do this we use <small> tags in the string (the solution was found here
+     https://stackoverflow.com/questions/3139676/android-edittext-hint-size ). In the end of the hint string it has &#160; symbol -
+     it is needed to keep size of EditText cursor when its content is empty.
+     -->
+    <string name="article_manager_ui_find_on_page_edit_text_hint"><![CDATA[<small><small>Find on page</small></small> ]]></string>
+</resources>

@@ -1,0 +1,53 @@
+How to build the app:
+
+*  Open the <slovoed_root>\products\slovoed in Android Studio by "Import project" and then try to build it.
+
+
+
+How to add new dictionary into the application:
+
+1. Add new demo dictionary .sdc file into <slovoed_root>\products\slovoed\app\src\pdahpc\assets\demo directory.
+
+      e.g. copy/paste new 5452.sdc file
+
+2. Add information about new dictionary in <slovoed_root>\products\slovoed\app\src\pdahpc\res\raw\catalog.json file into "products" block.
+
+      e.g. you could copy/paste block with info about existing "12474" product and change its several fields.
+      Firs of all change "12474" to some other value, for example "12475".
+      Then you would need to change these set of fields:
+
+      `
+      {
+        "products": {
+          "12475": {
+            "from_lang_short":
+            "lang_from":
+            "lang_to":
+            "to_lang_short":
+            "components": {
+              "demo_dict": {
+                "from_lang_short":
+                "from_lang":
+                "to_lang":
+                "to_lang_short":
+                "prc_id": "5452"
+              }
+            }
+          }
+        }
+      `
+
+      "prc_id" value should be equals to .sdc file name.
+      "*lang*" fields should specify dictionary directions.
+
+3. In <slovoed_root>\products\slovoed\prebuild-options-slovoed.gradle file add new "product" id into 'enableDictionaryList' parameter.
+
+      e.g. ` getTeamCityProperty('enableDictionaryList', '"12474","12475"') `
+
+4. Add new product icons into <slovoed_root>\products\slovoed\app\src\pdahpc\res\drawable* folders with product_{id}.png names.
+
+      e.g. add files:
+        ...\pdahpc\res\drawable-hdpi\product_12475.png
+        ...\pdahpc\res\drawable-mdpi\product_12475.png
+        ...\pdahpc\res\drawable-xhdpi\product_12475.png
+        ...

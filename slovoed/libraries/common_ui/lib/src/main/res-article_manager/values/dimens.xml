@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="article_manager_ui_search_in_article_input_field_left_padding">6dp</dimen>
+    <dimen name="article_manager_ui_search_in_article_input_field_bottom_padding">4dp</dimen>
+    <dimen name="article_manager_ui_search_in_article_result_corners_radius">4dp</dimen>
+    <dimen name="article_manager_ui_search_in_article_result_text_size">13dp</dimen>
+    <dimen name="article_manager_ui_search_in_article_result_left_margin">4dp</dimen>
+    <dimen name="article_manager_ui_search_in_article_result_right_margin">8dp</dimen>
+    <dimen name="article_manager_ui_search_in_article_result_horizontal_padding">8dp</dimen>
+    <dimen name="article_manager_ui_search_in_article_result_vertical_padding">3dp</dimen>
+
+    <dimen name="share_sliding_panel_height">86dp</dimen>
+    <dimen name="share_sliding_panel_shadow_height">4dp</dimen>
+    <dimen name="share_sliding_panel_height_expanded">240dp</dimen>
+
+    <dimen name="share_query_span_padding">6dp</dimen>
+    <dimen name="share_tabs_and_toolbar_elevation">4dp</dimen>
+
+</resources>

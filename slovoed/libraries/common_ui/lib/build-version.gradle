@@ -1,0 +1,12 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.common_ui')
+  getTeamCityProperty('setApplicationName', 'common_ui')
+  getTeamCityProperty('setApplicationDescription', 'Abstract and common UI classes and resources')
+
+  getPackageVersion('ANALYTICSMANAGERAPI')
+  getPackageVersion('AMAPI')
+  getPackageVersion('NAVIGATIONMANAGERAPI')
+  getPackageVersion('UTILSSLOVOED')
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:insetRight="@dimen/dictionary_direction_spinner_background_right_padding">
+    <bitmap
+            android:src="@drawable/baseline_arrow_drop_down_24"
+            android:gravity="right">
+    </bitmap>
+</inset>

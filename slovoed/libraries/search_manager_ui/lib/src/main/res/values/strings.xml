@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_manager_ui_search_hint">Please enter search query</string>
+    <string name="search_manager_ui_did_you_mean">Did you mean&#8230; ?</string>
+    <string name="search_manager_ui_see_other_results">See other results</string>
+    <string name="search_manager_ui_collapse_results">Collapse results</string>
+    <string name="search_manager_ui_edit_text_fts_search_hint">Full text search</string>
+    <string name="search_manager_ui_select_dictionary">Please select a dictionary</string>
+    <string name="search_manager_ui_download_all_dictionaries_title">Please download all dictionaries</string>
+</resources>

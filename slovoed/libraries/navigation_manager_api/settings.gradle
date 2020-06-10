@@ -1,0 +1,21 @@
+apply from: '../../gradle/local_build_settings.gradle'
+
+include ':lib'
+
+// direct dependencies
+slovoedProjects (
+        'search_manager_api',
+		'news_manager_api'
+)
+
+// subdependencies
+slovoedProjects (
+        'toolbar_manager_api',
+		'screen_opener_api',
+		'article_item',
+		'dictionary_manager_api',
+		'native_engine_api',
+		'utils_slovoed',
+		'settings_manager_api',
+		'sound_manager_api'
+)

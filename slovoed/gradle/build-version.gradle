@@ -1,0 +1,4 @@
+ext{
+gradlePluginVersion = '3.5.3'
+googleServicesVersion = '4.3.3'
+}

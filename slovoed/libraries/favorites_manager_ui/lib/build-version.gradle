@@ -1,0 +1,10 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.favorites_manager_ui')
+  getTeamCityProperty('setApplicationName', 'favorites_manager_ui')
+  getTeamCityProperty('setApplicationDescription', 'Favorites manager UI')
+
+  getPackageVersion('FM')
+  getPackageVersion('UTILSSLOVOEDUI')
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DictionaryTitleTextStyle">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textColor">@color/dictionary_title_color</item>
+        <item name="android:textSize">@dimen/dictionary_list_element_text_size</item>
+    </style>
+</resources>

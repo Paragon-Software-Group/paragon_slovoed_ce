@@ -1,0 +1,65 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/explain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:textColor="#FF666666"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.ButtonBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:orientation="horizontal"
+            android:gravity="bottom">
+
+            <Button
+                android:id="@+id/cancel"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/utils_slovoed_ui_common_cancel"
+                android:textSize="18sp"
+                android:gravity="start|center_vertical"
+                android:minHeight="36dp" />
+
+            <Button
+                android:id="@+id/open_settings"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dictionary_manager_ui_trial_explain_permissions_dialog_ok_button"
+                android:textSize="18sp"
+                android:gravity="end|center_vertical"
+                android:minHeight="36dp"
+                tools:textColor="@android:color/black" />
+
+        </androidx.appcompat.widget.ButtonBarLayout>
+
+    </LinearLayout>
+
+</ScrollView>

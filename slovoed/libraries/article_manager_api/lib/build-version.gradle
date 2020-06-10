@@ -1,0 +1,19 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.article_manager_api')
+  getTeamCityProperty('setApplicationName', 'article_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'Article manager API')
+
+  getPackageVersion('SSM')
+  getPackageVersion('AI')
+  getPackageVersion('DM')
+  getPackageVersion('FM')
+  getPackageVersion('HM')
+  getPackageVersion('SM')
+  getPackageVersion('NE')
+  getPackageVersion('SND')
+  getPackageVersion('SRM')
+  getPackageVersion('FLASHCARDSMANAGERAPI')
+  getPackageVersion('HINTMANAGERAPI')
+}

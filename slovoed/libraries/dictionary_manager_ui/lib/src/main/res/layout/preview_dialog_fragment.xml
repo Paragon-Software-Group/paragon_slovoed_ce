@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/preview_dialog_background_color"
+        android:paddingLeft="@dimen/preview_dialog_horizontal_padding"
+        android:paddingRight="@dimen/preview_dialog_horizontal_padding"
+        android:paddingTop="@dimen/preview_dialog_top_padding"
+        android:paddingBottom="@dimen/preview_dialog_bottom_padding">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dictionary_manager_ui_preview_dialog_header_text"
+            android:textStyle="bold"
+            android:textSize="@dimen/preview_dialog_title_text_size"
+            android:textColor="@color/preview_dialog_title_text_color"
+            android:layout_marginLeft="@dimen/preview_dialog_text_extra_horizontal_margin"
+            android:layout_marginRight="@dimen/preview_dialog_text_extra_horizontal_margin"/>
+
+    <TextView
+            android:id="@+id/preview_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dictionary_manager_ui_preview_dialog_text"
+            android:textSize="@dimen/preview_dialog_text_size"
+            android:textColor="@color/preview_dialog_text_color"
+            android:layout_marginLeft="@dimen/preview_dialog_text_extra_horizontal_margin"
+            android:layout_marginRight="@dimen/preview_dialog_text_extra_horizontal_margin"
+            android:layout_marginTop="@dimen/preview_dialog_text_top_margin"
+            android:layout_marginBottom="@dimen/preview_dialog_text_bottom_margin"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/google_trial"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/preview_dialog_social_button_height"
+            style="@style/SocialNetworkButtonStyle"
+            android:text="@string/dictionary_manager_ui_preview_dialog_google_button_text"
+            android:textColor="@color/preview_dialog_google_button_text_color"
+            android:drawableLeft="@drawable/ic_googleicon"
+            android:paddingLeft="@dimen/preview_dialog_google_button_horizontal_padding"
+            android:paddingRight="@dimen/preview_dialog_google_button_horizontal_padding"
+            android:drawablePadding="@dimen/preview_dialog_google_button_drawable_padding"
+            app:backgroundTint="@color/preview_dialog_google_button_background_color"/>
+
+<!--    <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/preview_dialog_social_button_height"
+            style="@style/SocialNetworkButtonStyle"
+            android:text="@string/preview_dialog_facebook_button_text"
+            android:textColor="@color/preview_dialog_facebook_button_text_color"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:paddingLeft="@dimen/preview_dialog_facebook_button_horizontal_padding"
+            android:paddingRight="@dimen/preview_dialog_facebook_button_horizontal_padding"
+            android:drawablePadding="@dimen/preview_dialog_facebook_button_drawable_padding"
+            app:backgroundTint="@color/preview_dialog_facebook_button_background_color"/> -->
+
+    <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/dictionary_manager_ui_ok"
+            android:textSize="@dimen/preview_dialog_ok_button_text_size"
+            android:textStyle="normal"
+            android:textColor="@color/preview_dialog_ok_button_text_color"
+            android:background="@null"
+            android:minWidth="0dp"
+            android:layout_marginLeft="@dimen/preview_dialog_ok_button_extra_horizontal_margin"
+            android:layout_marginRight="@dimen/preview_dialog_ok_button_extra_horizontal_margin"
+            android:layout_marginTop="@dimen/preview_dialog_ok_button_vertical_margin"
+            android:layout_marginBottom="@dimen/preview_dialog_ok_button_vertical_margin"/>
+
+</LinearLayout>

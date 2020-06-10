@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"
+        android:background="?attr/colorPrimary"
+        app:titleTextColor="?attr/colorPrimaryDark"
+        app:titleTextAppearance="@style/ToolbarTitle"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/quiz_margin"
+        android:orientation="vertical"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/card_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/quiz_margin"
+            android:layout_marginBottom="@dimen/quiz_margin"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/quiz_margin"
+            >
+
+            <WebView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+            <FrameLayout
+                android:id="@+id/articleFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/show_meaning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flash_cards_manager_ui_show_meaning"
+            android:backgroundTint="@color/fc_blue"
+            style="@style/QuizButton"
+            />
+
+        <Button
+            android:id="@+id/start_again"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flash_cards_manager_ui_start_again"
+            android:backgroundTint="@color/fc_blue"
+            style="@style/QuizButton"
+            />
+
+        <LinearLayout
+            android:id="@+id/answer_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/right"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="@dimen/quiz_margin"
+                android:text="@string/flash_cards_manager_ui_right"
+                android:backgroundTint="@color/fc_green"
+                style="@style/QuizButton"
+                />
+
+            <Button
+                android:id="@+id/wrong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/quiz_margin"
+                android:text="@string/flash_cards_manager_ui_wrong"
+                android:backgroundTint="@color/fc_red"
+                style="@style/QuizButton"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

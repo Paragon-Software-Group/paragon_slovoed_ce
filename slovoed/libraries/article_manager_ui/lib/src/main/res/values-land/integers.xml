@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="share_toolbar_spinner_text_lines">1</integer>
+</resources>

@@ -1,0 +1,10 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.utils_slovoed')
+  getTeamCityProperty('setApplicationName', 'utils_slovoed')
+  getTeamCityProperty('setApplicationDescription', 'Common classes')
+
+  getPackageVersion('SETTINGSMANAGERAPI')
+  getPackageVersion('UTILSCORE')
+}

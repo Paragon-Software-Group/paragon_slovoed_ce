@@ -1,0 +1,13 @@
+apply from: '../../gradle/local_build_settings.gradle'
+
+include ':lib'
+
+slovoedProjects(
+        'news_manager_api'
+)
+
+slovoedProjects(
+    'settings_manager_api',
+    'dictionary_manager_api',
+    'toolbar_manager_api'
+)

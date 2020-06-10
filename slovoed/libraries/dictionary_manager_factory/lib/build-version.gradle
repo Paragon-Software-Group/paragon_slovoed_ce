@@ -1,0 +1,10 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.dictionary_manager_factory')
+  getTeamCityProperty('setApplicationName', 'dictionary_manager_factory')
+  getTeamCityProperty('setApplicationDescription', 'Collection of all available dictionaries')
+
+  getPackageVersion('DM')
+  getPackageVersion('TMA')
+}

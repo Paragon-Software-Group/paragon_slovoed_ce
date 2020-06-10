@@ -1,0 +1,53 @@
+// supported app brands
+// 'slovoed', 'oald10', 'malayin', 'oxford_bilingual', 'duden'
+//
+// get current app brand
+getTeamCityProperty('appBrand', 'slovoed')
+
+
+//if ( appBrand == 'oald10' )
+//{
+//    // OALD10 properties
+//    apply from: '../slovoed/prebuild-options-oald10.gradle'
+//}
+//else if ( appBrand == 'oxford_bilingual' )
+//{
+//	// Oxford Bilingual properties
+//    apply from: '../slovoed/prebuild-options-oxford-bilingual.gradle'
+//}
+//else if ( appBrand == 'duden' )
+//{
+//    // Duden properties
+//    apply from: '../slovoed/prebuild-options-duden.gradle'
+//}
+//else
+//{
+//    if ( appBrand == 'malayin' )
+//    {
+//        // Malayin properties
+//        apply from: '../slovoed/prebuild-options-malayin.gradle'
+//    }
+    // other properties inherit from New Slovoed
+    // Default properties (New Slovoed)
+    apply from: '../slovoed/prebuild-options-slovoed.gradle'
+//}
+
+// Common properties
+apply from: '../slovoed/prebuild-options-common.gradle'
+
+
+// Default properties to get data from PDAHPC
+//
+// (To download all products (dictionaries) remove productIds property
+// or use -PproductIds= or -PproductIds=* command-line parameter)
+//
+//getTeamCityProperty('catalogId', '1196')
+//getTeamCityProperty('productIds', '4320,4760,4315')
+//getTeamCityProperty('prod_demo_max_mib_assets', '20')
+//getTeamCityProperty('demo_bases', 'all')
+
+// To download bases with "iOS approval" flag use -Ptest_base="iOS approval" command-line parameter
+//getTeamCityProperty('test_base', '"iOS approval"')
+
+// To download only full bases use -PforceLoadOnlyFullBases=1 command-line parameter
+//getTeamCityProperty('forceLoadOnlyFullBases', '1')

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dictionary_manager_ui_tab_recently_viewed_label">recently viewed</string>
+    <string name="dictionary_manager_ui_tab_featured_label">featured</string>
+    <string name="dictionary_manager_ui_tab_bestsellers_label">bestsellers</string>
+    <string name="dictionary_manager_ui_tab_new_label">new</string>
+    <string name="dictionary_manager_ui_tab_deals_label">deals</string>
+    <string name="dictionary_manager_ui_tab_all_label">all</string>
+    <string name="dictionary_manager_ui_description_button_text">description</string>
+    <string name="dictionary_manager_ui_buy_button_text_with_price">buy for %1$s</string>
+    <string name="dictionary_manager_ui_in_app_purchased_status">purchased</string>
+    <string name="dictionary_manager_ui_subscription_status">subscription</string>
+    <string name="dictionary_manager_ui_sample_button_text">sample</string>
+    <string name="dictionary_manager_ui_search_field_hint">Search catalog</string>
+    <string name="dictionary_manager_ui_preview_dialog_header_text">Preview Dictionary</string>
+    <string name="dictionary_manager_ui_preview_dialog_text">To get a %1$s of a full dictionary, please sign in with your Google account.</string>
+    <string name="dictionary_manager_ui_preview_dialog_google_button_text">Sign in with Google</string>
+    <string name="dictionary_manager_ui_ok">OK</string>
+    <string name="dictionary_manager_ui_language_all">All languages</string>
+    <string name="dictionary_manager_ui_deal_text">save %1$d%%</string>
+    <string name="dictionary_manager_ui_my_dictionary_open">open</string>
+    <string name="dictionary_manager_ui_content_description_dictionary_icon">Dictionary icon</string>
+    <string name="dictionary_manager_ui_my_dictionaries_remove">Remove</string>
+    <string name="dictionary_manager_ui_my_dictionaries_total_size">( %1$s total )</string>
+    <string name="dictionary_manager_ui_my_dictionaries_download_and_remove_word_base_button">dictionary (%1$s)</string>
+    <string name="dictionary_manager_ui_my_dictionaries_download_and_remove_sound_base_button">%1$s sound (%2$s)</string>
+    <string name="dictionary_manager_ui_my_dictionaries_download_and_remove_picture_base_button">pictures (%1$s)</string>
+    <string name="dictionary_manager_ui_my_dictionaries_download_sound_base">%1$s sound</string>
+    <string name="dictionary_manager_ui_my_dictionaries_download_picture_base">pictures</string>
+    <string name="dictionary_manager_ui_my_dictionaries_download_progress_text">Downloading… %1$d%%</string>
+    <string name="dictionary_manager_ui_my_dictionaries_download_common_error">Download has failed</string>
+    <string name="dictionary_manager_ui_my_dictionaries_download_insufficient_space">Not enough free space available</string>
+    <string name="dictionary_manager_ui_my_dictionaries_download_file_corrupted">Data were corrupted. Please, try again.</string>
+    <string name="dictionary_manager_ui_undefined_billing_error">Unexpected billing error</string>
+    <string name="dictionary_manager_ui_purchase_item_already_owned">You have purchased this product earlier</string>
+    <string name="dictionary_manager_ui_purchase_item_unavailable">The product you\'ve chosen is unavailable for payment</string>
+    <string name="dictionary_manager_ui_unavailable_connection_with_market">Could not connect to Google Play</string>
+    <string name="dictionary_manager_ui_error_dialog_title_default">Error</string>
+    <string name="dictionary_manager_ui_tab_my_dictionaries_label">My Dictionaries</string>
+    <string name="dictionary_manager_ui_manage_subs_in_gp">Manage subscriptions</string>
+    <string name="dictionary_manager_ui_subscription_explanation_dialog_msg">Active subscription:\n\n%1$s\n\nTo buy this dictionary or switch to another subscription, please cancel the current one. To do so, tap \"%2$s\"</string>
+    <plurals name="dictionary_manager_ui_active_subscription_year_with_price">
+        <item quantity="one">%1$s year - %2$s</item>
+        <item quantity="two">%1$s years - %2$s</item>
+        <item quantity="few">%1$s years - %2$s</item>
+        <item quantity="other">%1$s years - %2$s</item>
+    </plurals>
+    <plurals name="dictionary_manager_ui_active_subscription_month_with_price">
+        <item quantity="one">%1$s month - %2$s</item>
+        <item quantity="two">%1$s months - %2$s</item>
+        <item quantity="few">%1$s months - %2$s</item>
+        <item quantity="other">%1$s months - %2$s</item>
+    </plurals>
+    <plurals name="dictionary_manager_ui_active_subscription_week_with_price">
+        <item quantity="one">%1$s week - %2$s</item>
+        <item quantity="two">%1$s weeks - %2$s</item>
+        <item quantity="few">%1$s weeks - %2$s</item>
+        <item quantity="other">%1$s weeks - %2$s</item>
+    </plurals>
+    <plurals name="dictionary_manager_ui_subscribe_button_month_with_price">
+        <item quantity="one">Subscribe for %1$s month - %2$s</item>
+        <item quantity="two">Subscribe for %1$s months - %2$s</item>
+        <item quantity="few">Subscribe for %1$s months - %2$s</item>
+        <item quantity="other">Subscribe for %1$s months - %2$s</item>
+    </plurals>
+    <plurals name="dictionary_manager_ui_subscribe_button_week_with_price">
+        <item quantity="one">Subscribe for %1$s week - %2$s</item>
+        <item quantity="two">Subscribe for %1$s weeks - %2$s</item>
+        <item quantity="few">Subscribe for %1$s weeks - %2$s</item>
+        <item quantity="other">Subscribe for %1$s weeks - %2$s</item>
+    </plurals>
+    <plurals name="dictionary_manager_ui_subscribe_button_year_with_price">
+        <item quantity="one">Subscribe for %1$s year - %2$s</item>
+        <item quantity="two">Subscribe for %1$s years - %2$s</item>
+        <item quantity="few">Subscribe for %1$s years - %2$s</item>
+        <item quantity="other">Subscribe for %1$s years - %2$s</item>
+    </plurals>
+    <string name="dictionary_manager_ui_subscriptions_info">Payment will be charged to Google Play Account at confirmation of purchase. Subscriptions automatically renews unless auto-renew is turned off at least 24 hours prior to end of the current period for the same price as first period. You may manage your subscriptions and auto-renew may be turned off by going to Account Settings after purchase. No cancellation of current subscription is allowed during an active subscription period.</string>
+    <string name="dictionary_manager_ui_trial_explain_dialog_message_permission">To start the trial period, please make sure to grant the app permission to access your Google account. For more info, visit our Privacy Policy page.</string>
+    <string name="dictionary_manager_ui_trial_explain_dialog_message_account">Google Play services or account unavailable. Please sign in to your account.</string>
+    <string name="dictionary_manager_ui_need_write_external_storage_permission">Please provide the app with the access to the device storage in the system settings in order to edit your files.</string>
+    <string name="dictionary_manager_ui_trial_explain_dialog_message_permission_read_phone_state">To start the trial period, please make sure to grant the app permission to access your phone state. For more info, visit our Privacy Policy page.</string>
+    <string name="dictionary_manager_ui_enable_saf_help"> </string>
+    <string name="dictionary_manager_ui_trial_explain_permissions_dialog_ok_button">Open Settings</string>
+    <string name="dictionary_manager_ui_downloading">Downloading…</string>
+    <string name="dictionary_manager_ui_download_success">Download completed</string>
+    <string name="dictionary_manager_ui_download_error">Download error</string>
+    <string name="dictionary_manager_ui_download_size_of">%1$s of %2$s</string>
+    <string name="dictionary_manager_ui_download_remaining">%1$s remaining</string>
+    <string name="dictionary_manager_ui_no_results_found">No results found</string>
+    <string name="dictionary_manager_ui_delete_dictionary_database">Are you sure you want to delete this database?</string>
+
+    <string name="dictionary_manager_ui_consent_dlg_title1">Allow the Slovoed app collect Personal Data.</string>
+    <string name="dictionary_manager_ui_consent_dlg_body1">The Slovoed app will hash and send the hashed email address to its server: https://backyard.slovoed.com. Hashed emails are completely anonymous and used only for trial identification. The hashed data is securely stored on the server for 5 years and then deleted. The data is not shared with third parties.</string>
+    <string name="dictionary_manager_ui_consent_dlg_title2">Why does Slovoed need this data?</string>
+    <string name="dictionary_manager_ui_consent_dlg_body2">The %1$s can be activated once for each dictionary. For that the app needs to uniquely identify users in order to understand which trial they have already used, which they have not; and to track time of the trial in-use. Validating the trial is the only reason for the anonymized data collection. The personal data is not used for any other purposes. For more information, please read our &lt;a href=\'https://www.paragon-software.com/privacy/\'&gt;Privacy Policy&lt;/a&gt;.</string>
+    <string name="dictionary_manager_ui_consent_dlg_checkbox1">I have read Privacy Policy</string>
+    <string name="dictionary_manager_ui_consent_dlg_checkbox2">I agree that my email will be used to provide me with the trial.</string>
+</resources>

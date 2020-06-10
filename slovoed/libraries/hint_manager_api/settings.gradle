@@ -1,0 +1,14 @@
+apply from: '../../gradle/local_build_settings.gradle'
+
+include ':lib'
+
+// direct dependencies
+slovoedProjects (
+    'settings_manager_api'
+)
+
+// subdependencies
+//slovoedProjects (
+//        'lib3',
+//        'lib4'
+//)

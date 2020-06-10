@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="utils_slovoed_ui_common_yes">Yes</string>
+    <string name="utils_slovoed_ui_common_no">No</string>
+    <string name="utils_slovoed_ui_common_ok">OK</string>
+    <string name="utils_slovoed_ui_common_cancel">Cancel</string>
+    <string name="utils_slovoed_ui_common_download">Download</string>
+    <string name="utils_slovoed_ui_common_search">Search</string>
+    <string name="utils_slovoed_ui_common_tab_history">History</string>
+    <string name="utils_slovoed_ui_common_nav_bar_menu_item_settings">Settings</string>
+    <string name="utils_slovoed_ui_common_nav_bar_menu_item_news">News</string>
+    <string name="utils_slovoed_ui_common_share_btn_go_to_dictionary">Dictionary</string>
+    <string name="utils_slovoed_ui_common_nav_bar_menu_item_information">Information</string>
+    <string name="utils_slovoed_ui_common_failed_to_start_trial_message">Failed to activate trial period. Please check your internet connection and try again.</string>
+    <string name="utils_slovoed_ui_common_no_result_found">No result found</string>
+    <string name="utils_slovoed_ui_common_dictionary_list_default_title">All dictionaries</string>
+
+    <!-- TRIAL -->
+    <string name="utils_slovoed_ui_common_trial_notification_title_expires">%s trial is expiring soon</string>
+    <string name="utils_slovoed_ui_common_trial_notification_time_remain_message">Your free %1$s-day trial is going to expire in 2 hours</string>
+    <string name="utils_slovoed_ui_common_trial_notification_trial_is_over_message">Trial for %s is over!</string>
+    <string name="utils_slovoed_ui_common_trial_prolongation_exceeded">Thank you for using our app. Unfortunately, you can\'t extend the trial period any more.</string>
+    <!-- NOTIFICATIONS -->
+    <string name="utils_slovoed_ui_common_notification_channel_name">Notifications</string>
+</resources>

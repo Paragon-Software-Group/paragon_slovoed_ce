@@ -1,0 +1,27 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+
+  getTeamCityProperty('packageGroupId', 'com.paragon_software.components')
+  getTeamCityProperty('packageName', 'ufsd.android.components')
+
+  getTeamCityProperty('setMavenBranch', '')
+  getTeamCityProperty('buildCounter', '0')
+
+  getTeamCityProperty('organization_name', 'Paragon Technologie GmbH')
+  getTeamCityProperty('organization_url', 'https://www.paragon-software.com/')
+
+  getTeamCityProperty('license_name', 'Copyright © 1994-2018 Paragon Technologie GmbH.')
+  getTeamCityProperty('license_url', 'https://www.paragon-software.com/home/license.html')
+
+  inceptionYear = 2018
+
+  if ('' != setMavenBranch)
+  {
+    packageVersionName = "$setVersionName.$buildCounter-$setMavenBranch"
+  } else
+  {
+    packageVersionName = "$setVersionName.$buildCounter"
+  }
+  version = packageVersionName
+}

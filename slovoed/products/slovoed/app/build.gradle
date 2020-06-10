@@ -1,0 +1,472 @@
+apply plugin: 'com.android.application'
+apply from: '../../slovoed/app/build-version.gradle'
+apply from: '../../../gradle/jacoco.gradle'
+
+ext {
+  getTeamCityProperty('runAppDependenciesTask', buildOnCI)
+}
+
+repositories {
+  flatDir {
+    dirs 'aars'
+  }
+}
+
+android {
+  compileSdkVersion setCompileSdkVersion.toInteger()
+  defaultConfig {
+    applicationId setApplicationId
+    minSdkVersion setMinSdkVersion.toInteger()
+    targetSdkVersion setTargetSdkVersion.toInteger()
+    versionCode setProductVersionCode.toInteger() * 1000000 + buildCounter.toInteger()
+    versionName "${setProductVersionName}.${buildCounter}"
+
+    //For the correct operation of the settings, you must call it before the variables are initialized.
+    buildConfigField "boolean",
+            "isApplicationSettingsOverridden", "${isApplicationSettingsOverridden}"
+
+    buildConfigField "Class<?>[]",
+        "settingsManagerStoragesClass", "${settingsManagerStoragesClasses}"
+    buildConfigField "String[][]", "componentsVersions", "${componentsVersion}"
+    buildConfigField "String[]", "enableDictionaryList", "${dictionaryManagerDictionaries}"
+    buildConfigField "com.paragon_software.dictionary_manager.Dictionary.DictionaryId",
+        "dictionaryManagerDefaultDictionaryId", "${dictionaryManagerDefaultDictionaryId}"
+    buildConfigField "com.paragon_software.dictionary_manager.Dictionary.Direction",
+        "dictionaryManagerDefaultDirection", "${dictionaryManagerDefaultDirection}"
+
+    buildConfigField "com.paragon_software.about_manager.AboutManagerFactoryAPI",
+        "aboutManagerFactory", "${aboutManagerFactory}"
+
+    buildConfigField "androidx.fragment.app.Fragment",
+            "dictionaryManagerFragment", "${dictionaryManagerFragment}"
+    buildConfigField "androidx.fragment.app.Fragment",
+            "dictionaryDescriptionFragmentOald", "${dictionaryDescriptionFragmentOald}"
+    buildConfigField "java.lang.Class", "descriptionActivityClass", "${descriptionActivityClass}"
+
+    buildConfigField "androidx.fragment.app.Fragment",
+            "downloadManagerFragment", "${downloadManagerFragment}"
+
+    buildConfigField "com.paragon_software.dictionary_manager.downloader.IDownloadStrings",
+            "downloadStrings", "${downloadStrings}"
+
+    buildConfigField "Class", "buyActivity", "${buyActivity}"
+
+    buildConfigField "com.paragon_software.search_manager.SearchManagerAPI",
+        "searchManager", "${searchManager}"
+
+    buildConfigField "androidx.fragment.app.Fragment", "searchManagerFragment", "${searchManagerFragment}"
+    buildConfigField "androidx.fragment.app.Fragment", "searchManagerFragmentTablet", "${searchManagerFragmentTablet}"
+
+    buildConfigField "int", "favoritesMaxNumberOfWords", "${favoritesMaxNumberOfWords}"
+    buildConfigField "com.paragon_software.favorites_manager.FavoritesManagerAPI.Factory",
+        "favoritesManagerFactory", "${favoritesManagerFactory}"
+
+
+    buildConfigField "com.paragon_software.article_manager.ArticleManagerAPI",
+        "articleManager", "${articleManager}"
+    buildConfigField "android.app.Activity",
+            "articleActivity", "${articleActivity}"
+    buildConfigField "android.app.Activity",
+            "articleActivityTablet", "${articleActivityTablet}"
+    buildConfigField "android.app.Activity",
+            "additionalActivity", "${additionalActivity}"
+    buildConfigField "Class", "practisePronunciationActivity", "${practisePronunciationActivity}"
+    buildConfigField "String",
+            "articleControllerId ", "${articleControllerId }"
+    buildConfigField "String",
+            "additionalArticleControllerId ", "${additionalArticleControllerId}"
+    buildConfigField "String",
+            "practisePronunciationControllerId ", "${practisePronunciationControllerId }"
+    buildConfigField "androidx.fragment.app.Fragment",
+            "articleFragment", "${articleFragment}"
+    buildConfigField "androidx.fragment.app.Fragment",
+            "articleFragmentTablet", "${articleFragmentTablet}"
+    buildConfigField "String",
+            "shareArticleControllerId ", "${shareArticleControllerId }"
+    buildConfigField "android.app.Activity",
+            "shareActivity", "${shareActivity}"
+
+    buildConfigField "androidx.fragment.app.Fragment",
+            "favoritesManagerFragment", "${favoritesManagerFragment}"
+
+    buildConfigField "androidx.fragment.app.DialogFragment",
+            "favoritesManagerAddInDirectoryUI", "${favoritesManagerAddInDirectoryUI}"
+
+    buildConfigField "java.lang.Class",
+            "favoritesManagerActivityClass", "${favoritesManagerActivityClass}"
+    buildConfigField "java.lang.Class",
+            "favoritesManagerExportHtmlBuilderClass", "${favoritesManagerExportHtmlBuilderClass}"
+
+
+    buildConfigField "int", "historyMaxNumberOfWords", "${historyMaxNumberOfWords}"
+    buildConfigField "com.paragon_software.history_manager.HistoryManagerAPI.Factory", "historyManagerFactory", "${historyManagerFactory}"
+    buildConfigField "androidx.fragment.app.Fragment", "historyManagerFragment", "${historyManagerFragment}"
+    buildConfigField "java.lang.Class", "historyManagerActivityClass", "${historyManagerActivityClass}"
+    buildConfigField "java.lang.Class", "historyManagerExportHtmlBuilderClass", "${historyManagerExportHtmlBuilderClass}"
+
+    buildConfigField "androidx.fragment.app.Fragment", "settingsManagerFragment", "${settingsManagerFragment}"
+    buildConfigField "androidx.fragment.app.Fragment", "settingsManagerFragmentGeneral", "${settingsManagerFragmentGeneral}"
+    buildConfigField "androidx.fragment.app.Fragment", "settingsManagerFragmentMyView", "${settingsManagerFragmentMyView}"
+    buildConfigField "androidx.fragment.app.Fragment", "settingsManagerFragmentNotifications", "${settingsManagerFragmentNotifications}"
+    buildConfigField "java.lang.Class", "settingsGeneralActivityClass", "${settingsGeneralActivityClass}"
+    buildConfigField "java.lang.Class", "settingsMyViewActivityClass", "${settingsMyViewActivityClass}"
+    buildConfigField "java.lang.Class", "settingsNotificationsActivityClass", "${settingsNotificationsActivityClass}"
+    buildConfigField "com.paragon_software.settings_manager.MigrationHelper", "settingsMigrationHelper", "${settingsMigrationHelper}"
+    
+    buildConfigField "com.paragon_software.toolbar_manager.ToolbarFactory",
+        "toolbarFactory", "${toolbarFactory}"
+
+    buildConfigField "androidx.fragment.app.Fragment",
+            "bottomNavigationFragment", "${bottomNavigationFragment}"
+
+    buildConfigField "androidx.fragment.app.Fragment",
+            "informationFragment", "${informationFragment}"
+
+    buildConfigField 'androidx.fragment.app.Fragment',
+            'flashCardsManagerFragment', "${flashCardsManagerFragment}"
+
+    buildConfigField 'String', 'newsManagerPkey', "${newsManagerPkey}"
+    buildConfigField 'com.paragon_software.news_manager.NewsManagerAPI.Factory',
+        'newsManagerFactory', "${newsManagerFactory}"
+
+    buildConfigField 'com.paragon_software.news_manager.NewsResProviderAPI','newsResProvider', "${newsResProvider}"
+
+    buildConfigField 'androidx.fragment.app.Fragment',
+            'newsManagerFragment', "${newsManagerFragment}"
+
+    buildConfigField 'androidx.fragment.app.Fragment',
+            'newsFragmentItem', "${newsFragmentItem}"
+
+    buildConfigField 'Class',
+            'newsItemActivityClass', "${newsItemActivityClass}"
+
+    buildConfigField "com.paragon_software.license_manager_api.ActivateSource[]",
+        "activationSources", "${activationSources}"
+
+    buildConfigField "com.paragon_software.trial_manager.TrialManagerAPI.Builder",
+        "trialManagerBuilder", "${trialManagerBuilder}"
+
+
+    buildConfigField "com.paragon_software.analytics_manager.AnalyticsManagerAPI", "analyticsManager",
+        "${analyticsManager}"
+
+    buildConfigField "com.paragon_software.word_of_day.WotDManagerAPI.Factory",
+            "wotDManagerFactory", "${wotDManagerFactory}"
+    buildConfigField "com.paragon_software.word_of_day.WotDResProviderAPI.Factory",
+            "wotDManagerResProviderFactory", "${wotDManagerResProviderFactory}"
+    buildConfigField "java.lang.Class", "wotDManagerItemActivityClass", "${wotDManagerItemActivityClass}"
+    buildConfigField "androidx.fragment.app.Fragment", "wotDManagerListFragment", "${wotDManagerListFragment}"
+
+    buildConfigField "androidx.fragment.app.Fragment", "wotDManagerItemFragment", "${wotDManagerItemFragment}"
+    buildConfigField "com.paragon_software.quiz.QuizManagerAPI.Factory",
+            "quizManagerFactory", "${quizManagerFactory}"
+    buildConfigField "java.lang.Class", "quizManagerActivityClass", "${quizManagerActivityClass}"
+    buildConfigField "java.lang.Class", "quizManagerAchievementActivityClass", "${quizManagerAchievementActivityClass}"
+    buildConfigField "java.lang.Class", "quizManageStatisticActivityClass", "${quizManageStatisticActivityClass}"
+    buildConfigField "androidx.fragment.app.Fragment", "quizManagerListFragment", "${quizManagerListFragment}"
+    buildConfigField "androidx.fragment.app.Fragment", "quizManagerFragment", "${quizManagerFragment}"
+    buildConfigField "androidx.fragment.app.Fragment", "quizManagerFragmentTablet", "${quizManagerFragmentTablet}"
+    buildConfigField "androidx.fragment.app.Fragment", "quizManagerStatisticFragment", "${quizManagerStatisticFragment}"
+    buildConfigField "androidx.fragment.app.Fragment", "quizManagerAchievementFragment", "${quizManagerAchievementFragment}"
+    buildConfigField "com.paragon_software.quiz.QuizProgressListFactoryAPI", "quizManagerProgressListFactory", "${quizManagerProgressListFactory}"
+    buildConfigField "com.paragon_software.quiz.QuizAchievementsGeneratorAPI.Factory", "quizManagerAchievementsGeneratorFactory", "${quizManagerAchievementsGeneratorFactory}"
+
+    buildConfigField "com.paragon_software.information_manager.InformationManagerFactoryAPI", "informationManagerFactory",
+        "${informationManagerFactory}"
+
+    buildConfigField "com.paragon_software.hint_manager.HintManagerAPI.Factory", "hintManagerFactory", "${hintManagerFactory}"
+    buildConfigField "com.paragon_software.hint_manager.HintUIHelperAPI", "hintManagerUIHelper", "${hintManagerUIHelper}"
+
+    buildConfigField "com.paragon_software.splash_screen_manager.ISplashScreen.Factory[]", "startScreensFactories",
+        "${startScreensFactories}"
+    buildConfigField "com.paragon_software.information_manager.InformationManagerFactoryAPI.InformationScreenFactory", "ppInformationScreenFactory",
+        "${ppInformationScreenFactory}"
+    buildConfigField "com.paragon_software.information_manager.InformationManagerFactoryAPI.InformationScreenFactory", "eulaInformationScreenFactory",
+        "${eulaInformationScreenFactory}"
+
+    buildConfigField "java.lang.Class", "aboutActivityClass",
+            "${aboutActivityClass}"
+
+    buildConfigField 'com.paragon_software.navigation_manager.NavigationManagerApi', 'navigationManager',
+        "${navigationManager}"
+    buildConfigField 'com.paragon_software.navigation_manager.NavigationUiApi.Factory', 'navigationUiFactory',
+        "${navigationUiFactory}"
+    buildConfigField 'com.paragon_software.navigation_manager.NavigationUiApi.Factory', 'navigationUiFactoryTablet',
+        "${navigationUiFactoryTablet}"
+
+    buildConfigField 'boolean', 'useTabletOpener ',
+            "${useTabletOpener }"
+
+    buildConfigField 'com.paragon_software.information_manager.InformationManagerFactoryAPI.InformationScreenFactory', 'rateAppIntentFactory',
+            "${rateAppIntentFactory}"
+    
+    buildConfigField 'com.paragon_software.flash_cards_manager.FlashcardManagerAPI', 'flashcardManager',
+            "${flashcardManager}"
+
+    buildConfigField 'com.paragon_software.flash_cards_manager.FlashcardExchangerAPI.Factory', 'flashcardExchangerFactory',
+            "${flashcardExchangerFactory}"
+
+    buildConfigField "com.paragon_software.sound_manager.OnlineSoundApi.Factory",
+            "onlineSoundFactory", "${onlineSoundFactory}"
+            
+    buildConfigField "com.paragon_software.user_core_manager.UserCoreManagerAPI.Factory",
+        "userCoreManagerFactory", "${userCoreManagerFactory}"
+
+    buildConfigField "java.lang.Class",
+        "userCoreManagerActivityClass", "${userCoreManagerActivityClass}"
+
+    buildConfigField "androidx.fragment.app.DialogFragment",
+            "userCoreManagerLoginDialog", "${userCoreManagerLoginDialog}"
+
+    buildConfigField "androidx.fragment.app.DialogFragment",
+            "userCoreManagerResetPasswordDialog", "${userCoreManagerResetPasswordDialog}"
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  signingConfigs {
+    if (project.hasProperty("KEY_STORE_FILE") && file(KEY_STORE_FILE).isFile() &&
+        project.hasProperty("KEY_STORE_PASSWORD") && project.hasProperty("KEY_STORE_ALIAS") &&
+        project.hasProperty("KEY_PASSWORD"))
+    {
+      ''
+      release {
+        storeFile file(KEY_STORE_FILE)
+        storePassword KEY_STORE_PASSWORD
+        keyAlias KEY_STORE_ALIAS
+        keyPassword KEY_PASSWORD
+      }
+    } else if ("" != "$System.env.KEY_STORE_FILE" && file("$System.env.KEY_STORE_FILE").isFile())
+    {
+      release {
+        storeFile file("$System.env.KEY_STORE_FILE")
+        storePassword "$System.env.KEY_STORE_PASSWORD"
+        keyAlias "$System.env.KEY_STORE_ALIAS"
+        keyPassword "$System.env.KEY_PASSWORD"
+      }
+    }
+  }
+
+  flavorDimensions 'pdahpc', 'lokalise'
+  productFlavors {
+    pdahpc {
+      dimension 'pdahpc'
+    }
+    lokalise {
+      dimension 'lokalise'
+    }
+  }
+
+  aaptOptions {
+    noCompress 'txt', 'sdc'
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled true
+      shrinkResources true
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      if (signingConfigs.hasProperty("release"))
+      {
+        signingConfig signingConfigs.release
+      }
+    }
+    debug {}
+  }
+
+  lintOptions {
+    warning 'InvalidPackage'
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+dependencies {
+  testImplementation "junit:junit:${setJUnitVersion}"
+  androidTestImplementation "androidx.test.ext:junit:${setTestRunnerVersion}"
+  androidTestImplementation "androidx.test.espresso:espresso-core:${setEspressoCoreVersion}"
+
+  implementation slovoedLib('settings_manager', packageVersionNameSM)
+  implementation slovoedLib('dictionary_manager_paragon', packageVersionNameDM)
+  implementation slovoedLib('dictionary_manager_factory', packageVersionNameDMF)
+
+  if ('0' != "${enableOald10Ui}")
+    implementation slovoedLib('oald10_ui', packageVersionNameOALD10UI)
+  if ('0' != "${enableBilingualUi}")
+    implementation slovoedLib('bilingual_ui', packageVersionNameBILINGUALUI)
+  if ('0' != "${enableDudenUi}")
+    implementation slovoedLib('duden_ui', packageVersionNameDUDENUI)
+
+  if ( '0' != "${enableDictionaryManagerUiSlovoed}" )
+    implementation slovoedLib('dictionary_manager_ui', packageVersionNameDMU)
+//  implementation slovoedLib('license_manager', packageVersionNameLM)
+  if ('0' != "${enableSettingsManagerGoogleDrive}")
+    implementation slovoedLib('settings_manager_google_drive', packageVersionNameSMG)
+
+  if ( '0' != "${enableSearchManagerUiSlovoed}" )
+    implementation slovoedLib('search_manager_ui', packageVersionNameSEARCHUISLOVOED)
+
+  if ( '0' != "${enableLicenseManagerActivateDemo}" )
+    implementation slovoedLib('license_manager_activate_demo', packageVersionNameLMD)
+  if ( '0' != "${enableLicenseManagerActivateDemoPurchase}" )
+    implementation slovoedLib('license_manager_activate_demo_purchase', packageVersionNameLMDP)
+  if ( '0' != "${enableLicenseManagerActivateTrial}" )
+    implementation slovoedLib('license_manager_activate_trial', packageVersionNameLMT)
+  if ('0' != enableLicenseManagerActivateGooglePlay)
+    implementation slovoedLib('license_manager_activate_google_play_factory', packageVersionNameLMGP)
+  if ('0' != enableLicenseManagerActivateFree)
+    implementation slovoedLib('license_manager_activate_free', packageVersionNameLMF)
+
+  if ( '0' != "${enableSettingsManagerUiSlovoed}" )
+    implementation slovoedLib('settings_manager_ui', packageVersionNameSETTINGSMANAGERUI)
+
+  implementation slovoedLib('search_manager', packageVersionNamePSM)
+  implementation slovoedLib('toolbar_manager', packageVersionNameTM)
+
+  implementation slovoedLib('favorites_manager', packageVersionNameFM)
+  if( '0' != "${enableFavoritesManagerUiSlovoed}")
+    implementation slovoedLib('favorites_manager_ui', packageVersionNameFAVORITESMANAGERUI)
+
+  implementation slovoedLib('history_manager', packageVersionNameHM)
+  if ( '0' != "${enableHistoryManagerUiSlovoed}" )
+    implementation slovoedLib('history_manager_ui', packageVersionNameHISTORYMANAGERUI)
+
+  if ('0' != "${enableToolbarManagerUiSlovoed}")
+    implementation slovoedLib('toolbar_manager_ui', packageVersionNameTMU)
+
+  implementation slovoedLib('article_manager', packageVersionNameSAM)
+  if ('0' != "${enableArticleUiSlovoed}")
+    implementation slovoedLib('article_manager_ui', packageVersionNameAMU)
+
+  implementation slovoedLib('news_manager_api', packageVersionNameNEWSMANAGERAPI)
+
+  if ('0' != "${enableNewsManagerFirebase}")
+  {
+    // news_manager uses shdd.android.components.news v2.+ with Firebase Cloud Messaging (project would require google-services.json config file)
+    implementation slovoedLib('news_manager', packageVersionNameNM)
+    // fix firebase/google play dependencies conflicts with shdd.android.components.news v2.+
+    implementation 'com.google.android.gms:play-services-basement:16.2.0'
+  }
+  if ('0' != "${enableNewsManagerUiSlovoed}")
+  {
+    implementation slovoedLib('news_manager_ui', packageVersionNameNMU)
+  }
+
+  implementation slovoedLib('native_engine', packageVersionNameSE)
+
+  implementation slovoedLib('testmode', packageVersionNameTSM)
+  implementation slovoedLib('testmode_ui', packageVersionNameTSMU)
+
+  if ('0' != "${enableAboutSlovoedUi}")
+  {
+    implementation slovoedLib('about_manager_ui', packageVersionNameABMU)
+  }
+  implementation slovoedLib('about_manager_paragon', packageVersionNameABOUTMANAGERPARAGON)
+
+  implementation slovoedLib('splash_screen_manager_paragon', packageVersionNameSSM)
+
+  if ('0' != "${enableSplashScreenUiSlovoed}") {
+    implementation slovoedLib('splash_screen_manager_ui', packageVersionNameSSMU)
+  }
+
+  if ('0' != "${enableAgreementSlovoedUi}")
+    implementation slovoedLib('agreement_slovoed_ui', packageVersionNameAGREEMENTSLOVOEDUI)
+
+//  implementation slovoedLib('trial_manager', packageVersionNameTRM)
+
+  implementation slovoedLib('navigation_manager', packageVersionNameNAVIGATIONMANAGER)
+  if ('0' != "${enableNavigationManagerUiSlovoed}")
+    implementation slovoedLib('navigation_manager_ui', packageVersionNameNAVIGATIONMANAGERUI)
+
+  implementation slovoedLib('information_manager_paragon', packageVersionNameINFORMATIONMANAGERPARAGON)
+
+  if('0' != "${enableInformationUiSlovoed}")
+  implementation slovoedLib('information_manager_ui', packageVersionNameINFORMATIONMANAGERUI)
+
+  implementation slovoedLib('hint_manager_api', packageVersionNameHINTMANAGERAPI)
+  if('0' != "${enableHintManager}")
+  {
+    implementation slovoedLib('hint_manager', packageVersionNameHINTMANAGER)
+  }
+
+  implementation slovoedLib('sound_manager', packageVersionNameSND)
+
+  implementation slovoedLib('odapi_ui', packageVersionNameODAPIUI)
+
+  implementation slovoedLib('common_ui', packageVersionNameCOMMONUI)
+
+  if ('0' != "${enableStandardFlashcardManager}")
+    implementation slovoedLib('flash_cards_manager', packageVersionNameFLASHCARDSMANAGER)
+  if('0' != "${enableFlashcardManagerUi}")
+    implementation slovoedLib('flash_cards_manager_ui', packageVersionNameFLASHCARDSMANAGERUI)
+
+  if ('0' != "${enableFirebaseAnalytics}")
+  {
+    implementation slovoedLib('firebase_analytics_paragon', packageVersionNameFIREBASEANALYTICS)
+  }
+  else
+  {
+    implementation slovoedLib('analytics_manager_api', packageVersionNameANALYTICSMANAGERAPI)
+  }
+
+  implementation slovoedLib('word_of_day_manager_api', packageVersionNameWOTDAPI)
+  if ( '0' != "${enableWordOfTheDayManager}" )
+    implementation slovoedLib('word_of_day_manager', packageVersionNameWOTD)
+
+  implementation slovoedLib('quiz_manager_api', packageVersionNameQUIZAPI)
+  if ( '0' != "${enableQuizManager}" )
+    implementation slovoedLib('quiz_manager', packageVersionNameQUIZ)
+
+  if ( '0' != "${enableUserCoreManagerAces}" )
+    implementation slovoedLib('user_core_manager_aces', packageVersionNameUSERCOREMANAGERACES)
+  if ('0' != "${enableUserCoreManagerEac}")
+    implementation slovoedLib('user_core_manager_eac', packageVersionNameUSERCOREMANAGEREAC)
+
+  implementation "com.google.android.material:material:${setAndroidXLibrariesVersion}"
+  implementation "androidx.constraintlayout:constraintlayout:${setConstraintLayoutVersion}"
+  implementation "androidx.legacy:legacy-support-v4:${setAndroidXLibrariesVersion}"
+  implementation "androidx.appcompat:appcompat:${setAndroidXAppCompatVersion}"
+  implementation "androidx.recyclerview:recyclerview:${setAndroidXRecyclerViewVersion}"
+  implementation "androidx.cardview:cardview:${setAndroidXLibrariesVersion}"
+}
+
+if ('0' != "${enableFirebaseAnalytics}" || '0' != "${enableNewsManagerFirebase}")
+{
+  buildscript {
+    // Set 'process*GoogleServices' tasks from 'com.google.gms.google-services' plugin to run after our
+    // 'prepareSrc' task to guarantee what google-services.json file would be already downloaded from PDAHPC
+//    afterEvaluate { project ->
+//      if (project.tasks.findByName('processPdahpcLokaliseDebugGoogleServices')){
+//        project.tasks["processPdahpcLokaliseDebugGoogleServices"].dependsOn rootProject.tasks["prepareSrc"]
+//      }
+//      if (project.tasks.findByName('processPdahpcLokaliseReleaseGoogleServices')){
+//        project.tasks["processPdahpcLokaliseReleaseGoogleServices"].dependsOn rootProject.tasks["prepareSrc"]
+//      }
+//    }
+  }
+
+  println "Apply 'com.google.gms.google-services' plugin"
+  apply plugin: 'com.google.gms.google-services'
+}
+
+//TODO way to disable unnecessary modules
+//configurations {
+//  compile.exclude module: 'utils_slovoed_ui'
+//}
+//
+
+buildscript {
+  afterEvaluate { project ->
+    // run 'dependencies' task before build to show dependencies tree in logs
+    // NOTE: run after 'preBuild' not after 'build' task because it is much faster (found it out empirically)
+    if ( runAppDependenciesTask == '1' && project.tasks.findByName('preBuild') && project.tasks.findByName('dependencies')){
+      project.tasks["preBuild"].finalizedBy project.tasks["dependencies"]
+      // unfortunately didn't find out how to set '--configuration' command line option for 'dependencies'
+      // task to reduce and filter its output. Maybe it is not possible in gradle at all
+      // (as documented here https://docs.gradle.org/current/userguide/custom_tasks.html#limitations )
+    }
+  }
+}

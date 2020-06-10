@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.history_manager')
+  getTeamCityProperty('setApplicationName', 'history_manager')
+  getTeamCityProperty('setApplicationDescription', 'History manager implementation')
+
+  getPackageVersion('HM')
+}

@@ -1,0 +1,11 @@
+apply from: '../../slovoed/app/build.gradle'
+android {
+    sourceSets {
+        main {
+            java.srcDirs += '../../slovoed/app/src/main/java'
+            res.srcDirs += '../../slovoed/app/src/main/res'
+            assets.srcDirs += '../../slovoed/app/src/main/assets'
+            manifest.srcFile '../../slovoed/app/src/main/AndroidManifest.xml'
+        }
+    }
+}

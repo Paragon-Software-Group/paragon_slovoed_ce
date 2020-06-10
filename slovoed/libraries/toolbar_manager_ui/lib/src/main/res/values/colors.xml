@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toolbar_manager_background_color">#e0e0e0</color>
+    <color name="toolbar_manager_selection_mode_background_color">#7a818e</color>
+    <color name="toolbar_manager_selection_mode_title_color">#FFFAFAFA</color>
+</resources>

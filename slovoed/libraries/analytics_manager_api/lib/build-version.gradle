@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.analytics_manager_api')
+  getTeamCityProperty('setApplicationName', 'analytics_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'AnalyticsManagerApi')
+
+  getPackageVersion('SM')
+}

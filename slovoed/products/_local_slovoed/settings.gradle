@@ -1,0 +1,1 @@
+apply from: '../slovoed/settings.gradle'

@@ -1,0 +1,7 @@
+apply from: '../../gradle/local_build_settings.gradle'
+
+include ':lib'
+
+slovoedProjects (
+        'splash_screen_manager_api'
+)

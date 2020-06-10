@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.agreement_screen_manager_ui')
+  getTeamCityProperty('setApplicationName', 'agreement_screen_manager_ui')
+  getTeamCityProperty('setApplicationDescription', 'UI for agreement screen')
+
+  getPackageVersion('UTILSSLOVOEDUI')
+}

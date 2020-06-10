@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.flash_cards_manager')
+  getTeamCityProperty('setApplicationName', 'flash_cards_manager')
+  getTeamCityProperty('setApplicationDescription', 'flash cards manager')
+
+  getPackageVersion('FLASHCARDSMANAGERAPI')
+}

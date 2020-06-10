@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.paragon_software.slovoed">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+            android:name=".SlovoedApplication"
+            android:allowBackup="true"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:networkSecurityConfig="@xml/network_security_config">
+        <activity
+                android:name=".MainActivity"
+                android:windowSoftInputMode="adjustPan|stateHidden"
+                android:launchMode="singleTask"/>
+
+        <provider
+                android:name="com.paragon_software.favorites_manager.FavoritesManagerFileProvider"
+                android:authorities="${applicationId}.favorites_manager.fileprovider"
+                tools:replace="android:authorities">
+        </provider>
+
+        <provider
+                android:name="com.paragon_software.history_manager.HistoryManagerFileProvider"
+                android:authorities="${applicationId}.history_manager.fileprovider"
+                tools:replace="android:authorities">
+        </provider>
+        <provider
+                android:name="com.paragon_software.word_of_day.WotDFileProvider"
+                android:authorities="${applicationId}.word_of_day.fileprovider"
+                tools:replace="android:authorities">
+        </provider>
+
+    </application>
+
+</manifest>

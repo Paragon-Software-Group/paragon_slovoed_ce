@@ -1,0 +1,12 @@
+// *** IMPORTANT NOTE ***
+//
+// Please, do not change the structure of this file. Just change a content of
+// the predefined variables. Read the project documentation for more details.
+
+ext {
+    packageName = 'shdd.android.components.httpdownloader'
+    majorVersion = 1
+    minorVersion = 1
+    patchVersion = 1
+    prereleaseSuffix = 'alpha'
+}

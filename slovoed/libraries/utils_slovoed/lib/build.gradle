@@ -1,0 +1,64 @@
+apply plugin: 'com.android.library'
+apply from: 'build-version.gradle'
+apply from: '../../../gradle/publish.gradle'
+apply from: '../../../gradle/jacoco.gradle'
+
+android {
+  compileSdkVersion setCompileSdkVersion.toInteger()
+
+  defaultConfig {
+    minSdkVersion setMinSdkVersion.toInteger()
+    targetSdkVersion setTargetSdkVersion.toInteger()
+    versionCode setVersionCode.toInteger()
+    versionName setVersionName
+
+    buildConfigField "String", "packageVersionName", "\"${packageVersionName}\""
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    consumerProguardFiles 'proguard-public.pro'
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+    debug {}
+  }
+
+  lintOptions {
+    warning 'InvalidPackage'
+  }
+}
+
+apply from: '../../../gradle/javadoc.gradle'
+
+dependencies {
+  testImplementation "junit:junit:${setJUnitVersion}"
+  testImplementation "org.mockito:mockito-core:${setMockitoCoreVersion}"
+  androidTestImplementation "androidx.test.ext:junit:${setTestRunnerVersion}"
+  androidTestImplementation "androidx.test.espresso:espresso-core:${setEspressoCoreVersion}"
+
+  implementation "com.google.code.gson:gson:${setGSONVersion}"
+  implementation ("org.simpleframework:simple-xml:${setSimpleXmlVersion}") {
+    exclude module: 'stax'
+    exclude module: 'stax-api'
+    exclude module: 'xpp3'
+  }
+
+  api "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+  //javadocDeps "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+  implementation "androidx.legacy:legacy-support-v4:${setAndroidXLibrariesVersion}"
+  //javadocDeps("androidx.legacy:legacy-support-v4:${setAndroidXLibrariesVersion}")
+  implementation "androidx.appcompat:appcompat:${setAndroidXAppCompatVersion}"
+  //javadocDeps("androidx.appcompat:appcompat:${setAndroidXAppCompatVersion}")
+  implementation "androidx.recyclerview:recyclerview:${setAndroidXRecyclerViewVersion}"
+  //javadocDeps "androidx.recyclerview:recyclerview:${setAndroidXRecyclerViewVersion}"
+
+  api slovoedLib('settings_manager_api', packageVersionNameSETTINGSMANAGERAPI)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.settings_manager_api:${packageVersionNameSETTINGSMANAGERAPI}")
+
+  api slovoedLib('utils_core_api', packageVersionNameUTILSCORE)
+//  javadocDeps("com.paragon_software.components:com.paragon_software.utils_slovoed:${packageVersionNameUTILSCORE}")
+}

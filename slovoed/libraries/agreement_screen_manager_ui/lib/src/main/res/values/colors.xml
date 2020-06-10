@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="buttonsContainerBackgroundColor">#F5F5F5</color>
+
+    <color name="paragonLogoColor">#F37400</color>
+
+    <color name="linkColor">#3B3E8B</color>
+    <color name="agreementBtnTextColor">@android:color/white</color>
+    <color name="agreementBtnColor">#1FB429</color>
+    <color name="disagreementBtnTextColor">@android:color/white</color>
+    <color name="disagreementBtnColor">#A5A5A5</color>
+</resources>

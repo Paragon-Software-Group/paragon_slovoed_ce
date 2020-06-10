@@ -1,0 +1,13 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.quiz_manager_api')
+  getTeamCityProperty('setApplicationName', 'quiz_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'Quiz Manager API')
+
+  getPackageVersion('SM')
+  getPackageVersion('NATIVE_ENGINE_API')
+  getPackageVersion('SCREEN_OPENER_API')
+  getPackageVersion('SOUND_MANAGER_API')
+  getPackageVersion('HINTMANAGERAPI')
+}

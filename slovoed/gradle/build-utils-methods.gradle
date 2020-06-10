@@ -1,0 +1,42 @@
+ext {
+  getTeamCityProperty = { propertyName, defaultValue ->
+    if (!project.hasProperty("${propertyName}"))
+    {
+      project.ext["${propertyName}"] = "${defaultValue}"
+    }
+  }
+
+  getPackageVersion = { packageName ->
+    if (!project.hasProperty("${packageName}buildCounterAPI"))
+    {
+      project.ext["packageVersionName${packageName}"] = "${setVersionName}.+"
+    } else
+    {
+      def apiVersion = project.ext["${packageName}buildCounterAPI"]
+      if (project.hasProperty("${packageName}buildCounterAPIMavenBranch"))
+      {
+        def branchName = project.ext["${packageName}buildCounterAPIMavenBranch"]
+        project.ext["packageVersionName${packageName}"] = "${setVersionName}.$apiVersion-$branchName"
+      } else
+      {
+        project.ext["packageVersionName${packageName}"] = "${setVersionName}.$apiVersion"
+      }
+    }
+	println 'packageVersionName' + packageName + ' = ' + project.ext["packageVersionName${packageName}"]
+  }
+  
+  getArrayInitializer = { arrayValues, propertyName, needValue, arrayObject ->
+    String
+    if ("${needValue}" == project.ext["${propertyName}"])
+      {
+        def result = arrayValues
+          if (1 != arrayValues.size())
+          {
+            result = result + ','
+          }
+          result = result + "${arrayObject}"
+          return result
+      }
+      return arrayValues
+  }
+}

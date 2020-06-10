@@ -1,0 +1,13 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.flash_cards_manager_api')
+  getTeamCityProperty('setApplicationName', 'flash_cards_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'flash cards manager api')
+
+  getPackageVersion('SCREEN_OPENER_API')
+  getPackageVersion('NATIVEENGINEAPI')
+  getPackageVersion('SETTIINGSMANAGERAPI')
+  getPackageVersion('SOUNDMANAGERAPI')
+  getPackageVersion('US')
+}

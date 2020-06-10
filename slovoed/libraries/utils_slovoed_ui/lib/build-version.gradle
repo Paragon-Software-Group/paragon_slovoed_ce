@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.utils_slovoed_ui')
+  getTeamCityProperty('setApplicationName', 'utils_slovoed_ui')
+  getTeamCityProperty('setApplicationDescription', 'Slovoed ui classes and resources')
+
+  getPackageVersion('COMMONUI')
+}

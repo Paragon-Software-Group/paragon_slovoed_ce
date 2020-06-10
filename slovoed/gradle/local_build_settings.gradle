@@ -1,0 +1,8 @@
+ext.slovoedProjects = { String... list ->
+	list.each {
+		if ( new File("../../libraries/${it}/lib").exists() ) {
+		    include ":${it}"
+		    project(":${it}").projectDir = new File("../../libraries/${it}/lib")
+		}
+	}
+}

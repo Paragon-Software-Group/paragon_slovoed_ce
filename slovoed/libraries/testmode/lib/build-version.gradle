@@ -1,0 +1,13 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.testmode')
+  getTeamCityProperty('setApplicationName', 'testmode')
+  getTeamCityProperty('setApplicationDescription', 'Testmode Implementation')
+
+  getPackageVersion('DM')
+  getPackageVersion('NE')
+  getPackageVersion('NM')
+  getPackageVersion('FM')
+  getPackageVersion('HM')
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/history_list_item_height_material"
+              android:background="?android:attr/listChoiceBackgroundIndicator">
+
+    <ImageView
+        android:id="@+id/dictionary_icon"
+        android:layout_width="@dimen/history_list_item_icon_size_material"
+        android:layout_height="@dimen/history_list_item_icon_size_material"
+        android:scaleType="fitCenter"
+        android:layout_marginStart="@dimen/history_list_item_left_right_margin_material"
+        android:layout_marginEnd="@dimen/history_list_item_left_right_margin_material"
+        android:layout_gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/history_item_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAppearance="?android:attr/textAppearanceListItem"
+        android:layout_marginEnd="@dimen/history_list_item_left_right_margin_material"
+        android:layout_marginTop="@dimen/history_list_item_top_bottom_margin_material"
+        android:layout_marginBottom="@dimen/history_list_item_top_bottom_margin_material"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/history_item_sound"
+        android:padding="@dimen/history_list_item_sound_icon_padding"
+        android:layout_width="@dimen/history_list_item_sound_icon_size"
+        android:layout_height="@dimen/history_list_item_sound_icon_size"
+        android:layout_marginEnd="@dimen/history_list_item_left_right_margin_material"
+        android:layout_marginTop="@dimen/history_list_item_top_bottom_margin_material"
+        android:layout_marginBottom="@dimen/history_list_item_top_bottom_margin_material"
+        android:src="@drawable/ic_volume_up_black_48dp"
+        android:tint="@color/sound_icon"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/history_item_direction_icon"
+        android:src="@android:drawable/presence_invisible"
+        android:layout_width="@dimen/history_list_item_direction_icon_size"
+        android:layout_height="@dimen/history_list_item_direction_icon_size"
+        android:layout_marginEnd="@dimen/history_list_item_left_right_margin_material"
+        android:layout_marginTop="@dimen/history_list_item_top_bottom_margin_material"
+        android:layout_marginBottom="@dimen/history_list_item_top_bottom_margin_material"
+        android:layout_gravity="center" />
+
+    <CheckBox
+        android:id="@+id/history_item_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/history_list_item_left_right_margin_material"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>

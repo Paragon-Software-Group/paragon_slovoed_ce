@@ -1,0 +1,80 @@
+import java.util.zip.ZipFile
+
+configurations {
+  javadocDeps
+}
+
+task javadoc(type: Javadoc) {
+  failOnError false
+  source = android.sourceSets.main.java.sourceFiles
+  source += "$buildDir/generated/source/aidl/release/"
+  excludes += "**/R.java"
+  if (project.hasProperty('setJavaDocExclude'))
+  {
+    excludes += "${setJavaDocExclude}"
+  }
+  classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+  classpath += configurations.compile
+  classpath += configurations.javadocDeps
+  afterEvaluate {
+    classpath += files(android.getBootClasspath())
+    // Process AAR dependencies
+    def item = 0;
+    def aarDependencies = classpath.filter { it.name.endsWith('.aar') }
+    classpath -= aarDependencies
+    aarDependencies.each { aar ->
+      // Extract classes.jar from the AAR dependency, and add it to the javadoc classpath
+      def outputPath = "$buildDir/tmp/aarJar/${aar.name.replace('.aar', '.jar')}"
+      classpath += files(outputPath)
+
+      // Use a task so the actual extraction only happens before the javadoc task is run
+      dependsOn task(name: "extract_${aar.name}_${item}").doLast {
+        extractEntry(aar, 'classes.jar', outputPath)
+      }
+      item++
+    }
+  }
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+  classifier = 'javadoc'
+  from javadoc.destinationDir
+}
+
+artifacts {
+  archives javadocJar
+}
+
+// Utility method to extract only one entry in a zip file
+private static def extractEntry (archive, entryPath, outputPath)
+{
+  if (archive.exists())
+  {
+    def zip = new ZipFile(archive)
+
+    zip.entries().each {
+      if (it.name == entryPath)
+      {
+        def path = new File(outputPath)
+
+        if (!path.exists())
+        {
+          path.getParentFile().mkdirs()
+
+          // Surely there's a simpler is->os utility except
+          // the one in java.nio.Files? Ah well...
+          def buf = new byte[1024]
+          def is = zip.getInputStream(it)
+          def os = new FileOutputStream(path)
+          def len
+
+          while ((len = is.read(buf)) != -1)
+          {
+            os.write(buf, 0, len)
+          }
+          os.close()
+        }
+      }
+    }
+    zip.close()
+  }
+}

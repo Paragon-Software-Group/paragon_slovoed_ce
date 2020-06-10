@@ -1,0 +1,10 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.sound_manager')
+  getTeamCityProperty('setApplicationName', 'sound_manager')
+  getTeamCityProperty('setApplicationDescription', 'Sound manager implementation')
+
+  getPackageVersion('SND')
+  getPackageVersion('DM')
+}

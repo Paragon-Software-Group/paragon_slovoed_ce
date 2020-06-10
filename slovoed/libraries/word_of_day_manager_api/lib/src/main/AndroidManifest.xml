@@ -1,0 +1,16 @@
+<manifest
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        package="com.paragon_software.word_of_day_manager_api">
+
+    <application>
+        <provider
+                android:name="com.paragon_software.word_of_day.WotDFileProvider"
+                android:authorities="com.paragon_software.word_of_day.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_provider_paths"/>
+        </provider>
+    </application>
+</manifest>

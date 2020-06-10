@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="-6dp"
+            android:layout_above="@id/buttons_container">
+
+        <LinearLayout
+                android:id="@+id/legal_notice_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:id="@+id/logo_icon"
+                    android:src="@drawable/ic_paragon_logo"
+                    android:layout_width="@dimen/agreement_logo_width"
+                    android:layout_height="@dimen/agreement_logo_height"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center"/>
+
+            <TextView
+                    android:id="@+id/agree_instruction_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="30dp"/>
+
+            <TextView
+                    android:id="@+id/main_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColorLink="@color/linkColor"/>
+
+            <TextView
+                    android:id="@+id/last_updated"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="5dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    app:layout_constraintTop_toBottomOf="@+id/main_text"/>
+
+            <TextView
+                    android:id="@+id/subject_to_change"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColorLink="@color/linkColor"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/buttons_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_top_shadow"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_alignParentBottom="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/disagreement_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/disagreementBtnTextColor"
+                android:backgroundTint="@color/disagreementBtnColor"
+                android:text="@string/agreement_screen_manager_ui_disagree"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/agreement_button"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintWidth_percent="0.5"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/agreement_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/agreementBtnTextColor"
+                android:backgroundTint="@color/agreementBtnColor"
+                android:text="@string/utils_slovoed_ui_agree"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/disagreement_button"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintWidth_percent="0.5"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.paragon_software.about_manager_ui">
+
+    <application>
+        <activity android:name="com.paragon_software.about_manager.AboutActivity"
+                  android:launchMode="singleTop"/>
+    </application>
+</manifest>

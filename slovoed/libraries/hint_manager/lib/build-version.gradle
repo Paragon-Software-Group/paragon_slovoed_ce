@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.hint_manager')
+  getTeamCityProperty('setApplicationName', 'hint_manager')
+  getTeamCityProperty('setApplicationDescription', 'Hint manager implementation')
+
+  getPackageVersion('HM')
+}

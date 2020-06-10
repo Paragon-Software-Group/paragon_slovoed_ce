@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/scroller"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:gravity="top">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:descendantFocusability="blocksDescendants"
+            android:background="@color/buy_activity_background_color"
+            android:paddingLeft="@dimen/buy_activity_horizontal_padding"
+            android:paddingRight="@dimen/buy_activity_horizontal_padding">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/buy_activity_dictionary_icon_bottom_margin"
+                android:orientation="horizontal">
+
+            <ImageView
+                    android:id="@+id/dictionary_icon_image_view"
+                    android:layout_width="@dimen/dictionary_description_icon_size"
+                    android:layout_height="@dimen/dictionary_description_icon_size"
+                    style="@style/DictionaryCardImageStyle"
+                    android:layout_gravity="center_vertical"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dictionary_description_icon_size">
+
+                <TextView
+                        android:id="@+id/dictionary_description_label_text_view"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/DictionaryTitleTextStyle"
+                        android:textStyle="bold"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/buy_activity_dictionary_title_text_size"
+                        android:layout_marginLeft="@dimen/buy_activity_dictionary_title_vertical_margin"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/preview_sample_buttons_container"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dictionary_description_label_text_view"
+                        android:layout_marginLeft="@dimen/buy_activity_dictionary_title_vertical_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintVertical_bias="1.0">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/go_to_my_dictionaries_button"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dictionary_button_height"
+                            android:text="@string/utils_slovoed_ui_go_to_my_dictionaries"
+                            style="@style/DictionaryButtonStyle"
+                            app:backgroundTint="@color/dictionary_preview_button_color"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/dictionary_open_button"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dictionary_button_height"
+                            android:text="@string/dictionary_manager_ui_my_dictionary_open"
+                            style="@style/DictionaryButtonStyle"
+                            app:backgroundTint="@color/dictionary_preview_button_color"
+                            app:layout_constraintTop_toBottomOf="@id/go_to_my_dictionaries_button"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/preview_dictionary_button"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dictionary_button_height"
+                            style="@style/DictionaryButtonStyle"
+                            app:backgroundTint="@color/dictionary_preview_button_color"
+                            app:layout_constraintTop_toBottomOf="@id/dictionary_open_button"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/sample"
+                            android:layout_marginRight="@dimen/dictionary_button_horizontal_margin"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/sample"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dictionary_button_height"
+                            android:layout_weight="1"
+                            android:text="@string/dictionary_manager_ui_sample_button_text"
+                            style="@style/DictionaryButtonStyle"
+                            app:backgroundTint="@color/dictionary_sample_button_color"
+                            app:layout_constraintTop_toBottomOf="@id/dictionary_open_button"
+                            app:layout_constraintLeft_toRightOf="@id/preview_dictionary_button"
+                            app:layout_constraintRight_toRightOf="parent"
+                            android:layout_marginLeft="@dimen/dictionary_button_horizontal_margin"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buy_dictionary_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dictionary_button_height"
+                android:text="@string/utils_slovoed_ui_buy_or_subscribe"
+                style="@style/DictionaryButtonStyle"
+                app:backgroundTint="@color/dictionary_buy_button_color"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/subscribe_button_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:layout_marginTop="@dimen/subscribe_buttons_list_vertical_margin"
+                android:layout_marginBottom="@dimen/subscribe_buttons_list_vertical_margin"/>
+
+        <TextView
+                android:id="@+id/dictionary_description_content_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/buy_activity_dictionary_description_text_size"
+                android:textColor="@color/buy_activity_dictionary_description_text_color"
+                android:layout_margin="@dimen/buy_activity_dictionary_description_margin"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"/>
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/buy_activity_subscriptions_info_text_size"
+                android:textColor="@color/buy_activity_dictionary_description_text_color"
+                android:layout_margin="@dimen/buy_activity_dictionary_description_margin"
+                android:text="@string/dictionary_manager_ui_subscriptions_info"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

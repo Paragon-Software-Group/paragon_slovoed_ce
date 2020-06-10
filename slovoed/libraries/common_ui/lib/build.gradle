@@ -1,0 +1,81 @@
+apply plugin: 'com.android.library'
+apply from: 'build-version.gradle'
+apply from: '../../../gradle/publish.gradle'
+
+android {
+  compileSdkVersion setCompileSdkVersion.toInteger()
+
+  defaultConfig {
+    minSdkVersion setMinSdkVersion.toInteger()
+    targetSdkVersion setTargetSdkVersion.toInteger()
+    versionCode setVersionCode.toInteger()
+    versionName setVersionName
+
+    buildConfigField "String", "packageVersionName", "\"${packageVersionName}\""
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    consumerProguardFiles 'proguard-public.pro'
+  }
+
+  sourceSets {
+    main {
+      res.srcDirs += './src/main/res-article_manager'
+      res.srcDirs += './src/main/res-settings_manager'
+      res.srcDirs += './src/main/res-utils'
+    }
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+    debug {}
+  }
+
+  lintOptions {
+    warning 'InvalidPackage'
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+apply from: '../../../gradle/javadoc.gradle'
+
+dependencies {
+  testImplementation "junit:junit:${setJUnitVersion}"
+  androidTestImplementation "androidx.test.ext:junit:${setTestRunnerVersion}"
+  androidTestImplementation "androidx.test.espresso:espresso-core:${setEspressoCoreVersion}"
+
+  api ('com.sothree.slidinguppanel:library:3.4.0')
+
+  api "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+  //javadocDeps "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+  api "com.google.android.material:material:${setAndroidXLibrariesVersion}"
+  //javadocDeps "com.google.android.material:material:${setAndroidXLibrariesVersion}"
+
+  api "androidx.legacy:legacy-support-v4:${setAndroidXLibrariesVersion}"
+  //javadocDeps("androidx.legacy:legacy-support-v4:${setAndroidXLibrariesVersion}")
+  api "androidx.appcompat:appcompat:${setAndroidXAppCompatVersion}"
+  //javadocDeps("androidx.appcompat:appcompat:${setAndroidXAppCompatVersion}")
+  api "androidx.cardview:cardview:${setAndroidXLibrariesVersion}"
+  //javadocDeps("androidx.cardview:cardview:${setAndroidXLibrariesVersion}")
+  api "androidx.constraintlayout:constraintlayout:${setConstraintLayoutVersion}"
+  //javadocDeps("androidx.constraintlayout:constraintlayout:${setConstraintLayoutVersion}")
+
+  api slovoedLib('analytics_manager_api', packageVersionNameANALYTICSMANAGERAPI)
+  //javadocDeps "com.paragon_software.components:com.paragon_software.analytics_manager_api:${packageVersionNameANALYTICSMANAGERAPI}"
+
+  api slovoedLib('article_manager_api', packageVersionNameAMAPI)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.article_manager_api:${packageVersionNameAMAPI}")
+
+  api slovoedLib('navigation_manager_api', packageVersionNameNAVIGATIONMANAGERAPI)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.article_manager_api:${packageVersionNameAMAPI}")
+
+  api slovoedLib('utils_slovoed', packageVersionNameUTILSSLOVOED)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.utils_slovoed:${packageVersionNameUTILSSLOVOED}")
+}

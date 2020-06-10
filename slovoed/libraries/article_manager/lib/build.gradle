@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply from: 'build-version.gradle'
+apply from: '../../../gradle/publish.gradle'
+apply from: '../../../gradle/jacoco.gradle'
+
+android {
+  compileSdkVersion setCompileSdkVersion.toInteger()
+
+  defaultConfig {
+    minSdkVersion setMinSdkVersion.toInteger()
+    targetSdkVersion setTargetSdkVersion.toInteger()
+    versionCode setVersionCode.toInteger()
+    versionName setVersionName
+
+    buildConfigField "String", "packageVersionName", "\"${packageVersionName}\""
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+    debug {}
+  }
+
+  lintOptions {
+    warning 'InvalidPackage'
+  }
+
+  testOptions {
+    unitTests {
+      includeAndroidResources = true
+    }
+  }
+  compileOptions {
+	sourceCompatibility = 1.8
+	targetCompatibility = 1.8
+  }
+}
+
+apply from: '../../../gradle/javadoc.gradle'
+
+dependencies {
+  testImplementation "junit:junit:${setJUnitVersion}"
+  androidTestImplementation "androidx.test.ext:junit:${setTestRunnerVersion}"
+  androidTestImplementation "androidx.test.espresso:espresso-core:${setEspressoCoreVersion}"
+  testImplementation "org.mockito:mockito-core:${setMockitoCoreVersion}"
+  testImplementation "org.robolectric:robolectric:${setRobolectricVersion}"
+
+  api "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+  //javadocDeps "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+
+  api slovoedLib('analytics_manager_api', packageVersionNameANALYTICSMANAGERAPI)
+  //javadocDeps "com.paragon_software.components:com.paragon_software.analytics_manager_api:${packageVersionNameANALYTICSMANAGERAPI}"
+
+  api slovoedLib('article_manager_api', packageVersionNameAM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.article_manager_api:${packageVersionNameAM}")
+}

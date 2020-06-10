@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="favorites_manager_ui_no_favorites">Currently you do not have entries in Favorites</string>
+    <string name="favorites_manager_ui_sort">Sort</string>
+    <string name="favorites_manage_ui_clear_favorites">Clear Favorites</string>
+    <string name="favorites_manage_ui_delete_all_articles">Are you sure you want to delete all articles from your Favorites list?</string>
+    <string name="favorites_manage_ui_delete_selected_articles">Are you sure you want to delete selected articles from your Favorites list?</string>
+    <string name="favorites_manage_ui_sort_alphabetically_ascending">Alphabetically (ascending)</string>
+    <string name="favorites_manage_ui_sort_alphabetically_descending">Alphabetically (descending)</string>
+    <string name="favorites_manage_ui_sort_by_date_ascending">By date (ascending)</string>
+    <string name="favorites_manage_ui_sort_by_date_descending">By date (descending)</string>
+</resources>

@@ -1,0 +1,62 @@
+apply from: '../../../gradle/local_build.gradle'
+
+ext {
+
+  parseVersion = { versionName, versionCodeProperty ->
+    v = versionName.split('\\.')
+	assert v.length == 2
+	major = v[0].toInteger()
+	minor = v[1].toInteger()
+	assert 0 < major
+	assert 100 > major
+	assert 0 <= minor
+	assert 100 > minor
+	project.ext["${versionCodeProperty}"] = major * 100 + minor
+  }
+
+  //println 'before get team city properies'
+  //println project.getProperties().toString()
+
+  getTeamCityProperty('setMinSdkVersion', '22')
+  getTeamCityProperty('setTargetSdkVersion', '29')
+  getTeamCityProperty('setCompileSdkVersion', "$setTargetSdkVersion")
+
+  getTeamCityProperty('buildCounter', '0')
+//  getTeamCityProperty('setVersionCode', '3')
+  getTeamCityProperty('setVersionName', '1.0')  
+  parseVersion("$setVersionName", 'setVersionCode')
+
+  getTeamCityProperty('setProductVersionName', "$setVersionName")
+  parseVersion("$setProductVersionName", 'setProductVersionCode')
+
+  getTeamCityProperty('setPlayServicesAuthVersion', '16.0.1')
+  getTeamCityProperty('setFirebaseCoreVersion', '16.0.9')
+
+  getTeamCityProperty('setAndroidXLibrariesVersion', '1.0.0')
+  getTeamCityProperty('setAndroidXAppCompatVersion', '1.1.0-rc01')
+  getTeamCityProperty('setAndroidXRecyclerViewVersion', '1.1.0')
+  getTeamCityProperty('setAndroidXVectorDrawableVersion', '1.1.0')
+  getTeamCityProperty('setAndroidXBrowserVersion', '1.2.0')
+  getTeamCityProperty('setAndroidXPreferenceVersion', '1.1.1')
+  getTeamCityProperty('setConstraintLayoutVersion', '1.1.3')
+
+  getTeamCityProperty('setFlexboxVersion', '2.0.1')
+
+  getTeamCityProperty('setGSONVersion', '2.8.5')
+  getTeamCityProperty('setRxAndroidVersion', '2.1.1')
+  getTeamCityProperty('setRxJavaVersion', '2.2.18')
+  getTeamCityProperty('setRetrofitVersion', '2.6.2')
+  getTeamCityProperty('setOkHttpVersion', '4.2.1')
+  getTeamCityProperty('setSimpleXmlVersion', '2.7.1')
+
+  getTeamCityProperty('setJUnitVersion', '4.12')
+  getTeamCityProperty('setTestRunnerVersion', '1.1.1')
+  getTeamCityProperty('setEspressoCoreVersion', '3.1.0')
+  getTeamCityProperty('setMockitoCoreVersion', '2.17.0')
+  getTeamCityProperty('setRobolectricVersion', '4.3.1')
+  getTeamCityProperty('setPowermockVersion', '2.0.5')
+  getTeamCityProperty('setKsoap2Version', '3.6.2')
+
+  //println 'after get team city properies'
+  //println project.getProperties().toString()
+}

@@ -1,0 +1,38 @@
+package com.paragon_software.engine.nativewrapper;
+
+public enum WordVariant
+{
+  Show,
+  ShowSecondary,
+  SortKey,
+  PartOfSpeech,
+  Label,
+  SourceSortKey,
+  LanguageCode,
+  LockFlag,
+  Depth,
+  Phrase,
+  StylePreferences,
+  Numeration,
+  LocalizationPreferences,
+  TextBookLevelType,
+  TextBookLevelNumber,
+  TextBookLevelDescription,
+  NotSortedRealGlobalIndex,
+  GrammarInfo0,
+  GrammarInfo1,
+  GrammarInfo2,
+  GrammarInfo3,
+  GrammarInfo4,
+  GrammarInfo5,
+  GrammarInfo6,
+  GrammarInfo7,
+  GrammarInfo8,
+  TypeOfContent,
+  ExternArticleLink,
+  ExternalKey,
+  InternalKey,
+  HtmlSourceName,
+  AuthorName,
+  KesID
+}

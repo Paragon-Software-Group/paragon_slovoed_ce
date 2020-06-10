@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="paragonLogoColor">#F37400</color>
+    <color name="white">#ffffff</color>
+    <color name="remove_base_accent">#d50000</color>
+    <color name="navigation_manager_ui_lightgray">#f1f1f1</color>
+    <color name="navigation_manager_ui_darkgray">#5b5b5b</color>
+    <color name="navigation_manager_ui_orange">#ef5000</color>
+</resources>

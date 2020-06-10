@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.about_manager_api')
+  getTeamCityProperty('setApplicationName', 'about_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'AboutManagerAPI')
+  getPackageVersion('DM')
+  getPackageVersion('NE')
+}

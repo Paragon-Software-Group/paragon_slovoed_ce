@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BuyTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="actionBarStyle">@style/BuyActionBarStyle</item>
+    </style>
+
+    <style name="BuyActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="elevation">0dp</item>
+        <item name="background">@color/buy_activity_background_color</item>
+    </style>
+
+    <style name="DictionaryTitleTextStyle">
+        <item name="android:textColor">@color/dictionary_title_color</item>
+        <item name="android:textSize">@dimen/dictionary_list_element_text_size</item>
+    </style>
+
+    <style name="DictionaryStatusTextStyle">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dictionary_status_text_size</item>
+        <item name="android:textColor">@color/dictionary_status_text_color</item>
+    </style>
+
+    <style name="DictionaryButtonStyle">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/dictionary_button_text_color_selector</item>
+        <item name="android:textSize">@dimen/dictionary_button_text_size</item>
+    </style>
+
+    <style name="DictionaryDescriptionTextStyle">
+        <item name="android:textColor">@color/dictionary_description_text_color</item>
+        <item name="android:textSize">@dimen/dictionary_description_text_size</item>
+    </style>
+
+    <style name="DictionaryCardImageStyle">
+    </style>
+
+    <style name="DictionaryListStyle">
+        <item name="android:scrollbars">vertical</item>
+        <item name="layoutManager">androidx.recyclerview.widget.LinearLayoutManager</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:paddingTop">@dimen/dictionary_list_top_padding</item>
+    </style>
+
+    <style name="SocialNetworkButtonStyle">
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/preview_dialog_social_button_text_size</item>
+    </style>
+    <style name="DictionaryViewDealLabelStyle">
+        <item name="android:layout_marginTop">@dimen/dictionary_view_deal_label_margin_top</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">@dimen/dictionary_view_deal_label_text_padding</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dictionary_view_deal_label_text_size</item>
+        <item name="android:background">@drawable/dictionary_view_deal_background</item>
+    </style>
+
+    <style name="MyDictionaryListStyle">
+        <item name="android:scrollbars">vertical</item>
+        <item name="layoutManager">androidx.recyclerview.widget.LinearLayoutManager</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:paddingTop">@dimen/my_dictionaries_list_top_padding</item>
+        <item name="android:background">@color/my_dictionaries_list_background</item>
+    </style>
+
+    <style name="MyDictionariesCardStyle">
+        <item name="android:layout_marginTop">@dimen/my_dictionaries_card_margin_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/my_dictionaries_card_margin_vertical</item>
+        <item name="cardCornerRadius">0dp</item>
+        <item name="contentPaddingLeft">@dimen/my_dictionaries_card_left_padding</item>
+        <item name="contentPaddingTop">@dimen/my_dictionaries_card_top_padding</item>
+        <item name="contentPaddingRight">@dimen/my_dictionaries_card_right_padding</item>
+        <item name="contentPaddingBottom">@dimen/my_dictionaries_card_bottom_padding</item>
+    </style>
+
+    <style name="MyDictionariesComponentButton" parent="@style/Widget.AppCompat.Button">
+        <item name="android:textSize">@dimen/dictionary_button_text_size</item>
+        <item name="android:theme">@style/MyDictionariesComponentButton.SelectableItemTheme</item>
+        <item name="android:drawablePadding">@dimen/drawable_padding_remove_word_base_button</item>
+        <item name="android:padding">@dimen/my_dictionaries_component_button_padding</item>
+        <item name="android:layout_marginLeft">@dimen/my_dictionaries_component_button_horizontal_layout_margin</item>
+        <item name="android:layout_marginRight">@dimen/my_dictionaries_component_button_horizontal_layout_margin</item>
+        <item name="android:layout_marginBottom">@dimen/my_dictionaries_component_button_vertical_layout_margin</item>
+        <item name="android:layout_marginTop">@dimen/my_dictionaries_component_button_vertical_layout_margin</item>
+        <item name="android:background">@drawable/background_download_and_remove_button</item>
+    </style>
+
+    <style name="MyDictionariesComponentButton.SelectableItemTheme">
+        <item name="colorControlHighlight">@color/my_dictionaries_component_button_control_highlight</item>
+    </style>
+
+    <style name="MyDictionariesDownloadButton" parent="@style/MyDictionariesComponentButton">
+        <item name="android:textColor">@color/text_color_selector_download_base</item>
+        <item name="android:drawableLeft">@drawable/drawable_left_selector_download_base</item>
+        <item name="android:drawableStart">@drawable/drawable_left_selector_download_base</item>
+    </style>
+
+    <style name="MyDictionariesPauseButton" parent="@style/MyDictionariesComponentButton">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:drawableLeft">@drawable/drawable_left_selector_pause_base_downloading</item>
+        <item name="android:drawableStart">@drawable/drawable_left_selector_pause_base_downloading</item>
+        <item name="android:drawableRight">@drawable/drawable_stub_right_component</item>
+        <item name="android:drawableEnd">@drawable/drawable_stub_right_component</item>
+    </style>
+
+    <style name="MyDictionariesRemoveButton" parent="@style/MyDictionariesComponentButton">
+        <item name="android:textColor">@color/text_color_selector_remove_base</item>
+        <item name="android:drawableLeft">@drawable/drawable_left_selector_remove_base</item>
+        <item name="android:drawableStart">@drawable/drawable_left_selector_remove_base</item>
+    </style>
+
+    <style name="MyDictionariesPauseDownload">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:tint">@color/tint_pause_download_color</item>
+        <item name="android:layout_margin">@dimen/my_dictionaries_pause_button_margin</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="MyDictionariesStatusLabel" parent="@style/DictionaryStatusTextStyle">
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+</resources>

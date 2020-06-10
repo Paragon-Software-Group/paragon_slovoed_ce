@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="DictionaryCardImageStyle">
+        <item name="android:elevation">@dimen/dictionary_card_icon_elevation</item>
+        <item name="android:background">@drawable/dictionary_card_icon_background</item>
+    </style>
+    <style name="DictionaryViewDealLabelStyle">
+        <item name="android:layout_marginTop">@dimen/dictionary_view_deal_label_margin_top</item>
+        <item name="android:elevation">@dimen/dictionary_view_deal_label_text_elevation</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">@dimen/dictionary_view_deal_label_text_padding</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dictionary_view_deal_label_text_size</item>
+        <item name="android:background">@drawable/dictionary_view_deal_background</item>
+    </style>
+</resources>

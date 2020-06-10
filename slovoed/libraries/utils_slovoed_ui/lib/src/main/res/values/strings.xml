@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="utils_slovoed_ui_confirm">Confirm</string>
+
+    <string name="utils_slovoed_ui_trial_day_length">%1$d-day trial</string>
+    <string name="utils_slovoed_ui_buy_or_subscribe">buy or subscribe</string>
+    <string name="utils_slovoed_ui_go_to_my_dictionaries">go to \"my dictionaries\"</string>
+    <string name="utils_slovoed_ui_switch_direction">Switch direction</string>
+    <string name="utils_slovoed_ui_agree">I agree</string>
+    <string name="utils_slovoed_ui_privacy_policy">Privacy Policy</string>
+    <string name="utils_slovoed_ui_eula">End-User License Agreement</string>
+    <string name="utils_slovoed_ui_about">About</string>
+    <string name="utils_slovoed_ui_add_to_flashcards_hint">Add a flashcard</string>
+    <string name="utils_slovoed_ui_connection_unavailable">Connection unavailable</string>
+    <string name="utils_slovoed_ui_connection_lost">Connection lost</string>
+
+    <!-- SUPPORT MAIL -->
+    <string name="utils_slovoed_ui_support_mail_text_device_information_title">Application and device details</string>
+    <string name="utils_slovoed_ui_support_mail_text_android_version">Android OS version</string>
+    <string name="utils_slovoed_ui_support_mail_text_device_model">Device name</string>
+    <string name="utils_slovoed_ui_support_mail_text_dictionary_version">Dictionary version</string>
+    <string name="utils_slovoed_ui_support_mail_text_package_name">Package name</string>
+    <string name="utils_slovoed_ui_support_mail_text_external_space">Free space of memory card</string>
+    <string name="utils_slovoed_ui_support_mail_text_internal_space">Free space of internal memory</string>
+    <string name="utils_slovoed_ui_support_mail_text_card_not_mounted">Memory card is not inserted</string>
+    <string name="utils_slovoed_ui_support_mail_text_screen_resolution">Screen resolution</string>
+    <string name="utils_slovoed_ui_support_mail_text_search_engine">Search engine</string>
+    <string name="utils_slovoed_ui_support_mail_text_search_engine_version">Slovoed™ %d.%d</string>
+
+    <string name="trial_notification_title_is_over">%s trial is over</string>
+</resources>

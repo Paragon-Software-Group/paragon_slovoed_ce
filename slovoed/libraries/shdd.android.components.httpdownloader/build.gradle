@@ -1,0 +1,47 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+apply from: 'package.gradle'
+apply from: 'VERSION.gradle'
+
+ext {
+    if (!project.hasProperty('release')) { release = false }
+    if (!project.hasProperty('buildCounter')) { buildCounter = 0 }
+    if (!project.hasProperty('buildRevision')) { buildRevision = 'local' }
+    if (!project.hasProperty('mavenUser')) { mavenUser = '' }
+    if (!project.hasProperty('mavenPassword')) { mavenPassword = '' }
+
+    packageVersionName = "$majorVersion.$minorVersion.$patchVersion"
+    packageVersionCode = Integer.parseInt(sprintf('%03d%03d%03d%d', [ majorVersion, minorVersion, patchVersion, release ? 1 : 0 ]))
+
+    if (!release.toBoolean()) {
+        println("This is pre-release version")
+        packageVersionName += "-$prereleaseSuffix-$buildCounter-$buildRevision"
+    }
+
+    println("release=$release")
+    println("buildCounter=$buildCounter")
+    println("buildRevision=$buildRevision")
+    println("packageVersionName=$packageVersionName")
+    println("packageVersionCode=$packageVersionCode")
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+    }
+    buildDir "$rootDir/.build/$project.name"
+}

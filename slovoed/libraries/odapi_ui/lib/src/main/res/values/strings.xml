@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="odapi_ui_no_dictionaries">No dictionaries downloaded. Tap here to download a dictionary.</string>
+    <string name="odapi_ui_nothing_found_in_current_dir_good">No words found in %1$s. Tap here to view meanings in other dictionaries.</string>
+    <string name="odapi_ui_nothing_found_in_current_dir_bad">No words found in %1$s. Tap here to view meanings in other directions.</string>
+    <string name="odapi_ui_view_action_good">VIEW</string>
+    <string name="odapi_ui_view_action_bad">VIEW IN OTHER\nDIRECTIONS</string>
+</resources>

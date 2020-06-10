@@ -1,0 +1,12 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.dictionary_manager_ui')
+  getTeamCityProperty('setApplicationName', 'dictionary_manager_ui')
+  getTeamCityProperty('setApplicationDescription', 'UI for dictionary manager')
+  getPackageVersion('ANALYTICSMANAGERAPI')
+  getPackageVersion('DM')
+  getPackageVersion('AI')
+  getPackageVersion('SCREEN_OPENER_API')
+  getPackageVersion('UTILSSLOVOEDUI')
+}

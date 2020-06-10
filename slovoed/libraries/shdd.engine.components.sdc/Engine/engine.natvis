@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="CSldVector&lt;*&gt;">
+    <DisplayString>{{ size={size_} }}</DisplayString>
+    <Expand>
+      <Item Name="[capacity]">capacity_</Item>
+      <ArrayItems>
+        <Size>size_</Size>
+        <ValuePointer>ptr_</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+
+  <Type Name="sld2::DynArray&lt;*&gt;">
+    <DisplayString>{{ size={size_} }}</DisplayString>
+    <Expand>
+      <ArrayItems>
+        <Size>size_</Size>
+        <ValuePointer>ptr_</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+
+  <Type Name="sld2::Span&lt;*&gt;">
+    <DisplayString>{{ size={size_} }}</DisplayString>
+    <Expand>
+      <ArrayItems>
+        <Size>size_</Size>
+        <ValuePointer>data_</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+
+  <Type Name="CSldString&lt;unsigned short,*&gt;">
+    <DisplayString>{m_String,[m_Size]su}</DisplayString>
+    <StringView>m_String,[m_Size]su</StringView>
+    <Expand>
+      <Item Name="[size]">m_Size</Item>
+      <Item Name="[capacity]">m_Capacity</Item>
+      <ArrayItems>
+        <Size>m_Size</Size>
+        <ValuePointer>m_String</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+
+  <Type Name="sld2::BasicStringRef&lt;unsigned short,*&gt;">
+    <DisplayString Condition="ptr_ == nullptr">empty</DisplayString>
+    <DisplayString>{ptr_,[len_]su}</DisplayString>
+    <StringView>ptr_,[len_]su</StringView>
+    <Expand>
+      <Item Name="[size]">len_</Item>
+      <ArrayItems>
+        <Size>len_</Size>
+        <ValuePointer>ptr_</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+
+  <Type Name="sld2::UniquePtr&lt;*&gt;">
+    <DisplayString Condition="ptr_ == nullptr">empty</DisplayString>
+    <DisplayString>UniquePtr {*ptr_}</DisplayString>
+    <Expand>
+      <Item Name="[ptr]" Condition="ptr_ != nullptr">ptr_</Item>
+    </Expand>
+  </Type>
+</AutoVisualizer>

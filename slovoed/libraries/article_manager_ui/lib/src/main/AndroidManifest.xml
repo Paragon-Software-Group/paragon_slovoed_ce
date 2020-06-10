@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.paragon_software.article_manager_ui">
+
+    <application>
+
+        <activity
+            android:name="com.paragon_software.article_manager.ArticleManagerActivity"
+            android:theme="@style/ArticleManagerTheme"
+            android:windowSoftInputMode="adjustNothing">
+        </activity>
+
+        <activity
+            android:name="com.paragon_software.article_manager.ShareActivitySlovoed"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustNothing">
+        </activity>
+
+        <activity
+            android:name="com.paragon_software.article_manager.AdditionalInfoActivity"
+            android:theme="@style/SlovoedInformationActivityTheme"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustNothing">
+        </activity>
+    </application>
+</manifest>

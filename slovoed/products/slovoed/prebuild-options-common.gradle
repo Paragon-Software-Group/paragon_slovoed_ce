@@ -1,0 +1,504 @@
+ext {
+  getTeamCityProperty('prod_demo_max_mib_assets', '20')
+  getTeamCityProperty('demo_bases', 'all')
+
+  getTeamCityProperty('penreader', 'disabled')
+
+  getTeamCityProperty('enableOald10Ui', '0')
+  getTeamCityProperty('enableBilingualUi', '0')
+  getTeamCityProperty('enableDudenUi', '0')
+
+
+// -- Dictionary manager
+  getTeamCityProperty('enableDictionaryManagerUiSlovoed', '0')
+  if('0' != enableDictionaryManagerUiSlovoed) {
+    dictionaryManagerFragment = 'new com.paragon_software.dictionary_manager_ui.DictionaryManagerFragment()'
+    descriptionActivityClass = 'null'
+    dictionaryDescriptionFragmentOald = 'null'
+    buyActivity = 'com.paragon_software.dictionary_manager_ui.BuyActivity.class'
+    downloadManagerFragment = 'new com.paragon_software.dictionary_manager_ui.DictionaryManagerFragment()'
+    downloadStrings = 'new com.paragon_software.dictionary_manager_ui.DownloadStrings()'
+  }
+  if('0' != enableOald10Ui || '0' != enableBilingualUi || '0' != enableDudenUi) {
+    buyActivity = 'com.paragon_software.dictionary_manager.BuyActivityOald.class'
+    downloadManagerFragment = 'new com.paragon_software.dictionary_manager.DownloadManagerFragment()'
+    downloadStrings = 'new com.paragon_software.dictionary_manager.DownloadStringsOald()'
+  }
+  if('0' != enableOald10Ui ) {
+    dictionaryManagerFragment = 'new com.paragon_software.dictionary_manager.DictionaryManagerFragmentOald()'
+    descriptionActivityClass = 'com.paragon_software.dictionary_manager.DescriptionActivityOald.class'
+    dictionaryDescriptionFragmentOald = 'new com.paragon_software.dictionary_manager.DescriptionFragmentOald()'
+  }
+  if('0' != enableBilingualUi || '0' != enableDudenUi) {
+    dictionaryManagerFragment = 'new com.paragon_software.dictionary_manager.DictionaryManagerFragmentBilingual()'
+    descriptionActivityClass = 'com.paragon_software.dictionary_manager.DescriptionActivityBilingual.class'
+    dictionaryDescriptionFragmentOald = 'new com.paragon_software.dictionary_manager.DescriptionFragmentBilingual()'
+  }
+  dictionaryManagerDictionaries = '{' + enableDictionaryList + '}'
+  getTeamCityProperty('dictionaryManagerDefaultDictionaryId', 'null')
+  getTeamCityProperty('dictionaryManagerDefaultDirection', 'null')
+
+
+// -- Search manager
+  searchManager = 'new com.paragon_software.search_manager.ParagonSearchManager()'
+  getTeamCityProperty('enableSearchManagerUiSlovoed', '0')
+  if('0' != enableSearchManagerUiSlovoed)
+  {
+    searchManagerFragment = searchManagerFragmentTablet = 'new com.paragon_software.search_manager.SearchFragment()'
+  }
+  if('0' != enableOald10Ui)
+  {
+    searchManagerFragment = 'new com.paragon_software.search_manager.OaldSearchFragment()'
+    searchManagerFragmentTablet = 'new com.paragon_software.search_manager.SearchFragmentOALD10Tablet()'
+  }
+  if('0' != enableBilingualUi )
+  {
+    searchManagerFragment = 'new com.paragon_software.search_manager.SearchFragmentBilingual()'
+    searchManagerFragmentTablet = 'new com.paragon_software.search_manager.SearchFragmentBilingualTablet()'
+  }
+  if('0' != enableDudenUi)
+  {
+    searchManagerFragment = 'new com.paragon_software.search_manager.SearchFragmentDuden()'
+    searchManagerFragmentTablet = 'new com.paragon_software.search_manager.SearchFragmentDudenTablet()'
+  }
+
+
+// -- Article manager
+  getTeamCityProperty('articleManager', 'new com.paragon_software.article_manager.StandardArticleManager()')
+  getTeamCityProperty('enableArticleUiSlovoed', '0')
+  practisePronunciationActivity = 'null'
+  practisePronunciationControllerId = 'null'
+  if('0' != enableArticleUiSlovoed) {
+    articleActivity = articleActivityTablet = 'new com.paragon_software.article_manager.ArticleManagerActivity()'
+    shareActivity = 'new com.paragon_software.article_manager.ShareActivitySlovoed()'
+    additionalActivity = 'new com.paragon_software.article_manager.AdditionalInfoActivity()'
+    articleControllerId = 'com.paragon_software.article_manager.ArticleControllerType.DEFAULT_CONTROLLER'
+    shareArticleControllerId = 'com.paragon_software.article_manager.ArticleControllerType.CONTROLLER_ID_SHARE'
+    additionalArticleControllerId = 'com.paragon_software.article_manager.ArticleControllerType.CONTROLLER_ID_ADDITIONAL_INFO'
+    articleFragment = 'new com.paragon_software.article_manager.ArticleFragment()'
+    articleFragmentTablet = 'new com.paragon_software.article_manager.ArticleFragment()'
+  }
+  if('0' != enableOald10Ui || '0' != enableBilingualUi || '0' != enableDudenUi) {
+    articleActivity = 'new com.paragon_software.article_manager.ArticleManagerActivityOALD()'
+    articleActivityTablet = 'new com.paragon_software.article_manager.ArticleManagerActivityTabletOALD()'
+    shareActivity = 'new com.paragon_software.article_manager.ShareActivityOald()'
+    additionalActivity = 'new com.paragon_software.article_manager.AdditionalInfoActivityOald()'
+    practisePronunciationActivity = 'com.paragon_software.article_manager.PractisePronunciationActivityOALD10.class'
+    articleControllerId = 'com.paragon_software.article_manager.ArticleControllerType.OALD_CONTROLLER'
+    shareArticleControllerId = 'com.paragon_software.article_manager.ArticleControllerType.OALD_CONTROLLER_ID_SHARE'
+    additionalArticleControllerId = 'com.paragon_software.article_manager.ArticleControllerType.OALD_CONTROLLER_ID_ADDITIONAL_INFO'
+    practisePronunciationControllerId = 'com.paragon_software.article_manager.ArticleControllerType.OALD_CONTROLLER_ID_PRACTICE_PRONUNCIATION'
+    articleFragment = 'new com.paragon_software.article_manager.ArticleFragmentOald()'
+    articleFragmentTablet = 'new com.paragon_software.article_manager.ArticleFragmentTabletOald()'
+  }
+  if('0' != enableOald10Ui) {
+    articleFragment = 'new com.paragon_software.article_manager.ArticleFragmentOald()'
+    articleFragmentTablet = 'new com.paragon_software.article_manager.ArticleFragmentTabletOald()'
+  }
+  if('0' != enableBilingualUi || '0' != enableDudenUi) {
+    articleFragment = 'new com.paragon_software.article_manager.ArticleFragmentBilingual()'
+    articleFragmentTablet = 'new com.paragon_software.article_manager.ArticleFragmentBilingualTablet()'
+  }
+
+
+// -- Favorites manager
+  getTeamCityProperty('favoritesMaxNumberOfWords', '1000')
+  favoritesManagerFactory = 'new com.paragon_software.favorites_manager.BaseFavoritesManagerFactory()'
+  favoritesManagerExportHtmlBuilderClass = 'null'
+  getTeamCityProperty('enableFavoritesManagerUiSlovoed', '0')
+  if('0' != enableFavoritesManagerUiSlovoed)
+  {
+    favoritesManagerFragment = 'new com.paragon_software.favorites_manager.FavoritesFragment()'
+    favoritesManagerActivityClass = 'null'
+    favoritesManagerAddInDirectoryUI = 'null'
+  }
+  if('0' != enableOald10Ui || '0' != enableBilingualUi || '0' != enableDudenUi)
+  {
+    favoritesManagerFragment = 'new com.paragon_software.favorites_manager.FavoritesFragmentOALD10()'
+    favoritesManagerActivityClass = 'com.paragon_software.favorites_manager.FavoritesActivityOALD10.class'
+    favoritesManagerAddInDirectoryUI = 'new com.paragon_software.favorites_manager.AddToFavoritesDialogFragment()'
+    favoritesManagerExportHtmlBuilderClass = 'com.paragon_software.favorites_manager.ExportHtmlBuilder.class'
+  }
+
+
+// -- History manager
+  historyManagerFactory = 'new com.paragon_software.history_manager.BaseHistoryManagerFactory()'
+  historyManagerExportHtmlBuilderClass = 'null'
+  getTeamCityProperty('enableHistoryManagerUiSlovoed', '0')
+  if('0' != enableHistoryManagerUiSlovoed)
+  {
+    historyManagerFragment = 'new com.paragon_software.history_manager.HistoryFragment()'
+    historyManagerActivityClass = 'null'
+  }
+  if('0' != enableOald10Ui || '0' != enableDudenUi)
+  {
+    historyManagerFragment = 'new com.paragon_software.history_manager.HistoryFragmentOALD10()'
+    historyManagerActivityClass = 'com.paragon_software.history_manager.HistoryActivityOALD10.class'
+    historyManagerExportHtmlBuilderClass = 'com.paragon_software.history_manager.ExportHtmlBuilder.class'
+  }
+
+  if('0' != enableBilingualUi)
+  {
+    historyManagerFragment = 'new com.paragon_software.history_manager.HistoryFragmentBilingual()'
+    historyManagerActivityClass = 'com.paragon_software.history_manager.HistoryActivityBilingual.class'
+    historyManagerExportHtmlBuilderClass = 'com.paragon_software.history_manager.ExportHtmlBuilderBilingual.class'
+  }
+
+
+// -- Toolbar manager
+  toolbarFactory = 'null'
+  getTeamCityProperty('enableToolbarManagerUiSlovoed', '0')
+  if('0' != enableToolbarManagerUiSlovoed || '0' != enableBilingualUi || '0' != enableDudenUi)
+    toolbarFactory = 'new com.paragon_software.toolbar_manager.BaseParagonToolbarFactory()'
+
+
+// Trial manager
+  trialManagerBuilder = 'null'
+
+
+// -- Analytics manager
+  getTeamCityProperty('enableFirebaseAnalytics', '0')
+  analyticsManager = 'new com.paragon_software.analytics_manager.EmptyAnalyticsManger()'
+  if ('0' != enableFirebaseAnalytics)
+  {
+    analyticsManager = 'new com.paragon_software.analytics_manager.FirebaseAnalyticsParagon()'
+  }
+
+
+// -- Navigation manager
+  getTeamCityProperty('enableNavigationManagerUiSlovoed', '0')
+  navigationManager = 'new com.paragon_software.navigation_manager.NavigationManager()'
+  useTabletOpener = 'true'
+  getTeamCityProperty('enableBottomNavigationFragment', '0')
+  bottomNavigationFragment = 'null'
+  rateAppIntentFactory = 'null'
+  if ('0' != "${enableNavigationManagerUiSlovoed}")
+  {
+    navigationUiFactoryTablet = navigationUiFactory = 'new com.paragon_software.navigation_manager.NavigationUi.Factory()'
+    useTabletOpener = 'false'
+
+    if ('0' != enableBottomNavigationFragment)
+      bottomNavigationFragment = 'new com.paragon_software.navigation_manager.SlovoedBottomNavigationFragment()'
+  }
+  else if ('0' != "${enableOald10Ui}")
+  {
+    navigationUiFactory = 'new com.paragon_software.navigation_manager.NavigationUiOald10.Factory()'
+    navigationUiFactoryTablet = 'new com.paragon_software.navigation_manager.NavigationUiOald10Tablet.Factory()'
+  }
+  else if ('0' != enableBilingualUi)
+  {
+    navigationUiFactory = 'new com.paragon_software.navigation_manager.NavigationUiBilingual.Factory()'
+    navigationUiFactoryTablet = 'new com.paragon_software.navigation_manager.NavigationUiBilingualTablet.Factory()'
+    rateAppIntentFactory = 'new com.paragon_software.navigation_manager.RateAppFactory()'
+  }
+
+  if('0' != enableDudenUi)
+  {
+    navigationUiFactory = 'new com.paragon_software.navigation_manager.NavigationUiBilingual.Factory()'
+    navigationUiFactoryTablet = 'new com.paragon_software.navigation_manager.NavigationUiBilingualTablet.Factory()'
+  }
+
+
+// -- Information manager
+  getTeamCityProperty('enableInformationUiSlovoed', '0')
+  informationFragment = 'null'
+  if('0' !=  enableInformationUiSlovoed)
+  {
+    informationFragment = 'new com.paragon_software.information_manager.InformationFragment()'
+  }
+  informationManagerFactory = 'new com.paragon_software.information_manager.InformationManagerFactory()'
+
+
+// -- Settings manager
+  getTeamCityProperty('enableSettingsManagerGoogleDrive', '1')
+  settingsManagerStoragesClasses = '{'
+  settingsManagerStoragesClasses = getArrayInitializer(settingsManagerStoragesClasses,
+      'enableSettingsManagerGoogleDrive', '1',
+      'com.paragon_software.android_native_backup_storage.AndroidNativeBackupStorage.class')
+  settingsManagerStoragesClasses += '}'
+  getTeamCityProperty('enableSettingsManagerUiSlovoed', '0')
+  getTeamCityProperty('isApplicationSettingsOverridden', 'false')
+  settingsManagerFragment = 'null'
+  settingsManagerFragmentGeneral = 'null'
+  settingsManagerFragmentMyView = 'null'
+  settingsManagerFragmentNotifications = 'null'
+  settingsGeneralActivityClass = 'null'
+  settingsMyViewActivityClass = 'null'
+  settingsNotificationsActivityClass = 'null'
+  settingsMigrationHelper = 'null'
+  if('0' != enableSettingsManagerUiSlovoed)
+  {
+    settingsManagerFragment = 'new com.paragon_software.settings_manager.SettingsFragment()'
+  }
+  if('0' != enableOald10Ui || '0' != enableDudenUi)
+  {
+    settingsManagerFragment = 'new com.paragon_software.settings_manager.SettingsFragmentOALD10()'
+    settingsManagerFragmentGeneral = 'new com.paragon_software.settings_manager.SettingsGeneralFragmentOALD10()'
+    settingsManagerFragmentMyView = 'new com.paragon_software.settings_manager.SettingsMyViewFragmentOALD10()'
+    settingsManagerFragmentNotifications = 'new com.paragon_software.settings_manager.SettingsNotificationsAndStatisticsFragmentOALD10()'
+    settingsGeneralActivityClass = 'com.paragon_software.settings_manager.SettingsGeneralActivityOALD10.class'
+    settingsMyViewActivityClass = 'com.paragon_software.settings_manager.SettingsMyViewActivityOALD10.class'
+    settingsNotificationsActivityClass = 'com.paragon_software.settings_manager.SettingsNotificationsActivityOALD10.class'
+  }
+
+  if('0' != enableBilingualUi)
+  {
+    settingsManagerFragment = 'new com.paragon_software.settings_manager.SettingsFragmentBilingual()'
+    settingsGeneralActivityClass = 'com.paragon_software.settings_manager.SettingsGeneralActivityBilingual.class'
+    settingsManagerFragmentGeneral = 'new com.paragon_software.settings_manager.SettingsGeneralFragmentBilingual()'
+    settingsMigrationHelper = 'new com.paragon_software.settings_manager.BaseMigrationHelper()'
+  }
+
+
+// -- Word of the Day manager
+  wotDManagerFactory = 'null'
+  wotDManagerResProviderFactory = 'null'
+  wotDManagerItemActivityClass = 'null'
+  wotDManagerListFragment = 'null'
+  wotDManagerItemFragment = 'null'
+  getTeamCityProperty('enableWordOfTheDayManager', '0')
+  if ( enableWordOfTheDayManager != '0' )
+  {
+    wotDManagerFactory = 'new com.paragon_software.word_of_day.BaseWotDManagerFactory()'
+  }
+  if ( enableOald10Ui !='0')
+  {
+    wotDManagerItemActivityClass = 'com.paragon_software.word_of_day.WotDItemActivityOALD10.class'
+    wotDManagerListFragment = 'new com.paragon_software.word_of_day.WotDListFragmentOALD10()'
+    wotDManagerItemFragment = 'new com.paragon_software.word_of_day.WotDItemFragmentOALD10()'
+    wotDManagerResProviderFactory = 'new com.paragon_software.word_of_day.WotDResProviderFactory()'
+  }
+
+
+// -- News manager
+  getTeamCityProperty('enableNewsManagerUiSlovoed', '0')
+  getTeamCityProperty('enableNewsManagerFirebase', '0')
+  getTeamCityProperty('newsManagerPkey', 'null')
+  newsManagerFactory = 'null'
+  if ( enableNewsManagerFirebase != '0' )
+  {
+    newsManagerFactory = 'new com.paragon_software.news_manager.BaseNewsManagerFactory()'
+  }
+  newsResProvider = 'null'
+  newsFragmentItem = 'null'
+  newsItemActivityClass = 'null'
+  if(enableNewsManagerUiSlovoed !='0')
+  {
+    newsManagerFragment = 'new com.paragon_software.news_manager.NewsFragment()'
+  }
+  if(enableOald10Ui !='0' || '0' != enableDudenUi)
+  {
+    newsManagerFragment = 'new com.paragon_software.news_manager.NewsFragmentOald10()'
+    newsItemActivityClass = 'com.paragon_software.news_manager.NewsItemActivity.class'
+    newsFragmentItem = 'new com.paragon_software.news_manager.NewsItemFragmentOald10()'
+    newsResProvider = 'new com.paragon_software.news_manager.NewsResProvider()'
+  }
+  if('0' != enableBilingualUi)
+  {
+    newsManagerFragment = 'new com.paragon_software.news_manager.NewsFragmentBilingual()'
+    newsItemActivityClass = 'com.paragon_software.news_manager.NewsItemActivity.class'
+    newsFragmentItem = 'new com.paragon_software.news_manager.NewsItemFragmentBilingual()'
+    newsResProvider = 'new com.paragon_software.news_manager.NewsResProvider()'
+  }
+
+// -- Quiz manager
+  quizManagerFactory = 'null'
+  quizManagerActivityClass = 'null'
+  quizManagerAchievementActivityClass = "null"
+  quizManageStatisticActivityClass = "null"
+  quizManagerListFragment = 'null'
+  quizManagerFragment = 'null'
+  quizManagerFragmentTablet = 'null'
+  quizManagerStatisticFragment = "null"
+  quizManagerAchievementFragment = "null"
+  quizManagerAchievementsGeneratorFactory = "null"
+  quizManagerProgressListFactory = "null"
+  getTeamCityProperty('enableQuizManager', '0')
+  if( enableQuizManager != '0' )
+  {
+    quizManagerFactory = 'new com.paragon_software.quiz.BaseQuizManagerFactory()'
+  }
+  if( enableOald10Ui != '0' || '0' != enableBilingualUi || '0' != enableDudenUi )
+  {
+    quizManagerActivityClass = 'com.paragon_software.quiz.QuizActivity.class'
+    quizManagerAchievementActivityClass = 'com.paragon_software.quiz.QuizAchievementActivity.class'
+    quizManageStatisticActivityClass = 'com.paragon_software.quiz.QuizStatisticActivity.class'
+    quizManagerListFragment = 'new com.paragon_software.quiz.QuizListFragmentOALD10()'
+    quizManagerFragment = 'new com.paragon_software.quiz.QuizFragment()'
+    quizManagerFragmentTablet = 'new com.paragon_software.quiz.QuizFragmentTablet()'
+    quizManagerStatisticFragment = 'new com.paragon_software.quiz.QuizStatisticFragment()'
+    quizManagerAchievementFragment = 'new com.paragon_software.quiz.QuizAchievementFragment()'
+    quizManagerProgressListFactory = 'new com.paragon_software.quiz.QuizProgressListFactory()'
+    quizManagerAchievementsGeneratorFactory = 'new com.paragon_software.quiz.QuizAchievementsGeneratorFactory()'
+  }
+
+
+// -- Sound manager
+  getTeamCityProperty('enableSlovosoundOnlineSound', '0')
+  onlineSoundFactory = 'null'
+  if( enableSlovosoundOnlineSound != '0' )
+  {
+    onlineSoundFactory = 'new com.paragon_software.sound_manager.SlovosoundOnlineSound.SlovosoundOnlineFactory()'
+  }
+  //TODO сервис пока в разработке
+//  getTeamCityProperty('enableParagonOnlineSound', '0')
+//  if( enableParagonOnlineSound != '0' )
+//  {
+//    onlineSoundFactory = 'new com.paragon_software.sound_manager.ParagonOnlineSound.ParagonOnlineFactory()'
+//  }
+
+
+// -- User core manager
+  userCoreManagerFactory = 'null'
+  userCoreManagerActivityClass = 'null'
+  userCoreManagerLoginDialog = 'null'
+  userCoreManagerResetPasswordDialog = 'null'
+  getTeamCityProperty('enableUserCoreManagerAces', '0')
+  getTeamCityProperty('enableUserCoreManagerEac', '0')
+  if (enableUserCoreManagerAces != '0') {
+    userCoreManagerFactory = 'new com.paragon_software.user_core_manager.UserCoreManagerAcesFactory()'
+  }
+  if (enableUserCoreManagerEac != '0') {
+    userCoreManagerFactory = 'new com.paragon_software.user_core_manager.UserCoreManagerEacFactory()'
+  }
+  if ( enableOald10Ui  !='0' )
+  {
+    userCoreManagerActivityClass = 'com.paragon_software.user_core_manager.UserCoreActivityAcesOALD10.class'
+  }
+
+  if( enableBilingualUi !='0' )
+  {
+    userCoreManagerLoginDialog = 'new com.paragon_software.user_core_manager.EacLoginDialog()'
+    userCoreManagerResetPasswordDialog = 'new com.paragon_software.user_core_manager.EacResetPasswordDialog()'
+  }
+
+// -- License manager
+  getTeamCityProperty('enableLicenseManagerActivateDemo', '0')
+  getTeamCityProperty('enableLicenseManagerActivateDemoPurchase', '0')
+  getTeamCityProperty('enableLicenseManagerActivateTrial', '0')
+  getTeamCityProperty('enableLicenseManagerActivateGooglePlay', '0')
+  getTeamCityProperty('enableLicenseManagerActivateFree', '0')
+  activationSources = '{'
+  activationSources += '}'
+
+
+// -- Hint manager
+  hintManagerFactory = 'null'
+  hintManagerUIHelper = 'null'
+  getTeamCityProperty('enableHintManager', '0')
+  if('0' != "${enableHintManager}")
+  {
+    hintManagerFactory = 'new com.paragon_software.hint_manager.BaseHintManagerFactory()'
+  }
+  if('0' != "${enableOald10Ui}" || '0' != enableDudenUi)
+  {
+    hintManagerUIHelper = 'new com.paragon_software.hint_manager.HintUIHelperOALD10()'
+  }
+
+  if('0' != enableBilingualUi)
+  {
+    hintManagerUIHelper = 'new com.paragon_software.hint_manager.HintUIHelperBilingual()'
+  }
+
+// -- Flashcard manager
+  flashcardManager = 'null'
+  flashCardsManagerFragment = 'null'
+  flashcardExchangerFactory = 'null'
+  getTeamCityProperty('enableStandardFlashcardManager', '0')
+  if('0' != "${enableStandardFlashcardManager}")
+    flashcardManager = 'new com.paragon_software.flash_cards_manager.StandardFlashcardManager()'
+  getTeamCityProperty('enableFlashcardManagerUi', '0')
+  if ('0' != "${enableFlashcardManagerUi}") {
+    flashCardsManagerFragment = 'new com.paragon_software.flash_cards_manager.FlashCardsFragment()'
+  }
+  if ('0' != "${enableDudenUi}") {
+    flashCardsManagerFragment = 'new com.paragon_software.flash_cards_manager.FlashCardsDudenFragment()'
+    flashcardExchangerFactory = 'new com.paragon_software.flash_cards_manager.FlashcardExchangerFactory()'
+  }
+
+
+// -- Start screens manager
+  ppInformationScreenFactory = 'null'
+  eulaInformationScreenFactory = 'null'
+  startScreensFactories = 'null'
+  getTeamCityProperty('enableAgreementSlovoedUi', '0')
+  getTeamCityProperty('enableSplashScreenUiSlovoed', '0')
+  if ('0' != enableAgreementSlovoedUi)
+  {
+    startScreensFactories = 'new com.paragon_software.splash_screen_manager.ISplashScreen.Factory[] {' +
+                            ' new com.paragon_software.splash_screen_manager.AgreementPrivacyPolicyActivity.SplashScreenFactory(),' +
+                            ' new com.paragon_software.splash_screen_manager.AgreementEULAActivity.SplashScreenFactory() }'
+
+    ppInformationScreenFactory = 'new com.paragon_software.splash_screen_manager.AgreementPrivacyPolicyActivity.InformationScreenFactory()'
+    eulaInformationScreenFactory = 'new com.paragon_software.splash_screen_manager.AgreementEULAActivity.InformationScreenFactory()'
+  }
+
+
+// -- About manager
+  aboutManagerFactory = 'new com.paragon_software.about_manager.AboutManagerFactory()'
+  getTeamCityProperty('enableAboutSlovoedUi', '0')
+  if('0' !=enableAboutSlovoedUi)
+  {
+    aboutActivityClass = 'com.paragon_software.about_manager.AboutActivity.class'
+  }
+  if('0' != enableOald10Ui || '0' != enableBilingualUi || '0' != enableDudenUi)
+  {
+    aboutActivityClass = 'com.paragon_software.about_manager.AboutActivityOald10.class'
+  }
+
+
+
+
+  componentsVersion = '{'
+//  componentsVersion += '{"Article Manager", com.paragon_software.article_manager.BuildConfig.packageVersionName}'
+//  if ('0' != enableArticleUiSlovoed) {
+//    componentsVersion += ',{"Article Manager UI", com.paragon_software.article_manager_ui.BuildConfig.packageVersionName}'
+//  }
+//  componentsVersion +=
+//      ',{"Settings manager API", com.paragon_software.settings_manager_api.BuildConfig.packageVersionName}'
+//  componentsVersion += ',{"Settings manager", com.paragon_software.settings_manager.BuildConfig.packageVersionName}'
+//  if ('0' != enableSettingsManagerGoogleDrive)
+//  {
+//    componentsVersion += ',{"Settings manager Google Drive", ' +
+//                         'com.paragon_software.android_native_backup_storage.BuildConfig.packageVersionName}'
+//  }
+//  if('0' != enableSettingsManagerUiSlovoed)
+//  {
+//    componentsVersion +=
+//        ',{"Settings manager UI", com.paragon_software.settings_manager_ui.BuildConfig.packageVersionName}'
+//  }
+//  componentsVersion +=
+//      ',{"Dictionary Manager API", com.paragon_software.dictionary_manager_api.BuildConfig.packageVersionName}'
+//  componentsVersion +=
+//      ',{"Paragon Dictionary Manager", com.paragon_software.dictionary_manager_paragon.BuildConfig.packageVersionName}'
+//  componentsVersion +=
+//      ',{"Paragon Dictionary Manager Factory", com.paragon_software.dictionary_manager_factory.BuildConfig.packageVersionName}'
+//  componentsVersion +=
+//      ',{"License Manager API", com.paragon_software.license_manager_api.BuildConfig.packageVersionName}'
+//  componentsVersion += ',{"License Manager", com.paragon_software.license_manager.BuildConfig.packageVersionName}'
+//
+//  if ('0' != enableLicenseManagerActivateDemo)
+//  {
+//    componentsVersion +=
+//        ',{"License Manager Activate Demo", com.paragon_software.license_manager_activate_demo.BuildConfig.packageVersionName}'
+//  }
+//  if ('0' != enableLicenseManagerActivateTrial)
+//  {
+//    componentsVersion +=
+//        ',{"License Manager Activate Trial", com.paragon_software.license_manager_activate_trial.BuildConfig.packageVersionName}'
+//  }
+//  if ('0' != enableLicenseManagerActivateGooglePlay)
+//  {
+//    componentsVersion +=
+//        ',{"License Manager Activate Google play", com.paragon_software.license_manager_activate_google_play.BuildConfig.packageVersionName}'
+//    componentsVersion +=
+//        ',{"License Manager Activate Google play Factory", com.paragon_software.license_manager_activate_google_play_factory.BuildConfig.packageVersionName}'
+//  }
+//  componentsVersion += ',{"Search Manager API", com.paragon_software.search_manager.BuildConfig.packageVersionName}'
+//  componentsVersion += ',{"Search Manager", com.paragon_software.search_manager.BuildConfig.packageVersionName}'
+//  componentsVersion += ',{"Favorites Manager API", com.paragon_software.favorites_manager_api.BuildConfig.packageVersionName}'
+//  componentsVersion += ',{"Favorites Manager", com.paragon_software.favorites_manager.BuildConfig.packageVersionName}'
+//  componentsVersion += ',{"News Manager API", com.paragon_software.news_manager_api.BuildConfig.packageVersionName}'
+//  componentsVersion += ',{"News Manager", com.paragon_software.news_manager.BuildConfig.packageVersionName}'
+  componentsVersion += '}'
+}

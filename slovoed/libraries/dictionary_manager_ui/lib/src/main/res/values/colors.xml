@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tabs_background_color">#FFFFFF</color>
+    <color name="tabs_highlight_color">#F07218</color>
+    <color name="tabs_highlight_text_color">#EE6402</color>
+    <color name="tabs_text_color">#757B81</color>
+
+    <color name="dictionary_title_color">#303030</color>
+    <color name="dictionary_description_text_color">#808080</color>
+    <color name="dictionary_status_text_color">#1b9b24</color>
+    <color name="dictionary_view_background_color">#FFFFFF</color>
+
+    <color name="dictionary_button_text_color">#FFFFFF</color>
+    <color name="dictionary_button_text_color_disabled">#aaaaaa</color>
+    <color name="dictionary_buy_button_color">#1FB429</color>
+    <color name="dictionary_preview_button_color">#F07218</color>
+    <color name="dictionary_sample_button_color">#A5A5A5</color>
+
+    <color name="search_field_background_color">#F9F9F9</color>
+    <color name="search_cursor_color">#F37400</color>
+
+    <color name="buy_activity_background_color">#FFFFFF</color>
+    <color name="buy_activity_dictionary_description_text_color">#3F3F3F</color>
+    <color name="subscription_button_background_color">#3056CD</color>
+
+    <color name="preview_dialog_background_color">#F9F9F9</color>
+    <color name="preview_dialog_title_text_color">#252525</color>
+    <color name="preview_dialog_text_color">#717171</color>
+    <color name="preview_dialog_google_button_background_color">#EDEDED</color>
+    <color name="preview_dialog_google_button_text_color">#6C6C6C</color>
+    <color name="preview_dialog_facebook_button_background_color">#2E50AF</color>
+    <color name="preview_dialog_facebook_button_text_color">#FFFFFF</color>
+    <color name="preview_dialog_ok_button_text_color_default">#F07218</color>
+    <color name="preview_dialog_ok_button_text_color_pressed">#4CF07218</color>
+    <color name="dictionary_view_deal_label_backgound_color">#dfffffff</color>
+
+    <color name="my_dictionaries_open_button_color">#1FB429</color>
+    <color name="my_dictionaries_button_color_background_disabled">#f3f3f3</color>
+    <color name="my_dictionaries_button_color_background_regular">#eaeaea</color>
+    <color name="my_dictionaries_list_background">#eee</color>
+    <color name="my_dictionaries_component_button_control_highlight">#50000000</color>
+    <color name="my_dictionaries_downloading_pause_button_progress">#34d50000</color>
+    <color name="download_base_accent">#1b9b24</color>
+    <color name="remove_base_accent">#d50000</color>
+    <color name="tint_pause_download_color">#757575</color>
+
+    <color name="darkgray">#5b5b5b</color>
+
+</resources>

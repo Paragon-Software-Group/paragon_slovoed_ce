@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dictionary_view_horizontal_padding"
+        android:paddingRight="@dimen/dictionary_view_horizontal_padding"
+        android:paddingBottom="@dimen/dictionary_view_bottom_padding">
+
+    <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:id="@+id/dictionary_icon_image_view"
+                android:layout_width="@dimen/dictionary_view_icon_size"
+                android:layout_height="@dimen/dictionary_view_icon_size"
+                style="@style/DictionaryCardImageStyle"
+                android:layout_marginTop="@dimen/dictionary_view_icon_vertical_margin"
+                android:layout_marginBottom="@dimen/dictionary_view_icon_vertical_margin"
+                android:layout_marginLeft="@dimen/dictionary_view_icon_left_margin"
+                android:layout_marginRight="@dimen/dictionary_view_icon_right_margin"/>
+        <TextView
+                android:id="@+id/dictionary_deal_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="save 25%"
+                style="@style/DictionaryViewDealLabelStyle"/>
+    </FrameLayout>
+    <include
+            layout="@layout/dictionary_info"/>
+
+</LinearLayout>
+

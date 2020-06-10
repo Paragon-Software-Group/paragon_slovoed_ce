@@ -1,0 +1,8 @@
+apply from: '../../gradle/local_build_settings.gradle'
+
+include ':lib'
+
+slovoedProjects (
+        'dictionary_manager_api',
+        'trial_manager_api'
+)

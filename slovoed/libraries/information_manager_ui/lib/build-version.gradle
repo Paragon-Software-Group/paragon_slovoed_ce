@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.information_manager_ui')
+  getTeamCityProperty('setApplicationName', 'information_manager_ui')
+  getTeamCityProperty('setApplicationDescription', 'InformationManagerUi')
+  getPackageVersion('INFORMATIONMANAGERAPI')
+  getPackageVersion('UTILSSLOVOEDUI')
+}

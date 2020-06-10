@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.settings_manager_google_drive')
+  getTeamCityProperty('setApplicationName', 'settings_manager_google_drive')
+  getTeamCityProperty('setApplicationDescription', 'Settings Manager storage source for Google Drive of all available dictionaries')
+
+  getPackageVersion('SM')
+}

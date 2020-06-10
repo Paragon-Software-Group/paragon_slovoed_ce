@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- https://stackoverflow.com/questions/20862258/android-how-to-get-appcompat-translucent-type-theme-with-support-actionbar -->
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <!-- Slovoed styles -->
+    <style name="SlovoedAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/slovoedColorPrimary</item>
+        <item name="colorAccent">@color/slovoedColorAccent</item>
+        <item name="colorPrimaryDark">@color/slovoedColorPrimaryDark</item>
+    </style>
+
+    <style name="SlovoedAppThemeWithActionBar" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/slovoedColorPrimary</item>
+        <item name="colorAccent">@color/slovoedColorAccent</item>
+        <item name="colorPrimaryDark">@color/slovoedColorPrimaryDark</item>
+    </style>
+
+    <style name="SlovoedToolbarTitleTextStyle">
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:layout_marginStart">18dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SlovoedActionBarStyle" parent="Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:titleTextStyle">@style/SlovoedToolbarTitleTextStyle</item>
+        <item name="titleTextStyle">@style/SlovoedToolbarTitleTextStyle</item>
+    </style>
+
+    <style name="SlovoedInformationActivityTheme" parent="SlovoedAppThemeWithActionBar">
+        <item name="android:actionBarStyle">@style/SlovoedActionBarStyle</item>
+        <item name="actionBarStyle">@style/SlovoedActionBarStyle</item>
+    </style>
+
+    <style name="SlovoedAboutActivityTheme" parent="SlovoedAppThemeWithActionBar">
+        <item name="android:actionBarStyle">@style/SlovoedAboutActionBarStyle</item>
+        <item name="actionBarStyle">@style/SlovoedAboutActionBarStyle</item>
+    </style>
+
+    <style name="SlovoedAboutActionBarStyle" parent="SlovoedAppThemeWithActionBar">
+        <item name="background">@android:color/transparent</item>
+    </style>
+</resources>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/go_to_my_dictionaries_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dictionary_button_height"
+            android:text="@string/utils_slovoed_ui_go_to_my_dictionaries"
+            style="@style/DictionaryButtonStyle"
+            app:backgroundTint="@color/dictionary_preview_button_color"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dictionary_open_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dictionary_button_height"
+            android:text="@string/dictionary_manager_ui_my_dictionary_open"
+            style="@style/DictionaryButtonStyle"
+            app:backgroundTint="@color/dictionary_preview_button_color"
+            app:layout_constraintTop_toBottomOf="@id/go_to_my_dictionaries_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buy_dictionary_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dictionary_button_height"
+            android:text="@string/utils_slovoed_ui_buy_or_subscribe"
+            style="@style/DictionaryButtonStyle"
+            app:backgroundTint="@color/dictionary_buy_button_color"
+            app:layout_constraintTop_toBottomOf="@id/dictionary_open_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/preview_dictionary_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dictionary_button_height"
+            style="@style/DictionaryButtonStyle"
+            app:backgroundTint="@color/dictionary_preview_button_color"
+            app:layout_constraintTop_toBottomOf="@id/buy_dictionary_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/sample"
+            app:layout_constraintHorizontal_weight="5"
+            android:layout_marginRight="@dimen/dictionary_button_horizontal_margin"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sample"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dictionary_button_height"
+            android:layout_weight="1"
+            android:text="@string/dictionary_manager_ui_sample_button_text"
+            style="@style/DictionaryButtonStyle"
+            app:backgroundTint="@color/dictionary_sample_button_color"
+            app:layout_constraintTop_toBottomOf="@id/buy_dictionary_button"
+            app:layout_constraintLeft_toRightOf="@id/preview_dictionary_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintHorizontal_weight="3"
+            android:layout_marginLeft="@dimen/dictionary_button_horizontal_margin"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

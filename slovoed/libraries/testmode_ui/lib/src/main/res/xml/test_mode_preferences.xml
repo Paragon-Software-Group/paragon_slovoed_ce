@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+            android:key="test_mode_general_category"
+            android:title="General">
+        <EditTextPreference
+                android:key="test_mode_favorites_entries"
+                android:title="Search entries for Favorites"
+                android:summary="Add entries in Favorites using all dictionaries search"
+                android:hint="Search query"/>
+        <EditTextPreference
+                android:key="test_mode_history_entries"
+                android:title="Search entries for History"
+                android:summary="Add entries in History using all dictionaries search"
+                android:hint="Search query"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="test_mode_purchases_category"
+        android:title="Purchases">
+        <ListPreference
+            android:key="test_mode_purchases_consume"
+            android:title="Consume"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:key="test_mode_purchases_category"
+        android:title="News">
+        <CheckBoxPreference
+            android:key="test_mode_news"
+            android:persistent="false"
+            android:title="Enable receipt of test news"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+</PreferenceScreen>

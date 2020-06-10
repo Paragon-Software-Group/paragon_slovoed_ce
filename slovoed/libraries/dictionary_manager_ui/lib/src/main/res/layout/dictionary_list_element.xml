@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:padding="@dimen/dictionary_list_element_margin">
+    <ImageView
+            android:id="@+id/dictionary_icon_image_view"
+            android:layout_width="@dimen/dictionary_list_element_icon_size"
+            android:layout_height="@dimen/dictionary_list_element_icon_size"/>
+
+    <TextView
+            android:id="@+id/dictionary_description_label_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            style="@style/DictionaryTitleTextStyle"
+            android:layout_marginLeft="@dimen/dictionary_list_element_text_left_margin"/>
+</LinearLayout>

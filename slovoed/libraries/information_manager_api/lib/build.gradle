@@ -1,0 +1,48 @@
+apply plugin: 'com.android.library'
+apply from: 'build-version.gradle'
+apply from: '../../../gradle/publish.gradle'
+apply from: '../../../gradle/jacoco.gradle'
+
+android {
+  compileSdkVersion setCompileSdkVersion.toInteger()
+
+  defaultConfig {
+    minSdkVersion setMinSdkVersion.toInteger()
+    targetSdkVersion setTargetSdkVersion.toInteger()
+    versionCode setVersionCode.toInteger()
+    versionName setVersionName
+
+    buildConfigField "String", "packageVersionName", "\"${packageVersionName}\""
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+    debug {}
+  }
+
+  lintOptions {
+    warning 'InvalidPackage'
+  }
+}
+
+apply from: '../../../gradle/javadoc.gradle'
+
+dependencies {
+  testImplementation "junit:junit:${setJUnitVersion}"
+  androidTestImplementation "androidx.test.ext:junit:${setTestRunnerVersion}"
+  androidTestImplementation "androidx.test.espresso:espresso-core:${setEspressoCoreVersion}"
+
+  api "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+  //javadocDeps "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+
+  api slovoedLib('about_manager_api', packageVersionNameABOUTMANAGERAPI)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.about_manager_api:${packageVersionNameABOUTMANAGERAPI}")
+
+  api slovoedLib('article_manager_api', packageVersionNameAM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.article_manager_api:${packageVersionNameAM}")
+}

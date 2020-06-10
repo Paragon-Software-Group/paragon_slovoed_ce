@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.favorites_manager')
+  getTeamCityProperty('setApplicationName', 'favorites_manager')
+  getTeamCityProperty('setApplicationDescription', 'Favorites manager implementation')
+  getPackageVersion('ANALYTICSMANAGERAPI')
+  getPackageVersion('FM')
+}

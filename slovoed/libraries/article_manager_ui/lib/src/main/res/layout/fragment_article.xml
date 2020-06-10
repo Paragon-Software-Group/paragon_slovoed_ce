@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="@color/article_manager_ui_bkg_color">
+
+    <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/article_manager_ui_navigation_button_height"
+            style="@style/NavigationButton"
+            android:gravity="left|center_vertical"
+            android:text="@string/article_manager_ui_back"
+            android:drawableLeft="@drawable/arrow_back"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <Button
+            android:id="@+id/forward_button"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/article_manager_ui_navigation_button_height"
+            style="@style/NavigationButton"
+            android:gravity="right|center_vertical"
+            android:text="@string/article_manager_ui_forward"
+            android:drawableRight="@drawable/arrow_forward"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    <Space
+            android:id="@+id/navigation_buttons_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/article_manager_ui_navigation_button_placeholder_height"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:barrierAllowsGoneWidgets="false"
+            app:constraint_referenced_ids="back_button,forward_button,navigation_buttons_margin"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/icon_left_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/article_manager_ui_dict_icon_guideline_left"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/icon_right_guideline_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/article_manager_ui_dict_icon_guideline_right_small"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/icon_right_guideline_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/article_manager_ui_dict_icon_guideline_right_large"/>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/title_right_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/article_manager_ui_dict_title_margin_horizontal"/>
+
+    <Space
+            android:id="@+id/icon_top_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/article_manager_ui_dict_large_icon_extra_top_margin"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier1"/>
+
+    <ImageView
+            android:id="@+id/dict_icon"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/article_manager_ui_dict_icon_top_margin"
+            app:layout_constraintLeft_toRightOf="@id/icon_left_guideline"
+            app:layout_constraintRight_toLeftOf="@+id/icon_right_guideline_small"
+            app:layout_constraintTop_toBottomOf="@id/barrier1"
+            app:layout_constraintDimensionRatio="1:1"/>
+
+    <TextView
+            android:id="@+id/dict_title_simple"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TitleTextView"
+            android:layout_marginLeft="@dimen/article_manager_ui_dict_title_margin_horizontal"
+            android:fontFamily="@string/article_manager_ui_condensed_font_family"
+            android:includeFontPadding="false"
+            app:layout_constraintLeft_toRightOf="@id/dict_icon"
+            app:layout_constraintTop_toTopOf="@+id/dict_icon"
+            app:layout_constraintRight_toLeftOf="@id/title_right_guideline"/>
+
+    <TextView
+            android:id="@+id/dict_title_demo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TitleTextView"
+            android:layout_marginLeft="@dimen/article_manager_ui_dict_title_margin_horizontal"
+            android:visibility="gone"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/dict_icon"
+            app:layout_constraintTop_toBottomOf="@id/barrier1"
+            app:layout_constraintRight_toLeftOf="@id/title_right_guideline"/>
+
+    <TextView
+            style="@style/DictionaryStatusTextStyle"
+            android:id="@+id/dict_trial_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/article_manager_ui_dict_title_margin_horizontal"
+            app:layout_constraintLeft_toRightOf="@id/dict_icon"
+            app:layout_constraintTop_toBottomOf="@id/dict_title_demo"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/GenericButton"
+            android:text="@string/utils_slovoed_ui_buy_or_subscribe"
+            android:textSize="@dimen/article_manager_ui_buy_button_text_size"
+            android:textColor="@color/article_manager_ui_buy_button_text_color"
+            app:backgroundTint="@color/article_manager_ui_buy_button_color"
+            android:layout_marginLeft="@dimen/article_manager_ui_buy_button_margin_horizontal"
+            android:paddingLeft="@dimen/article_manager_ui_buy_button_padding_horizontal"
+            android:paddingRight="@dimen/article_manager_ui_buy_button_padding_horizontal"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/dict_icon"
+            app:layout_constraintTop_toBottomOf="@id/dict_trial_status"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierAllowsGoneWidgets="false"
+        app:constraint_referenced_ids="dict_title_simple,dict_title_demo,buy"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/go_to_my_dictionaries_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/GenericButton"
+            android:text="@string/utils_slovoed_ui_go_to_my_dictionaries"
+            android:textSize="@dimen/article_manager_ui_buy_button_text_size"
+            android:textColor="@color/article_manager_ui_buy_button_text_color"
+            app:backgroundTint="@color/article_manager_ui_accent_color"
+            android:layout_marginLeft="@dimen/article_manager_ui_buy_button_margin_horizontal"
+            android:paddingLeft="@dimen/article_manager_ui_buy_button_padding_horizontal"
+            android:paddingRight="@dimen/article_manager_ui_buy_button_padding_horizontal"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/dict_icon"
+            app:layout_constraintTop_toBottomOf="@id/barrier2"/>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:barrierAllowsGoneWidgets="false"
+        app:constraint_referenced_ids="barrier2,go_to_my_dictionaries_button"/>
+
+    <TextView
+            style="@style/DescriptionTextView"
+            android:id="@+id/dict_purchase_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/article_manager_ui_dict_title_margin_horizontal"
+            android:visibility="gone"
+            android:text="@string/article_manager_ui_dict_purchase_description"
+            app:layout_constraintLeft_toRightOf="@id/dict_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier3"/>
+
+    <TextView
+            style="@style/DescriptionTextView"
+            android:id="@+id/download_full_base_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/article_manager_ui_dict_title_margin_horizontal"
+            android:visibility="gone"
+            android:text="@string/article_manager_ui_download_full_base_description"
+            app:layout_constraintLeft_toRightOf="@id/dict_icon"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier3"/>
+
+    <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:barrierAllowsGoneWidgets="false"
+            app:constraint_referenced_ids="barrier1,dict_icon,dict_title_simple,dict_title_demo,buy, go_to_my_dictionaries_button, dict_purchase_description, download_full_base_description"/>
+
+    <Space
+        android:id="@+id/article_top_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/article_manager_ui_article_content_margin_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/barrier4"
+        app:layout_constraintBottom_toTopOf="@id/article_container"
+        />
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/article_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/article_top_margin"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+                android:id="@+id/article_content_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        <View
+                android:id="@+id/progress_bar_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/article_manager_ui_progress_bar_background_color"
+                android:visibility="gone"/>
+
+        <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

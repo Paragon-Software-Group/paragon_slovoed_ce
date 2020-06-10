@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/toolbar_select_all_action"
+          android:icon="@drawable/ic_action_select_all_light"
+          android:title="@string/toolbar_manager_ui_select_all_items"
+          android:visible="false"
+          app:showAsAction="always"/>
+    <item android:id="@+id/toolbar_delete_selected_action"
+          android:icon="@drawable/ic_action_delete_light"
+          android:title="@string/toolbar_manager_ui_remove_selected_entries"
+          android:visible="false"
+          app:showAsAction="always"/>
+</menu>

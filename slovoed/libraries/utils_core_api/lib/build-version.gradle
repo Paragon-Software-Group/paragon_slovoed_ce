@@ -1,0 +1,8 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.utils_core_api')
+  getTeamCityProperty('setApplicationName', 'utils_core_api')
+  getTeamCityProperty('setApplicationDescription', 'Common classes')
+
+}

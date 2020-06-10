@@ -1,0 +1,13 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.word_of_day_manager_api')
+  getTeamCityProperty('setApplicationName', 'word_of_day_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'Word of the day manager interfaces')
+
+  getPackageVersion('SM')
+  getPackageVersion('NATIVE_ENGINE_API')
+  getPackageVersion('SCREEN_OPENER_API')
+  getPackageVersion('SOUND_MANAGER_API')
+  getPackageVersion('HINTMANAGERAPI')
+}

@@ -1,0 +1,80 @@
+apply plugin: 'com.android.library'
+apply from: 'build-version.gradle'
+apply from: '../../../gradle/publish.gradle'
+apply from: '../../../gradle/jacoco.gradle'
+
+android {
+  compileSdkVersion setCompileSdkVersion.toInteger()
+
+  defaultConfig {
+    minSdkVersion setMinSdkVersion.toInteger()
+    targetSdkVersion setTargetSdkVersion.toInteger()
+    versionCode setVersionCode.toInteger()
+    versionName setVersionName
+
+    buildConfigField "String", "packageVersionName", "\"${packageVersionName}\""
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+    debug {}
+  }
+
+  lintOptions {
+    warning 'InvalidPackage'
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+
+apply from: '../../../gradle/javadoc.gradle'
+
+dependencies {
+  testImplementation "junit:junit:${setJUnitVersion}"
+  testImplementation "org.mockito:mockito-core:${setMockitoCoreVersion}"
+  testImplementation "org.robolectric:robolectric:${setRobolectricVersion}"
+
+  androidTestImplementation "androidx.test.ext:junit:${setTestRunnerVersion}"
+  androidTestImplementation "androidx.test.espresso:espresso-core:${setEspressoCoreVersion}"
+
+  api slovoedLib('native_engine_api', packageVersionNameNE)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.native_engine_api:${packageVersionNameNE}")
+
+  api slovoedLib('dictionary_manager_api', packageVersionNameDM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.dictionary_manager_api:${packageVersionNameDM}")
+
+  api slovoedLib('license_manager_api', packageVersionNameLM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.license_manager_api:${packageVersionNameLM}")
+
+  api slovoedLib('settings_manager_api', packageVersionNameSM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.settings_manager_api:${packageVersionNameSM}")
+
+  api slovoedLib('article_item', packageVersionNameAI)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.article_item:${packageVersionNameAI}")
+
+  api slovoedLib('screen_opener_api', packageVersionNameSCREEN_OPENER_API)
+//  javadocDeps("com.paragon_software.components:com.paragon_software.screen_opener_api:${packageVersionNameSCREEN_OPENER_API}")
+
+  api slovoedLib('trial_manager_api', packageVersionNameTMA)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.trial_manager_api:${packageVersionNameTMA}")
+
+  api slovoedLib('utils_slovoed', packageVersionNameUTILSSLOVOED)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.utils_slovoed:${packageVersionNameUTILSSLOVOED}")
+
+  api slovoedLib('user_core_manager_api', packageVersionNameUSERCOREMANAGERAPI)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.user_core_manager_api:${packageVersionNameUSERCOREMANAGERAPI}")
+
+  api "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+  //javadocDeps "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+
+  implementation files('../../shdd.android.components.httpdownloader/shdd.android.components.httpdownloader-1.1.1.aar')
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+        <item
+                android:id="@+id/nav_search"
+                android:icon="@drawable/search"
+                android:title="@string/utils_slovoed_ui_common_search"/>
+
+        <item
+                android:id="@+id/nav_catalog"
+                android:icon="@drawable/ic_catalog"
+                android:title="@string/navigation_manager_ui_nav_bar_menu_item_catalog"/>
+        <item
+                android:id="@+id/nav_flashcards"
+                android:icon="@drawable/ic_cards"
+                android:title="@string/navigation_manager_ui_nav_bar_menu_item_flashcards"/>
+
+        <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/utils_slovoed_ui_common_nav_bar_menu_item_settings"/>
+        <item
+                android:id="@+id/nav_info"
+                android:icon="@drawable/ic_info"
+                android:title="@string/utils_slovoed_ui_common_nav_bar_menu_item_information"/>
+        <item
+            android:id="@+id/nav_news"
+            android:icon="@drawable/ic_news"
+            app:actionLayout="@layout/layout_news_badge"
+            app:showAsAction="always"
+            android:title="@string/utils_slovoed_ui_common_nav_bar_menu_item_news"/>
+        <item
+                android:id="@+id/footer_spacer"
+                android:checkable="false"
+                android:enabled="false"
+                android:orderInCategory="200"
+                android:title="" />
+    </group>
+</menu>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Names of language icon files must be in four character Slovoed format -->
+    <array name="direction_icons">
+        <item>@drawable/braz</item>
+        <item>@drawable/bulg</item>
+        <item>@drawable/croa</item>
+        <item>@drawable/ctln</item>
+        <item>@drawable/czec</item>
+        <item>@drawable/engl</item>
+        <item>@drawable/fren</item>
+        <item>@drawable/germ</item>
+        <item>@drawable/gree</item>
+        <item>@drawable/iris</item>
+        <item>@drawable/ital</item>
+        <item>@drawable/lith</item>
+        <item>@drawable/poli</item>
+        <item>@drawable/russ</item>
+        <item>@drawable/span</item>
+        <item>@drawable/turk</item>
+    </array>
+</resources>

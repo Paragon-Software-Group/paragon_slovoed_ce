@@ -1,0 +1,644 @@
+﻿Version 134
+Build 131:
+- ADD: Добавлены шрифты PhoneticTM и Symbol
+- BUG: Исправлена функция CSldDictionaryHelper::GetWordsPositionsInPhraseIncludingWhitespaces (возвращала не только слово + обрамляющие пробелы, но слово + обрамляющие не-разделители + пробелы)
+Version 133
+Build 129:
+- ADD: В CSldDictionaryHelper добавлен метод GetQueryHighlightData(), получающий данные для подсветки запроса в тексте, и изменён соответствующий скрипт в CSldBasicHTMLBuilder; GetQueryHighlightData() работает и для подсветки тильд в статьях
+- ADD: Добавлена функция CSldDictionaryHelper::GetWordsPositionsInPhraseIncludingWhitespaces(), возвращающая диапазоны слов во фразе для подсветки (с захватом окружающих слово пробелов)
+- CHN: Добавлена поддержка встроенной морфологии в CSldDictionaryHelper::GetWordReferenceInQuery()
+Build 128:
+- CHN: В CSldDictionaryHelper::GetWordReference добавлен флаг для использования внутренней морфологии
+- BUG: Исправлены баги с подсветкой результатов полнотекстового поиска в CSldBasicHTMLBuilder::GetSearchHighlightScript и CSldDictionaryHelper::GetWordReferenceInQuery
+Build 127
+- ADD: Добавлены функции CSldBasicHTMLBuilder::GetSearchHighlightScript() и CSldDictionaryHelper::GetWordReferenceInQuery().
+Build 126
+- BUG: Исправлены баги с раскрытием и скрытием подуровней в CSldCustomListControl::UncoverHierarchy
+- ADD: Добавлены функции CSldDictionaryHelper::GetWordReference() и CSldDictionaryHelper::GetWordReferenceInList().
+Build 125
+- ADD: Добавлен новый thematic для switch-block (eSwitchThematicTestHint)
+- ADD: Добавлены новые шрифты Kruti Dev (eFontName_Kruti_Dev), Win Innwa (eFontName_Win_Innwa) и Myriad Pro Cond (eFontName_Myriad_Pro_Cond)
+Build 124
+- ADD: Добавлены языки: албанский, бирманский, кантонский, филиппинский, шона, тсвана
+- BUG: Добавлен выбор нужного списка в CSldDictionary::Translate с указанием listIndex
+Build 123
+- BUG: Исправлена функция CSldCustomList::GetWordByTextExtended (баг с неправильным поиском первого элемента в списке).
+- BUG: Исправлена функция раскрытия/сокрытия уровней в катсомном списке CSldCustomListControl::UncoverHierarchy (баг с остающимся хвостом при сворачивании в конце списка).
+Build 122
+- BUG: Исправлены функция поиска CSldCustomList::GetWordByTextExtended и CSldCustomList::GetWordByText для корректной работы функций поиска CSldCustomList::GetWordByTextExtended и CSldCustomList::GetMostSimilarWordByText
+- BUG: Исправлена функция раскрытия сокрытия уровней в катсомном списке CSldCustomListControl::UncoverHierarchy.
+			Теперь при первом раскрытии уровня будут связываться (CSldCustomListControl::AddSubWord) подуровневые элементы с данным уровнем.
+			Необходимо для успешного изменения флага TSldCustomListWordInfo::UncoverFlag, отвечающего за статус уровня (раскрыт/сокрыт). Флаг влияет и на многое другое.
+- NEW: Добавлена функция CSldCustomList::ChengeSubwordsState меняющая статус уровня (раскрыт/сокрыт).
+Build 121
+- NEW: Добавлена аргентинская локализация
+Build 120
+- CHN: Дописана логика восстановления хистори элемента. Задействован флаг ESldHistoryResult::eHistoryDuplicateCompare, который учитывался на оболчках как результат положительного восстановления элемента
+- CHN: Оптимизирована функция свайпа для кастомного списка
+Build 119
+- NEW: Добавлена функция свайпа CSldDictionaryHelper::Swipe в режимах ESwipingMode
+- CHN: Исправлена загрузка history элементов (CSldHistoryElement::LoadElement) и выравнивание загрузки бинарников с history элементами в другой разрядности (CSldHistoryElement::ResolveElement)
+Build 118
+- CHN: Изменены сигнатуры функций поиска GetWordBySetOfVariants
+- CHN: Добавлен бинарный поиск по SimpleSorted списку в функцию CSldList::GetWordBySetOfVariants
+- CHN: Добавлено значение по умолчанию параметру aActionsOnFailFlag в сигнатурах функций поиска GetWordBySetOfVariants
+Build 117
+- NEW: Добавлен шрифт Wittenberger
+Build 116
+- CHN: Минимально поддерживаемая версия словарного ядра уменьшена до 101. В 104 версии мы имеем потенциальный баг, однако старые базы пересобираться не будут и для их открытия облочкам приходится использовать костыль.
+- BUG: Исправлен баг в IMorphoData::StrReverse()
+- BUG: Исправлены баги в CSldCompare::TrimDelimitersRef() CSldCompare::TrimIngnoresRef() с передачей строки, состоящей из нескольких разделителей.
+Build 115
+- CHN: Функция CSldCompare::TrimDelimiters() обрезает разделители. Раньше обрезались все нулевые символы.
+- NEW: Добавлены функции CSldCompare::TrimDelimitersRef(), CSldCompare::TrimIngnoresRef(), CSldCompare::TrimIngnores()
+- NEW: Добавлен бренд Zanichelli Editore
+Build 114
+- CHN: Изменена сигнатура CSldCompare::TrimDelimiters()
+- CHN: Переработан CSldDictionaryHelper::GetMorphoTips() - функция работает с любыми базами, однако сложные морфо-подсказки, например фразы, она возвращает только для баз бренда Van Dale. У функции добавлен параметр aOnlyRoot(по дефолту true), позволяющий искать морфоподсказки только в корне списка
+- NEW: Добавлена функция GetWordSetByTextExtended()
+- NEW: Удалена функция ReleasePath(), за очистку памяти отвечает деструктор TCatalogPath
+- CHN: LinksCollection переименован в SldLinksCollection
+- CHN: Изменились сигнатуры функций HasFeature(), IsDictionaryHasSkeletalMode(), IsDictionaryHasTaboo(), IsDictionaryHasStress(), IsDictionaryHasSwitchThematics()
+- NEW: Добавлена функция CSldDictionaryHelper::GetCrossReference()
+- NEW: Добавлены дефолтные js-функции для работы с кросс-ссылками CSldBasicHTMLBuilder::GetCrossRefScript() и CSldBasicHTMLBuilder::GetCrossRefInitScript()
+- NEW: Добавлены функции для конвертации кода языка в ISO код: CSldBasicHTMLBuilder::GetISOLanguageCode() и CSldBasicHTMLBuilder::GetLanguageCodeByISO()
+- CHN: Дефайны с кодами языков заменены на enum SldLanguage
+- CHN: Дефайн SLD_DEFAULT_LANGUAGE_CODE замен на SldLanguage::Default
+- CHN: Дефайн SLD_SYMBOLS_DELIMITERS_LANGUAGE_CODE заменен на SldLanguage::Delimiters
+- CHN: Сигнатуры функций по работе с кодами языка переработаны с учетом ESldLanguage: 
+			CSldDictionary: GetLanguageFrom(), GetCurrentLanguageFrom(), GetLanguageTo(), GetCurrentLanguageTo(), RecognizeLanguage(), SwitchDirectionTo(), SetLocalization(), IsSymbolBelongToLanguage(), IsSymbolBelongToLanguageDelimiters();
+			CSldListInfo: GetLanguageFrom(), GetLanguageTo(), GetLanguage();
+			CSldCompare: StrICmpByLanguage(), Unicode2ASCIIByLanguage(), ASCII2UnicodeByLanguage(), GetTableLanguage(), IsSymbolBelongToLanguage(), IsSymbolBelongToLanguageDelimiters(), SetDefaultLanguage(), GetDefaultLanguage(), GetDelimiters();
+			IMorphoData: GetLanguageCode();		
+- NEW: Добавлена перегрузка CSldCompare::GetEffectiveString(), возвращающая SldU16String
+- NEW: Добавлена функции CSldCompare::GetWordByPosition(), CSldCompare::ReplaceWordInPhraseByIndex()
+- CHN: GetAllMorphoForms() сохраняет порядок форм из внешней морфологической базы
+- NEW: Добавлена функция GetArticleLinks()
+- CHN: TArticleSplit заменен на SplittedArticle
+- CHN: Изменена сигнатура GetCurrentWordStylizedVariant()
+- BUG: CSldCustomList::CheckSubwordsState() исправлена обработка иерархических списков без сабиндексов
+- NEW: Добавлена реализация MorphoData_v3::EnumPartial()
+- NEW: В CSldBasicHTMLBuilder добавлена обработка switch-block-ов типа radio-button
+- BUG: CSldDictionaryHelper::SearchByAuxiliarySearchList переключает таблицу сортировки на код языка запроса
+Build 113
+- NEW: Добавлена функция CSldDictionaryHelper::GetMorphoTips()
+- CHN: CSldDictionaryHelper::SearchByAuxiliarySearchList() учитывает массу чисел и игнорируемых символов
+- BUG: Исправлен баг в CSldHistoryElement::LoadElement, с невозможностью загрузить элементы с слишком короткими вариантами написания при изменении разрядности системы
+- CHN: В таблицу пробельных символов добавлены 0x0085, 0x1680, 0x180e, 0x200c, 0x200d, 0x2028, 0x2029
+- BUG: Исправлен баг в CSldDictionaryHelper::SearchByAuxiliarySearchList() с поиском в направлениях, отличном от russ
+- CHN: GetDictionaryIndexByTranslationIndex() заменена на GetDictionaryIndexesByGlobalIndex()
+- CHN: В неслитых словарях индекс словаря всегда 0, вместо SLD_DEFAULT_DICTIONARY_INDEX
+- BUG: Исправлен баг в SearchChineseSound() - возвращались не все найденные индексы
+- BUG: В DoWildCardSearch() несколько подряд идущих символов '*' коллапсируют до одного
+- CHN: CollocationsSearch использует для сортировки eFTSSortingType_AlphabeticalSortedGroups
+- CHN: TMetadataSwitch инициализируется  значением eSwitchThematicDefault вместо MAX_UINT16
+- CHN: Большая часть функций CSldListInfo (GetNumberOfVariants(), GetLanguageFrom() и т.п.) возвращает значение напрямую, вместо кода ошибки
+- NEW: Добавлен новый тип метаданных eMetaDemoLink
+Build 112
+- CHN: Минимально поддерживаемая версия словарного ядра увеличена до 105
+- CHN: RecognizeLanguage() не учитывает CMP_NOT_FOUND_SYMBOL
+- NEW: Добавлена функция CSldCompare::IsMarginalSymbol()
+- BUG: Исправлен баг с определением разделителей в старых базах с отсутствующей таблицей общих разделителей(SLD_SYMBOLS_DELIMITERS_LANGUAGE_CODE)
+- NEW: Добавлен тип списка eWordListType_Enchiridion
+- BUG: Исправлен баг в UpdateHistoryElement(): не всегда восстанавливался элемент при изменении индекса списка слов
+Build 111
+- NEW: Добавлена функция CSldDictionaryHelper::GetAlphabet()
+- CHN: Изменена сигнатура CSldCustomListControl::AddSubWord(), SubIndexes в пользовательском списке больше не привязаны к списку родителя, и могут принадлежать любой записи в словаре
+- CHN: Функции для работы со стилизованными вариантами теперь поддерживают старый тип стилизации eVariantStylePreferences
+- NEW: Добавлены Перегрузки функций StrICmp() и DivideQueryByParts() для SldU16StringRef
+- CHN: Изменена сигнатура SldCustomListControl::AddVariantProperty(), добавлен флаг aUnique
+- NEW: Добавлена функция CSldDictionaryHelper::CollocationsSearch()
+- BUG: Исправлен баг в DoWildCardSearch() - находились не все записи в последних папках в списке
+- BUG: Исправлен баг с заполнением морфоформ в PrepareQueryForWildCardSearch()
+- NEW: Добавлены функции CSldDictionary::StartMultiSearch(), StopMultiSearch() и соответствующие коллбэки ESldWordFoundCallbackType
+- CHN: Ускорены CSldDictionary::Translate(), SortSearchListRelevant(), DoFullTextSearch()
+- NEW: Добавлен новый тип метки ESldLabelType::eLabelFullTextSearch
+- CHN: Флаг резултата CSldDictionaryHelper::SearchByDictionaryForSearchList() возвращается в виде EDictionaryForSearchResultType.
+- CHN: Теперь перенос строки("\%0A") обрабатываются в ядре, CSldDictionary::Translate() возвращает обычный юникодный символ
+- NEW: Добавлен класс CSldBasicHTMLBuilder
+- CHN: Теперь информацию о метаданных можно получить только в виде CSldMetadataProxy через CSldMetadataParser::GetMetadata<ESldStyleMetaTypeEnum>()
+- NEW: Добавлен класс CSldMergedDictionary
+- DEL: Удалены классы CSldMerge, CSldMergeList, CSldMergeListInfo
+- DEL: Удалены перегрузки функций в SldAuxiliary для CSldMerge
+- NEW: Добавлен бренд Academia International
+- DEL: Удалена функция CSldCompare::StrNCmpA(). Вместо нее можно использовать шаблонную sld2::StrNCmp()
+Version 132
+Build 110
+- CHN: Изменилась сигнатура GetNumberOfStyles() и GetNumberOfProperty()
+- DEL: Удалены функции GetFullTextResultCount() для индекса в списке слов. Вместо нее можно использовать GetRealIndexesCount()
+- CHN: Удалена вся логика для работы со списками типа DictionaryForSearch
+- BUG: Исправлен баг с восстановлением элемента истории в локализованных списках
+- NEW: Добавлен бренд Druid Multimedia
+- CHN: Функция GetStylizedVariantArticleIndex() теперь работает с поисковыми и пользовательскими списками
+- NEW: Добавлен атрибут TextIndent для MediaContainer
+- BUG: Исправлен баг в конструкторе копирования CSldCustomListControl
+Version 131
+Build 109
+- NEW: Добавлено CSS-свойство 'direction'
+- BUG: Исправлен баг в конструкторе копирования CSldCustomListControl
+- NEW: Добавлена функция UpdateHistoryElement()
+- NEW: Добавлена функция CSldDictionaryHelper::AdvancedHeadwordSearch()
+- NEW: Добавлены функции CSldCompare::GetEffectiveString() и CSldCompare::GetNextMassSymbol()
+- CHN: В функцию PrepareQueryForFullTextSearch() добавлен параметр aMorphoForms, возвращающий все морфоформы, имеет дефолтное значение
+- CHN: Добавлена константность для GetDatabaseType() и IsInApp()
+- BUG: Исправлен баг с MurmurHash3 для 4-х байтовых элементов
+- NEW: Добавлена функция CSldDictionaryHelper::SearchByDictionaryForSearchList()
+- CHN: CSldDictionaryHelper::SpecialWildCardSearchForAuxiliarySearchList() переименована в SearchByAuxiliarySearchList(), добавлен параметр aUnlockedCategoriesCount, изменилось поведение функции (в случае неудачного поиска возвращает индекс пустого кастомного списка)
+Build 108
+- BUG: Исправлен баг со строчками метаданных в базах версии 131+
+- CHN: Обновлен sldEmojiTable
+- NEW: Добавлен тип баз eDatabaseType_InflectionMorphology
+- CHN: В сигнатуру InitMorphology() добавлен параметр ISldLayerAccess*
+- NEW: Добавлен новая реализация интерфейса морфологии  MorphoData_v3
+Build 107
+- NEW: Для CSldHistoryElement-а добавлены метод GetHash() и operator==()
+- NEW: Добавлены CSS-свойства display: flex, justify-content, align-items, (min|max)-(width|height), !important, text-indent
+- CHN: В одной из перегрузок FindWordBySpecificRule() удален параметр aWordSearchType
+- NEW: Добавлен тип списка eWordListType_AuxiliarySearchList
+- NEW: Добавлена функция CSldDictionaryHelper::SpecialWildCardSearchForAuxiliarySearchList()
+- CHN: SldDictionaryHelper стал полноценным классом
+- CHN: Добавлена параметр, задающий тип Emoji-символов в функциях по работе с Emoji
+- NEW: Добавлена функция GetCurrentLocalizationIndex()
+- NEW: Добавлен тип eDatabaseType_DisplayMorphology
+- NEW: Добавлен тип метаданных eMetaArticleEventHandler
+- NEW: Добавлена функция GetArticlesJavaScript()
+- CHN: Добавлена обработка GetStylizedVariantArticleIndex() для пользовательских списков
+- CHN: Хистори элементы, сохраненные в основной базе восстанавливаются в демо-базах первого типа
+- CHN: Переработана функция GetAlphabetTypeByText(). В случае, если в запросе встречается хотя бы один иероглиф - весь запрос считается иероглифическим.
+Version 130
+Build 106
+- NEW: Исправлен баг с декодированием старых spx-файлов.
+- CHN: GetTotalWordCount() потерял константность (в списках с локализациями недостаточно дернуть хидер)
+- BUG: Исправлен баг в TCurrentQAWordsShift в базах < 112 (иногда GetCurrentWord() возвращал неверное слово для текущего индекса)
+- BUG: Исправлен баг GetSearchBounds() с определением нижней границы поиска в иерархических списках
+Build 105
+- NEW: Добавлен тип базы eDatabaseType_PictureDictionary
+- NEW: Добавлена тематика switch-блока eSwitchThematicsRadioButton
+- NEW: Добавлены функции CSldDictionary::GetNumberOfLocalization(), SetLocalizationByIndex(), GetLocalizationInfoByIndex()
+- NEW: Добавлена функция CSldCompare::UInt16StrToUInt32Code()
+- NEW: Поиски (кроме полнотекстового) поддерживают локализации списков
+- CHN: RemoveList() не пытается переключить список, если нужный список уже установлен
+- BUG: Исправлен баг в GetMorphoForms() для встроенной морфологии
+- BUG: Объявление и реализация PrepareQueryForFullTextSearch для CSldMerge приведены к единому виду
+- NEW: Добавлены CSS-свойства background-color, border-*-radius, position, left, right, top, bottom, z-index
+- DEL: Удален eMetaDrawingObject
+- CHN: Все стили пакуются в один ресурс
+- NEW: Добавлено сжатие ресурсов
+Version 129
+Build 104
+- ADD: Добавлены функции CSldCompare: IsEmoji(), IsWhitespace(), AddEmojiSelector() и ClearEmojiSelector()
+Build 103
+- BUG: Исправлены ошибки сборки с помощью Clang
+- CHN: Испралено получение базовых форм для полисинтетических языков (M_IGNORE_BASEFORMS_OF_PARTS)
+- BUG: Исправлен баг в поиске по шаблону (при совпадении позиции "?" и символа с нулевой массой слово не находилось)
+Build 102
+- ADD: Добавлен вариант написания eWordListType_ArticleTemplates
+- ADD: Добавлена CSldDictionary::SortResultByVariantType()
+- ADD: Добавлена CSldListInfo::GetVariantIndexByType()
+- CHN: GetStrOfMass(), GetStrOfMassWithDelimiters(), GetSearchPatternOfMass() переведены на SldU16String
+- NEW: Добавлен бренд eBrand_The_Kosciuszko_Foundation
+- NEW: Добавлен интерфейс ISDCFile. Все открытия/закрытия контейнеров sdc производятся через него
+- ADD: Добавлен заголовочный файл SldUnicode.h и шаблонная функция для смены кодировки текста, доступная в пространстве имен sld2::utf
+- CHN: Вернулась GetAllMorphoForms() для встроенной морфологии(Обертка для GetMorphoForms())
+- ADD: Добавлены функции sldNew() и sldDelete() заменяющие стандартные new и delete. В ядро добавлен заголовочный файл <new>
+- ADD: Добавлены шаблонные функции sldMemNewZero<T>(count = 1) и sldMemNew<T>(count = 1);
+- CHN: Часть платформозависимых функций перенесена в ядро. Осталась возможность использовать свои реализации через дефайны SLD__HAVE_SDC_BASE_TYPES_H и SLD__HAVE_MEM_MGR. Добавлены заголовочные файлы <stdlib.h> и <string.h>
+- CHN: SortSearchListRelevant(), PrepareQueryForSortingSearchResults(), GetAllMorphoForms(), GetMorphoForms() переведены на  CSldVector<TSldMorphologyWordStruct>
+- BUG: Исправлен баг в формировании запроса в PrepareQueryForWildCardSearch()
+- ADD: Добавлена функция GetEngineVersionForced() - получает версию ядра, которым собрана база, не открывая базу полностью
+Build 101
+- CHN: Если в поле MorphologyId зашит индекс текущего списка полнотекста, PrepareQueryForFullTextSearch() для инфлекшн списков не использует производные формы. Список полнотекста не может быть нулевым.
+- BUG: Исправлен баг с формированием запроса в PrepareQueryForFullTextSearch() для списков isFullMorfologyList.
+Build 100
+- ADD: Добавлен класс CSldMetadataProxy (упрощает интерфейс для работы с новыми метаданными);
+- ADD: Добавлена опция FullTextSearchOptions::MorphologyId. При ее наличии ядро формирует запрос для полнотекстового поиска, состоящий только из базовых форм (работает только для внешних морфологических баз)
+- ADD: Добавлен SldTypeDefs.h, который объединяет универсальные дефайны и типы компилятора и ядра (во избежание расхождения значений)
+- ADD: Добавлена возможность указывать css настройки у любых метаданных; также добавлен новый тип метаданных eMetaDiv
+Version 128
+Build 99
+- CHN: Добавлено восстановление хистори-элемента для систем с разной разрядностью
+- BUG: Исправлен баг с восстановлением истории при переключении списков.
+Build 98
+- ADD: Добавлены CSldVector, CSldString 
+- CHN: Изменена схема работы с метаданными: теперь для получения настроек используется одна функция GetMetadata(), в которую передаются необходимые структуры
+Build 97:
+- ADD: в TListHeader добавлен SearchRange – определяет рекомендуемый режим поиска (возможные значения в ESldSearchRange); режим поиска задается при сборке базы, в ядре его поменять нельзя
+- ADD: Добавлен бренд eBrand_Kuznetsov
+- ADD: Добавлен eFontName_Augean – содержит отрисованные нами символы (со временем будет дополняться)
+- ADD: Добавлен шрифт Courier New
+- ADD: Добавлена функция TSizeValue::Is100Percent() - аналог бывшего FULL
+- ADD: Добавлена поддержка умножения/деления для TSizeValue
+- BUG: Исправлен memleak в сортировке результатов поиска
+- ADD: Добавлена функция GetInitialWordIndexes() – позволяет из результатов поиска получить словарный список (возвращает индекс списка и индекс слова)
+Build 96
+- DEL: Удалены файлы SldPageStyleInfo.h, SldPageStyleInfo.cpp
+Build 95
+- CHN: Изменена сигнатура функции CSldMetadataParser::GetSvgInfo()
+- ADD: Добавлена перегрузка функции CSldMetadataParser::GetNextParam() на основе разделителей из таблицы сортировки
+- CHN: В TSldMediaContainer BorderStyle и BorderColor переведены на целочисленные значения
+- ADD: Добавлен EBorderStyle
+- ADD: Добавлен eFontName_Augean
+Version 126
+Build 94
+- ADD: Добавлена функция CSldCompare::GetDelimiters() - возвращает строку разделителей в таблице сортировки заданного языка
+- CHN: Изменены значения жирности шрифта (см. ESldBoldValue)
+- CHN: GoToByGlobalIndex() вынесена в интерфейс CSldDictionary
+- CHN: Изменена сигнатура CSldDictionary::GetWordByHistoryElement()
+- CHN: Добавлено восстановление истории из демо баз первого типа
+- ADD: Добалены новые функции работы с памятью - sldMemRealloc() и sldMemNewZero()
+- ADD: Добавлены новые варианты написания eVariantExternalKey, eVariantInternalKey, eVariantHtmlSourceName, eVariantAuthorName и eVariantKesID
+- CHN: Удалены лишние варианты написания eVariantFirstPage и eVariantLastPage
+- BUG: Устранена утечка памяти в m_StylizedVariant
+- ADD: Добавлена функция CSldDictionary::SortListByVariant() - индексирует все слова, содержащиеся в списке в соответсвии с заданным вариантом написания
+- ADD: Добавлен EHierarchyLevelType - тип уровня иерархии
+- CHN: В isWordHasHierarchy() добавлен новый параметр - настройки поведения папки при активации
+- ADD: Добавлен новый тип метаданных - атомарные объекты; добавлена функция CSldDictionary::GetAtomicObjectInfo()
+- ADD: Добавлены функции CSldDictionary::GetRealIndexesCount() и CSldDictionary::GetRealIndexes() - их можно использовать в полнотекстовом поиске для определения основного словарного списка из вспомогательного списка. Работают только в базах версии 126+
+- ADD: Добавлен новый тип ресурса RESOURCE_TYPE_BINARY, который добавляется через список типа eWordListType_BinaryResource. Получить название ресурса можно через этот же список, индекс ресурса равен индексу записи в списке слов. Также добавлена функция GetBinaryResourceByIndex()
+- ADD: Добавлен новый тип списка eWordListType_PageNumerationIndex
+- ADD: Добавлена возможность группировки результатов полнотекстового поиска по заголовкам. Работает через пользовательские списки только в базах версии 126+
+- ADD: Добавлены шрифты eFontName_Lyon_Text, eFontName_Atlas_Grotesk, eFontName_1234_Sans
+- ADD: Добавлена структура TSizeValue для хранения значений метаданных вместе с их размерностями; интерфейсы функций CSldMetadataParser изменены под работу с этой структурой
+- CHN: Изменена кодировка файлов на UTF-8
+- ADD: Добавлены атрибуты display, float и clear для медиаконтейнеров
+- ADD: Добавлены новые значения тематик switch блоков
+Version 117
+Build 89
+- ADD: Добавлены/исправлены конструкторы копирования TImageElement и TSoundElement
+- ADD: Добавлен универсальный метод подмотки к слову в списке с иерархией GoToWordByGlobalIndex()
+- CHN: В несортированных списках заработал поиск опечаток
+- CHN: В листах eWordListType_SimpleSearch отключен поиск по шаблону
+- CHN: Изменена сигнатура функции WordFound
+- CHN: WildCardSearch в списках без иерархии и с вспомогательными поисковыми списками ищет во вспомогательных списках
+- CHN: В WildCardSearch добавлен callback с найденным индексом
+- ADD: Добавлены шрифты Combi Numerals и Charis SIL
+- ADD: Добавлен прототип пользовательского списка слов
+- ADD: Добавлена функция CSldDictionary::AddCustomWordList()
+- ADD: SldListInfo добавлена перегруженная функция инициализации для SldListInfo
+- CHN: CSldDictionary::GetSoundInfo() возвращает TSoundElement
+- BUG: Добавлена проверка граничных условий в GetResourceByTypeIndex()
+- CHN: Функция GetTranslateMaxSize() переименована в GetTranslateMaxBlockSize()
+- CHN: Функцию CSldDictionary::GetPictureInfo() корректнее обрабатывает svg и возвращает единицы измерения
+Version 116
+Build 88
+- ADD: Добавлены функции CSldDictionary::HasStylizedVariantForCurrentWord(), CSldDictionary::GetCurrentWordStylizedVariant() и CSldListInfo::IsStylizedVariant()
+- CHN: В функцию GetWordByTextExtended() добавлен флаг aActionsOnFailFlag, определяющий, нужно ли подматываться к ближайшему похожему варианту, если запрашиваемое слово не нашлось (aResultFlag == 0). По умолчанию не подматываемся.
+- ADD: Добавлена функция GetFullTextResultCount()
+Build 87
+- CHN: Изменена работа всех поисковых функций в каталогах (кроме полнотекстового поиска). В сортированных каталогах поиск идет только по корню, во всех остальных по текущему уровню и всем подуровням
+- CHN: Тип eDatabaseType_InApp больше не актуален, вместо него добавлен отдельный флаг в заголовок контейнера IsInApp
+- ADD: В интерфейсе CSldDictionary добавлены функции GetDatabaseType() и IsInApp();
+- CHN: SimpleSortedList инициализируется автоматически, при инициализации базового списка
+- ADD: Добавлена функция CSldListInfo::GetShowVariantIndex()
+- ADD: Добавлена возможность работать с зашитой в базу морфологией (в CSldDictionary добавлена функция GetMorphology, которая возвращает указатель на морфологию по коду языка и id базы)
+Build 86
+- ADD: В таблицы сортировки добавлены частичные разделители - тире и апострофы. При формировании поискового запроса из слов с этими разделителями создается запрос, содержащий больше вариантов
+- CHN: PrepareQueryForFullTextSearch() использует частичные разделители для составления запроса
+- ADD: Добавлена функция TrimDelimiters
+- BUG: При формировании поискового списка не учитываются поисковые списки
+- BUG: Исправлен небольшой баг в SpellingSearch
+Version 115
+Build 85
+- CHN: Оптимизирован доступ к словам в списках в базах версий 115+
+- ADD: Добавлены шрифты Gentium, Merriweather, Merriweather Sans, Noto Sans, Noto Serif, Trajectum
+Build 84
+- ADD: Добавлены бренды Insight Guides и Editura Litera
+Version 114
+Build 83
+- ADD: Добавлено сохранение состояния ядра (поддержка history/favourites): добавлены методы CSldDictionary::GetHistoryElement() и CSldDictionary::GetWordByHistoryElement()
+- CHN: GetMostSimilarWordByText() в списках с результатами поиска ищет по тексту с помощью GetWordByText()
+- BUG: CSDCReadMy::CheckData() перенесен в public
+Build 82
+- CHN: В функции открытия базы добавлен параметр aUserData
+- CHN: GetNextRealSortedWord() проверяет граничные условия
+- BUG: В GetPictureInfo() создается временная строчка для поиска информации о svg
+- CHN: GetWordByTextExtended() в случае неудачи(возвращаемый флажок равен нулю) адекватно восстанавливает состояние списка (учитывая историю переходов по иерархии)
+Build 81
+- CHN: sldBaseType.h вынесен из ядра наружу и переименован в SDCBaseType.h
+- CHN: Функции открытия sdc-баз могут принимать полные пути к файлам
+- CHN: функция GetDatabaseType() перенесена в public
+Version 113
+Build 80
+- CHN: Флаг, возвращаемый GetWordByTextExtended() несет информацию о реальности полученного слова
+- CHN: Удалены UInt16 указатели на wchar_t-строчки (в 64-битных версиях wchar_t 4-хбайтовый)
+- NEW: В дефайны добавлен код "бразильского" языка
+- CHN: GetWordByTextExtended() в иерархических списках осуществляет полный переход по иерархии
+- CHN: GetWordByText() в поисковом списке возвращает первое вхождение по массе Show-варианта
+- CHN: GetWordByTextExtended() ищет максимально похожее слово, старый GetWordByTextExtended() переименован в GetWordBySortedText()
+- NEW: Добавлен метод AnagramCompare()
+- CHN: PrepareTextForWildCompare() заменен на PrepareTextForAnagramSearch(), так как используется только при поиске анаграмм
+- NEW: Добавлена функция StrEffectiveLen()
+- CHN: SpellingSearch вызывает GetWordByText значительно реже, за счет проверки уже вызванных запросов
+- BUG: WordFound SpellingSearch-а больше не срабатывает при дублях
+- CHN: PrepareQueryForWildCardSearch возвращает не строку, а структуру TExpressionBox
+- CHN: Поиск по шаблону больше не использует LogicalExpression, вместо строки с запросом DoWildCardSearch принимает структуру TExpressionBox
+- CHN: Поиск по шаблону научился поддерживать бинарные не (!) и совершает все проверки за один проход. Скорость выполнения для сложных запросов выросла пропорционально количеству запросов
+- CHN: WildCardSearch больше не учитывает ShowSecondary-варианты написания
+- CHN: Переработан метод PrepareQueryForWildCardSearch() введенное слово без джокеров больше не считается частью слова (*a*)->(a)
+- NEW: В таблицы сортировки добавлен массив MostUsageCharTable
+- CHN: WildCompare() переработан для работы со строкой масс
+- NEW: Добавлены макросы для работы с массой чисел CMP_IS_DIGIT и CMP_VIRTUAL_DIGIT_MASS
+- NEW: Добавлены функции GetStrOfMassWhithDelimiters(), GetSearchPatternOfMass()
+- CHN: Переработан GetStrOfMass()
+- CHN: Переработан GetMass()
+- NEW: Добавлена функция IsZeroSymbol()
+- CHN: RecognizeLanguage() точнее определяет язык и больше не возвращает SLD_SYMBOLS_DELIMITERS_LANGUAGE_CODE для строки разделителей
+- CHN: CopyStrNoDelimitersToLower() переименован в StrEffectiveCopyToLowerStr()
+- CHN: StuffSymbolsStr удален из дефайнов и создается локально в случае необходимости
+- CHN: MetaParamMaxValSize переименован в SLD_META_PARAM_MAX_VAL_SIZE и перенесен в Define.h
+- CHN: StrCopyNoDelimiters() переименована в StrEffectiveCopy()
+Build 79
+- CHN: GetTranslationIndex() для поискового списка возвращает индекс перевода найденного слова, а не текущего в реал-листе
+- BUG: GetCurrentSortedIndex() возвращает глобальный индекс слова, в случае отсутствия SimpleSorted-List-а
+- CHN: Из GetNumberOfTranslations() удалена проверка верхнего граничного условия(мешает навигации по каталогам), проверка в Translate() работает через общее количество слов, а не слов на текущем уровне
+- ADD: Добавлен атрибут стиля текста "Unclickable"
+- ADD: Доехали атрибуты стиля текста BackgroundTopImageIndex и BackgroundBottomImageIndex. Компилятор уже год зашивает их в базы
+- BUG: Исправлен баг сортировки по релевантности
+Build 78
+- BUG: Исправлен незначительный баг в новом виде сортировки результатов полнотекстового поиска
+Build 77
+- ADD: Добавлен новый вид сортировки результатов полнотекстового поиска
+Version 112
+Build 76
+- ADD: Добавлен новый вид сортировки результатов полнотекстового поиска
+- ADD: В интерфейс ISldSDCRead добавлены методы для работы с дополнительными свойствами базы: GetNumberOfProperty(), GetPropertyByKey(), GetPropertyByIndex(), GetFileCRC()
+- BUG: Исправлена ошибка с лишним выделением памяти под один из буферов для декодирования списков
+- BUG: Исправлены баги ядра слияния для словарей с иерархическими списками
+- BUG: Исправлен подсчет количества найденных слов в поисковых списках
+Build 75
+- ADD: Добавлен шрифт Source Sans Pro
+- ADD: Добавлена функция IsCurrentLevelSorted()
+- ADD: Добавлена перегруженная версия GetWordByGlobalIndex() для получения слова в текущем списке
+- ADD: Добавлена подмотка в несортированных списках с помощью вспомогательных списков
+- BUG: Исправлена ошибка с переключением ресурсов в каталогах
+- BUG: Добавлена проверка граничных условий в GetNumberOfTranslations()
+- BUG: Исправлена ошибка с утечкой памяти в поисковых списках при неудачном поиске
+- CHN: Доработан GetWordByText() в каталогах
+- CHN: Ускорено обратное декодирование словарных списков
+- CHN: GetHeadwordMaxSize() возвращает максимальную длинну слова в списке слов
+- CHN: GetPathByGlobalIndex() очищает переданный в нее путь перед использованием
+- CHN: У TCatalogPath появился конструктор
+Build 74
+- BUG: Исправлена ошибка с переключением ресурсов в каталогах
+Build 73
+- ADD: Добавлены параметры для ширины отдельных границ ячейки
+- ADD: Добавлен тип списка eWordListType_PopupArticles
+- CHN: GetMass() получает массу напрямую, без бинарного поиска
+Build 72
+- BUG: Исправлен баг при переходе по ссылкам в иеррархии
+- CHN: При попытке получить перевод слова в списке полнотекстового поиска возвращается eOK, перевод не получается
+Build 71
+- ADD: Расширен функционал медиа контейнеров, добавлена поддержка горизонтальных линий
+- ADD: Добавлен новый тип теста на сопоставление (Mapping)
+- BUG: Исправлена ошибка с индексом видео для элемента списка
+- BUG: Исправлена ошибка с возвращаемым значением в GetXmlIntAttribute
+- CHN: Информация о кодеке видеоэлемента представлена значением enum-поля (ESldVideoType)
+- CHN: Удален enum ESldSizeType
+- CHN: Функции StrToInt32 и StrToUInt32 перенесены из CSldMetadataParser в CSldCompare
+Build 70
+- CHN: Появилась поддержка медиа контейнеров
+Build 69
+- ADD: Добавлен класс для декодировки по частям
+- ADD: Добавлена поддержка видеоконтента
+- ADD: Добавлены дефайны языковых кодов
+- BUG: Исправлен баг IsSymbolBelongToLanguage()
+- BUG: Исправлен баг с неверным определением номера ресурса каталога
+- CHN: Появилась возможность проигрывать озвучку не сначала
+Build 60
+- ADD: Добавлены функции генерации поисковых запросов (PrepareQueryForFullTextSearch, PrepareQueryForWildCardSearch), работающие со встроенными в базу морфологическими списками
+- BUG: Исправлен баг в CSldSearchList::DoFuzzySearch() с разделителями в индексе
+- BUG: Исправлен баг с получением базовых форм из морфологии - в испанском не всегда возвращались все базовые формы для слов с ударениями
+- CHN: Исправлена генерация поисковых запросов, отделяемые приставки в испанском ("se") не попадают в запрос
+- CHN: Исправлена функция CSldCompare::GetStrOfMass() - в строку масс попадают только веса игнорируемых символов-разделителей
+Build 59
+- BUG: Исправлен баг в CSldDictionary::SwitchDirectionTo() - не всегда переключались на нужный список (т.е. иногда переключения вообще не происходило)
+Build 58
+- ADD: Добавлена функция CSldDictionary::IsWordHasSound(), которая проверяет есть ли озвучка для введенного слова.
+- CHN: Улучшена точность метода CSldList::GetMostSimilarWordByText() - появилась возможность нахождения чисел
+- CHN: Для списков полнотекстового поиска CSldListInfo::GetUsage() теперь возвращает начало диапазона кодов использования
+Build 57
+- ADD: Добавлена обертка для флажка локализации слов CSldListInfo::GetLocalizedWordsFlag()
+- BUG: Исправлен баг с установкой флага результата в CSldDictionary::SearchChineseSound()
+- BUG: Исправлен баг с декодированием текста точки входа в CSldInputText
+- BUG: Исправлены баги в ядре слияния
+- CHN: Переработан метод CSldSearchList::DoFuzzySearch(), улучшена точность поиска
+- CHN: Изменен метод CSldCompare::StrCopyNoDelimiters() CMP_NOT_FOUND_SYMBOL (символы, отсутствующие в таблице сравнения) теперь игнорируются
+- CHN: Улучшена точность метода CSldList::GetMostSimilarWordByText()
+Build 56
+- ADD: Добавлена каталанская морфология
+- BUG: Исправлен баг, связанный с выделением памяти при подготовке поискового запроса (PrepareQueryForFullTextSearch, PrepareQueryForWildCardSearch)
+Version 107
+Build 55
+- ADD: Добавлена функция CSldDictionary::GetSoundInfo()
+- ADD: Добавлена поддержка локализации слов в списках - для этого используется новый вариант написания eVariantLocalizationPreferences и функция CSldList::SetLocalization()
+- ADD: Добавлена функция  CSldDictionary::PlaySoundByText() для проигрывания озвучки по введенному слову (поддерживает проигрывание китайских слов, где озвучка формируется из нескольких звуков для отдельных слогов)
+- ADD: Добавлена поддержка азиатских языков - например для китайского в словаре могут присутствовать два списка (иероглифы и латинское написание), различить которые можно с помощью CSldListInfo::GetAlphabetType()
+- BUG: Исправлен баг в функции CSldCatalog::GoToByShift() - без этого иногда неправильно считывалась информация о каталоге, разбитом на несколько ресурсов
+- BUG: Исправлены баги в ядре слияния
+- CHN: Переработан класс SldAuxiliary, снято ограничение на 16 морфоформ
+- CHN: Переработана функция CSldCompare::GetStrOfMass() - разделители добавляются в строку с весом CMP_DELIMITER
+- CHN: Функция CSldDictionary::GetHeadwordMaxSize переименована в CSldDictionary::GetTranslateMaxSize
+Version 106
+Build 54
+- ADD: Добавлен новый вариант написания - eVariantNumeration - нумерация в списке статей
+- ADD: Добавлен новый вариант написания - eVariantStylePreferences - настройки стилей для вариантов написания
+- ADD: Добавлен новый тип метаданных - eMetaBackgroundImage - фоновые картинки для вложенного текста
+- CHN: Доработана функция CSldCompare::StrCopyNoDelimiters, добавлена функция CSldDictionary::CopyStrNoDelimitersToLower
+Version 105
+Build 53
+- ADD: Добавлена поддержка дополнительной таблицы сравнения (для каждого направления)
+- ADD: Добавлены новые типы списков полнотекстового поиска (разделение по типам контента)
+- ADD: Добавлен метод CSldCompare::StrCopyNoDelimiters - копирует строку, игнорируя встречающиеся разделители
+- CHN: Улучшена сортировка результатов по релевантности; добавлена функция подготовки морфологических форм для сортировки результатов - PrepareQueryForSortingSearchResults
+- CHN: Изменены методы CSldList::GetMostSimilarWordByText() и CSldSearchList::DoFuzzySearch(), из поискового запроса и вариантов написания удалены символы с нулевой массой.
+Build 52
+- ADD: Добавлен новый тип списка слов: eWordListType_InApp - список с избранными статьями для инап базы
+- ADD: Добавлен новый бренд Operator's Dictionary
+Build 51
+- ADD: Добавлен новый тип варианта написания в списке слов eVariantDepth - отступ для элемента в списке, соответствующий его положению в иерархии
+- ADD: Добавлены бренды: PASSWORD, Richmond, Ecovit Kiado, Magnus
+- ADD: Добавлен ряд функций ядра слияния (частично в виде заглушек)
+Build 50
+- ADD: Добавлен новый тип метаданных - тег <info_block>: блок, сообщающий о том, что в тело статьи нужно подставить некий контент с информацией в зависимости от типа блока
+- ADD: Добавлены бренды: RedHouse, Living Language
+- BUG: Исправлен баг в сортировке результатов поиска при помощи CSldDictionary::SortSearchListRelevant(). Результаты теперь сортируются в следующем порядке: слова, совпадающие с шаблоном поиска; слова, совпадающие с точностью до регистра; слова, содержащиеся в шаблоне поиска; далее все результаты, отсортированные в соответствии с таблицей сравнения
+- BUG: Исправлен баг в поиске по шаблону: если слово в списке слов содержит какой-то из спец.символов ('&', '|', '(', ')', '!', '*', '?'), то в поисковом запросе вместо этого символа можно использовать '?'
+Version 104
+Build 49
+- ADD: Добавлена поддержка нового типа метаданных - тег <nobr>: текст, заключенный в этот тег, отображается без переносов строк
+Build 48
+- CHN: В SldAuxiliary добавлена возможность включить генерацию поискового запроса из всех возможных словоформ, которые можно получить из переданного текста
+Build 47
+- ADD: Добавлен бренд Drofa
+- CHN: Функция получения списка номеров стилей с ударениями перенесена в CSldDictionary
+- CHN: Перегруженная версия CSldDictionary::SetDefaultStyleVariant() позволяет указать нужный вариант отображения сразу у всех стилей
+- CHN: Исправлен механизм подсчета CRC во избежание ошибок при работе с некоторыми компиляторами
+- CHN: Поддержка морфологии в полнотекстовом поиске по умолчанию включена в SldAuxiliary
+- CHN: В SldAuxiliary исправлена ссылка на include файла морфологического ядра
+Build 46
+- ADD:Робавлен метод CSldCompare::GetSimilarMassSymbols() 
+- ADD:Робавлен бренд Hoepli
+Version 103
+Build 45
+- ADD:Робавлен новый тип списка eWordListType_GameArticles (каталог для статей лигвистических игр)
+- ADD:Робавлен новый тип списка eWordListType_FlashCardsBack (cписок статей с лицевыми сторонами флеш-карточек)
+- ADD: Добавлен новый тип списка eWordListType_FlashCardsFront (cписок статей с обратными сторонами флеш-карточек)
+- ADD: Добавлен новый размер текста eSizeSmallCaps, относительный размер текста, промежуточный между eSizeNormal и eSizeSmall
+- CHN: Доработано ядро слияния с поддержкой основных ф-й (GetWordByIndex, GetWordByText, DoFullTextSearch, Translate)
+Build 44
+- ADD: Добавлен новый тип варианта написания в списке слов eVariantLockFlag, информирущий доступен ли элемент списка для просмотра
+- ADD: Добавлена поддержка speex-озвучки с качествои 8 и выше.
+- BUG: Исправлено падение при выполнении функции GetMostSimilarWordByText
+- CHN: Значение по-умолчанию для фона ячеек таблиц изменено с белого (FFFFFF) на прозрачный (transparent)
+Build 43
+- ADD: Добавлен новый тип списка - eWordListType_ArticlesHideInfo, содержащий статьи со всеми вариантами сокрытия частей перевода
+Build 42
+- ADD: Добавлена функция CSldDictionary::TranslateClear()
+Build 41
+- ADD: В свойства стиля добавлено новое поле LineHeight - высота строки
+- REM: Удален атрибут interval у тега <p>
+Build 40
+- ADD: Для тега p добавлены атрибуты margin-top (отступ сверху), margin-bottom (отступ снизу), interval (межстрочный интервал)
+- ADD: Добавлена поддержка нового типа метаданных - тег <ui_element>: на его место в тело статьи должен подставляться элемент интерфейса
+- ADD: Добавлена поддержка нового типа метаданных - тег <popup_article>: при клике на текст, заключенный в этот тег, показывается статья в отдельном окне
+- ADD: Добавлен новый тип списка слов "MorphologyArticles" - список, содержащий статьи с морфологической информацией
+- ADD: Добавлен бренд Librairie Orientale
+- ADD: Добавлен бренд Cambridge
+Build 39
+- ADD: Добавлен бренд Barron's.
+Build 38
+- ADD: Добавлена функция CSldDictionary::IsDictionaryHasCmpSymbolPairTable() - возвращает флаг, есть ли в словаре в таблицах сравнения таблицы пар соответствий символов верхнего и нижнего регистров.
+- ADD: Добавлен диапазон типов специальных списков слов с интерактивными доп. статьями - eWordListType_SpecialAdditionalInteractiveInfoBase - eWordListType_SpecialAdditionalInteractiveInfoLast.
+- ADD: Добавлена поддержка нескольких таблиц символов-разделителей для разных языков.
+- BUG: Исправлено несколько багов и предупреждений.
+- CHN: Добавлен код, который завершает инициализацию списка слов при первом переключении на него (текущим словом делается слово с индексом 0). Без этого иногда мог неправильно работать поиск (если впервые переключились на список слов и сразу начинаем в нем искать).
+- CHN: В поиск по шаблону добавлена возможность поиска спец. символов сложного запроса (&, |, !, (, ), *, ?) - для этого их нужно экранировать спец. символом '%' - %&, %|, %!, %(, %), %*, %?.
+- CHN: Улучшена функция CSldDictionary::RecognizeLanguage() на основе данных таблиц сравнения (таблиц соответствия символов верхнего и нижнего регистров, если они присутствуют).
+- CHN: Улучшены функции преобразования регистров символов в классе CSldCompare.
+Build 37
+- ADD: Добавлен бренд Independent Publishing.
+- ADD: Добавлен бренд Hodder.
+- CHN: Исправлен поиск по шаблону в каталоге.
+Build 36
+- ADD: Для атрибута align тега p добавлено значение justify - выравнивание по ширине.
+- ADD: Добавлена поддержка языков с написанием текста справа налево (арабский и иврит) - для параграфа (тег p) добавлен атрибут dir (ltr или rtl) - направление текста слева направо или справа налево.
+- BUG: Исправлен поиск похожих слов и поиск с опечатками - в некоторых случаях неправильно определялись веса символов при сравнении и происходила запись за пределы массива.
+Build 35
+- ADD: Добавлен новый тип списка слов: "MergedDictionary" - объединенный словарный список слов (не каталог), в котором есть слова из обоих направлений (прямого и обратного). Коды языков направлений хранятся в соответствующих полях заголовка списка слов: LanguageCodeFrom и LanguageCodeTo.
+- ADD: Добавлено свойство ячейки таблицы text-valign - вертикальное выравнивание текста в ячейке.
+- ADD: Для картинки (img) добавлены атрибуты (dictid_f, listidx_f, key_f, show_width_f, show_height_f), позволяющие полноразмерной версии картинки ссылаться на внешнюю базу.Рля всплывающей картинки (popup_img) добавлены атрибуты (dictid, listidx, key, show_width, show_height), позволяющие всплывающей картинке ссылаться на внешнюю базу.
+- ADD: Добавлены перегруженные методы класса CSldDictionary, которые позволяют обращаться к спискам слов напрямую по индексам списков без установки текущего списка слов.
+- ADD: Добавлены функции CSldDictionary::GetParentWordGlobalIndex() и CSldDictionary::GetChildrenWordsGlobalIndexes().
+- CHN: Исправлен поиск с опечатками (SpellingSearch) - теперь регистр символов при поиске не учитывается.
+Build 34
+- ADD: Добавлены функции CSldDictionary::GetCurrentParentWordName() и CSldDictionary::GetParentWordNamesByGlobalIndex().
+- ADD: В структуру TCatalogPath добавлены методы isRoot() и GetParentWordLocalIndex().
+- ADD: Добавлена поддержка нового свойства для стиля: Overline - надчерктнутость (черта над текстом).
+- ADD: Добавлена поддержка нового типа метаданных - url - внешняя ссылка.
+- ADD: Для тега метаданных img добавлена поддержка атрибутов show_width и show_height - желаемая ширина и высота картинки в пикселах при отображении в оболочке (не реальная ширина и высота).
+- ADD: Добавлена функция CSldDictionary::GetPictureInfo(), возвращающая информацию о формате и реальных размерах картинки.
+- BUG: Исправлен баг в полнотекстовом поиске: если введенное для поиска слово состоит только из разделителей, то при поиске сравнение идет не по таблице сравнения, а бинарно, таким образом исключаются лишние слова из результатов поиска.
+- CHN: Функция CSldDictionary::GoToLevelUp() теперь меняет индекс текущего слова на индекс слова–категории, в которой находились.
+- CHN: Функции CSldDictionary::GetCurrentPath() и CSldDictionary::GetPathByGlobalIndex() теперь ведут себя одинаково: последний элемент списка содержит локальный номер слова в обоих случаях.
+- CHN: Функция SetBase() теперь получает (декодирует и делает текущим) первое слово (с индексом 0) на текущем уровне вложенности (на который переходит), чтобы ядро находилось в согласованном состоянии.
+- REM: Из структуры TCatalogPath удалены лишние поля WordIndex и IsWordHasHierarchy
+Build 33
+- ADD: Добавлена поддержка нового типа метаданных - тег <popup_img>: при клике на текст, заключенный в этот тег, показывается картинка в отдельном окне.
+Build 32
+- ADD: Добавлен диапазон новых типов списков слов - от eWordListType_SpecialAdditionalInfoBase до eWordListType_SpecialAdditionalInfoLast - специальные списки слов с доп. статьями, которые можно различать между собой.
+- BUG: Исправлен один баг с выходом за границы массива.
+Build 31
+- ADD: Добавлена поддержка формата mp3.
+- BUG: Исправлены опечатки - русские символы в именах классов.
+- BUG: Исправлен баг в CSldCatalog::GetPathByGlobalIndex() - после работы функции предыдущее состояние восстанавливалось не полностью, что в некоторых случаях приводило к ошибке.
+Build 30
+- ADD: Добавлена поддержка новых типов метаданных - грамматических тестов.
+- ADD: Добавлены классы для разбора логических выражений: добавилось 5 новых исходных файлов *SldLogicalExpression*.
+- ADD: Для заголовка списка слов добавлено поле IsFullMorphologyWordFormsList - флаг, содержит или нет данный список для каждого слова все словоформы.
+- CHN: Улучшен поиск по шаблону и полнотекстовый поиск: при поиске можно использовать вспомогательные функции PrepareQueryForWildCardSearch и PrepareQueryForFullTextSearch для формирования расширенного запроса с использованием логических выражений и морфологии. Обновленный поиск выдает больше релевантных результатов.
+Build 29
+- ADD: Добавлен новый тип варианта написания - eVariantLanguageCode.Робавлена поддержка атрибута text-align для тега td - горизонтальное выравнивание текста в ячейке таблицы.
+- ADD: Добавлен бренд Le Robert.
+- BUG: Исправлен один баг при сравнении указателей, из-за чего ядро не компилировалось на платформе Linux x64.
+- BUG: Исправлены баги в различных функциях поиска: вспомогательные варианты написания (часть речи, код языка и т.д.) при поиске не учитываются.
+- CHN: При поиске анаграмм, так же как и при поиске по шаблону, символы Combining Marks не учитываются.
+Build 28
+- BUG: Исправлен баг поиска в списке слов полнотекстового поиска: поисковый список неверно наследовал флаг полнотекстовости.
+- CHN: При поиске по шаблону игнорируются ударения (символ 0x0301).
+- CHN: В функцию поиска по тексту добавлена проверка на передачу в ядро извне указателя на входные данные, который сам указывает на внутренние структуры ядра.
+- CHN: Улучшен поиск похожих слов - поиск находит больше слов, т.к. теперь сравнение происходит по весам символов (без учета регистра символов и игнорируемых символов).
+Version 102
+Build 27
+- CHN: Нераспознаваемые парсером метаданных параметры просто игнорируются, не возвращая ошибки.
+- CHN: Небольшая оптимизация CSldSearchList::DoFuzzySearch(), ускоряющая поиск примерно в 2 раза.
+Build 26
+- BUG: Исправлен баг работы ядра, когда в базе вообще нет переводов.
+- CHN: Парсер метаданных по-умолчанию возвращает SLD_INDEX_PICTURE_NO и SLD_INDEX_SOUND_NO, если соответствующие индексы не найдены в параметрах.
+- CHN: В функцию CSldDictionary::PlaySoundByIndex() добавлен флаг, с помощью которого можно указать, что озвучка будет предоставлена самой оболочкой.
+Build 25
+- ADD: Добавлена поддержка ссылок на внешние sdc базы для тегов sound, img и link.
+Build 24
+- ADD: Добавлена поддержка атрибута align у параграфа - выравнивание текста в параграфе по горизонтали.Робавлен новый тип списка - DictionaryForSearch.Робавлена поддержка нового шрифта - Helvetica.
+- ADD: Добавлена поддержка двух новых типов списков слов: eWordListType_MorphologyBaseForm и eWordListType_MorphologyInflectionForm.
+- BUG: Исправлен баг с выделением памяти нулевого размера в CSldList::GetCurrentPath().
+- CHN: При полнотекстовом поиске проверка на достижение максимально разрешенного количества найденных слов проводится уже при окончательном заполнении массива результатов после всех объединений и пересечений.
+- CHN: Сделана оптимизация работы с индексами статей в классе CSldIndexes, сделана оптимазация работы с ресурсами в классе CSldBitInput.
+- CHN: Если поисковый список содержит результаты поиска в списке слов полнотекстового поиска, который в свою очередь ссылается только на один отсортированный список слов, то при вызове метода сортировки по релевантности шаболону поиска для такого списка выполняется не полная сортировка, а упрощенная: диапазон слов, которые равны шаблону поиска, перемещается в начало списка.
+Build 23
+- ADD: Добавлена обработка параметра lang в тег sound.
+- ADD: Добавлена обработка типа варианта написания Label.
+- BUG: Исправлен баг с установкой количества вариантов написания у поискового списка слов.
+- CHN: Для ссылок по-умолчанию возвращается link_type=0.
+Version 101
+Build 22
+Первая стабильная версия ядра.
+- ADD: Добавлена поддержка новых таблиц сравнения, в которых могут быть таблицы соответствия символов в верхнем и нижнем регистрах.
+- ADD: Добавлена поддержка атрибута "width" у ячейки таблицы.
+- ADD: Сделана проверка версий открываемых словарных баз.
+- ADD: Добавлена поддержка полноразмерной картинки для тега img - атрибут full_url.
+- BUG: Исправлены баги.
+Build 21
+- CHN: Сделано так, чтобы Speex собирался с fixed-point кодом. Т.к. это в полтора раза ускоряет декодирование.
+Build 20
+- ADD: В заголовок словаря добавлено общее количество картинок и озвучек в словаре, в заголовок списка слов добавлено количество картинок и озвучек для данного списка слов.
+Build 19
+- ADD: В заголовок словаря добавлены флаги - типы источников медиаданных (для картинок, озвучек и т.д.), которые позволяют хранить медиаданные вне базы sdc.
+- ADD: Добавлен метод, который производит сортировку поискового списка слов по релевантности шаблону поиска.
+Build 18
+- CHN: Новый формат стилей - у стиля может быть несколько вариантов отображения и несколько вариантов использования (Usage).
+Build 14
+- BUG: Исправлена проблема с декодированием списков слов с вариантами написания.
+Build 13
+- ADD: Добавлена поддержка списков слов полнотекстового поиска.
+Build 12
+- ADD: Зарезервировано место в заголовке словаря, в заголовок словаря добавлено поле DictionaryFeatures, добавлены функции для получения этих свойств.
+Build 11
+- ADD: Добавлена поддержка дополнительных параметров в классе разбора метаданных.
+- ADD: Добавлена новые типы метаданных: Metadata-Hide и Metadata-Hide-Control.
+- ADD: В свойства стиля Color и BackgroundColor добавлен параметр Alpha - значение альфа-канала (0 - полная прозрачность, 255 - полная непрозрачность).
+Build 10
+- ADD: В свойства стиля добавлено новое поле FontFamily - тип семейства шрифта.
+- ADD: В базе sdc сохраняется тип контейнера (ESlovoEdContainerDatabaseTypeEnum).
+- CHN: Переработана система работы с регистрацией для озвучки: сделан единый механизм для озвучки и переводов.
+- CHN: Изменения, необходимые для работы со звуковыми базами - учитывается возможность, что у элемента списка слов количество переводов может быть равно нулю.
+Build 9
+- ADD: Добавлен функционал для работы с озвучкой в едином формате (поддерживается озвучка, сжатая speex и формат wav).
+Build 8
+- ADD: Добавлена функция CSldDictionary::GetCurrentListUsageCount(), в функцию CSldDictionary::GetCurrentListUsage() теперь нужно передавать индекс запрашиваемого кода использования.
+Build 7
+- BUG: Исправлен баг приводящий к падению в случае поиска по тексту в списке за пределами списка слов.
+Build 6
+- ADD: Добавлен класс CSldSymbolsTable (доступ к таблице символов определенного языка); в словарь добавлен список таблиц символов.
+- ADD: Добавлены функции RecognizeLanguage(), SwitchCurrentDirection(), SwitchDirection(), SwitchDirectionTo().
+Build 5
+- ADD: Добавлено новое поле в заголовок словаря - MarketingTotalWordsCount.
+- ADD: Добавлена функциональность для работы с локализованными строками списков слов.
+- BUG: Исправления багов в работе поисковых списков.
+- CHN: Перед переключением списков слов сохраняется состояние текущего списка и восстанавливается состояние списка, на который переключаемся.
+Build 4
+- CHN: Добавлена поддержка звукового и морфологического ядра. Множественные прочие изменения.
+Build 3
+- ADD: Добавлен расширенный поиск по шаблону (с запросами).
+Build 2
+- ADD: В заголовок стиля включено описание свойства Visible.
+- BUG: Исправлена функция CSldList::GetSearchBounds(), определяющая индексные границы текущего уровня вложенности в каталоге/словаре. 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_manager_ui_entry_list_font_size">Entry list font size</string>
+    <string name="settings_manager_ui_example_entry_title">example entry title</string>
+    <string name="settings_manager_ui_behavior">Behavior</string>
+    <string name="settings_manager_ui_show_keyboard_for_search">Show the keyboard when you return to the index</string>
+    <string name="settings_manager_ui_use_pinch_to_zoom">Use pinch-to-zoom to change article font size</string>
+    <string name="settings_manager_ui_privacy">Privacy</string>
+    <string name="settings_manager_ui_receive_news">Receive news</string>
+    <string name="settings_manager_ui_send_statistics">Send statistics and crash reports</string>
+</resources>

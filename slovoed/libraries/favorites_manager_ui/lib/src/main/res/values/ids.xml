@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="favorites_popup_sort_alphabetically_ascending" type="id"/>
+    <item name="favorites_popup_sort_alphabetically_descending" type="id"/>
+    <item name="favorites_popup_sort_by_date_ascending" type="id"/>
+    <item name="favorites_popup_sort_by_date_descending" type="id"/>
+</resources>

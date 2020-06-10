@@ -1,0 +1,32 @@
+// create "local_build_params.gradle" and write in there some build variables what
+// you want to override locally. For example, you can specify ext.appBrand for
+// local build ( ext.appBrand = ['slovoed' | 'oald10' | 'malayin' | ...] )
+try {
+  apply from: "../../../gradle/local_build_params.gradle"
+} catch (MissingResourceException e) {
+  try {
+    // in case when trying to apply local_build.gradle file inside products/slovoed/build.gradle file
+    apply from: "../../gradle/local_build_params.gradle"
+  } catch (MissingResourceException ignore) {
+  }
+}
+
+
+try {
+  apply from: "../../../gradle/build-utils-methods.gradle"
+} catch (MissingResourceException e) {
+  // in case when trying to apply local_build.gradle file inside products/slovoed/build.gradle file
+  apply from: "../../gradle/build-utils-methods.gradle"
+}
+
+ext {
+    getTeamCityProperty('buildOnCI', '0')
+    getTeamCityProperty('useMavenLibs', '0')
+}
+
+ext.slovoedLib = { libName, libVersion ->
+    if (useMavenLibs == '1')
+        "com.paragon_software.components:com.paragon_software.${libName}:${libVersion}"
+    else
+        project(":${libName}")
+}

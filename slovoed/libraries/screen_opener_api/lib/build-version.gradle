@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.screen_opener_api')
+  getTeamCityProperty('setApplicationName', 'screen_opener_api')
+  getTeamCityProperty('setApplicationDescription', 'Interface for screen open')
+
+  getPackageVersion('AI')
+}

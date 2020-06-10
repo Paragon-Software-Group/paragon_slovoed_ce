@@ -1,0 +1,14 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.news_manager_api')
+  getTeamCityProperty('setApplicationName', 'news_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'News manager interfaces')
+
+
+  getPackageVersion('SM')
+  getPackageVersion('TM')
+  getPackageVersion('HINTMANAGERAPI')
+
+  getPackageVersion('SCREEN_OPENER_API')
+}

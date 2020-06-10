@@ -1,0 +1,17 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.search_manager_api')
+  getTeamCityProperty('setApplicationName', 'search_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'Search Manager API')
+
+  getPackageVersion('SCREEN_OPENER_API')
+  getPackageVersion('NE')
+  getPackageVersion('SM')
+  getPackageVersion('TM')
+  getPackageVersion('SND')
+  getPackageVersion('TSM')
+  getPackageVersion('HISTORYMANAGERAPI')
+  getPackageVersion('FM')
+  getPackageVersion('HINTMANAGERAPI')
+}

@@ -1,0 +1,11 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.odapi_ui')
+  getTeamCityProperty('setApplicationName', 'odapi_ui')
+  getTeamCityProperty('setApplicationDescription', 'open dictionary api ui')
+  getPackageVersion('ANALYTICSMANAGERAPI')
+  getPackageVersion('AM')
+  getPackageVersion('SSM')
+  getPackageVersion('COMMONUI')
+}

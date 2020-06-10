@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.paragon_software.android_native_backup_storage">
+    <application
+            android:backupAgent="com.paragon_software.android_native_backup_storage.AndroidNativeBackupStorage">
+    </application>
+</manifest>

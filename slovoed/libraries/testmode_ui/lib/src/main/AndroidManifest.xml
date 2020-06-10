@@ -1,0 +1,11 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.paragon_software.testmode_ui">
+
+    <application>
+        <activity
+            android:name=".TestModeActivity"
+            android:theme="@style/Theme.AppCompat.Light">
+        </activity>
+    </application>
+</manifest>

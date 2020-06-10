@@ -1,0 +1,9 @@
+ apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.news_manager')
+  getTeamCityProperty('setApplicationName', 'news_manager')
+  getTeamCityProperty('setApplicationDescription', 'News manager implementation')
+
+  getPackageVersion('NM')
+}

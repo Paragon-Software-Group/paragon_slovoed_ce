@@ -1,0 +1,8 @@
+<resources>
+    <string name="navigation_manager_ui_nav_header_title">Slovoed Dictionaries</string>
+    <string name="navigation_manager_ui_nav_bar_menu_item_catalog">Catalog</string>
+    <string name="navigation_manager_ui_nav_bar_menu_item_flashcards">Flashcards</string>
+    <string name="navigation_manager_ui_report_problem">Report a problem</string>
+    <string name="navigation_manager_ui_tab_favorites">Favorites</string>
+    <string name="navigation_manager_ui_tab_history">History</string>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+            style="@style/MyDictionariesCardStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintVertical_bias="1.0"
+                    app:constraint_referenced_ids="layout_title_and_bytes,dictionary_open_button,dictionary_icon_image_view"/>
+
+            <ImageView
+                    tools:srcCompat="@drawable/ic_googleicon"
+                    style="@style/DictionaryCardImageStyle"
+                    android:id="@+id/dictionary_icon_image_view"
+                    android:layout_width="@dimen/dictionary_list_element_icon_size"
+                    android:layout_height="@dimen/dictionary_list_element_icon_size"
+                    app:layout_constraintTop_toTopOf="@+id/layout_title_and_bytes"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/layout_title_and_bytes"
+                    android:contentDescription="@string/dictionary_manager_ui_content_description_dictionary_icon"/>
+
+            <LinearLayout
+                    android:id="@+id/layout_title_and_bytes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/my_dictionaries_title_margin_horizontal"
+                    android:layout_marginStart="@dimen/my_dictionaries_title_margin_horizontal"
+                    android:layout_marginEnd="@dimen/my_dictionaries_title_margin_horizontal"
+                    android:layout_marginRight="@dimen/my_dictionaries_title_margin_horizontal"
+                    app:layout_constraintStart_toEndOf="@+id/dictionary_icon_image_view"
+                    app:layout_constraintEnd_toStartOf="@+id/dictionary_open_button"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintBottom_toTopOf="@+id/barrier"
+                    app:layout_constraintTop_toTopOf="parent"
+                    >
+
+                <TextView
+                        tools:text="Bulgarian - English "
+                        style="@style/DictionaryTitleTextStyle"
+                        android:id="@+id/dictionary_description_label_text_view"
+                        android:textStyle="bold"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                <TextView
+                        tools:text="( 312 MB total )"
+                        style="@style/DictionaryDescriptionTextStyle"
+                        android:id="@+id/dictionary_downloaded_bytes_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                    style="@style/DictionaryButtonStyle"
+                    android:id="@+id/dictionary_open_button"
+                    android:text="@string/dictionary_manager_ui_my_dictionary_open"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/my_dictionaries_button_open_margin_right"
+                    android:layout_marginRight="@dimen/my_dictionaries_button_open_margin_right"
+                    app:backgroundTint="@color/my_dictionaries_open_button_tint_selector"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/barrier"
+                    app:layout_constraintStart_toEndOf="@+id/layout_title_and_bytes"
+                    />
+
+            <TextView
+                    style="@style/MyDictionariesStatusLabel"
+                    android:id="@+id/dictionary_status_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@+id/barrier"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/dictionary_components" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dictionary_components"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/dictionary_status_text_view"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

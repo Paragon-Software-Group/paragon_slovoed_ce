@@ -1,0 +1,17 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.paragon_software.odapi_ui" >
+    <application>
+        <service android:name=".OpenDictionaryAPIService">
+            <intent-filter>
+                <action android:name="${applicationId}.IOpenDictionaryAPIService"/>
+            </intent-filter>
+        </service>
+        <activity android:name=".StartTranslateActivity"
+                  android:excludeFromRecents="true"
+                  android:noHistory="true">
+            <intent-filter>
+                <action android:name="${applicationId}.StartTranslateActivity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

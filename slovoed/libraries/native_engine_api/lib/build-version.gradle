@@ -1,0 +1,10 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.native_engine_api')
+  getTeamCityProperty('setApplicationName', 'native_engine_api')
+  getTeamCityProperty('setApplicationDescription', 'Native engine interfaces')
+
+  getPackageVersion('AI')
+  getPackageVersion('UTILSCORE')
+}

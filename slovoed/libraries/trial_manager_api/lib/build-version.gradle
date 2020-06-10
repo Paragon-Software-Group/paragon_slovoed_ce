@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.trial_manager_api')
+  getTeamCityProperty('setApplicationName', 'trial_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'trial manager api')
+
+  getPackageVersion('DM')
+}

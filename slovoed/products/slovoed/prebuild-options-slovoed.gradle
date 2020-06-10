@@ -1,0 +1,30 @@
+ext {
+  getTeamCityProperty('catalogId', '849')
+
+  getTeamCityProperty('setApplicationId', 'open.slovoed.language.dictionaries')
+  getTeamCityProperty('enableDictionaryList', '"12474"')
+  getTeamCityProperty('enableBottomNavigationFragment', '1')
+  getTeamCityProperty('enableSearchManagerUiSlovoed', '1')
+  getTeamCityProperty ('enableDictionaryManagerUiSlovoed', '1')
+  getTeamCityProperty('enableNavigationManagerUiSlovoed', '1')
+  getTeamCityProperty('enableArticleUiSlovoed', '1')
+  getTeamCityProperty('enableToolbarManagerUiSlovoed', '1')
+  getTeamCityProperty('favoritesMaxNumberOfWords', '1000')
+  getTeamCityProperty('historyMaxNumberOfWords', '1000')
+  getTeamCityProperty('enableHistoryManagerUiSlovoed', '1')
+  getTeamCityProperty('enableAgreementSlovoedUi', '1')
+  getTeamCityProperty('enableAboutSlovoedUi', '1')
+  getTeamCityProperty('enableStandardFlashcardManager', '1')
+  getTeamCityProperty('enableFlashcardManagerUi', '1')
+  getTeamCityProperty('enableFavoritesManagerUiSlovoed', '1')
+
+  getTeamCityProperty('enableSettingsManagerUiSlovoed', '1')
+
+  getTeamCityProperty('newsManagerPkey', '"paragon-slovoed"')
+  getTeamCityProperty('enableNewsManagerFirebase', '1')
+  getTeamCityProperty('enableNewsManagerUiSlovoed', '1')
+
+  getTeamCityProperty('enableInformationUiSlovoed', '1')
+
+  getTeamCityProperty('enableSplashScreenUiSlovoed', '1')
+}

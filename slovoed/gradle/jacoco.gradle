@@ -1,0 +1,67 @@
+apply plugin: 'jacoco'
+
+jacoco {
+    getTeamCityProperty('setJacocoToolVersion', '0.8.2')
+    toolVersion = setJacocoToolVersion
+}
+
+android {
+    testOptions {
+        unitTests.all {
+            jacoco {
+                includeNoLocationClasses = true
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            testCoverageEnabled = true
+        }
+    }
+
+}
+
+project.afterEvaluate {
+    // Grab all build types
+    def buildTypes = android.buildTypes.collect { type -> type.name }
+
+    buildTypes.each { buildTypeName ->
+        def sourceName, sourcePath
+
+        sourceName = sourcePath = "${buildTypeName}"
+
+        def testTaskName = "test${sourceName.capitalize()}UnitTest"
+
+        task "${testTaskName}Coverage"(type: JacocoReport, dependsOn: "$testTaskName") {
+            group = "Reporting"
+            description = "Generate Jacoco coverage reports on the ${sourceName.capitalize()} build."
+
+            classDirectories = fileTree(
+                    dir: "${project.buildDir}/intermediates/javac/classes/${sourcePath}",
+                    excludes: ['**/R.class',
+                               '**/R$*.class',
+                               '**/*$ViewInjector*.*',
+                               '**/*$ViewBinder*.*',
+                               '**/BuildConfig.*',
+                               '**/Manifest*.*']
+            )
+
+            def coverageSourceDirs = [
+                    "src/main/java",
+                    "src/$buildTypeName/java"
+            ]
+            additionalSourceDirs = files(coverageSourceDirs)
+            sourceDirectories = files(coverageSourceDirs)
+            executionData = files("${project.buildDir}/jacoco/${testTaskName}.exec")
+
+            reports {
+                xml.enabled = true
+                html.enabled = true
+            }
+            getTeamCityProperty('setCoveragePackage', setApplicationId)
+            //Importing JaCoCo coverage data to TeamCity https://www.jetbrains.com/help/teamcity/jacoco.html
+            println "##teamcity[jacocoReport dataPath=\'${project.buildDir}/jacoco/${testTaskName}.exec\'  includes=\'${setCoveragePackage}.*\' excludes=\' ${setCoveragePackage}.mock.*  **/R.* *Test* *Mock* **/*\$ViewInjector*.* **/BuildConfig* **/Manifest*.*\']']"
+        }
+    }
+}

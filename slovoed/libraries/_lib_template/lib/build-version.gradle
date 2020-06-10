@@ -1,0 +1,7 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.%%LIB_NAME%%')
+  getTeamCityProperty('setApplicationName', '%%LIB_NAME%%')
+  getTeamCityProperty('setApplicationDescription', '%%LIB_DESCRIPTION%%')
+}

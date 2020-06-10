@@ -1,0 +1,35 @@
+<manifest package="com.paragon_software.common_ui"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+
+        <!--   Article manager   -->
+        <activity android:name='com.paragon_software.article_manager.ShareActivity'
+            android:excludeFromRecents="true"
+            android:clearTaskOnLaunch="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustNothing">
+            <intent-filter>
+                <action android:name='android.intent.action.SEND' />
+                <action android:name='com.google.android.gms.actions.SEARCH_ACTION' />
+                <category android:name='android.intent.category.DEFAULT' />
+                <data android:mimeType='text/plain' />
+            </intent-filter>
+            <intent-filter>
+                <action android:name='android.intent.action.SEARCH' />
+            </intent-filter>
+        </activity>
+
+
+
+        <!--   Utils   -->
+        <activity
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:name="com.paragon_software.utils_slovoed_ui_common.activities.SnackbarActivity"
+            android:noHistory="true"
+            android:theme="@style/Theme.AppCompat.Translucent" />
+
+    </application>
+
+</manifest>

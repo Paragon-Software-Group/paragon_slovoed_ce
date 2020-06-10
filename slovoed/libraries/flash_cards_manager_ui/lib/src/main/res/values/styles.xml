@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">@dimen/toolbar_font_size</item>
+    </style>
+
+    <style name="QuizButton">
+        <item name="android:textColor">@color/fc_white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/quiz_button_font_size</item>
+        <item name="android:layout_marginTop">@dimen/quiz_margin</item>
+        <item name="android:layout_marginBottom">@dimen/quiz_margin</item>
+    </style>
+</resources>

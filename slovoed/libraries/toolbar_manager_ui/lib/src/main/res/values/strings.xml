@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="toolbar_manager_ui_dictionary_list_default_title">All dictionaries</string>
+    <string name="toolbar_manager_ui_select_all_items">Select all</string>
+    <string name="toolbar_manager_ui_remove_selected_entries">Remove selected entries</string>
+    <string name="toolbar_manager_ui_selected_mode_title">Selected: %d</string>
+</resources>

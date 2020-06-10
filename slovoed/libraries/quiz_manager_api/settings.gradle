@@ -1,0 +1,11 @@
+apply from: '../../gradle/local_build_settings.gradle'
+
+include ':lib'
+
+slovoedProjects (
+       'settings_manager_api'
+)
+
+slovoedProjects (
+
+)

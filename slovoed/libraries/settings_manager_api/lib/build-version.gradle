@@ -1,0 +1,12 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.settings_manager_api')
+  getTeamCityProperty('setApplicationName', 'settings_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'API for Settings Manager')
+
+  //for jacoco coverage
+  getTeamCityProperty('setCoveragePackage', 'com.paragon_software.settings_manager')
+
+  getPackageVersion('SCREEN_OPENER_API')
+}

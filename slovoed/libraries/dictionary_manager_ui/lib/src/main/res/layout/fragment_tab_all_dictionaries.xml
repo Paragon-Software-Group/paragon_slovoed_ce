@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/search_field_container"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/search_field_height"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/filter_language_from_container"
+            android:layout_marginLeft="@dimen/search_field_horizontal_margin"
+            android:layout_marginRight="@dimen/search_field_horizontal_margin"
+            android:layout_marginTop="@dimen/search_field_top_margin" android:layout_marginBottom="@dimen/language_filter_vertical_margin">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+            <ImageButton android:layout_width="50dp"
+                         android:layout_height="50dp"
+                         android:id="@+id/clear_search_field"
+                         android:src="@drawable/ic_clear_black_24dp"
+                         android:background="@color/search_field_background_color"
+                         android:tint="@color/darkgray"
+                         android:layout_alignParentRight="true"
+                         android:layout_alignParentEnd="true"
+                         android:layout_centerVertical="true"
+            />
+
+            <EditText
+                    android:id="@+id/search_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:maxLength="200"
+                    android:imeOptions="actionSearch"
+                    android:hint="@string/dictionary_manager_ui_search_field_hint"
+                    android:textSize="@dimen/search_field_text_size"
+                    android:textCursorDrawable="@drawable/search_cursor"
+                    android:background="@color/search_field_background_color"
+                    android:drawableLeft="@drawable/search"
+                    android:drawableTint="@color/darkgray"
+                    android:paddingLeft="@dimen/search_field_horizontal_padding"
+                    android:paddingRight="@dimen/search_field_horizontal_padding"
+                    android:drawablePadding="@dimen/search_field_extra_horizontal_padding"
+                    android:layout_toStartOf="@id/clear_search_field"
+                    android:layout_toLeftOf="@id/clear_search_field"
+                    android:layout_centerVertical="true"/>
+            <!--android:drawableRight="@drawable/baseline_mic_24"/>-->
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/filter_language_from_container"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/language_filter_height"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/filter_languages_delimiter"
+            app:layout_constraintTop_toBottomOf="@id/search_field_container"
+            app:layout_constraintBottom_toTopOf="@id/main_recycler_container"
+            android:layout_marginLeft="@dimen/language_filter_horizontal_margin"
+            android:layout_marginRight="@dimen/language_filter_horizontal_margin"
+            android:layout_marginBottom="@dimen/language_filter_vertical_margin">
+        <Spinner
+                android:id="@+id/language_from_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/language_filter_inner_spinner_horizontal_margin"
+                android:layout_marginRight="@dimen/language_filter_inner_spinner_horizontal_margin"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/dictionary_direction_spinner_background"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+            android:id="@+id/filter_languages_delimiter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_switchdirection"
+            app:layout_constraintLeft_toRightOf="@id/filter_language_from_container"
+            app:layout_constraintRight_toLeftOf="@id/filter_language_to_container"
+            app:layout_constraintTop_toBottomOf="@id/search_field_container"
+            app:layout_constraintBottom_toTopOf="@id/main_recycler_container"
+            android:layout_marginLeft="@dimen/language_filter_delimiter_horizontal_margin"
+            android:layout_marginRight="@dimen/language_filter_delimiter_horizontal_margin"/>
+
+    <androidx.cardview.widget.CardView
+            android:id="@+id/filter_language_to_container"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintLeft_toRightOf="@id/filter_languages_delimiter"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/filter_language_from_container"
+            app:layout_constraintBottom_toBottomOf="@id/filter_language_from_container"
+            android:layout_marginLeft="@dimen/language_filter_horizontal_margin"
+            android:layout_marginRight="@dimen/language_filter_horizontal_margin">
+        <Spinner
+                android:id="@+id/language_to_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/language_filter_inner_spinner_horizontal_margin"
+                android:layout_marginRight="@dimen/language_filter_inner_spinner_horizontal_margin"
+                android:spinnerMode="dropdown"
+                android:background="@drawable/dictionary_direction_spinner_background"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:id="@+id/main_recycler_container"
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/filter_language_from_container"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/main_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/dictionary_view_background_color"
+            style="@style/DictionaryListStyle" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/no_data_result_hint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/dictionary_view_background_color">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="100dp"
+                android:gravity="center_horizontal"
+                android:text="@string/dictionary_manager_ui_no_results_found"
+                android:textSize="20sp"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

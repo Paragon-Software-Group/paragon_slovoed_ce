@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="article_manager_ui_dict_icon_guideline_left">16dp</dimen>
+    <dimen name="article_manager_ui_dict_icon_guideline_right_small">48dp</dimen>
+    <dimen name="article_manager_ui_dict_icon_guideline_right_large">80dp</dimen>
+    <dimen name="article_manager_ui_dict_icon_top_margin">8dp</dimen>
+    <dimen name="article_manager_ui_dict_large_icon_extra_top_margin">2dp</dimen>
+    <dimen name="article_manager_ui_dict_title_margin_horizontal">12dp</dimen>
+    <dimen name="article_manager_ui_dict_status_text_size">12sp</dimen>
+    <dimen name="article_manager_ui_dict_title_text_size">14sp</dimen>
+    <dimen name="article_manager_ui_dict_description_text_size">12sp</dimen>
+
+    <dimen name="article_manager_ui_article_content_margin_top">8dp</dimen>
+    <dimen name="article_manager_ui_navigation_button_text_size">16dp</dimen>
+    <dimen name="article_manager_ui_navigation_button_height">37dp</dimen>
+    <dimen name="article_manager_ui_navigation_button_padding_top">3dp</dimen>
+    <dimen name="article_manager_ui_navigation_button_padding_horizontal">18dp</dimen>
+    <dimen name="article_manager_ui_navigation_button_placeholder_height">22dp</dimen>
+    <dimen name="article_manager_ui_buy_button_text_size">12sp</dimen>
+    <dimen name="article_manager_ui_buy_button_margin_horizontal">8dp</dimen>
+    <dimen name="article_manager_ui_buy_button_padding_horizontal">25dp</dimen>
+    <dimen name="article_manager_ui_search_in_article_input_field_drawable_padding">8dp</dimen>
+
+
+    <dimen name="share_sliding_panel_chevron_padding_top">18dp</dimen>
+    <dimen name="share_sliding_panel_chevron_padding_start">32dp</dimen>
+    <dimen name="share_sliding_panel_chevron_padding_end">32dp</dimen>
+    <dimen name="share_sliding_panel_chevron_padding_bottom">8dp</dimen>
+    <dimen name="share_sliding_panel_direction_layout_margin_start">8dp</dimen>
+    <dimen name="share_sliding_panel_direction_layout_margin_end">8dp</dimen>
+    <dimen name="share_sliding_panel_direction_icon_width">26dp</dimen>
+    <dimen name="share_sliding_panel_direction_icon_height">26dp</dimen>
+    <dimen name="share_sliding_panel_direction_text_margin_start">8dp</dimen>
+
+    <dimen name="share_toolbar_dictionaries_spinner_padding_end">48dp</dimen>
+    <dimen name="share_toolbar_dictionaries_spinner_drop_down_width">300dp</dimen>
+    <dimen name="share_toolbar_dictionary_icon_width">32dp</dimen>
+    <dimen name="share_toolbar_dictionary_icon_height">32dp</dimen>
+    <dimen name="share_toolbar_dictionary_icon_margin_start">8dp</dimen>
+    <dimen name="share_toolbar_dictionary_icon_margin_top">8dp</dimen>
+    <dimen name="share_toolbar_dictionary_icon_margin_bottom">8dp</dimen>
+    <dimen name="share_toolbar_dictionary_title_margin_start">10dp</dimen>
+    <dimen name="share_toolbar_dictionary_title_margin_end">10dp</dimen>
+
+    <dimen name="share_query_scroll_view_margin_top">16dp</dimen>
+    <dimen name="share_query_text_view_margin_start">8dp</dimen>
+    <dimen name="share_query_text_view_margin_end">8dp</dimen>
+    <dimen name="share_query_text_view_spacing_extra">10dp</dimen>
+    <dimen name="share_query_text_view_text_size">16sp</dimen>
+
+    <dimen name="share_direction_switch_text_size">14sp</dimen>
+    <dimen name="share_no_result_view_text_size">20sp</dimen>
+    <dimen name="share_no_result_view_margin_top">150dp</dimen>
+</resources>

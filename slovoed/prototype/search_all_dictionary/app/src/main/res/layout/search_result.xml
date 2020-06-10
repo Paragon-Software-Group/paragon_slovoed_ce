@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="result" type="com.paragon_software.search_all_dictionary.search_manager.SearchResult"/>
+    </data>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{result.word}"
+            android:textSize="24sp"/>
+</layout>

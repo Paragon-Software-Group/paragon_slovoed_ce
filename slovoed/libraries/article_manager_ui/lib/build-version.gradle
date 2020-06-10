@@ -1,0 +1,8 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.article_manager_ui')
+  getTeamCityProperty('setApplicationName', 'article_manager_ui')
+  getTeamCityProperty('setApplicationDescription', 'Article Manager UI component')
+  getPackageVersion('UTILSSLOVOEDUI')
+}

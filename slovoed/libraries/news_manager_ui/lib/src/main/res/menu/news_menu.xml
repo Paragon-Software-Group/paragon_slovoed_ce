@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/read_all_news_action"
+        android:icon="@drawable/ic_done_all"
+        android:title="@string/news_ui_read_all"
+        android:right="10dp"
+        android:visible="true"
+        app:showAsAction="always"/>
+</menu
+>

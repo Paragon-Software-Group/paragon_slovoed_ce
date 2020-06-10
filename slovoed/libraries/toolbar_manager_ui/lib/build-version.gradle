@@ -1,0 +1,10 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.toolbar_manager_ui')
+  getTeamCityProperty('setApplicationName', 'toolbar_manager_ui')
+  getTeamCityProperty('setApplicationDescription', 'Toolbar Manager UI')
+
+  getPackageVersion('TM')
+  getPackageVersion('UTILSSLOVOEDUI')
+}

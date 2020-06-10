@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/play_sound"
+        android:title="@string/flash_cards_manager_ui_pronunciation"
+        android:icon="@drawable/icn_sound"
+        app:showAsAction="always"
+        />
+    <item
+        android:id="@+id/delete"
+        android:title="@string/flash_cards_manager_ui_delete"
+        android:icon="@drawable/ic_action_delete_dark"
+        app:showAsAction="always"
+    />
+</menu>

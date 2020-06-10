@@ -1,0 +1,11 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.agreement_slovoed_ui')
+  getTeamCityProperty('setApplicationName', 'agreement_slovoed_ui')
+  getTeamCityProperty('setApplicationDescription', 'agreement_slovoed_ui')
+  getPackageVersion('AGREEMENTSCREENMANAGERUI')
+  getPackageVersion('SPLASHSCREENMANAGERAPI')
+  getPackageVersion('SPLASHSCREENMANAGERSCREENACTIVITY')
+  getPackageVersion('INFORMATIONMANAGERAPI')
+}

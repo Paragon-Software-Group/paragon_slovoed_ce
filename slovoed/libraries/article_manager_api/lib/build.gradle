@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+apply from: 'build-version.gradle'
+apply from: '../../../gradle/publish.gradle'
+apply from: '../../../gradle/jacoco.gradle'
+
+android {
+  compileSdkVersion setCompileSdkVersion.toInteger()
+
+  defaultConfig {
+    minSdkVersion setMinSdkVersion.toInteger()
+    targetSdkVersion setTargetSdkVersion.toInteger()
+    versionCode setVersionCode.toInteger()
+    versionName setVersionName
+
+    buildConfigField "String", "packageVersionName", "\"${packageVersionName}\""
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+    debug {}
+  }
+
+  lintOptions {
+    warning 'InvalidPackage'
+  }
+}
+
+apply from: '../../../gradle/javadoc.gradle'
+
+dependencies {
+  testImplementation "junit:junit:${setJUnitVersion}"
+  androidTestImplementation "androidx.test.ext:junit:${setTestRunnerVersion}"
+  androidTestImplementation "androidx.test.espresso:espresso-core:${setEspressoCoreVersion}"
+
+  api "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+  //javadocDeps "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+
+  api slovoedLib('dictionary_manager_api', packageVersionNameDM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.dictionary_manager_api:${packageVersionNameDM}")
+
+  api slovoedLib('article_item', packageVersionNameAI)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.article_item:${packageVersionNameAI}")
+
+  api slovoedLib('favorites_manager_api', packageVersionNameFM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.favorites_manager_api:${packageVersionNameFM}")
+
+  api slovoedLib('history_manager_api', packageVersionNameHM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.history_manager_api:${packageVersionNameHM}")
+
+  api slovoedLib('settings_manager_api', packageVersionNameSM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.settings_manager_api:${packageVersionNameSM}")
+
+  api slovoedLib('native_engine_api', packageVersionNameNE)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.native_engine_api:${packageVersionNameNE}")
+
+  api slovoedLib('sound_manager_api', packageVersionNameSND)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.sound_manager_api:${packageVersionNameSND}")
+
+  api slovoedLib('search_manager_api', packageVersionNameSRM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.search_manager_api:${packageVersionNameSRM}")
+
+  api slovoedLib('splash_screen_manager_api', packageVersionNameSSM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.splash_screen_manager_api:${packageVersionNameSSM}")
+
+  api slovoedLib('flash_cards_manager_api', packageVersionNameFLASHCARDSMANAGERAPI)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.flash_cards_manager_api:${packageVersionNameFLASHCARDSMANAGERAPI}")
+
+  api slovoedLib('hint_manager_api', packageVersionNameHINTMANAGERAPI)
+}

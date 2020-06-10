@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_manager_ui_copyright">Copyright \u00A9 1994-%d Paragon Software Group.</string>
+    <string name="about_manager_ui_search_engine_label">Search engine</string>
+    <string name="about_manager_ui_faq_label">Frequently asked questions</string>
+    <string name="about_manager_ui_support_label">Support</string>
+    <string name="about_manager_ui_entries_number_label">Articles</string>
+    <string name="about_manager_ui_provided_by_label">Content provided by</string>
+</resources>

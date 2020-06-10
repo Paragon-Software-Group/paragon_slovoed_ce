@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Drawable mimicking Material Design buttons background (instead of default 9-patch background drawables)
+-->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+        android:color="?attr/colorControlHighlight">
+    <item android:id="@android:id/mask"
+          android:left="@dimen/my_dictionaries_component_button_background_horizontal_padding"
+          android:right="@dimen/my_dictionaries_component_button_background_horizontal_padding"
+          android:top="@dimen/my_dictionaries_component_button_background_vertical_padding"
+          android:bottom="@dimen/my_dictionaries_component_button_background_vertical_padding">
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorControlHighlight"/>
+            <corners android:radius="@dimen/my_dictionaries_component_button_background_radius"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/background"
+          android:left="@dimen/my_dictionaries_component_button_background_horizontal_padding"
+          android:right="@dimen/my_dictionaries_component_button_background_horizontal_padding"
+          android:top="@dimen/my_dictionaries_component_button_background_vertical_padding"
+          android:bottom="@dimen/my_dictionaries_component_button_background_vertical_padding">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/background_selector_download_and_remove_button"/>
+            <corners android:radius="@dimen/my_dictionaries_component_button_background_radius"/>
+        </shape>
+    </item>
+</ripple>

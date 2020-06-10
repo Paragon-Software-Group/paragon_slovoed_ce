@@ -1,0 +1,73 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getPackageVersion('SM')
+  getPackageVersion('SMG')
+
+  getPackageVersion('SETTINGSMANAGERUI')
+
+  getPackageVersion('LM')
+  getPackageVersion('LMD')
+  getPackageVersion('LMT')
+  getPackageVersion('LMGP')
+  getPackageVersion('LMDP')
+  getPackageVersion('LMF')
+  getPackageVersion('DM')
+  getPackageVersion('DMF')
+  getPackageVersion('DMU')
+  getPackageVersion('PSM')
+  getPackageVersion('TM')
+  getPackageVersion('TMU')
+  getPackageVersion('SAM')
+  getPackageVersion('AMU')
+  getPackageVersion('FM')
+  getPackageVersion('NEWSMANAGERAPI')
+  getPackageVersion('NM')
+  getPackageVersion('NMU')
+  getPackageVersion('SE')
+  getPackageVersion('TSM')
+  getPackageVersion('TSMU')
+  getPackageVersion('ABMU')
+  getPackageVersion('ABOUTMANAGERPARAGON')
+  getPackageVersion('SSM')
+  getPackageVersion('SSMU')
+  getPackageVersion('AGREEMENTSLOVOEDUI')
+  getPackageVersion('TRM')
+  getPackageVersion('NAVIGATIONMANAGER')
+  getPackageVersion('NAVIGATIONMANAGERUI')
+  getPackageVersion('INFORMATIONMANAGERPARAGON')
+  getPackageVersion('INFORMATIONMANAGERUI')
+  getPackageVersion('ODAPIUI')
+  getPackageVersion('SND')
+  getPackageVersion('ANALYTICSMANAGERAPI')
+  getPackageVersion('FIREBASEANALYTICS')
+
+  getPackageVersion('COMMONUI')
+
+  getPackageVersion('FAVORITESMANAGERUI')
+
+  getPackageVersion('HM')
+  getPackageVersion('HISTORYMANAGERUI')
+
+  getPackageVersion('WOTDAPI')
+  getPackageVersion('WOTD')
+
+  getPackageVersion('QUIZAPI')
+  getPackageVersion('QUIZ')
+
+  getPackageVersion ('SEARCHUISLOVOED')
+
+  getPackageVersion('FLASHCARDSMANAGER')
+  getPackageVersion('FLASHCARDSMANAGERUI')
+
+  getPackageVersion('HINTMANAGERAPI')
+  getPackageVersion('HINTMANAGER')
+  
+  getPackageVersion('USERCOREMANAGERACES')
+  getPackageVersion('USERCOREMANAGEREAC')
+
+
+  getPackageVersion('OALD10UI')
+  getPackageVersion('BILINGUALUI')
+  getPackageVersion('DUDENUI')
+}

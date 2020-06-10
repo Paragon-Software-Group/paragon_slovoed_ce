@@ -1,0 +1,102 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+ext {
+    if (!project.hasProperty('internalMavenPath')) {
+        if (System.env.INTERNAL_MAVEN != null && System.env.INTERNAL_MAVEN != '') {
+            internalMavenPath = "$System.env.INTERNAL_MAVEN"
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url uri("http://maven.ufsd.paragon-software.com/repository/google/")
+        }
+        maven {
+            url uri("http://maven.ufsd.paragon-software.com/repository/jcenter/")
+        }
+        maven {
+            url uri("https://proget.paragon-software.com/maven2/Maven/")
+        }
+        maven {
+            url uri("https://oss.sonatype.org/content/repositories/ksoap2-android-releases/")
+        }
+        google()
+        jcenter()
+        if ( project.hasProperty('internalMavenPath') ) {
+            maven {
+                url uri(project.internalMavenPath)
+            }
+        }
+    }
+    
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+apply from: '../slovoed/prebuild-options.gradle'
+
+ext {
+    getTeamCityProperty('linkAppSubprojectsCheckTasks', buildOnCI)
+
+    appEvaluatedProject = null
+    appEvaluatedSubprojectsArray = []
+}
+
+subprojects {
+    afterEvaluate { project ->
+        if (rootProject.ext.useMavenLibs == '0')
+        {
+            rootProject.ext.appEvaluatedSubprojectsArray.add(project)
+            if (rootProject.ext.appEvaluatedSubprojectsArray.containsAll(rootProject.subprojects))
+            {
+                rootProject.ext.appEvaluatedSubprojectsArray = []
+                def projectStack = [rootProject.subprojects.find { 'app' == it.name }]
+                while (!projectStack.isEmpty()) {
+                    def current = projectStack.pop()
+                    current.configurations.collectMany { it.allDependencies }
+                           .findAll { it instanceof ProjectDependency }
+                           .collect { it.getDependencyProject() }
+                           .unique { a, b -> a.name <=> b.name }
+                           .sort { a, b -> -(a.name <=> b.name) }
+                           .each {
+                               projectStack.push(it)
+                           }
+
+                    if (current.name == 'app')
+                    {
+                        rootProject.ext.appEvaluatedProject = current
+                    } else if (!rootProject.ext.appEvaluatedSubprojectsArray.contains(current))
+                    {
+                        rootProject.ext.appEvaluatedSubprojectsArray.add(current)
+                    }
+                }
+
+                if (rootProject.ext.linkAppSubprojectsCheckTasks == '1')
+                {
+                    // link ':app:check' task with 'check' tasks of all :app subprojects
+                    // (to run lint, unit and UI tests for subprojects)
+                    if (rootProject.ext.appEvaluatedProject.tasks.findByName('check'))
+                    {
+                        rootProject.ext.appEvaluatedSubprojectsArray.each { library ->
+                            if (library.tasks.findByName('check'))
+                            {
+                                rootProject.ext.appEvaluatedProject.tasks["check"].dependsOn library.tasks["check"]
+                            }
+                        }
+                    }
+                    // NOTE: also in the same way we could link ':app:build' task with 'build' tasks of all :app subprojects.
+                    // In this case it would additionally generate subprojects .aar and javadoc files.
+                }
+
+                if (rootProject.ext.buildOnCI == '0')
+                {
+                    apply from: '../slovoed/lokalise.gradle', to: rootProject
+                }
+            }
+        }
+    }
+}

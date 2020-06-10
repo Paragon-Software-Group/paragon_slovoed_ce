@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="article_manager_ui_search_in_article_result_text_color">#4F4F4F</color>
+    <color name="article_manager_ui_search_in_article_input_text_color">#0A0A0A</color>
+
+    <color name="share_query_text_selected_color">#FCFCFC</color>
+    <color name="share_query_text_regular_color">#FF4A5864</color>
+</resources>

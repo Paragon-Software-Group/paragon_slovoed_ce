@@ -1,0 +1,14 @@
+apply plugin: 'groovy'
+
+dependencies {
+  implementation gradleApi()
+  implementation localGroovy()
+}
+
+//Set the source directories for buildSrc to contain the source from the main project
+sourceSets {
+  main {
+    groovy.srcDirs += '../../../gradle/app_builder_plugin/buildSrc/src/main/groovy'
+    resources.srcDirs += '../../../gradle/app_builder_plugin/buildSrc/src/main/resources'
+  }
+}

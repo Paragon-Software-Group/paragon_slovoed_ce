@@ -1,0 +1,13 @@
+apply from: '../../gradle/local_build_settings.gradle'
+
+include ':lib'
+
+// direct dependencies
+slovoedProjects (
+    'hint_manager_api'
+)
+
+// subdependencies
+slovoedProjects (
+    'settings_manager_api'
+)

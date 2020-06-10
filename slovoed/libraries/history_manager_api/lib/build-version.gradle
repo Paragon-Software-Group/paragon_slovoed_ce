@@ -1,0 +1,14 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.history_manager_api')
+  getTeamCityProperty('setApplicationName', 'history_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'History manager interfaces')
+
+  getPackageVersion('SCREEN_OPENER_API')
+  getPackageVersion('SM')
+  getPackageVersion('TM')
+  getPackageVersion('NE')
+  getPackageVersion('SND')
+  getPackageVersion('HINTMANAGERAPI')
+}

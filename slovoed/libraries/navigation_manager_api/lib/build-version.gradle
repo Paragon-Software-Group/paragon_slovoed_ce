@@ -1,0 +1,16 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.navigation_manager_api')
+  getTeamCityProperty('setApplicationName', 'navigation_manager_api')
+  getTeamCityProperty('setApplicationDescription', 'navigation manager api')
+
+  getPackageVersion('SM')
+  getPackageVersion('NM')
+  getPackageVersion('FM')
+  getPackageVersion('HM')
+  getPackageVersion('WOTD')
+  getPackageVersion('SETTINGSMANAGERAPI')
+  getPackageVersion('HINTMANAGERAPI')
+  getPackageVersion('ARTICLEMANAGERAPI')
+}

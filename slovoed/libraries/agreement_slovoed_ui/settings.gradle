@@ -1,0 +1,29 @@
+apply from: '../../gradle/local_build_settings.gradle'
+
+include ':lib'
+
+slovoedProjects (
+        'agreement_screen_manager_ui',
+        'splash_screen_manager_api',
+        'splash_screen_manager_screen_activity',
+        'information_manager_api'
+)
+
+slovoedProjects (
+        'utils_slovoed_ui',
+        'utils_slovoed',
+        'about_manager_api',
+        'dictionary_manager_api',
+        'native_engine_api',
+        'article_manager_api',
+        'article_item',
+        'favorites_manager_api',
+        'history_manager_api',
+        'settings_manager_api',
+        'sound_manager_api',
+        'search_manager_api',
+        'screen_opener_api',
+        'toolbar_manager_api',
+        'testmode',
+        'news_manager_api'
+)

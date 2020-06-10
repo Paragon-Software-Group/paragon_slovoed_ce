@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply from: 'build-version.gradle'
+apply from: '../../../gradle/publish.gradle'
+apply from: '../../../gradle/jacoco.gradle'
+
+android {
+  compileSdkVersion setCompileSdkVersion.toInteger()
+
+  defaultConfig {
+    minSdkVersion setMinSdkVersion.toInteger()
+    targetSdkVersion setTargetSdkVersion.toInteger()
+    versionCode setVersionCode.toInteger()
+    versionName setVersionName
+
+    buildConfigField "String", "packageVersionName", "\"${packageVersionName}\""
+
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+    debug {}
+  }
+}
+
+
+
+apply from: '../../../gradle/javadoc.gradle'
+
+dependencies {
+  testImplementation "junit:junit:${setJUnitVersion}"
+  androidTestImplementation "androidx.test.ext:junit:${setTestRunnerVersion}"
+  androidTestImplementation "androidx.test.espresso:espresso-core:${setEspressoCoreVersion}"
+  testImplementation "androidx.test:core:${setAndroidXLibrariesVersion}"
+  testImplementation "org.mockito:mockito-core:${setMockitoCoreVersion}"
+  testImplementation "org.robolectric:robolectric:${setRobolectricVersion}"
+
+  api "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+  //javadocDeps "androidx.annotation:annotation:${setAndroidXLibrariesVersion}"
+
+  api slovoedLib('news_manager_api', packageVersionNameNM)
+  //javadocDeps("com.paragon_software.components:com.paragon_software.news_manager_api:${packageVersionNameNM}")
+
+  // shdd.android.components.news v2.+ uses Firebase Cloud Messaging (project would require google-services.json config file)
+  // (repo - https://git-su.paragon-software.com/git/shdd.android.components.news.git)
+
+  implementation files('../../shdd.android.components.news/shdd.android.components.news-2.0.1.aar')
+  implementation "com.google.firebase:firebase-messaging:18.0.0"
+}

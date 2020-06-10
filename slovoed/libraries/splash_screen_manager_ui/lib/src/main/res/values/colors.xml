@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default color of stub drawable for splash screen -->
+    <drawable name="splash_screen">@android:color/black</drawable>
+</resources>

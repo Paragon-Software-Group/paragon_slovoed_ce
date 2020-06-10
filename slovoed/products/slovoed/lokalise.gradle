@@ -1,0 +1,54 @@
+import groovy.util.slurpersupport.NodeChild
+import groovy.xml.XmlUtil
+
+//println 'EVALUATED PROJECT NAMES:'
+//ext.appEvaluatedSubprojectsArray.sort().each {println it.name}
+
+def lokalisePath =  '../slovoed/slovoed_lokalise/'
+def stringsFiles = ['strings.xml']
+def stringTags = ['string', 'string-array', 'plurals']
+
+def writtenAnything = false
+File outputFile = file("${lokalisePath}${ext.appBrand}/strings.xml")
+Writer outputWriter
+ext.appEvaluatedSubprojectsArray.sort().each { library ->
+    def strings = [:]
+    ConfigurableFileTree resFile = fileTree("../../libraries/${library.name}/lib/src/main/") {
+        include "res**/values/"
+        include "res-**/values/"
+    }
+    resFile.each { File file ->
+        stringsFiles.each { filename ->
+            if (file.name.equals(filename)) {
+                def stringsXml = (new XmlSlurper()).parse(file)
+                stringsXml.childNodes().each {
+                    if (stringTags.contains(it.name()))
+                        strings[it.attributes()['name']] = XmlUtil.serialize(new NodeChild(it, null, null)).replaceAll(/^<\?xml.+\?>/, '')
+                }
+            }
+        }
+    }
+    strings.remove('')
+    strings.remove(null)
+    if(!strings.isEmpty()) {
+        if(!writtenAnything) {
+            outputFile.parentFile.mkdirs()
+            if(outputFile.exists())
+                outputFile.delete()
+            outputWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(outputFile), 'UTF8'));
+            outputWriter.append '<?xml version="1.0" encoding="utf-8"?>\n'
+            outputWriter.append '<resources>\n'
+            outputWriter.append '\n'
+        }
+        strings.keySet().sort().each {
+            outputWriter.append strings[it]
+        }
+        outputWriter.append '\n'
+        writtenAnything = true
+    }
+}
+if(writtenAnything) {
+    outputWriter.append '</resources>'
+    outputWriter.flush()
+    outputWriter.close()
+}

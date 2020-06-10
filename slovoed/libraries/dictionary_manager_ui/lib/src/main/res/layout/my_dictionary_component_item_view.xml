@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    <!--
+      This stub button view is used as to allocate maximum fixed space for other
+      component buttons (to prevent buttons resizing at application runtime)
+    -->
+    <androidx.appcompat.widget.AppCompatButton
+            style="@style/MyDictionariesPauseButton"
+            android:id="@+id/component_space_anchor_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text=""
+            android:visibility="invisible"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+            style="@style/MyDictionariesDownloadButton"
+            android:id="@+id/download_base_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignEnd="@+id/component_space_anchor_button"
+            android:layout_alignStart="@+id/component_space_anchor_button"
+            tools:text="dictionary (56 mb)" />
+
+    <androidx.appcompat.widget.AppCompatButton
+            style="@style/MyDictionariesRemoveButton"
+            android:id="@+id/remove_base_button"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignEnd="@+id/component_space_anchor_button"
+            android:layout_alignStart="@+id/component_space_anchor_button"
+            tools:text="dictionary (56 mb)" />
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/component_space_anchor_button"
+            android:layout_alignStart="@+id/component_space_anchor_button">
+
+        <com.paragon_software.dictionary_manager_ui.view.ProgressBarAppCompatButton
+                style="@style/MyDictionariesPauseButton"
+                android:id="@+id/pause_base_downloading_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                custom:progressColor="@color/my_dictionaries_downloading_pause_button_progress"
+                tools:text="@string/dictionary_manager_ui_my_dictionaries_download_progress_text" />
+
+        <ProgressBar
+                android:id="@+id/base_downloading_progress_bar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:paddingEnd="@dimen/my_dictionaries_component_button_padding"
+                android:elevation="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="history_manager_ui_no_history">No search history</string>
+    <string name="history_manage_ui_clear_history">Clear History</string>
+    <string name="history_manage_ui_delete_all_articles">Are you sure you want to delete all articles from your History list?</string>
+    <string name="history_manage_ui_delete_selected_articles">Are you sure you want to delete selected articles from your History list?</string>
+</resources>

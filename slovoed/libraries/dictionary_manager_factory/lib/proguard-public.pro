@@ -1,0 +1,10 @@
+-keep class com.paragon_software.dictionary_manager_factory.Catalog { *; }
+-keep class com.paragon_software.dictionary_manager_factory.Components { *; }
+-keep class com.paragon_software.dictionary_manager_factory.Dict { *; }
+-keep class com.paragon_software.dictionary_manager_factory.LocaleData { *; }
+-keep class com.paragon_software.dictionary_manager_factory.Morpho { *; }
+-keep class com.paragon_software.dictionary_manager_factory.Pict { *; }
+-keep class com.paragon_software.dictionary_manager_factory.Product { *; }
+-keep class com.paragon_software.dictionary_manager_factory.Shopping { *; }
+-keep class com.paragon_software.dictionary_manager_factory.Sound { *; }
+-keep class com.paragon_software.dictionary_manager_factory.GenericData { *; }

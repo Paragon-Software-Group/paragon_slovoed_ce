@@ -1,0 +1,11 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.search_manager')
+  getTeamCityProperty('setApplicationName', 'search_manager')
+  getTeamCityProperty('setApplicationDescription', 'Search Manager Implementation')
+
+  getPackageVersion('DM')
+  getPackageVersion('SM')
+  getPackageVersion('TM')
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Agreement activity -->
+    <dimen name="agreement_logo_width">48dp</dimen>
+    <dimen name="agreement_logo_height">48dp</dimen>
+</resources>

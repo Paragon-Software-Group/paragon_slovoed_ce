@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="Search"
+                  type="com.paragon_software.search_all_dictionary.search_manager.SearchController"/>
+    </data>
+
+    <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.paragon_software.search_all_dictionary.search_manager.SearchActivity"
+            android:orientation="vertical">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:baselineAligned="false">
+            <Switch android:id="@+id/searchSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="@={Search.onlineSearch}"
+                    android:text="@string/online_search"/>
+            <EditText android:id="@+id/searchValue"
+                      android:text="@={Search.searchText}"
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:inputType="text"
+                      android:hint="@string/search"
+                      android:ems="10"
+                      android:layout_weight="1"
+                      android:imeOptions="actionSearch"
+                      onOkInSoftKeyboard="@{Search.okInSoftKeyboard}"/>
+        </LinearLayout>
+        <ListView
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                app:items="@{Search.searchResults}"/>
+    </LinearLayout>
+</layout>

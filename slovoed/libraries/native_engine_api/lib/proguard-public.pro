@@ -1,0 +1,2 @@
+-keep class com.paragon_software.native_engine.data.SoundData { *; }
+-keep class com.paragon_software.native_engine.HtmlBuilderParams { *; }

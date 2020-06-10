@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="flash_cards_manager_ui_show_meaning">Show meaning</string>
+    <string name="flash_cards_manager_ui_right">Right</string>
+    <string name="flash_cards_manager_ui_wrong">Wrong</string>
+    <string name="flash_cards_manager_ui_start_quiz_title">Start Flashcard Quiz</string>
+    <string name="flash_cards_manager_ui_start_quiz_subtitle">Test your knowledge using the flashcard quiz!</string>
+    <string name="flash_cards_manager_ui_select_cards_title">Select flashcards</string>
+    <string name="flash_cards_manager_ui_select_cards_subtitle">Use the following menu to manage the list of flashcards in the quiz.</string>
+    <string name="flash_cards_manager_ui_delete_all_title">Delete all flashcards</string>
+    <string name="flash_cards_manager_ui_delete_all_subtitle">Tap here to delete all your flashcards.</string>
+    <string name="flash_cards_manager_ui_alphabetically">Alphabetically</string>
+    <string name="flash_cards_manager_ui_by_progress">By progress</string>
+    <string name="flash_cards_manager_ui_select_all">Select all</string>
+    <string name="flash_cards_manager_ui_deselect_all">Deselect all</string>
+    <string name="flash_cards_manager_ui_delete">Delete</string>
+    <string name="flash_cards_manager_ui_percent">%d%%</string>
+    <string name="flash_cards_manager_ui_delete_count">Delete: %d</string>
+    <string name="flash_cards_manager_ui_pronunciation">Pronunciation</string>
+    <string name="flash_cards_manager_ui_start_again">Start quiz again</string>
+    <string name="flash_cards_manager_ui_front_html">
+        &lt;html&gt;
+            &lt;head&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;center&gt;&lt;b&gt;%1$s&lt;/b&gt;&lt;/center&gt;
+            &lt;p&gt;
+                Try to recall the translation of the word or phrase displayed and tap
+                \"%2$s\" button to turn over the card. Compare your answer with
+                the one on the other side of the card and tap \"%3$s\" or \"%4$s\" button
+                depending on the result.
+            &lt;/p&gt;
+            &lt;/body&gt;
+        &lt;html/&gt;
+    </string>
+    <string name="flash_cards_manager_ui_results_html">
+        &lt;html&gt;
+            &lt;head&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;center&gt;You have finished the flashcard quiz.&lt;/center&gt;
+            &lt;center&gt;Words recalled correctly: %1$d&lt;/center&gt;
+            &lt;center&gt;Words recalled incorrectly: %2$d&lt;/center&gt;
+            &lt;/body&gt;
+        &lt;html/&gt;
+    </string>
+    <string name="flash_cards_manager_ui_results_congratulation_html">
+        &lt;html&gt;
+            &lt;head&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;center&gt;Congratulations!&lt;/center&gt;
+            &lt;center&gt;You have finished the flashcard quiz.&lt;/center&gt;
+            &lt;center&gt;Words recalled correctly: %1$d&lt;/center&gt;
+            &lt;center&gt;Words recalled incorrectly: %2$d&lt;/center&gt;
+            &lt;/body&gt;
+        &lt;html/&gt;
+    </string>
+    <string name="flash_cards_manager_ui_really_want_to_quit">Do you really want to quit the quiz?</string>
+    <string name="flash_cards_manager_ui_really_want_to_delete_all_flashcards">Do you really want to delete all flashcards?</string>
+    <string name="flash_cards_manager_ui_no_flashcards">You do not have any flashcards to run the quiz. Please open an entry which you would like to learn and tap\n \"%1$s ###\" button.</string>
+    <string name="flash_cards_manager_ui_all_flashcards_deselected">Unfortunately you cannot run the quiz, as you have disabled all your flashcards. Please, enable them in \"%1$s\".</string>
+</resources>

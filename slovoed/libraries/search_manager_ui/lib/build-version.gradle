@@ -1,0 +1,9 @@
+apply from: '../../../gradle/version.gradle'
+
+ext {
+  getTeamCityProperty('setApplicationId', 'com.paragon_software.search_manager_ui')
+  getTeamCityProperty('setApplicationName', 'search_manager_ui')
+  getTeamCityProperty('setApplicationDescription', 'Search Manager UI component')
+  getPackageVersion('SM')
+  getPackageVersion('UTILSSLOVOEDUI')
+}

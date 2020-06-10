@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="history_list_item_height_material">56dp</dimen>
+    <dimen name="history_list_item_icon_size_material">40dp</dimen>
+    <dimen name="history_list_item_left_right_margin_material">16dp</dimen>
+    <dimen name="history_list_item_top_bottom_margin_material">8dp</dimen>
+    <dimen name="history_list_item_direction_icon_size">30dp</dimen>
+    <dimen name="history_list_item_sound_icon_size">30dp</dimen>
+    <dimen name="history_list_item_sound_icon_padding">5dp</dimen>
+    <dimen name="history_default_margin_material">8dp</dimen>
+</resources>

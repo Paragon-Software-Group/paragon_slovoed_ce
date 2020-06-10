@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/paragonLogoColor"
+              android:padding="@dimen/activity_horizontal_margin"
+              android:paddingTop="@dimen/nav_header_vertical_margin"
+              android:paddingBottom="@dimen/nav_header_vertical_margin"
+              android:theme="@style/ThemeOverlay.AppCompat.Dark"
+              android:orientation="vertical"
+              android:gravity="bottom">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:paddingTop="@dimen/nav_header_vertical_margin"
+            android:text="@string/navigation_manager_ui_nav_header_title"
+            android:textSize="14sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+</LinearLayout>

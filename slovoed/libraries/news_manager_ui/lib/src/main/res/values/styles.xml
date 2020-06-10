@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="news_list_style">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:cacheColorHint">@color/white</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:divider">@color/transparent</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <style name="news_item_style">
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>
