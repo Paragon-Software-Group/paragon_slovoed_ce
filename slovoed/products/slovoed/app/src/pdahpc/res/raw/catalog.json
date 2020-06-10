@@ -1,0 +1,93 @@
+{
+    "id": "849",
+    "brand": "slovoed",
+    "generic_data": {
+        
+    },
+    "order": [
+        "12474"
+    ],
+    "products": {
+        "12474": {
+            "from_lang_short": "iris",
+            "components": {
+                "demo_dict": {
+                    "from_lang_short": "iris",
+                    "role": "",
+                    "size": "1079324",
+                    "from_lang": "Irish",
+                    "to_lang": "English",
+                    "prc_id": "5451",
+                    "to_lang_short": "engl",
+                    "version": "0.5",
+                    "url": "",
+                    "words_count": 0
+                }
+            },
+            "generic_data": {
+                "standalonePackageName": "null",
+                "prc_id": "null"
+            },
+            "names": {
+                "en": "English &lt;\u2212&gt; Irish Slovoed Compact Talking Dictionary"
+            },
+            "lang_from": "ga",
+            "lang_to": "en",
+            "type": "bilingual",
+            "generic_vars": {
+                "ivs_id": "289"
+            },
+            "to_lang_short": "engl",
+            "shoppings": [
+                {
+                    "id_in_shop": "open",
+                    "shop": "Google Play",
+                    "price": "27.99",
+                    "subscription_period": "N/A",
+                    "currency": "EUR"
+                }
+            ]
+        }
+    },
+    "app_name": {
+        "en": "Slovoed"
+    },
+    "app_name_full": {
+        "en": "Slovoed"
+    },
+    "extra": {
+        "share": "true"
+    },
+    "about": {
+        "copyright": {
+            "en": "\u00a9 Paragon Software, 1994-2019"
+        },
+        "web": {
+            "en": "www.slovoed.com",
+            "de": "www.slovoed.com",
+            "ru": "www.slovoed.com"
+        },
+        "provided": {
+            "en": "Paragon Software"
+        },
+        "faq": {
+            "en": "slovoed.com/support"
+        },
+        "name": {
+            "en": "Slovoed Dictionaries: Deluxe Languages"
+        },
+        "support": {
+            "en": "support@slovoed.com"
+        }
+    },
+    "package_name": "com.slovoed.language.dictionaries",
+    "odapi_support_mode": "full",
+    "locale": {
+        "default": "en",
+        "use_system": "true",
+        "list": [
+            "English"
+        ]
+    },
+    "test_base": null
+}

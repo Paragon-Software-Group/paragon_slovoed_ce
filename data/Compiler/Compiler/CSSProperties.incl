@@ -1,0 +1,622 @@
+
+static const wchar_t *const AlignItems_enums[] = { L"flex-start", L"flex-end", L"center", L"baseline", L"stretch" };
+
+static const wchar_t *const BackgroundPosition_enums[] = { L"left", L"right", L"top", L"center", L"bottom" };
+
+static const wchar_t *const BackgroundRepeat_enums[] = { L"repeat", L"repeat-x", L"repeat-y", L"no-repeat" };
+
+static const wchar_t *const BackgroundSize_enums[] = { L"cover", L"contain" };
+
+static const wchar_t *const BorderStyle_enums[] = { L"hidden", L"dotted", L"dashed", L"solid", L"double", L"groove", L"ridge", L"inset", L"outset" };
+
+static const wchar_t *const BorderWidth_enums[] = { L"medium", L"thin", L"thick" };
+
+static const wchar_t *const Clear_enums[] = { L"left", L"right", L"both" };
+
+static const wchar_t *const Direction_enums[] = { L"ltr", L"rtl" };
+
+static const wchar_t *const Display_enums[] = { L"inline", L"block", L"inline-block", L"flex", L"inline-flex" };
+
+static const wchar_t *const Float_enums[] = { L"left", L"right" };
+
+static const wchar_t *const JustifyContent_enums[] = { L"flex-start", L"flex-end", L"center", L"space-between", L"space-around" };
+
+static const wchar_t *const Position_enums[] = { L"static", L"relative", L"absolute", L"fixed" };
+
+static const wchar_t *const TextAlign_enums[] = { L"left", L"right", L"center", L"justify" };
+
+static const wchar_t *const VerticalAlign_enums[] = { L"baseline", L"sub", L"super", L"top", L"text-top", L"middle", L"bottom", L"text-bottom" };
+
+static const PropertyDescriptor AlignItems = {
+	/* .name = */ L"align-items",
+	/* .type = */ eSldCSSProperty_AlignItems,
+	/* .validValuesMask = */ VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 5,
+	/* .enums = */ AlignItems_enums
+};
+
+static const PropertyDescriptor BackgroundColor = {
+	/* .name = */ L"background-color",
+	/* .type = */ eSldCSSProperty_BackgroundColor,
+	/* .validValuesMask = */ VMASK(Color),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor BackgroundImage = {
+	/* .name = */ L"background-image",
+	/* .type = */ eSldCSSProperty_BackgroundImage,
+	/* .validValuesMask = */ VMASK(None) | VMASK(SldImageUrl),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor BackgroundPosition = {
+	/* .name = */ L"background-position",
+	/* .type = */ eSldCSSProperty_BackgroundPosition,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage) | VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ true,
+	/* .enumCount = */ 5,
+	/* .enums = */ BackgroundPosition_enums
+};
+
+static const PropertyDescriptor BackgroundRepeat = {
+	/* .name = */ L"background-repeat",
+	/* .type = */ eSldCSSProperty_BackgroundRepeat,
+	/* .validValuesMask = */ VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 4,
+	/* .enums = */ BackgroundRepeat_enums
+};
+
+static const PropertyDescriptor BackgroundSize = {
+	/* .name = */ L"background-size",
+	/* .type = */ eSldCSSProperty_BackgroundSize,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage) | VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ true,
+	/* .enumCount = */ 2,
+	/* .enums = */ BackgroundSize_enums
+};
+
+static const PropertyDescriptor BorderBottomColor = {
+	/* .name = */ L"border-bottom-color",
+	/* .type = */ eSldCSSProperty_BorderBottomColor,
+	/* .validValuesMask = */ VMASK(Color),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor BorderBottomLeftRadius = {
+	/* .name = */ L"border-bottom-left-radius",
+	/* .type = */ eSldCSSProperty_BorderBottomLeftRadius,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor BorderBottomRightRadius = {
+	/* .name = */ L"border-bottom-right-radius",
+	/* .type = */ eSldCSSProperty_BorderBottomRightRadius,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor BorderBottomStyle = {
+	/* .name = */ L"border-bottom-style",
+	/* .type = */ eSldCSSProperty_BorderBottomStyle,
+	/* .validValuesMask = */ VMASK(None) | VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 9,
+	/* .enums = */ BorderStyle_enums
+};
+
+static const PropertyDescriptor BorderBottomWidth = {
+	/* .name = */ L"border-bottom-width",
+	/* .type = */ eSldCSSProperty_BorderBottomWidth,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Enum),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 3,
+	/* .enums = */ BorderWidth_enums
+};
+
+static const PropertyDescriptor BorderLeftColor = {
+	/* .name = */ L"border-left-color",
+	/* .type = */ eSldCSSProperty_BorderLeftColor,
+	/* .validValuesMask = */ VMASK(Color),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor BorderLeftStyle = {
+	/* .name = */ L"border-left-style",
+	/* .type = */ eSldCSSProperty_BorderLeftStyle,
+	/* .validValuesMask = */ VMASK(None) | VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 9,
+	/* .enums = */ BorderStyle_enums
+};
+
+static const PropertyDescriptor BorderLeftWidth = {
+	/* .name = */ L"border-left-width",
+	/* .type = */ eSldCSSProperty_BorderLeftWidth,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Enum),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 3,
+	/* .enums = */ BorderWidth_enums
+};
+
+static const PropertyDescriptor BorderRightColor = {
+	/* .name = */ L"border-right-color",
+	/* .type = */ eSldCSSProperty_BorderRightColor,
+	/* .validValuesMask = */ VMASK(Color),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor BorderRightStyle = {
+	/* .name = */ L"border-right-style",
+	/* .type = */ eSldCSSProperty_BorderRightStyle,
+	/* .validValuesMask = */ VMASK(None) | VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 9,
+	/* .enums = */ BorderStyle_enums
+};
+
+static const PropertyDescriptor BorderRightWidth = {
+	/* .name = */ L"border-right-width",
+	/* .type = */ eSldCSSProperty_BorderRightWidth,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Enum),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 3,
+	/* .enums = */ BorderWidth_enums
+};
+
+static const PropertyDescriptor BorderTopColor = {
+	/* .name = */ L"border-top-color",
+	/* .type = */ eSldCSSProperty_BorderTopColor,
+	/* .validValuesMask = */ VMASK(Color),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor BorderTopLeftRadius = {
+	/* .name = */ L"border-top-left-radius",
+	/* .type = */ eSldCSSProperty_BorderTopLeftRadius,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor BorderTopRightRadius = {
+	/* .name = */ L"border-top-right-radius",
+	/* .type = */ eSldCSSProperty_BorderTopRightRadius,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor BorderTopStyle = {
+	/* .name = */ L"border-top-style",
+	/* .type = */ eSldCSSProperty_BorderTopStyle,
+	/* .validValuesMask = */ VMASK(None) | VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 9,
+	/* .enums = */ BorderStyle_enums
+};
+
+static const PropertyDescriptor BorderTopWidth = {
+	/* .name = */ L"border-top-width",
+	/* .type = */ eSldCSSProperty_BorderTopWidth,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Enum),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 3,
+	/* .enums = */ BorderWidth_enums
+};
+
+static const PropertyDescriptor Bottom = {
+	/* .name = */ L"bottom",
+	/* .type = */ eSldCSSProperty_Bottom,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor Clear = {
+	/* .name = */ L"clear",
+	/* .type = */ eSldCSSProperty_Clear,
+	/* .validValuesMask = */ VMASK(None) | VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 3,
+	/* .enums = */ Clear_enums
+};
+
+static const PropertyDescriptor Direction = {
+	/* .name = */ L"direction",
+	/* .type = */ eSldCSSProperty_Direction,
+	/* .validValuesMask = */ VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 2,
+	/* .enums = */ Direction_enums
+};
+
+static const PropertyDescriptor Display = {
+	/* .name = */ L"display",
+	/* .type = */ eSldCSSProperty_Display,
+	/* .validValuesMask = */ VMASK(None) | VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 5,
+	/* .enums = */ Display_enums
+};
+
+static const PropertyDescriptor Float = {
+	/* .name = */ L"float",
+	/* .type = */ eSldCSSProperty_Float,
+	/* .validValuesMask = */ VMASK(None) | VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 2,
+	/* .enums = */ Float_enums
+};
+
+static const PropertyDescriptor Height = {
+	/* .name = */ L"height",
+	/* .type = */ eSldCSSProperty_Height,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor JustifyContent = {
+	/* .name = */ L"justify-content",
+	/* .type = */ eSldCSSProperty_JustifyContent,
+	/* .validValuesMask = */ VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 5,
+	/* .enums = */ JustifyContent_enums
+};
+
+static const PropertyDescriptor Left = {
+	/* .name = */ L"left",
+	/* .type = */ eSldCSSProperty_Left,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor MarginBottom = {
+	/* .name = */ L"margin-bottom",
+	/* .type = */ eSldCSSProperty_MarginBottom,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor MarginLeft = {
+	/* .name = */ L"margin-left",
+	/* .type = */ eSldCSSProperty_MarginLeft,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor MarginRight = {
+	/* .name = */ L"margin-right",
+	/* .type = */ eSldCSSProperty_MarginRight,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor MarginTop = {
+	/* .name = */ L"margin-top",
+	/* .type = */ eSldCSSProperty_MarginTop,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor MaxHeight = {
+	/* .name = */ L"max-height",
+	/* .type = */ eSldCSSProperty_MaxHeight,
+	/* .validValuesMask = */ VMASK(None) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor MaxWidth = {
+	/* .name = */ L"max-width",
+	/* .type = */ eSldCSSProperty_MaxWidth,
+	/* .validValuesMask = */ VMASK(None) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor MinHeight = {
+	/* .name = */ L"min-height",
+	/* .type = */ eSldCSSProperty_MinHeight,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor MinWidth = {
+	/* .name = */ L"min-width",
+	/* .type = */ eSldCSSProperty_MinWidth,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor PaddingBottom = {
+	/* .name = */ L"padding-bottom",
+	/* .type = */ eSldCSSProperty_PaddingBottom,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor PaddingLeft = {
+	/* .name = */ L"padding-left",
+	/* .type = */ eSldCSSProperty_PaddingLeft,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor PaddingRight = {
+	/* .name = */ L"padding-right",
+	/* .type = */ eSldCSSProperty_PaddingRight,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor PaddingTop = {
+	/* .name = */ L"padding-top",
+	/* .type = */ eSldCSSProperty_PaddingTop,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor Position = {
+	/* .name = */ L"position",
+	/* .type = */ eSldCSSProperty_Position,
+	/* .validValuesMask = */ VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 4,
+	/* .enums = */ Position_enums
+};
+
+static const PropertyDescriptor Right = {
+	/* .name = */ L"right",
+	/* .type = */ eSldCSSProperty_Right,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor TextAlign = {
+	/* .name = */ L"text-align",
+	/* .type = */ eSldCSSProperty_TextAlign,
+	/* .validValuesMask = */ VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 4,
+	/* .enums = */ TextAlign_enums
+};
+
+static const PropertyDescriptor TextIndent = {
+	/* .name = */ L"text-indent",
+	/* .type = */ eSldCSSProperty_TextIndent,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor Top = {
+	/* .name = */ L"top",
+	/* .type = */ eSldCSSProperty_Top,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor VerticalAlign = {
+	/* .name = */ L"vertical-align",
+	/* .type = */ eSldCSSProperty_VerticalAlign,
+	/* .validValuesMask = */ VMASK(Length) | VMASK(Percentage) | VMASK(Enum),
+	/* .validValuesFlags = */ 0,
+	/* .multiValue = */ false,
+	/* .enumCount = */ 8,
+	/* .enums = */ VerticalAlign_enums
+};
+
+static const PropertyDescriptor Width = {
+	/* .name = */ L"width",
+	/* .type = */ eSldCSSProperty_Width,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Length) | VMASK(Percentage),
+	/* .validValuesFlags = */ FMASK(NonNegative),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const PropertyDescriptor ZIndex = {
+	/* .name = */ L"z-index",
+	/* .type = */ eSldCSSProperty_ZIndex,
+	/* .validValuesMask = */ VMASK(Auto) | VMASK(Number),
+	/* .validValuesFlags = */ FMASK(IntOnly),
+	/* .multiValue = */ false,
+	/* .enumCount = */ 0,
+	/* .enums = */ nullptr
+};
+
+static const FourSidedPropertyDescriptor BorderColor = {
+	/* .name = */ L"border-color",
+	/* .sides = */ { &BorderTopColor, &BorderRightColor, &BorderBottomColor, &BorderLeftColor }
+};
+
+static const FourSidedPropertyDescriptor BorderRadius = {
+	/* .name = */ L"border-radius",
+	/* .sides = */ { &BorderTopLeftRadius, &BorderTopRightRadius, &BorderBottomRightRadius, &BorderBottomLeftRadius }
+};
+
+static const FourSidedPropertyDescriptor BorderStyle = {
+	/* .name = */ L"border-style",
+	/* .sides = */ { &BorderTopStyle, &BorderRightStyle, &BorderBottomStyle, &BorderLeftStyle }
+};
+
+static const FourSidedPropertyDescriptor BorderWidth = {
+	/* .name = */ L"border-width",
+	/* .sides = */ { &BorderTopWidth, &BorderRightWidth, &BorderBottomWidth, &BorderLeftWidth }
+};
+
+static const FourSidedPropertyDescriptor Margin = {
+	/* .name = */ L"margin",
+	/* .sides = */ { &MarginTop, &MarginRight, &MarginBottom, &MarginLeft }
+};
+
+static const FourSidedPropertyDescriptor Padding = {
+	/* .name = */ L"padding",
+	/* .sides = */ { &PaddingTop, &PaddingRight, &PaddingBottom, &PaddingLeft }
+};
+
+static const FourSidedPropertyDescriptor *const fourSidedProps[] = {
+	/* [border-color] = */ &BorderColor,
+	/* [border-radius] = */ &BorderRadius,
+	/* [border-style] = */ &BorderStyle,
+	/* [border-width] = */ &BorderWidth,
+	/* [margin] = */ &Margin,
+	/* [padding] = */ &Padding
+};
+
+static const PropertyDescriptor *const simpleProps[] = {
+	/* [eSldCSSPropertyType_Invalid] = */ nullptr,
+
+	/* [eSldCSSProperty_Display] = */ &Display,
+	/* [eSldCSSProperty_MarginTop] = */ &MarginTop,
+	/* [eSldCSSProperty_MarginRight] = */ &MarginRight,
+	/* [eSldCSSProperty_MarginBottom] = */ &MarginBottom,
+	/* [eSldCSSProperty_MarginLeft] = */ &MarginLeft,
+	/* [eSldCSSProperty_Width] = */ &Width,
+	/* [eSldCSSProperty_Height] = */ &Height,
+	/* [eSldCSSProperty_Float] = */ &Float,
+	/* [eSldCSSProperty_Clear] = */ &Clear,
+	/* [eSldCSSProperty_PaddingTop] = */ &PaddingTop,
+	/* [eSldCSSProperty_PaddingRight] = */ &PaddingRight,
+	/* [eSldCSSProperty_PaddingBottom] = */ &PaddingBottom,
+	/* [eSldCSSProperty_PaddingLeft] = */ &PaddingLeft,
+	/* [eSldCSSProperty_BackgroundImage] = */ &BackgroundImage,
+	/* [eSldCSSProperty_BackgroundRepeat] = */ &BackgroundRepeat,
+	/* [eSldCSSProperty_BackgroundSize] = */ &BackgroundSize,
+	/* [eSldCSSProperty_BackgroundPosition] = */ &BackgroundPosition,
+	/* [eSldCSSProperty_TextAlign] = */ &TextAlign,
+	/* [eSldCSSProperty_BorderTopWidth] = */ &BorderTopWidth,
+	/* [eSldCSSProperty_BorderRightWidth] = */ &BorderRightWidth,
+	/* [eSldCSSProperty_BorderBottomWidth] = */ &BorderBottomWidth,
+	/* [eSldCSSProperty_BorderLeftWidth] = */ &BorderLeftWidth,
+	/* [eSldCSSProperty_BorderTopStyle] = */ &BorderTopStyle,
+	/* [eSldCSSProperty_BorderRightStyle] = */ &BorderRightStyle,
+	/* [eSldCSSProperty_BorderBottomStyle] = */ &BorderBottomStyle,
+	/* [eSldCSSProperty_BorderLeftStyle] = */ &BorderLeftStyle,
+	/* [eSldCSSProperty_BorderTopColor] = */ &BorderTopColor,
+	/* [eSldCSSProperty_BorderRightColor] = */ &BorderRightColor,
+	/* [eSldCSSProperty_BorderBottomColor] = */ &BorderBottomColor,
+	/* [eSldCSSProperty_BorderLeftColor] = */ &BorderLeftColor,
+	/* [eSldCSSProperty_VerticalAlign] = */ &VerticalAlign,
+	/* [eSldCSSProperty_BackgroundColor] = */ &BackgroundColor,
+	/* [eSldCSSProperty_BorderTopLeftRadius] = */ &BorderTopLeftRadius,
+	/* [eSldCSSProperty_BorderTopRightRadius] = */ &BorderTopRightRadius,
+	/* [eSldCSSProperty_BorderBottomRightRadius] = */ &BorderBottomRightRadius,
+	/* [eSldCSSProperty_BorderBottomLeftRadius] = */ &BorderBottomLeftRadius,
+	/* [eSldCSSProperty_Position] = */ &Position,
+	/* [eSldCSSProperty_Top] = */ &Top,
+	/* [eSldCSSProperty_Right] = */ &Right,
+	/* [eSldCSSProperty_Bottom] = */ &Bottom,
+	/* [eSldCSSProperty_Left] = */ &Left,
+	/* [eSldCSSProperty_ZIndex] = */ &ZIndex,
+	/* [eSldCSSProperty_JustifyContent] = */ &JustifyContent,
+	/* [eSldCSSProperty_AlignItems] = */ &AlignItems,
+	/* [eSldCSSProperty_MinHeight] = */ &MinHeight,
+	/* [eSldCSSProperty_MaxHeight] = */ &MaxHeight,
+	/* [eSldCSSProperty_MinWidth] = */ &MinWidth,
+	/* [eSldCSSProperty_MaxWidth] = */ &MaxWidth,
+	/* [eSldCSSProperty_TextIndent] = */ &TextIndent,
+	/* [eSldCSSProperty_Direction] = */ &Direction
+};

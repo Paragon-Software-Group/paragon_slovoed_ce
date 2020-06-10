@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:android='http://schemas.android.com/apk/res/android' xmlns:tools='http://schemas.android.com/tools'>
+  <application android:label='@string/app_name' android:icon='@mipmap/ic_launcher'>
+    <meta-data android:name='open.dictionary.api.versionCode' android:value='3' />
+    <meta-data android:name='open.dictionary.api.minVersionCode' android:value='1' />
+    <meta-data android:name='open.dictionary.api.versionName' android:value='1.2.2' />
+    <meta-data android:name='open.dictionary.api.dict_1_id' android:value='0;5999' />
+    <meta-data android:name='open.dictionary.api.dict_1_lang' android:value='*' />
+    <meta-data android:name='open.dictionary.api.dict_1_words_count' android:value='0' />
+    <meta-data android:name='open.dictionary.api.dict_1_version' android:value='0' />
+    <meta-data android:name='open.dictionary.api.dict1_is_rtl' android:value='false' />
+    <meta-data android:name='open.dictionary.api.dict_1_name_full' android:value='@string/odapi_server_name' />
+    <meta-data android:name='open.dictionary.api.dict_1_name_short' android:value='@string/odapi_server_name' />
+    <meta-data android:name='open.dictionary.api.dict_1_author_name' android:value='@string/odapi_copyright' />
+    <meta-data android:name='open.dictionary.api.dict_1_author_web' android:value='@string/odapi_web' />
+    <meta-data android:name='open.dictionary.api.dict_1_product_name' android:value='@string/odapi_server_name' />
+    <meta-data android:name='open.dictionary.api.dict_1_translation_as_image_supported' android:value='true' />
+    <meta-data android:name='open.dictionary.api.dict_1_translation_as_text_supported' android:value='true' />
+  </application>
+</manifest>

@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_v140|Win32">
+      <Configuration>Debug_v140</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug_v140|x64">
+      <Configuration>Debug_v140</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_v140|Win32">
+      <Configuration>Release_v140</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_v140|x64">
+      <Configuration>Release_v140</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{22CD0940-8CA6-4139-82A3-708A5F0C9608}</ProjectGuid>
+    <RootNamespace>Compiler</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <EnablePREfast>false</EnablePREfast>
+      <AdditionalIncludeDirectories>../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnablePREfast>false</EnablePREfast>
+      <AdditionalIncludeDirectories>../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;_CRT_NON_CONFORMING_SWPRINTFS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+      <AdditionalDependencies>psapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AbstractItemManager.cpp" />
+    <ClCompile Include="Article.cpp" />
+    <ClCompile Include="Articles.cpp" />
+    <ClCompile Include="ArticlesCompress.cpp" />
+    <ClCompile Include="ArticlesLoader.cpp" />
+    <ClCompile Include="Compiler.cpp" />
+    <ClCompile Include="Compress.cpp" />
+    <ClCompile Include="CompressByStore.cpp" />
+    <ClCompile Include="CSSDataManager.cpp" />
+    <ClCompile Include="fmt\format.cc" />
+    <ClCompile Include="fmt\printf.cc" />
+    <ClCompile Include="FileResourceManagement.cpp" />
+    <ClCompile Include="ImageManager.cpp" />
+    <ClCompile Include="ListCompress.cpp" />
+    <ClCompile Include="ListLoader.cpp" />
+    <ClCompile Include="WordList.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="Material.cpp" />
+    <ClCompile Include="MaterialManager.cpp" />
+    <ClCompile Include="MetadataManager.cpp" />
+    <ClCompile Include="MorphoDataManager.cpp" />
+    <ClCompile Include="MyProcessTimer.cpp" />
+    <ClCompile Include="Out.cpp" />
+    <ClCompile Include="Platform.cpp" />
+    <ClCompile Include="PugiXML\pugixml.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="SDC_CRC.cpp" />
+    <ClCompile Include="SDCRead.cpp" />
+    <ClCompile Include="SDCWrite.cpp" />
+    <ClCompile Include="SlovoEdProject.cpp" />
+    <ClCompile Include="SortTablesManager.cpp" />
+    <ClCompile Include="SoundContainer.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="SpeexPack.cpp" />
+    <ClCompile Include="StringCompare.cpp" />
+    <ClCompile Include="StringFunctions.cpp" />
+    <ClCompile Include="StringStore.cpp" />
+    <ClCompile Include="Styles.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
+    <ClCompile Include="Tools.cpp" />
+    <ClCompile Include="VideoManager.cpp" />
+    <ClCompile Include="WordLists.cpp" />
+    <ClCompile Include="XmlTagContent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Engine\SldDefines.h" />
+    <ClInclude Include="..\..\..\Engine\SldMetadataTypes.h" />
+    <ClInclude Include="..\..\..\Engine\SldPlatform.h" />
+    <ClInclude Include="..\..\..\Engine\SldTypeDefs.h" />
+    <ClInclude Include="AbstractItemContainer.h" />
+    <ClInclude Include="AbstractItemManager.h" />
+    <ClInclude Include="allocators.h" />
+    <ClInclude Include="Article.h" />
+    <ClInclude Include="Articles.h" />
+    <ClInclude Include="ArticlesCompress.h" />
+    <ClInclude Include="ArticlesLoader.h" />
+    <ClInclude Include="Colour.h" />
+    <ClInclude Include="Compress.h" />
+    <ClInclude Include="CompressByStore.h" />
+    <ClInclude Include="CSSDataManager.h" />
+    <ClInclude Include="FileResourceManagement.h" />
+    <ClInclude Include="fmt\format.h" />
+    <ClInclude Include="fmt\printf.h" />
+    <ClInclude Include="fmt\string.h" />
+    <ClInclude Include="format.h" />
+    <ClInclude Include="ICompressBy.h" />
+    <ClInclude Include="ImageContainer.h" />
+    <ClInclude Include="ImageManager.h" />
+    <ClInclude Include="ListCompress.h" />
+    <ClInclude Include="ListLoader.h" />
+    <ClInclude Include="WordList.h" />
+    <ClInclude Include="macros.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="MaterialManager.h" />
+    <ClInclude Include="MeshManager.h" />
+    <ClInclude Include="MetadataManager.h" />
+    <ClInclude Include="MorphoDataManager.h" />
+    <ClInclude Include="MyProcessTimer.h" />
+    <ClInclude Include="Out.h" />
+    <ClInclude Include="PugiXML\pugiconfig.hpp" />
+    <ClInclude Include="PugiXML\pugixml.hpp" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneContainer.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="SDC_CRC.h" />
+    <ClInclude Include="SDCRead.h" />
+    <ClInclude Include="SDCWrite.h" />
+    <ClInclude Include="simple_list.h" />
+    <ClInclude Include="sld2_Error.h" />
+    <ClInclude Include="sld_Platform.h" />
+    <ClInclude Include="sld_Types.h" />
+    <ClInclude Include="SlovoEdProject.h" />
+    <ClInclude Include="SortTablesManager.h" />
+    <ClInclude Include="SoundContainer.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="SpeexPack.h" />
+    <ClInclude Include="StringCompare.h" />
+    <ClInclude Include="StringFunctions.h" />
+    <ClInclude Include="StringStore.h" />
+    <ClInclude Include="string_ref.h" />
+    <ClInclude Include="Styles.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ThreadPool.h" />
+    <ClInclude Include="Tools.h" />
+    <ClInclude Include="VersionInfo.h" />
+    <ClInclude Include="VideoContainer.h" />
+    <ClInclude Include="VideoManager.h" />
+    <ClInclude Include="WordLists.h" />
+    <ClInclude Include="XmlTagContent.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CSSProperties.incl" />
+    <CustomBuild Include="MetadataManagerStrings.incl.in.py">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">python MetadataManagerStrings.incl.in.py ../../../Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">python MetadataManagerStrings.incl.in.py ../../../Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">python MetadataManagerStrings.incl.in.py ../../../Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">python MetadataManagerStrings.incl.in.py ../../../Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">MetadataManagerStrings.incl</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">MetadataManagerStrings.incl</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">MetadataManagerStrings.incl</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">MetadataManagerStrings.incl</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">../../../Engine/SldMetadataTypes.h</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">../../../Engine/SldMetadataTypes.h</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">../../../Engine/SldMetadataTypes.h</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">../../../Engine/SldMetadataTypes.h</AdditionalInputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">Generating MetadataManagerStrings.incl</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">Generating MetadataManagerStrings.incl</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">Generating MetadataManagerStrings.incl</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">Generating MetadataManagerStrings.incl</Message>
+    </CustomBuild>
+    <CustomBuild Include="CSSProperties.incl.py">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">python %(Identity) ../../../Engine/ %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">python %(Identity) ../../../Engine/ %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">python %(Identity) ../../../Engine/ %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">python %(Identity) ../../../Engine/ %(Filename)</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">%(Filename)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">%(Filename)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">%(Filename)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">%(Filename)</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">Generating %(Filename)</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">Generating %(Filename)</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">Generating %(Filename)</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">Generating %(Filename)</Message>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">../../../Engine/sld_css_props.py</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">../../../Engine/sld_css_props.py</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">../../../Engine/sld_css_props.py</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">../../../Engine/sld_css_props.py</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="compiler.natvis" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+  <Type Name="sld::basic_string_ref&lt;char,*&gt;">
+    <DisplayString>{ptr_,[len_]s}</DisplayString>
+    <StringView>ptr_,[len_]s</StringView>
+    <Expand>
+      <Item Name="[size]">len_</Item>
+      <ArrayItems>
+        <Size>len_</Size>
+        <ValuePointer>ptr_</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+
+  <Type Name="sld::basic_string_ref&lt;unsigned short,*&gt;">
+    <DisplayString>{ptr_,[len_]su}</DisplayString>
+    <StringView>ptr_,[len_]su</StringView>
+    <Expand>
+      <Item Name="[size]">len_</Item>
+      <ArrayItems>
+        <Size>len_</Size>
+        <ValuePointer>ptr_</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+
+  <Type Name="sld::basic_string_ref&lt;char16_t,*&gt;">
+    <DisplayString>{ptr_,[len_]su}</DisplayString>
+    <StringView>ptr_,[len_]su</StringView>
+    <Expand>
+      <Item Name="[size]">len_</Item>
+      <ArrayItems>
+        <Size>len_</Size>
+        <ValuePointer>ptr_</ValuePointer>
+      </ArrayItems>
+    </Expand>
+  </Type>
+</AutoVisualizer>

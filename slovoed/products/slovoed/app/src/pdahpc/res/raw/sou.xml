@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?><data>
+    <catalog id="849">
+        <generic_data><![CDATA[promo = 2017.06, 10030
+demo_bases = 15
+penreader = nowlc
+google_analytics_adjustment = show_settings, show_policy_drawer]]></generic_data>
+    </catalog>
+    <levels>
+        <level name="Classic" priority="0"/>
+        <level name="course" priority="0"/>
+        <level name="Compact" priority="1"/>
+        <level name="Deluxe" priority="2"/>
+        <level name="Unabridged" priority="3"/>
+        <level name="Pocket" priority="4"/>
+        <level name="Learner's" priority="5"/>
+        <level name="Pro" priority="6"/>
+        <level name="Grand" priority="7"/>
+        <level name="Thematic" priority="8"/>
+    </levels>
+    <dictionary_types>
+        <type name="encyclopaedia">
+            <tr locale="Russian" name="энциклопедия"/>
+            <tr locale="English" name="encyclopaedia"/>
+        </type>
+        <type name="phrasebook">
+            <tr locale="Russian" name="разговорник"/>
+            <tr locale="English" name="phrasebook"/>
+        </type>
+        <type name="bilingual">
+            <tr locale="Russian" name="двуязычный"/>
+            <tr locale="English" name="bilingual"/>
+        </type>
+        <type name="explanatory">
+            <tr locale="Russian" name="толковый"/>
+            <tr locale="English" name="explanatory"/>
+        </type>
+        <type name="thesaurus">
+            <tr locale="Russian" name="тезаурус"/>
+            <tr locale="English" name="thesaurus"/>
+        </type>
+        <type name="spelling">
+            <tr locale="Russian" name="орфографический"/>
+            <tr locale="English" name="spelling"/>
+        </type>
+        <type name="sound">
+            <tr locale="Russian" name="звук"/>
+            <tr locale="English" name="sound"/>
+        </type>
+        <type name="collection">
+            <tr locale="Russian" name="коллекция"/>
+            <tr locale="English" name="collection"/>
+        </type>
+        <type name="reference">
+            <tr locale="English" name="reference guide"/>
+            <tr locale="Russian" name="справочный"/>
+        </type>
+        <type name="game">
+            <tr locale="Russian" name="Игровая"/>
+            <tr locale="English" name="Game"/>
+        </type>
+        <type name="wordform">
+            <tr locale="Russian" name="Словоформы"/>
+            <tr locale="English" name="wordform"/>
+        </type>
+        <type name="picture">
+            <tr locale="English" name="picture"/>
+        </type>
+    </dictionary_types>
+    <strings locale="English">
+        <lang_translations dicts="International" dir_from="International" dir_to="International" local_name="International" name="International"/>
+        <lang_translations dicts="Basque" dir_from="Basque" dir_to="Basque" local_name="Basque" name="Basque"/>
+        <lang_translations dicts="Catalan" dir_from="Catalan" dir_to="Catalan" local_name="Catalan" name="Catalan"/>
+        <lang_translations dicts="Hungarian" dir_from="Hungarian" dir_to="Hungarian" local_name="Hungarian" name="Hungarian"/>
+        <lang_translations dicts="Icelandic" dir_from="Icelandic" dir_to="Icelandic" local_name="Icelandic" name="Icelandic"/>
+        <lang_translations dicts="Portuguese" dir_from="Portuguese" dir_to="Portuguese" local_name="Portuguese" name="Portuguese"/>
+        <lang_translations dicts="Polish" dir_from="Polish" dir_to="Polish" local_name="Polish" name="Polish"/>
+        <lang_translations dicts="Chinese" dir_from="Chinese" dir_to="Chinese" local_name="Chinese" name="Chinese"/>
+        <lang_translations dicts="Estonian" dir_from="Estonian" dir_to="Estonian" local_name="Estonian" name="Estonian"/>
+        <lang_translations dicts="Slovak" dir_from="Slovak" dir_to="Slovak" local_name="Slovak" name="Slovak"/>
+        <lang_translations dicts="Arabic" dir_from="Arabic" dir_to="Arabic" local_name="Arabic" name="Arabic"/>
+        <lang_translations dicts="Mongolian" dir_from="Mongolian" dir_to="Mongolian" local_name="Mongolian" name="Mongolian"/>
+        <lang_translations dicts="Lithuanian" dir_from="Lithuanian" dir_to="Lithuanian" local_name="Lithuanian" name="Lithuanian"/>
+        <lang_translations dicts="Italian" dir_from="Italian" dir_to="Italian" local_name="Italian" name="Italian"/>
+        <lang_translations dicts="Malay" dir_from="Malay" dir_to="Malay" local_name="Malay" name="Malay"/>
+        <lang_translations dicts="Macedonian" dir_from="Macedonian" dir_to="Macedonian" local_name="Macedonian" name="Macedonian"/>
+        <lang_translations dicts="Dutch" dir_from="Dutch" dir_to="Dutch" local_name="Dutch" name="Dutch"/>
+        <lang_translations dicts="Croatian" dir_from="Croatian" dir_to="Croatian" local_name="Croatian" name="Croatian"/>
+        <lang_translations dicts="Belarusian" dir_from="Belarusian" dir_to="Belarusian" local_name="Belarusian" name="Belarusian"/>
+        <lang_translations dicts="Slovenian" dir_from="Slovenian" dir_to="Slovenian" local_name="Slovenian" name="Slovenian"/>
+        <lang_translations dicts="Spanish" dir_from="Spanish" dir_to="Spanish" local_name="Spanish" name="Spanish"/>
+        <lang_translations dicts="Russian" dir_from="Russian" dir_to="Russian" local_name="Russian" name="Russian"/>
+        <lang_translations dicts="Norwegian" dir_from="Norwegian" dir_to="Norwegian" local_name="Norwegian" name="Norwegian"/>
+        <lang_translations dicts="Ukrainian" dir_from="Ukrainian" dir_to="Ukrainian" local_name="Ukrainian" name="Ukrainian"/>
+        <lang_translations dicts="French" dir_from="French" dir_to="French" local_name="French" name="French"/>
+        <lang_translations dicts="Greek" dir_from="Greek" dir_to="Greek" local_name="Greek" name="Greek"/>
+        <lang_translations dicts="Swedish" dir_from="Swedish" dir_to="Swedish" local_name="Swedish" name="Swedish"/>
+        <lang_translations dicts="Romanian" dir_from="Romanian" dir_to="Romanian" local_name="Romanian" name="Romanian"/>
+        <lang_translations dicts="Bulgarian" dir_from="Bulgarian" dir_to="Bulgarian" local_name="Bulgarian" name="Bulgarian"/>
+        <lang_translations dicts="Danish" dir_from="Danish" dir_to="Danish" local_name="Danish" name="Danish"/>
+        <lang_translations dicts="Serbian" dir_from="Serbian" dir_to="Serbian" local_name="Serbian" name="Serbian"/>
+        <lang_translations dicts="Latvian" dir_from="Latvian" dir_to="Latvian" local_name="Latvian" name="Latvian"/>
+        <lang_translations dicts="Czech" dir_from="Czech" dir_to="Czech" local_name="Czech" name="Czech"/>
+        <lang_translations dicts="Finnish" dir_from="Finnish" dir_to="Finnish" local_name="Finnish" name="Finnish"/>
+        <lang_translations dicts="German" dir_from="German" dir_to="German" local_name="German" name="German"/>
+        <lang_translations dicts="Turkish" dir_from="Turkish" dir_to="Turkish" local_name="Turkish" name="Turkish"/>
+        <lang_translations dicts="Latin" dir_from="Latin" dir_to="Latin" local_name="Latin" name="Latin"/>
+        <lang_translations dicts="Armenian" dir_from="Armenian" dir_to="Armenian" local_name="Armenian" name="Armenian"/>
+        <lang_translations dicts="Hebrew" dir_from="Hebrew" dir_to="Hebrew" local_name="Hebrew" name="Hebrew"/>
+        <lang_translations dicts="English" dir_from="English" dir_to="English" local_name="English" name="English"/>
+        <lang_translations dicts="Japanese" dir_from="Japanese" dir_to="Japanese" local_name="Japanese" name="Japanese"/>
+        <lang_translations dicts="Uzbek" dir_from="Uzbek" dir_to="Uzbek" local_name="Uzbek" name="Uzbek"/>
+        <lang_translations dicts="Irish" dir_from="Irish" dir_to="Irish" local_name="Irish" name="Irish"/>
+        <lang_translations dicts="Farsi" dir_from="Farsi" dir_to="Farsi" local_name="Farsi" name="Persian"/>
+        <lang_translations dicts="Afrikaans" dir_from="Afrikaans" dir_to="Afrikaans" local_name="Afrikaans" name="Afrikaans"/>
+        <lang_translations dicts="Hindi" dir_from="Hindi" dir_to="Hindi" local_name="Hindi" name="Hindi"/>
+        <lang_translations dicts="Indonesian" dir_from="Indonesian" dir_to="Indonesian" local_name="Indonesian" name="Indonesian"/>
+        <lang_translations dicts="Urdu" dir_from="Urdu" dir_to="Urdu" local_name="Urdu" name="Urdu"/>
+        <lang_translations dicts="Thai" dir_from="Thai" dir_to="Thai" local_name="Thai" name="Thai"/>
+        <dicts_pattern text="%s dictionaries"/>
+    </strings>
+    <strings locale="Arabic">
+        <lang_translations dicts="باسكية" dir_from="الباسكية" dir_to="الباسكية" local_name="الباسكية" name="Basque"/>
+        <lang_translations dicts="كتالونية" dir_from="الكتالونية" dir_to="الكتالونية" local_name="الكتالونية" name="Catalan"/>
+        <lang_translations dicts="دنماركية" dir_from="الدنماركية" dir_to="الدنماركية" local_name="الدنماركية" name="Danish"/>
+        <lang_translations dicts="ليتوانية" dir_from="الليتوانية" dir_to="الليتوانية" local_name="الليتوانية" name="Lithuanian"/>
+        <lang_translations dicts="كرواتية" dir_from="الكرواتية" dir_to="الكرواتية" local_name="الكرواتية" name="Croatian"/>
+        <lang_translations dicts="تركية" dir_from="التركية" dir_to="التركية" local_name="التركية" name="Turkish"/>
+        <lang_translations dicts="أستونية" dir_from="الأستونية" dir_to="الأستونية" local_name="الأستونية" name="Estonian"/>
+        <lang_translations dicts="رومانية" dir_from="الرومانية" dir_to="الرومانية" local_name="الرومانية" name="Romanian"/>
+        <lang_translations dicts="أوكرانية" dir_from="الأوكرانية" dir_to="الأوكرانية" local_name="الأوكرانية" name="Ukrainian"/>
+        <lang_translations dicts="روسية" dir_from="الروسية" dir_to="الروسية" local_name="الروسية" name="Russian"/>
+        <lang_translations dicts="يونانية" dir_from="اليونانية" dir_to="اليونانية" local_name="اليونانية" name="Greek"/>
+        <lang_translations dicts="إيطالية" dir_from="الإيطالية" dir_to="الإيطالية" local_name="الإيطالية" name="Italian"/>
+        <lang_translations dicts="بيلاروسية" dir_from="البيلاروسية" dir_to="البيلاروسية" local_name="البيلاروسية" name="Belarusian"/>
+        <lang_translations dicts="يابانية" dir_from="اليابانية" dir_to="اليابانية" local_name="اليابانية" name="Japanese"/>
+        <lang_translations dicts="ألمانية" dir_from="الألمانية" dir_to="الألمانية" local_name="الألمانية" name="German"/>
+        <lang_translations dicts="صربية" dir_from="الصربية" dir_to="الصربية" local_name="الصربية" name="Serbian"/>
+        <lang_translations dicts="إنجليزية" dir_from="الإنجليزية" dir_to="الإنجليزية" local_name="الإنجليزية" name="English"/>
+        <lang_translations dicts="مجرية" dir_from="المجرية" dir_to="المجرية" local_name="المجرية" name="Hungarian"/>
+        <lang_translations dicts="فرنسية" dir_from="الفرنسية" dir_to="الفرنسية" local_name="الفرنسية" name="French"/>
+        <lang_translations dicts="بلغارية" dir_from="البلغارية" dir_to="البلغارية" local_name="البلغارية" name="Bulgarian"/>
+        <lang_translations dicts="لاتينية" dir_from="اللاينية" dir_to="اللاينية" local_name="اللاينية" name="Latin"/>
+        <lang_translations dicts="تشيكية" dir_from="التشيكية" dir_to="التشيكية" local_name="التشيكية" name="Czech"/>
+        <lang_translations dicts="سلوفانية" dir_from="السلوفانية" dir_to="السلوفانية" local_name="السلوفانية" name="Slovenian"/>
+        <lang_translations dicts="برتغالية" dir_from="البرتغالية" dir_to="البرتغالية" local_name="البرتغالية" name="Portuguese"/>
+        <lang_translations dicts="سلوفاكية" dir_from="السلوفاكية" dir_to="السلوفاكية" local_name="السلوفاكية" name="Slovak"/>
+        <lang_translations dicts="هولندية" dir_from="الهولندية" dir_to="الهولندية" local_name="الهولندية" name="Dutch"/>
+        <lang_translations dicts="نرويجية" dir_from="النرويجية" dir_to="النرويجية" local_name="النرويجية" name="Norwegian"/>
+        <lang_translations dicts="صينية" dir_from="الصينية" dir_to="الصينية" local_name="الصينية" name="Chinese"/>
+        <lang_translations dicts="سويدية" dir_from="السويدية" dir_to="السويدية" local_name="السويدية" name="Swedish"/>
+        <lang_translations dicts="لاتفية" dir_from="اللاتفية" dir_to="اللاتفية" local_name="اللاتفية" name="Latvian"/>
+        <lang_translations dicts="أرمينية" dir_from="الأرمينية" dir_to="الأرمينية" local_name="الأرمينية" name="Armenian"/>
+        <lang_translations dicts="عربية" dir_from="العربية" dir_to="العربية" local_name="العربية" name="Arabic"/>
+        <lang_translations dicts="منغولية" dir_from="المنغولية" dir_to="المنغولية" local_name="المنغولية" name="Mongolian"/>
+        <lang_translations dicts="فنلندية" dir_from="الفنلندية" dir_to="الفنلندية" local_name="الفنلندية" name="Finnish"/>
+        <lang_translations dicts="مقدونية" dir_from="المقدونية" dir_to="المقدونية" local_name="المقدونية" name="Macedonian"/>
+        <lang_translations dicts="أسبانية" dir_from="الأسبانية" dir_to="الأسبانية" local_name="الأسبانية" name="Spanish"/>
+        <lang_translations dicts="بولندية" dir_from="البولندية" dir_to="البولندية" local_name="البولندية" name="Polish"/>
+        <lang_translations dicts="عبرية" dir_from="العبرية" dir_to="العبرية" local_name="العبرية" name="Hebrew"/>
+        <lang_translations dicts="أوزباكية" dir_from="الأوزباكية" dir_to="الأوزباكية" local_name="الأوزباكية" name="Uzbek"/>
+        <lang_translations dicts="إيرلندية" dir_from="الأيرلندية" dir_to="الأيرلندية" local_name="الأيرلندية" name="Irish"/>
+        <lang_translations dicts="أيسلندية" dir_from="الأيسلندية" dir_to="الأيسلندية" local_name="الأيسلندية" name="Icelandic"/>
+        <lang_translations dicts="كورية" dir_from="الكورية" dir_to="الكورية" local_name="الكورية" name="Korean"/>
+        <lang_translations dicts="فيتنامية" dir_from="الفيتنامية" dir_to="الفيتنامية" local_name="الفيتنامية" name="Vietnamese"/>
+        <lang_translations dicts="المالاوية" dir_from="المالاوية" dir_to="المالاوية" local_name="المالاوية" name="Malay"/>
+        <lang_translations dicts="الفارسية" dir_from="الفارسية" dir_to="الفارسية" local_name="الفارسية " name="Persian"/>
+        <lang_translations dicts="الهندية" dir_from="الهندية" dir_to="الهندية" local_name="الهندية" name="Hindi"/>
+        <lang_translations dicts="الأفريكانية" dir_from="الأفريكانية" dir_to="الأفريكانية" local_name="الأفريكانية" name="Afrikaans"/>
+        <lang_translations dicts="الأندونيسية" dir_from="الأندونيسية" dir_to="الأندونيسية" local_name="الأندونيسية" name="Indonesian"/>
+        <lang_translations dicts="التايلندية" dir_from="التايلندية" dir_to="التايلندية" local_name="التايلندية" name="Thai"/>
+        <lang_translations dicts="الأردية" dir_from="الأردية" dir_to="الأردية" local_name="الأردية" name="Urdu"/>
+        <dicts_pattern text="%s dictionaries"/>
+    </strings>
+    <strings locale="Greek">
+        <lang_translations dicts="ρωσικά" dir_from="ρωσο" dir_to="ρωσικά" local_name="Ρωσικά" name="Russian"/>
+        <lang_translations dicts="ελληνικά" dir_from="ελληνο" dir_to="ελληνικά" local_name="Ελληνικά" name="Greek"/>
+        <lang_translations dicts="πολωνικά" dir_from="πολωνο" dir_to="πολωνικά" local_name="Πολωνικά" name="Polish"/>
+        <lang_translations dicts="ισπανικά" dir_from="ισπανο" dir_to="ισπανικά" local_name="Ισπανικά" name="Spanish"/>
+        <lang_translations dicts="γαλλικά" dir_from="γαλλο" dir_to="γαλλικά" local_name="Γαλλικά" name="French"/>
+        <lang_translations dicts="αγγλικά" dir_from="αγγλο" dir_to="αγγλικά" local_name="Αγγλικά" name="English"/>
+        <lang_translations dicts="γερμανικά" dir_from="γερμανο" dir_to="γερμανικά" local_name="Γερμανικά" name="German"/>
+        <lang_translations dicts="ιταλικά" dir_from="ιταλο" dir_to="ιταλικά" local_name="Ιταλικά" name="Italian"/>
+        <lang_translations dicts="τουρκικά" dir_from="τουρκο" dir_to="τουρκικά" local_name="Τουρκικά" name="Turkish"/>
+        <dicts_pattern text="%s λεξικό"/>
+    </strings>
+    <strings locale="Chinese Traditional">
+        <lang_translations dicts="加泰羅尼亞語" dir_from="加泰羅尼亞語" dir_to="加泰羅尼亞語" local_name="加泰羅尼亞語" name="Catalan"/>
+        <lang_translations dicts="保加利亞語" dir_from="保加利亞語" dir_to="保加利亞語" local_name="保加利亞語" name="Bulgarian"/>
+        <lang_translations dicts="斯洛文尼亞語" dir_from="斯洛文尼亞語" dir_to="斯洛文尼亞語" local_name="斯洛文尼亞語" name="Slovenian"/>
+        <lang_translations dicts="丹麥語" dir_from="丹麥語" dir_to="丹麥語" local_name="丹麥語" name="Danish"/>
+        <lang_translations dicts="德語" dir_from="德語" dir_to="德語" local_name="德語" name="German"/>
+        <lang_translations dicts="義大利語" dir_from="義大利語" dir_to="義大利語" local_name="義大利語" name="Italian"/>
+        <lang_translations dicts="塞爾維亞語" dir_from="塞爾維亞語" dir_to="塞爾維亞語" local_name="塞爾維亞語" name="Serbian"/>
+        <lang_translations dicts="波蘭語" dir_from="波蘭語" dir_to="波蘭語" local_name="波蘭語" name="Polish"/>
+        <lang_translations dicts="羅馬尼亞語" dir_from="羅馬尼亞語" dir_to="羅馬尼亞語" local_name="羅馬尼亞語" name="Romanian"/>
+        <lang_translations dicts="英語" dir_from="英語" dir_to="英語" local_name="英語" name="English"/>
+        <lang_translations dicts="立陶宛語" dir_from="立陶宛語" dir_to="立陶宛語" local_name="立陶宛語" name="Lithuanian"/>
+        <lang_translations dicts="挪威語" dir_from="挪威語" dir_to="挪威語" local_name="挪威語" name="Norwegian"/>
+        <lang_translations dicts="捷克語" dir_from="捷克語" dir_to="捷克語" local_name="捷克語" name="Czech"/>
+        <lang_translations dicts="希臘語" dir_from="希臘語" dir_to="希臘語" local_name="希臘語" name="Greek"/>
+        <lang_translations dicts="土耳其語" dir_from="土耳其語" dir_to="土耳其語" local_name="土耳其語" name="Turkish"/>
+        <lang_translations dicts="西班牙語" dir_from="西班牙語" dir_to="西班牙語" local_name="西班牙語" name="Spanish"/>
+        <lang_translations dicts="拉丁語" dir_from="拉丁語" dir_to="拉丁語" local_name="拉丁語" name="Latin"/>
+        <lang_translations dicts="葡萄牙語" dir_from="葡萄牙語" dir_to="葡萄牙語" local_name="葡萄牙語" name="Portuguese"/>
+        <lang_translations dicts="中文" dir_from="中文" dir_to="中文" local_name="中文" name="Chinese"/>
+        <lang_translations dicts="俄語" dir_from="俄語" dir_to="俄語" local_name="俄語" name="Russian"/>
+        <lang_translations dicts="烏克蘭語" dir_from="烏克蘭語" dir_to="烏克蘭語" local_name="烏克蘭語" name="Ukrainian"/>
+        <lang_translations dicts="阿拉伯語" dir_from="阿拉伯語" dir_to="阿拉伯語" local_name="阿拉伯語" name="Arabic"/>
+        <lang_translations dicts="愛沙尼亞語" dir_from="愛沙尼亞語" dir_to="愛沙尼亞語" local_name="愛沙尼亞語" name="Estonian"/>
+        <lang_translations dicts="拉脫維亞語" dir_from="拉脫維亞語" dir_to="拉脫維亞語" local_name="拉脫維亞語" name="Latvian"/>
+        <lang_translations dicts="斯洛伐克語" dir_from="斯洛伐克語" dir_to="斯洛伐克語" local_name="斯洛伐克語" name="Slovak"/>
+        <lang_translations dicts="匈牙利語" dir_from="匈牙利語" dir_to="匈牙利語" local_name="匈牙利語" name="Hungarian"/>
+        <lang_translations dicts="瑞典語" dir_from="瑞典語" dir_to="瑞典語" local_name="瑞典語" name="Swedish"/>
+        <lang_translations dicts="日語" dir_from="日語" dir_to="日語" local_name="日語" name="Japanese"/>
+        <lang_translations dicts="希伯來語" dir_from="希伯來語" dir_to="希伯來語" local_name="希伯來語" name="Hebrew"/>
+        <lang_translations dicts="克羅地亞語" dir_from="克羅地亞語" dir_to="克羅地亞語" local_name="克羅地亞語" name="Croatian"/>
+        <lang_translations dicts="荷蘭語" dir_from="荷蘭語" dir_to="荷蘭語" local_name="荷蘭語" name="Dutch"/>
+        <lang_translations dicts="法語" dir_from="法語" dir_to="法語" local_name="法語" name="French"/>
+        <dicts_pattern text="%s 詞匯"/>
+    </strings>
+    <strings locale="Italian">
+        <lang_translations dicts="Basco" dir_from="Basco" dir_to="basco" local_name="Basco" name="Basque"/>
+        <lang_translations dicts="spagnolo" dir_from="spagnolo" dir_to="spagnolo" local_name="Spagnolo" name="Spanish"/>
+        <lang_translations dicts="inglese" dir_from="inglese" dir_to="inglese" local_name="Inglese" name="English"/>
+        <lang_translations dicts="greco" dir_from="greco" dir_to="greco" local_name="Greco" name="Greek"/>
+        <lang_translations dicts="ceco" dir_from="ceco" dir_to="ceco" local_name="Ceco" name="Czech"/>
+        <lang_translations dicts="ungherese" dir_from="ungherese" dir_to="ungherese" local_name="Ungherese" name="Hungarian"/>
+        <lang_translations dicts="lettone" dir_from="lettone" dir_to="lettone" local_name="lettone" name="Latvian"/>
+        <lang_translations dicts="estone" dir_from="estone" dir_to="estone" local_name="estone" name="Estonian"/>
+        <lang_translations dicts="sloveno" dir_from="sloveno" dir_to="sloveno" local_name="sloveno" name="Slovenian"/>
+        <lang_translations dicts="serbo" dir_from="serbo" dir_to="serbo" local_name="serbo" name="Serbian"/>
+        <lang_translations dicts="ucraino" dir_from="uсraino" dir_to="uсraino" local_name="ucraino" name="Ukrainian"/>
+        <lang_translations dicts="francese" dir_from="francese" dir_to="francese" local_name="Francese" name="French"/>
+        <lang_translations dicts="tedesco" dir_from="tedesco" dir_to="tedesco" local_name="Tedesco" name="German"/>
+        <lang_translations dicts="turco" dir_from="turco" dir_to="turco" local_name="Turco" name="Turkish"/>
+        <lang_translations dicts="danese" dir_from="danese" dir_to="danese" local_name="Danese" name="Danish"/>
+        <lang_translations dicts="norvegese" dir_from="norvegese" dir_to="norvegese" local_name="Norvegese" name="Norwegian"/>
+        <lang_translations dicts="lituano" dir_from="lituano" dir_to="lituano" local_name="lituano" name="Lithuanian"/>
+        <lang_translations dicts="ebraico" dir_from="ebraico" dir_to="ebraico" local_name="ebraico" name="Hebrew"/>
+        <lang_translations dicts="arabo" dir_from="arabo" dir_to="arabo" local_name="arabo" name="Arabic"/>
+        <lang_translations dicts="giapponese" dir_from="giapponese" dir_to="giapponese" local_name="giapponese" name="Japanese"/>
+        <lang_translations dicts="italiano" dir_from="italiano" dir_to="italiano" local_name="Italiano" name="Italian"/>
+        <lang_translations dicts="polacco" dir_from="polacco" dir_to="polacco" local_name="Polacco" name="Polish"/>
+        <lang_translations dicts="portoghese" dir_from="portoghese" dir_to="portoghese" local_name="Portoghese" name="Portuguese"/>
+        <lang_translations dicts="rumeno" dir_from="rumeno" dir_to="rumeno" local_name="Rumeno" name="Romanian"/>
+        <lang_translations dicts="bielorusso" dir_from="bielorusso" dir_to="bielorusso" local_name="bielorusso" name="Belarusian"/>
+        <lang_translations dicts="slovacco" dir_from="slovacco" dir_to="slovacco" local_name="slovacco" name="Slovak"/>
+        <lang_translations dicts="cinese" dir_from="cinese" dir_to="cinese" local_name="cinese" name="Chinese"/>
+        <lang_translations dicts="russo" dir_from="russo" dir_to="russo" local_name="Russo" name="Russian"/>
+        <lang_translations dicts="croato" dir_from="croato" dir_to="croato" local_name="Croato" name="Croatian"/>
+        <lang_translations dicts="latino" dir_from="latino" dir_to="latino" local_name="Latino" name="Latin"/>
+        <lang_translations dicts="olandese" dir_from="olandese" dir_to="olandese" local_name="Olandese" name="Dutch"/>
+        <lang_translations dicts="svedese" dir_from="svedese" dir_to="svedese" local_name="Svedese" name="Swedish"/>
+        <lang_translations dicts="armeno" dir_from="armeno" dir_to="armeno" local_name="armeno" name="Armenian"/>
+        <lang_translations dicts="catalano" dir_from="catalano" dir_to="catalano" local_name="Catalano" name="Catalan"/>
+        <lang_translations dicts="bulgaro " dir_from="bulgaro" dir_to="bulgaro" local_name="Bulgaro" name="Bulgarian"/>
+        <lang_translations dicts="uzbeko" dir_from="uzbeko" dir_to="uzbeka" local_name="uzbeko" name="Uzbek"/>
+        <lang_translations dicts="Irlandese" dir_from="Irlandese" dir_to="Irlandese" local_name="Irlandese" name="Irish"/>
+        <lang_translations dicts="Islandese" dir_from="islandese" dir_to="islandese" local_name="Islandese" name="Icelandic"/>
+        <lang_translations dicts="Mongolo" dir_from="mongolo" dir_to="mongolo" local_name="Mongolo" name="Mongolian"/>
+        <lang_translations dicts="Finlandese" dir_from="finlandese" dir_to="finlandese" local_name="Finlandese" name="Finnish"/>
+        <lang_translations dicts="Macedone" dir_from="macedone" dir_to="macedone" local_name="Macedone" name="Macedonian"/>
+        <lang_translations dicts="Coreano" dir_from="Korean" dir_to="Korean" local_name="Coreano" name="Korean"/>
+        <lang_translations dicts="Vietnamita" dir_from="Vietnamese" dir_to="Vietnamese" local_name="Vietnamita" name="Vietnamese"/>
+        <lang_translations dicts="Malesi" dir_from="Malese" dir_to="Malese" local_name="Malese" name="Malay"/>
+        <lang_translations dicts="Farsi" dir_from="Farsi" dir_to="Farsi" local_name="Farsi" name="Persian"/>
+        <lang_translations dicts="Afrikaans" dir_from="Afrikaans" dir_to="Afrikaans" local_name="Afrikaans" name="Afrikaans"/>
+        <lang_translations dicts="Hindi" dir_from="Hindi" dir_to="Hindi" local_name="Hindi" name="Hindi"/>
+        <lang_translations dicts="Indonesiani" dir_from="Indonesiano" dir_to="Indonesiano" local_name="Indonesiano" name="Indonesian"/>
+        <lang_translations dicts="Urdu" dir_from="Urdu" dir_to="Urdu" local_name="Urdu" name="Urdu"/>
+        <lang_translations dicts="Tailandesi" dir_from="Tailandese" dir_to="Tailandese" local_name="Tailandese" name="Thai"/>
+        <dicts_pattern text="%s Dizionari"/>
+    </strings>
+    <strings locale="German">
+        <lang_translations dicts="Baskisch" dir_from="Baskisch" dir_to="Baskisch" local_name="Baskisch" name="Basque"/>
+        <lang_translations dicts="Belorusian" dir_from="Weißrussisch" dir_to="Weißrussisch" local_name="Belorusian" name="Belarusian"/>
+        <lang_translations dicts="Armenian" dir_from="Armenisch" dir_to="Armenisch" local_name="Armenian" name="Armenian"/>
+        <lang_translations dicts="Arabische" dir_from="Arabisch" dir_to="Arabisch" local_name="Arabisch" name="Arabic"/>
+        <lang_translations dicts="Bulgarische" dir_from="Bulgarisch" dir_to="Bulgarisch" local_name="Bulgarisch" name="Bulgarian"/>
+        <lang_translations dicts="Katalanische" dir_from="Katalanisch" dir_to="Katalanisch" local_name="Katalanisch" name="Catalan"/>
+        <lang_translations dicts="Chinesische" dir_from="Chinesisch" dir_to="Chinesisch" local_name="Chinesisch" name="Chinese"/>
+        <lang_translations dicts="Kroatische" dir_from="Kroatisch" dir_to="Kroatisch" local_name="Kroatisch" name="Croatian"/>
+        <lang_translations dicts="Tschechische" dir_from="Tschechisch" dir_to="Tschechisch" local_name="Tschechisch" name="Czech"/>
+        <lang_translations dicts="Dänische" dir_from="Dänisch" dir_to="Dänisch" local_name="Dänisch" name="Danish"/>
+        <lang_translations dicts="Englische" dir_from="Englisch" dir_to="Englisch" local_name="Englisch" name="English"/>
+        <lang_translations dicts="Estnische" dir_from="Estnisch" dir_to="Estnisch" local_name="Estnisch" name="Estonian"/>
+        <lang_translations dicts="Französische" dir_from="Französisch" dir_to="Französisch" local_name="Französisch" name="French"/>
+        <lang_translations dicts="Deutsche" dir_from="Deutsch" dir_to="Deutsch" local_name="Deutsch" name="German"/>
+        <lang_translations dicts="Griechische" dir_from="Griechisch" dir_to="Griechisch" local_name="Griechisch" name="Greek"/>
+        <lang_translations dicts="Hebräische" dir_from="Iwrith" dir_to="Iwrith" local_name="Hebräisch" name="Hebrew"/>
+        <lang_translations dicts="Ungarische" dir_from="Ungarisch" dir_to="Ungarisch" local_name="Ungarisch" name="Hungarian"/>
+        <lang_translations dicts="Italienische" dir_from="Italienisch" dir_to="Italienisch" local_name="Italienisch" name="Italian"/>
+        <lang_translations dicts="Japanische" dir_from="Japanisch" dir_to="Japanisch" local_name="Japanisch" name="Japanese"/>
+        <lang_translations dicts="Ukrainische" dir_from="Ukrainisch" dir_to="Ukrainisch" local_name="Ukrainisch" name="Ukrainian"/>
+        <lang_translations dicts="Türkische" dir_from="Türkisch" dir_to="Türkisch" local_name="Türkisch" name="Turkish"/>
+        <lang_translations dicts="Schwedische" dir_from="Schwedisch" dir_to="Schwedisch" local_name="Schwedisch" name="Swedish"/>
+        <lang_translations dicts="Spanische" dir_from="Spanisch" dir_to="Spanisch" local_name="Spanisch" name="Spanish"/>
+        <lang_translations dicts="Slowenische" dir_from="Slowenisch" dir_to="Slowenisch" local_name="Slowenisch" name="Slovenian"/>
+        <lang_translations dicts="Slowakische" dir_from="Slowakisch" dir_to="Slowakisch" local_name="Slowakisch" name="Slovak"/>
+        <lang_translations dicts="Serbische" dir_from="Serbisch" dir_to="Serbisch" local_name="Serbisch" name="Serbian"/>
+        <lang_translations dicts="Russische" dir_from="Russisch" dir_to="Russisch" local_name="Russisch" name="Russian"/>
+        <lang_translations dicts="Rumänische" dir_from="Romanisch" dir_to="Romanisch" local_name="Rumänisch" name="Romanian"/>
+        <lang_translations dicts="Portugiesische" dir_from="Portugiesisch" dir_to="Portugiesisch" local_name="Portugiesisch" name="Portuguese"/>
+        <lang_translations dicts="Niederländische" dir_from="Niederländisch" dir_to="Niederländisch" local_name="Niederländisch" name="Dutch"/>
+        <lang_translations dicts="Polnische" dir_from="Polnisch" dir_to="Polnisch" local_name="Polnisch" name="Polish"/>
+        <lang_translations dicts="Litauische" dir_from="Litauisch" dir_to="Litauisch" local_name="Litauisch" name="Lithuanian"/>
+        <lang_translations dicts="Lettische" dir_from="Lettisch" dir_to="Lettisch" local_name="Lettisch" name="Latvian"/>
+        <lang_translations dicts="Lateinische" dir_from="Lateinisch" dir_to="Lateinisch" local_name="Lateinisch" name="Latin"/>
+        <lang_translations dicts="Norwegische" dir_from="Norwegisch" dir_to="Norwegisch" local_name="Norwegisch" name="Norwegian"/>
+        <lang_translations dicts="Usbekische" dir_from="Usbekisch" dir_to="Usbekisch" local_name="Usbekisch" name="Uzbek"/>
+        <lang_translations dicts="Irische" dir_from="Irisch" dir_to="Irisch" local_name="Irisch" name="Irish"/>
+        <lang_translations dicts="Mongolische" dir_from="Mongolisch" dir_to="Mongolisch" local_name="Mongolisch" name="Mongolian"/>
+        <lang_translations dicts="Isländische" dir_from="Isländisch" dir_to="Isländisch" local_name="Isländisch " name="Icelandic"/>
+        <lang_translations dicts="Finnische" dir_from="Finnisch" dir_to="Finnisch" local_name="Finnisch" name="Finnish"/>
+        <lang_translations dicts="Mazedonische" dir_from="Mazedonisch" dir_to="Mazedonisch" local_name="Mazedonisch " name="Macedonian"/>
+        <lang_translations dicts="Koreanische " dir_from="Korean" dir_to="Korean" local_name="Koreanisch " name="Korean"/>
+        <lang_translations dicts="Vietnamesische " dir_from="Vietnamese" dir_to="Vietnamese" local_name="Vietnamesisch " name="Vietnamese"/>
+        <lang_translations dicts="Malaiisch" dir_from="Malaiisch" dir_to="Malaiisch" local_name="Malaiisch" name="Malay"/>
+        <lang_translations dicts="Farsi" dir_from="Farsi" dir_to="Farsi" local_name="Farsi" name="Persian"/>
+        <lang_translations dicts="Afrikanisch" dir_from="Afrikanisch" dir_to="Afrikanisch" local_name="Afrikanisch" name="Afrikaans"/>
+        <lang_translations dicts="Hindi" dir_from="Hindi" dir_to="Hindi" local_name="Hindi" name="Hindi"/>
+        <lang_translations dicts="Indonesisch" dir_from="Indonesisch" dir_to="Indonesisch" local_name="Indonesisch" name="Indonesian"/>
+        <lang_translations dicts="Urdu" dir_from="Urdu" dir_to="Urdu" local_name="Urdu" name="Urdu"/>
+        <lang_translations dicts="Thailändisch" dir_from="Thailändisch" dir_to="Thailändisch" local_name="Thailändisch" name="Thai"/>
+        <dicts_pattern text="%s Wörterbücher"/>
+    </strings>
+    <strings locale="Russian">
+        <lang_translations dicts="Малайские" dir_from="Малайско" dir_to="малайское" local_name="Малайский" name="Malay"/>
+        <lang_translations dicts="Фарси" dir_from="Фарси" dir_to="фарси" local_name="Фарси" name="Persian"/>
+        <lang_translations dicts="Африкаанс" dir_from="Африкаанс" dir_to="африкаанс" local_name="Африкаанс" name="Afrikaans"/>
+        <lang_translations dicts="Хинди" dir_from="Хинди" dir_to="хинди" local_name="Хинди" name="Hindi"/>
+        <lang_translations dicts="Индонезийские" dir_from="Индонезийско" dir_to="индонезийское" local_name="Индонезийский" name="Indonesian"/>
+        <lang_translations dicts="Урду" dir_from="Урду" dir_to="урду" local_name="Урду" name="Urdu"/>
+        <lang_translations dicts="Тайские" dir_from="Тайско" dir_to="тайский" local_name="Тайский" name="Thai"/>
+        <lang_translations dicts="International" dir_from="International" dir_to="International" local_name="Многоязычный" name="International"/>
+        <lang_translations dicts="Баскские" dir_from="Баскско" dir_to="баскское" local_name="Баскский" name="Basque"/>
+        <lang_translations dicts="Каталонские" dir_from="Каталонско" dir_to="Каталонское" local_name="Каталонский" name="Catalan"/>
+        <lang_translations dicts="Датские" dir_from="Датско" dir_to="Датское" local_name="Датский" name="Danish"/>
+        <lang_translations dicts="Литовские" dir_from="Литовско" dir_to="Литовское" local_name="Литовский" name="Lithuanian"/>
+        <lang_translations dicts="Хорватские" dir_from="Хорватско" dir_to="Хорватское" local_name="Хорватский" name="Croatian"/>
+        <lang_translations dicts="Турецкие" dir_from="Турецко" dir_to="Турецкое" local_name="Турецкий" name="Turkish"/>
+        <lang_translations dicts="Эстонские" dir_from="Эстонско" dir_to="Эстонское" local_name="Эстонский" name="Estonian"/>
+        <lang_translations dicts="Румынские" dir_from="Румынско" dir_to="Румынское" local_name="Румынский" name="Romanian"/>
+        <lang_translations dicts="Украинские" dir_from="Украинско" dir_to="Украинское" local_name="Украинский" name="Ukrainian"/>
+        <lang_translations dicts="Русские" dir_from="Русско" dir_to="Русское" local_name="Русский" name="Russian"/>
+        <lang_translations dicts="Греческие" dir_from="Греческо" dir_to="Греческое" local_name="Греческий" name="Greek"/>
+        <lang_translations dicts="Итальянские" dir_from="Итальянско" dir_to="Итальянское" local_name="Итальянский" name="Italian"/>
+        <lang_translations dicts="Японские" dir_from="Японско" dir_to="Японское" local_name="Японский" name="Japanese"/>
+        <lang_translations dicts="Немецкие" dir_from="Немецко" dir_to="Немецкое" local_name="Немецкий" name="German"/>
+        <lang_translations dicts="Сербские" dir_from="Сербско" dir_to="Сербское" local_name="Сербский" name="Serbian"/>
+        <lang_translations dicts="Английские" dir_from="Англо" dir_to="Английское" local_name="Английский" name="English"/>
+        <lang_translations dicts="Венгерские" dir_from="Венгерско" dir_to="Венгерское" local_name="Венгерский" name="Hungarian"/>
+        <lang_translations dicts="Французские" dir_from="Французско" dir_to="Французское" local_name="Французский" name="French"/>
+        <lang_translations dicts="Болгарские" dir_from="Болгарско" dir_to="Болгарское" local_name="Болгарский" name="Bulgarian"/>
+        <lang_translations dicts="Латинские" dir_from="Латинско" dir_to="Латинское" local_name="Латинский" name="Latin"/>
+        <lang_translations dicts="Чешские" dir_from="Чешско" dir_to="Чешское" local_name="Чешский" name="Czech"/>
+        <lang_translations dicts="Словенские" dir_from="Словенско" dir_to="Словенское" local_name="Словенский" name="Slovenian"/>
+        <lang_translations dicts="Португальские" dir_from="Португальско" dir_to="Португальское" local_name="Португальский" name="Portuguese"/>
+        <lang_translations dicts="Словацкие" dir_from="Словацко" dir_to="Словацкое" local_name="Словацкий" name="Slovak"/>
+        <lang_translations dicts="Голландские" dir_from="Голландско" dir_to="Голландское" local_name="Голландский" name="Dutch"/>
+        <lang_translations dicts="Норвежские" dir_from="Норвежско" dir_to="Норвежское" local_name="Норвежский" name="Norwegian"/>
+        <lang_translations dicts="Китайские" dir_from="Китайско" dir_to="Китайское" local_name="Китайский" name="Chinese"/>
+        <lang_translations dicts="Шведские" dir_from="Шведско" dir_to="Шведское" local_name="Шведский" name="Swedish"/>
+        <lang_translations dicts="Латвийские" dir_from="Латвийско" dir_to="Латвийское" local_name="Латвийский" name="Latvian"/>
+        <lang_translations dicts="Арабские" dir_from="Арабско" dir_to="Арабское" local_name="Арабский" name="Arabic"/>
+        <lang_translations dicts="Испанские" dir_from="Испанско" dir_to="Испанское" local_name="Испанский" name="Spanish"/>
+        <lang_translations dicts="Польские" dir_from="Польско" dir_to="Польское" local_name="Польский" name="Polish"/>
+        <lang_translations dicts="Иврит" dir_from="Иврит" dir_to="Иврит" local_name="Иврит" name="Hebrew"/>
+        <lang_translations dicts="Узбекские" dir_from="Узбекско" dir_to="Узбекский" local_name="Узбекский" name="Uzbek"/>
+        <lang_translations dicts="Ирландские" dir_from="Ирландско" dir_to="Ирландское" local_name="Ирландский" name="Irish"/>
+        <lang_translations dicts="Исландские" dir_from="Исландско" dir_to="Исландское" local_name="Исландский" name="Icelandic"/>
+        <lang_translations dicts="Македонские" dir_from="Македонско" dir_to="Македонское" local_name="Македонский" name="Macedonian"/>
+        <lang_translations dicts="Монгольские" dir_from="Монгольско" dir_to="Монгольское" local_name="Монгольский" name="Mongolian"/>
+        <lang_translations dicts="Финские" dir_from="Финско" dir_to="Финское" local_name="Финский" name="Finnish"/>
+        <lang_translations dicts="Корейские" dir_from="Korean" dir_to="Korean" local_name="Корейский" name="Korean"/>
+        <lang_translations dicts="Вьетнамские" dir_from="Vietnamese" dir_to="Vietnamese" local_name="Вьетнамский" name="Vietnamese"/>
+        <lang_translations dicts="Беларуские" dir_from="Беларуско" dir_to="Беларуское" local_name="Belarusian" name="Belarusian"/>
+        <lang_translations dicts="Армянские" dir_from="Армянско" dir_to="Армянское" local_name="Armenian" name="Armenian"/>
+        <dicts_pattern text="%s словари"/>
+    </strings>
+    <strings locale="Turkish">
+        <lang_translations dicts="Baskça" dir_from="Baskça" dir_to="Baskça" local_name="Baskça" name="Basque"/>
+        <lang_translations dicts="Katalanca" dir_from="Katalanca" dir_to="Katalanca" local_name="Katalanca" name="Catalan"/>
+        <lang_translations dicts="Danca" dir_from="Danca" dir_to="Danca" local_name="Danca" name="Danish"/>
+        <lang_translations dicts="Litvanyaca" dir_from="Litvanyaca" dir_to="Litvanyaca" local_name="Litvanyaca" name="Lithuanian"/>
+        <lang_translations dicts="Hırvatça" dir_from="Hırvatça" dir_to="Hırvatça" local_name="Hırvatça" name="Croatian"/>
+        <lang_translations dicts="Türkçe" dir_from="Türkçe" dir_to="Türkçe" local_name="Türkçe" name="Turkish"/>
+        <lang_translations dicts="Fince" dir_from="Fince" dir_to="Fince" local_name="Fince" name="Finnish"/>
+        <lang_translations dicts="Estonyaca" dir_from="Estonyaca" dir_to="Estonyaca" local_name="Estonyaca" name="Estonian"/>
+        <lang_translations dicts="Romence" dir_from="Romence" dir_to="Romence" local_name="Romence" name="Romanian"/>
+        <lang_translations dicts="Ukraynaca" dir_from="Ukraynaca" dir_to="Ukraynaca" local_name="Ukraynaca" name="Ukrainian"/>
+        <lang_translations dicts="Rusça" dir_from="Rusça" dir_to="Rusça" local_name="Rusça" name="Russian"/>
+        <lang_translations dicts="Yunanca" dir_from="Yunanca" dir_to="Yunanca" local_name="Yunanca" name="Greek"/>
+        <lang_translations dicts="İtalyanca" dir_from="İtalyanca" dir_to="İtalyanca" local_name="İtalyanca" name="Italian"/>
+        <lang_translations dicts="Beyaz Rusça" dir_from="Beyaz Rusça" dir_to="Beyaz Rusça" local_name="Beyaz Rusça" name="Belarusian"/>
+        <lang_translations dicts="Japonca" dir_from="Japonca" dir_to="Japonca" local_name="Japonca" name="Japanese"/>
+        <lang_translations dicts="Almanca" dir_from="Almanca" dir_to="Almanca" local_name="Almanca" name="German"/>
+        <lang_translations dicts="Sırpça" dir_from="Sırpça" dir_to="Sırpça" local_name="Sırpça" name="Serbian"/>
+        <lang_translations dicts="İngilizce" dir_from="İngilizce" dir_to="İngilizce" local_name="İngilizce" name="English"/>
+        <lang_translations dicts="Macarca" dir_from="Macarca" dir_to="Macarca" local_name="Macarca" name="Hungarian"/>
+        <lang_translations dicts="Fransızca" dir_from="Fransızca" dir_to="Fransızca" local_name="Fransızca" name="French"/>
+        <lang_translations dicts="Bulgarca" dir_from="Bulgarca" dir_to="Bulgarca" local_name="Bulgarca" name="Bulgarian"/>
+        <lang_translations dicts="Makedonca" dir_from="Makedonca" dir_to="Makedonca" local_name="Makedonca" name="Macedonian"/>
+        <lang_translations dicts="Latince" dir_from="Latince" dir_to="Latince" local_name="Latince" name="Latin"/>
+        <lang_translations dicts="Çekçe" dir_from="Çekçe" dir_to="Çekçe" local_name="Çekçe" name="Czech"/>
+        <lang_translations dicts="Slovence" dir_from="Slovence" dir_to="Slovence" local_name="Slovence" name="Slovenian"/>
+        <lang_translations dicts="Portekizce" dir_from="Portekizce" dir_to="Portekizce" local_name="Portekizce" name="Portuguese"/>
+        <lang_translations dicts="Slovakça" dir_from="Slovakça" dir_to="Slovakça" local_name="Slovakça" name="Slovak"/>
+        <lang_translations dicts="Flemenkçe" dir_from="Flemenkçe" dir_to="Flemenkçe" local_name="Flemenkçe" name="Dutch"/>
+        <lang_translations dicts="Norveççe" dir_from="Norveççe" dir_to="Norveççe" local_name="Norveççe" name="Norwegian"/>
+        <lang_translations dicts="Çince" dir_from="Çince" dir_to="Çince" local_name="Çince" name="Chinese"/>
+        <lang_translations dicts="İsveççe" dir_from="İsveççe" dir_to="İsveççe" local_name="İsveççe" name="Swedish"/>
+        <lang_translations dicts="Letonca" dir_from="Letonca" dir_to="Letonca" local_name="Letonca" name="Latvian"/>
+        <lang_translations dicts="Ermenice" dir_from="Ermenice" dir_to="Ermenice" local_name="Ermenice" name="Armenian"/>
+        <lang_translations dicts="Arapça" dir_from="Arapça" dir_to="Arapça" local_name="Arapça" name="Arabic"/>
+        <lang_translations dicts="İspanyolca" dir_from="İspanyolca" dir_to="İspanyolca" local_name="İspanyolca" name="Spanish"/>
+        <lang_translations dicts="Lehçe" dir_from="Lehçe" dir_to="Lehçe" local_name="Lehçe" name="Polish"/>
+        <lang_translations dicts="İbranice" dir_from="İbranice" dir_to="İbranice" local_name="İbranice" name="Hebrew"/>
+        <lang_translations dicts="Özbekçe" dir_from="Özbekçe" dir_to="Özbekçe" local_name="Özbekçe" name="Uzbek"/>
+        <lang_translations dicts="İrlandaca" dir_from="İrlandaca" dir_to="İrlandaca" local_name="İrlandaca" name="Irish"/>
+        <lang_translations dicts="İzlandaca" dir_from="İzlandaca" dir_to="İzlandaca" local_name="İzlandaca" name="Icelandic"/>
+        <lang_translations dicts="Moğolca" dir_from="Moğolca" dir_to="Moğolca" local_name="Moğolca" name="Mongolian"/>
+        <lang_translations dicts="Korece" dir_from="Korece" dir_to="Korece" local_name="Korece" name="Korean"/>
+        <lang_translations dicts="Vietnamca" dir_from="Vietnamca" dir_to="Vietnamca" local_name="Vietnamca" name="Vietnamese"/>
+        <lang_translations dicts="Malay" dir_from="Malay" dir_to="Malay" local_name="Malay" name="Malay"/>
+        <lang_translations dicts="Frasça" dir_from="Farsça" dir_to="Frasça" local_name="Frasça" name="Persian"/>
+        <lang_translations dicts="Hintçe" dir_from="Hintçe" dir_to="Hintçe" local_name="Hintçe" name="Hindi"/>
+        <lang_translations dicts="Afrikanca" dir_from="Afrikanca" dir_to="Afrikanca" local_name="Afrikanca" name="Afrikaans"/>
+        <lang_translations dicts="Endonezyaca" dir_from="Endonezyaca" dir_to="Endonezyaca" local_name="Endonezyaca" name="Indonesian"/>
+        <lang_translations dicts="Tayca" dir_from="Tayca" dir_to="Tayca" local_name="Tayca" name="Thai"/>
+        <lang_translations dicts="Urdu" dir_from="Urdu" dir_to="Urdu" local_name="Urdu" name="Urdu"/>
+        <dicts_pattern text="%s dictionaries"/>
+    </strings>
+    <strings locale="Japanese">
+        <lang_translations dicts="日本語" dir_from="日本語" dir_to="日本語" local_name="日本語" name="Japanese"/>
+        <lang_translations dicts="カタロニア語" dir_from="カタロニア語" dir_to="カタロニア語" local_name="カタロニア語" name="Catalan"/>
+        <lang_translations dicts="ポーランド語" dir_from="ポーランド語" dir_to="ポーランド語" local_name="ポーランド語" name="Polish"/>
+        <lang_translations dicts="ポルトガル語" dir_from="ポルトガル語" dir_to="ポルトガル語" local_name="ポルトガル語" name="Portuguese"/>
+        <lang_translations dicts="イタリア語" dir_from="イタリア語" dir_to="イタリア語" local_name="イタリア語" name="Italian"/>
+        <lang_translations dicts="ドイツ語" dir_from="ドイツ語" dir_to="ドイツ語" local_name="ドイツ語" name="German"/>
+        <lang_translations dicts="オランダ語" dir_from="オランダ語" dir_to="オランダ語" local_name="オランダ語" name="Dutch"/>
+        <lang_translations dicts="クロアチア語" dir_from="クロアチア語" dir_to="クロアチア語" local_name="クロアチア語" name="Croatian"/>
+        <lang_translations dicts="ハンガリー語" dir_from="ハンガリー語" dir_to="ハンガリー語" local_name="ハンガリー語" name="Hungarian"/>
+        <lang_translations dicts="ラトヴィア語" dir_from="ラトヴィア語" dir_to="ラトヴィア語" local_name="ラトヴィア語" name="Latvian"/>
+        <lang_translations dicts="スウェーデン語" dir_from="スウェーデン語" dir_to="スウェーデン語" local_name="スウェーデン語" name="Swedish"/>
+        <lang_translations dicts="スロベニア語" dir_from="スロベニア語" dir_to="スロベニア語" local_name="スロベニア語" name="Slovenian"/>
+        <lang_translations dicts="ヘブライ語" dir_from="ヘブライ語" dir_to="ヘブライ語" local_name="ヘブライ語" name="Hebrew"/>
+        <lang_translations dicts="中国語" dir_from="中国語" dir_to="中国語" local_name="中国語" name="Chinese"/>
+        <lang_translations dicts="アラビア語" dir_from="アラビア語" dir_to="アラビア語" local_name="アラビア語" name="Arabic"/>
+        <lang_translations dicts="チェコ語" dir_from="チェコ語" dir_to="チェコ語" local_name="チェコ語" name="Czech"/>
+        <lang_translations dicts="トルコ語" dir_from="トルコ語" dir_to="トルコ語" local_name="トルコ語" name="Turkish"/>
+        <lang_translations dicts="ロシア語" dir_from="ロシア語" dir_to="ロシア語" local_name="ロシア語" name="Russian"/>
+        <lang_translations dicts="英語" dir_from="英語" dir_to="英語" local_name="英語" name="English"/>
+        <lang_translations dicts="スロバキア語" dir_from="スロバキア語" dir_to="スロバキア語" local_name="スロバキア語" name="Slovak"/>
+        <lang_translations dicts="ギリシャ語" dir_from="ギリシャ語" dir_to="ギリシャ語" local_name="ギリシャ語" name="Greek"/>
+        <lang_translations dicts="エストニア語" dir_from="エストニア語" dir_to="エストニア語" local_name="エストニア語" name="Estonian"/>
+        <lang_translations dicts="スペイン語" dir_from="スペイン語" dir_to="スペイン語" local_name="スペイン語" name="Spanish"/>
+        <lang_translations dicts="ブルガリア語" dir_from="ブルガリア語" dir_to="ブルガリア語" local_name="ブルガリア語" name="Bulgarian"/>
+        <lang_translations dicts="リトアニア語" dir_from="リトアニア語" dir_to="リトアニア語" local_name="リトアニア語" name="Lithuanian"/>
+        <lang_translations dicts="フランス語" dir_from="フランス語" dir_to="フランス語" local_name="フランス語" name="French"/>
+        <lang_translations dicts="セルビア語" dir_from="セルビア語" dir_to="セルビア語" local_name="セルビア語" name="Serbian"/>
+        <lang_translations dicts="ウクライナ語" dir_from="ウクライナ語" dir_to="ウクライナ語" local_name="ウクライナ語" name="Ukrainian"/>
+        <lang_translations dicts="デンマーク語" dir_from="デンマーク語" dir_to="デンマーク語" local_name="デンマーク語" name="Danish"/>
+        <lang_translations dicts="ノルウェー語" dir_from="ノルウェー語" dir_to="ノルウェー語" local_name="ノルウェー語" name="Norwegian"/>
+        <lang_translations dicts="ローマ語" dir_from="ローマ語" dir_to="ローマ語" local_name="ローマ語" name="Romanian"/>
+        <lang_translations dicts="ラテン語" dir_from="ラテン語" dir_to="ラテン語" local_name="ラテン語" name="Latin"/>
+        <dicts_pattern text="%s 語彙"/>
+    </strings>
+    <strings locale="French">
+        <lang_translations dicts="basques" dir_from="basque" dir_to="basque" local_name="basque" name="Basque"/>
+        <lang_translations dicts="catalans" dir_from="catalan" dir_to="catalan" local_name="Catalan" name="Catalan"/>
+        <lang_translations dicts="islandais" dir_from="islandais" dir_to="islandais" local_name="islandais" name="Icelandic"/>
+        <lang_translations dicts="grec" dir_from="Grec" dir_to="Grec" local_name="Grec" name="Greek"/>
+        <lang_translations dicts="arabe" dir_from="arabe" dir_to="arabe" local_name="arabe" name="Arabic"/>
+        <lang_translations dicts="arménien" dir_from="arménien" dir_to="arménien" local_name="arménien" name="Armenian"/>
+        <lang_translations dicts="letton" dir_from="letton" dir_to="letton" local_name="letton" name="Latvian"/>
+        <lang_translations dicts="ukrainien" dir_from="ukrainien" dir_to="ukrainien" local_name="ukrainien" name="Ukrainian"/>
+        <lang_translations dicts="malais" dir_from="malais" dir_to="malais" local_name="malais" name="Malay"/>
+        <lang_translations dicts="croate" dir_from="Croate" dir_to="Croate" local_name="Croate" name="Croatian"/>
+        <lang_translations dicts="hollandais" dir_from="Hollandais" dir_to="Hollandais" local_name="Hollandais" name="Dutch"/>
+        <lang_translations dicts="hongrois" dir_from="Hongrois" dir_to="Hongrois" local_name="Hongrois" name="Hungarian"/>
+        <lang_translations dicts="latin" dir_from="Latin" dir_to="Latin" local_name="Latin" name="Latin"/>
+        <lang_translations dicts="slovène" dir_from="slovène" dir_to="slovène" local_name="slovène" name="Slovenian"/>
+        <lang_translations dicts="portugais" dir_from="Portugais" dir_to="Portugais" local_name="Portugais" name="Portuguese"/>
+        <lang_translations dicts="roumain" dir_from="Roumain" dir_to="Roumain" local_name="Roumain" name="Romanian"/>
+        <lang_translations dicts="bulgare" dir_from="Bulgare" dir_to="Bulgare" local_name="Bulgare" name="Bulgarian"/>
+        <lang_translations dicts="serbe" dir_from="serbe" dir_to="serbe" local_name="serbe" name="Serbian"/>
+        <lang_translations dicts="macédoniens" dir_from="macédonien" dir_to="macédonien" local_name="macédonien" name="Macedonian"/>
+        <lang_translations dicts="estonien" dir_from="estonien" dir_to="estonien" local_name="estonien" name="Estonian"/>
+        <lang_translations dicts="danois" dir_from="Danois" dir_to="Danois" local_name="Danois" name="Danish"/>
+        <lang_translations dicts="lithuanien" dir_from="lithuanien" dir_to="lithuanien" local_name="lithuanien" name="Lithuanian"/>
+        <lang_translations dicts="norvégien" dir_from="Norvégien" dir_to="Norvégien" local_name="Norvégien" name="Norwegian"/>
+        <lang_translations dicts="slovaque" dir_from="slovaque" dir_to="slovaque" local_name="slovaque" name="Slovak"/>
+        <lang_translations dicts="suédois" dir_from="Suédois" dir_to="Suédois" local_name="Suédois" name="Swedish"/>
+        <lang_translations dicts="tchèque" dir_from="Tchèque" dir_to="Tchèque" local_name="Tchèque" name="Czech"/>
+        <lang_translations dicts="mongols" dir_from="mongol" dir_to="mongol" local_name="mongol" name="Mongolian"/>
+        <lang_translations dicts="biélorusse" dir_from="biélorusse" dir_to="biélorusse" local_name="biélorusse" name="Belarusian"/>
+        <lang_translations dicts="hébreu" dir_from="hébreu" dir_to="hébreu" local_name="hébreu" name="Hebrew"/>
+        <lang_translations dicts="Anglais" dir_from="Anglais" dir_to="Anglais" local_name="Anglais" name="English"/>
+        <lang_translations dicts="Français" dir_from="Français" dir_to="Français" local_name="Français" name="French"/>
+        <lang_translations dicts="Espagnol" dir_from="Espagnoll" dir_to="Espagnol" local_name="Espagnol" name="Spanish"/>
+        <lang_translations dicts="Allemand" dir_from="Allemand" dir_to="Allemand" local_name="Allemand" name="German"/>
+        <lang_translations dicts="Chinois" dir_from="Chinois" dir_to="Chinois" local_name="Chinois" name="Chinese"/>
+        <lang_translations dicts="Japonais" dir_from="Japonais" dir_to="Japonais" local_name="Japonais" name="Japanese"/>
+        <lang_translations dicts="Russe" dir_from="Russe" dir_to="Russe" local_name="Russe" name="Russian"/>
+        <lang_translations dicts="Italien" dir_from="Italien" dir_to="Italien" local_name="Italien" name="Italian"/>
+        <lang_translations dicts="Polonais" dir_from="Polonais" dir_to="Polonais" local_name="Polonais" name="Polish"/>
+        <lang_translations dicts="Turc" dir_from="Turc" dir_to="Turc" local_name="Turc" name="Turkish"/>
+        <lang_translations dicts="Uzbek" dir_from="Ouzbékistan" dir_to="Ouzbékistan" local_name="Ouzbékistan" name="Uzbek"/>
+        <lang_translations dicts="irlandais" dir_from="irlandais" dir_to="irlandais" local_name="irlandais" name="Irish"/>
+        <lang_translations dicts="finnois" dir_from="finnois" dir_to="finnois" local_name="finnois" name="Finnish"/>
+        <lang_translations dicts="coréens" dir_from="Korean" dir_to="Korean" local_name="coréen" name="Korean"/>
+        <lang_translations dicts="vietnamiens" dir_from="Vietnamese" dir_to="Vietnamese" local_name="vietnamien" name="Vietnamese"/>
+        <lang_translations dicts="perses" dir_from="farsi" dir_to="farsi" local_name="farsi" name="Persian"/>
+        <lang_translations dicts="afrikaans" dir_from="afrikaans" dir_to="afrikaans" local_name="afrikaans" name="Afrikaans"/>
+        <lang_translations dicts="hindis" dir_from="hindi" dir_to="hindi" local_name="hindi" name="Hindi"/>
+        <lang_translations dicts="indonésiens" dir_from="indonésien" dir_to="indonésien" local_name="indonésien" name="Indonesian"/>
+        <lang_translations dicts="ourdou" dir_from="ourdou" dir_to="ourdou" local_name="ourdou" name="Urdu"/>
+        <lang_translations dicts="thaïlandais" dir_from="thaï" dir_to="thaï" local_name="thaï" name="Thai"/>
+        <dicts_pattern text="Vocabulaire %s"/>
+    </strings>
+    <strings locale="Chinese Simplified">
+        <lang_translations dicts="加泰罗尼亚语" dir_from="加泰罗尼亚语" dir_to="加泰罗尼亚语" local_name="加泰罗尼亚语" name="Catalan"/>
+        <lang_translations dicts="波兰语" dir_from="波兰语" dir_to="波兰语" local_name="波兰语" name="Polish"/>
+        <lang_translations dicts="立陶宛语" dir_from="立陶宛语" dir_to="立陶宛语" local_name="立陶宛语" name="Lithuanian"/>
+        <lang_translations dicts="阿拉伯语" dir_from="阿拉伯语" dir_to="阿拉伯语" local_name="阿拉伯语" name="Arabic"/>
+        <lang_translations dicts="斯洛伐克语" dir_from="斯洛伐克语" dir_to="斯洛伐克语" local_name="斯洛伐克语" name="Slovak"/>
+        <lang_translations dicts="意大利语" dir_from="意大利语" dir_to="意大利语" local_name="意大利语" name="Italian"/>
+        <lang_translations dicts="罗马尼亚语" dir_from="罗马尼亚语" dir_to="罗马尼亚语" local_name="罗马尼亚语" name="Romanian"/>
+        <lang_translations dicts="西班牙语" dir_from="西班牙语" dir_to="西班牙语" local_name="西班牙语" name="Spanish"/>
+        <lang_translations dicts="德语" dir_from="德语" dir_to="德语" local_name="德语" name="German"/>
+        <lang_translations dicts="克罗地亚语" dir_from="克罗地亚语" dir_to="克罗地亚语" local_name="克罗地亚语" name="Croatian"/>
+        <lang_translations dicts="丹麦语" dir_from="丹麦语" dir_to="丹麦语" local_name="丹麦语" name="Danish"/>
+        <lang_translations dicts="保加利亚语" dir_from="保加利亚语" dir_to="保加利亚语" local_name="保加利亚语" name="Bulgarian"/>
+        <lang_translations dicts="葡萄牙语" dir_from="葡萄牙语" dir_to="葡萄牙语" local_name="葡萄牙语" name="Portuguese"/>
+        <lang_translations dicts="匈牙利语" dir_from="匈牙利语" dir_to="匈牙利语" local_name="匈牙利语" name="Hungarian"/>
+        <lang_translations dicts="捷克语" dir_from="捷克语" dir_to="捷克语" local_name="捷克语" name="Czech"/>
+        <lang_translations dicts="希腊语" dir_from="希腊语" dir_to="希腊语" local_name="希腊语" name="Greek"/>
+        <lang_translations dicts="塞尔维亚语" dir_from="塞尔维亚语" dir_to="塞尔维亚语" local_name="塞尔维亚语" name="Serbian"/>
+        <lang_translations dicts="拉脱维亚语" dir_from="拉脱维亚语" dir_to="拉脱维亚语" local_name="拉脱维亚语" name="Latvian"/>
+        <lang_translations dicts="英语" dir_from="英语" dir_to="英语" local_name="英语" name="English"/>
+        <lang_translations dicts="中文" dir_from="中文" dir_to="中文" local_name="中文" name="Chinese"/>
+        <lang_translations dicts="拉丁语" dir_from="拉丁语" dir_to="拉丁语" local_name="拉丁语" name="Latin"/>
+        <lang_translations dicts="俄语" dir_from="俄语" dir_to="俄语" local_name="俄语" name="Russian"/>
+        <lang_translations dicts="爱沙尼亚语" dir_from="爱沙尼亚语" dir_to="爱沙尼亚语" local_name="爱沙尼亚语" name="Estonian"/>
+        <lang_translations dicts="土耳其语" dir_from="土耳其语" dir_to="土耳其语" local_name="土耳其语" name="Turkish"/>
+        <lang_translations dicts="日语" dir_from="日语" dir_to="日语" local_name="日语" name="Japanese"/>
+        <lang_translations dicts="法语" dir_from="法语" dir_to="法语" local_name="法语" name="French"/>
+        <lang_translations dicts="斯洛文尼亚语" dir_from="斯洛文尼亚语" dir_to="斯洛文尼亚语" local_name="斯洛文尼亚语" name="Slovenian"/>
+        <lang_translations dicts="荷兰语" dir_from="荷兰语" dir_to="荷兰语" local_name="荷兰语" name="Dutch"/>
+        <lang_translations dicts="希伯来语" dir_from="希伯来语" dir_to="希伯来语" local_name="希伯来语" name="Hebrew"/>
+        <lang_translations dicts="乌克兰语" dir_from="乌克兰语" dir_to="乌克兰语" local_name="乌克兰语" name="Ukrainian"/>
+        <lang_translations dicts="挪威语" dir_from="挪威语" dir_to="挪威语" local_name="挪威语" name="Norwegian"/>
+        <lang_translations dicts="瑞典语" dir_from="瑞典语" dir_to="瑞典语" local_name="瑞典语" name="Swedish"/>
+        <dicts_pattern text="%s 词汇"/>
+    </strings>
+    <strings locale="Spanish">
+        <lang_translations dicts="Vascos" dir_from="Vasco" dir_to="Vasco" local_name="Vasco" name="Basque"/>
+        <lang_translations dicts="de islandés" dir_from="islandés" dir_to="islandés" local_name="islandés" name="Icelandic"/>
+        <lang_translations dicts="holandés" dir_from="Holandés" dir_to="Holandés" local_name="Holandés" name="Dutch"/>
+        <lang_translations dicts="Armenian" dir_from="armenio" dir_to="armenio" local_name="Armenian" name="Armenian"/>
+        <lang_translations dicts="hebreo" dir_from="hebreo" dir_to="hebreo" local_name="hebreo" name="Hebrew"/>
+        <lang_translations dicts="ucraniano" dir_from="ucraniano" dir_to="ucraniano" local_name="ucraniano" name="Ukrainian"/>
+        <lang_translations dicts="croata" dir_from="Croata" dir_to="Croata" local_name="Croata" name="Croatian"/>
+        <lang_translations dicts="de mongol" dir_from="mongol" dir_to="mongol" local_name="mongol" name="Mongolian"/>
+        <lang_translations dicts="portugués" dir_from="Portugués" dir_to="Portugués" local_name="Portugués" name="Portuguese"/>
+        <lang_translations dicts="Inglés" dir_from="Inglés" dir_to="Inglés" local_name="Inglés" name="English"/>
+        <lang_translations dicts="lituano" dir_from="lituano" dir_to="lituano" local_name="lituano" name="Lithuanian"/>
+        <lang_translations dicts="eslovaco" dir_from="eslovaco" dir_to="eslovaco" local_name="eslovaco" name="Slovak"/>
+        <lang_translations dicts="esloveno" dir_from="esloveno" dir_to="esloveno" local_name="esloveno" name="Slovenian"/>
+        <lang_translations dicts="Belarusian" dir_from="bielorusso" dir_to="bielorusso" local_name="Belarusian" name="Belarusian"/>
+        <lang_translations dicts="checo" dir_from="Checo" dir_to="Checo" local_name="Checo" name="Czech"/>
+        <lang_translations dicts="danés" dir_from="Danés" dir_to="Danés" local_name="Danés" name="Danish"/>
+        <lang_translations dicts="latín " dir_from="Latín" dir_to="Latín" local_name="Latín" name="Latin"/>
+        <lang_translations dicts="árabe" dir_from="àrabe" dir_to="àrabe" local_name="árabe" name="Arabic"/>
+        <lang_translations dicts="búlgaro" dir_from="Búlgaro" dir_to="Búlgaro" local_name="Búlgaro" name="Bulgarian"/>
+        <lang_translations dicts="griego" dir_from="Griego" dir_to="Griego" local_name="Griego" name="Greek"/>
+        <lang_translations dicts="húngaro" dir_from="Húngaro" dir_to="Húngaro" local_name="Húngaro" name="Hungarian"/>
+        <lang_translations dicts="noruego" dir_from="Noruego" dir_to="Noruego" local_name="Noruego" name="Norwegian"/>
+        <lang_translations dicts="sueco" dir_from="Sueco" dir_to="Sueco" local_name="Sueco" name="Swedish"/>
+        <lang_translations dicts="serbio" dir_from="serbio" dir_to="serbio" local_name="serbio" name="Serbian"/>
+        <lang_translations dicts="estonio" dir_from="estonio" dir_to="estonio" local_name="estonio" name="Estonian"/>
+        <lang_translations dicts="letón" dir_from="letón" dir_to="letón" local_name="letón" name="Latvian"/>
+        <lang_translations dicts="rumano" dir_from="Rumano" dir_to="Rumano" local_name="Rumano" name="Romanian"/>
+        <lang_translations dicts="Catalanes" dir_from="Catalán" dir_to="Catalán" local_name="Catalán" name="Catalan"/>
+        <lang_translations dicts="Español" dir_from="Español" dir_to="Español" local_name="Español" name="Spanish"/>
+        <lang_translations dicts="Francés" dir_from="Francés" dir_to="Francés" local_name="Francés" name="French"/>
+        <lang_translations dicts="Italiano" dir_from="Italiano" dir_to="Italiano" local_name="Italiano" name="Italian"/>
+        <lang_translations dicts="Chino" dir_from="Chino" dir_to="Chino" local_name="Chino" name="Chinese"/>
+        <lang_translations dicts="Alemán" dir_from="Alemán" dir_to="Alemán" local_name="Alemán" name="German"/>
+        <lang_translations dicts="Ruso" dir_from="Ruso" dir_to="Ruso" local_name="Ruso" name="Russian"/>
+        <lang_translations dicts="Japonés" dir_from="Japonés" dir_to="Japonés" local_name="Japonés" name="Japanese"/>
+        <lang_translations dicts="Polaco" dir_from="Polaco" dir_to="Polaco" local_name="Polaco" name="Polish"/>
+        <lang_translations dicts="Turco" dir_from="Turco" dir_to="Turco" local_name="Turco" name="Turkish"/>
+        <lang_translations dicts="Uzbekistán" dir_from="Uzbekistán" dir_to="Uzbekistán" local_name="Uzbekistán" name="Uzbek"/>
+        <lang_translations dicts="Irlandés" dir_from="Irlandés" dir_to="Irlandés" local_name="Irlandés" name="Irish"/>
+        <lang_translations dicts="de finlandés" dir_from="finés" dir_to="finés" local_name="finlandés" name="Finnish"/>
+        <lang_translations dicts="de macedonio" dir_from="macedónico" dir_to="macedónico" local_name="macedonio" name="Macedonian"/>
+        <lang_translations dicts="de coreano" dir_from="Korean" dir_to="Korean" local_name="coreano" name="Korean"/>
+        <lang_translations dicts="de vietnamita" dir_from="Vietnamese" dir_to="Vietnamese" local_name="vietnamita" name="Vietnamese"/>
+        <lang_translations dicts="de malayo" dir_from="Malayo" dir_to="Malayo" local_name="Malayo" name="Malay"/>
+        <lang_translations dicts="de farsi" dir_from="Farsi" dir_to="Farsi" local_name="Farsi" name="Persian"/>
+        <lang_translations dicts="de afrikaans" dir_from="Afrikaans" dir_to="Afrikaans" local_name="Afrikaans" name="Afrikaans"/>
+        <lang_translations dicts="de hindi" dir_from="Hindi" dir_to="Hindi" local_name="Hindi" name="Hindi"/>
+        <lang_translations dicts="de indonesio" dir_from="Indonesio" dir_to="Indonesio" local_name="Indonesio" name="Indonesian"/>
+        <lang_translations dicts="de tailandés" dir_from="Tailandés" dir_to="Tailandés" local_name="Tailandés" name="Thai"/>
+        <lang_translations dicts="de urdu" dir_from="Urdu" dir_to="Urdu" local_name="Urdu" name="Urdu"/>
+        <dicts_pattern text="%s vocabularies"/>
+    </strings>
+    <lanuages_map>
+        <language locale_code="" name="International" xxx_code="" xxxx_code=""/>
+        <language locale_code="vi" name="Vietnamese" xxx_code="" xxxx_code="viet"/>
+        <language locale_code="ja" name="Japanese" xxx_code="" xxxx_code="japa"/>
+        <language locale_code="ur" name="Urdu" xxx_code="urd" xxxx_code="urdu"/>
+        <language locale_code="th" name="Thai" xxx_code="tha" xxxx_code="thai"/>
+        <language locale_code="ms" name="Malay" xxx_code="msa" xxxx_code="mala"/>
+        <language locale_code="hi" name="Hindi" xxx_code="hin" xxxx_code="hind"/>
+        <language locale_code="fa" name="Persian" xxx_code="fas" xxxx_code="fars"/>
+        <language locale_code="af" name="Afrikaans" xxx_code="afr" xxxx_code="afri"/>
+        <language locale_code="sr" name="Serbian" xxx_code="" xxxx_code="serb"/>
+        <language locale_code="en" name="English" xxx_code="eng" xxxx_code="engl"/>
+        <language locale_code="hu" name="Hungarian" xxx_code="" xxxx_code="hung"/>
+        <language locale_code="bg" name="Bulgarian" xxx_code="" xxxx_code="bulg"/>
+        <language locale_code="la" name="Latin" xxx_code="" xxxx_code="lati"/>
+        <language locale_code="sl" name="Slovenian" xxx_code="" xxxx_code="slvn"/>
+        <language locale_code="pt" name="Portuguese" xxx_code="" xxxx_code="port"/>
+        <language locale_code="sk" name="Slovak" xxx_code="" xxxx_code="slvk"/>
+        <language locale_code="nl" name="Dutch" xxx_code="" xxxx_code="dutc"/>
+        <language locale_code="no" name="Norwegian" xxx_code="" xxxx_code="norw"/>
+        <language locale_code="eu" name="Basque" xxx_code="" xxxx_code="basq"/>
+        <language locale_code="zh" name="Chinese" xxx_code="" xxxx_code="chin"/>
+        <language locale_code="lv" name="Latvian" xxx_code="" xxxx_code="latv"/>
+        <language locale_code="hy" name="Armenian" xxx_code="" xxxx_code="arme"/>
+        <language locale_code="pl" name="Polish" xxx_code="" xxxx_code="poli"/>
+        <language locale_code="he" name="Hebrew" xxx_code="" xxxx_code="hebr"/>
+        <language locale_code="ca" name="Catalan" xxx_code="" xxxx_code="ctln"/>
+        <language locale_code="uz" name="Uzbek" xxx_code="" xxxx_code="uzbe"/>
+        <language locale_code="ga" name="Irish" xxx_code="" xxxx_code="iris"/>
+        <language locale_code="is" name="Icelandic" xxx_code="" xxxx_code="icel"/>
+        <language locale_code="da" name="Danish" xxx_code="" xxxx_code="dani"/>
+        <language locale_code="lt" name="Lithuanian" xxx_code="" xxxx_code="lith"/>
+        <language locale_code="mn" name="Mongolian" xxx_code="" xxxx_code=""/>
+        <language locale_code="hr" name="Croatian" xxx_code="" xxxx_code="croa"/>
+        <language locale_code="fi" name="Finnish" xxx_code="" xxxx_code="finn"/>
+        <language locale_code="mk" name="Macedonian" xxx_code="" xxxx_code=""/>
+        <language locale_code="tr" name="Turkish" xxx_code="" xxxx_code="turk"/>
+        <language locale_code="et" name="Estonian" xxx_code="" xxxx_code="esto"/>
+        <language locale_code="ro" name="Romanian" xxx_code="" xxxx_code="roma"/>
+        <language locale_code="uk" name="Ukrainian" xxx_code="" xxxx_code="ukra"/>
+        <language locale_code="ru" name="Russian" xxx_code="рус" xxxx_code="russ"/>
+        <language locale_code="el" name="Greek" xxx_code="" xxxx_code="gree"/>
+        <language locale_code="ko" name="Korean" xxx_code="" xxxx_code="kore"/>
+        <language locale_code="be" name="Belarusian" xxx_code="" xxxx_code=""/>
+        <language locale_code="ar" name="Arabic" xxx_code="" xxxx_code="arab"/>
+        <language locale_code="zh_cn" name="China" xxx_code="" xxxx_code=""/>
+        <language locale_code="zh_tw" name="Hong kong" xxx_code="" xxxx_code=""/>
+        <language locale_code="br" name="Brazilian" xxx_code="" xxxx_code="braz"/>
+        <language locale_code="woen" name="World English" xxx_code="" xxxx_code="woen"/>
+        <language locale_code="amen" name="American English" xxx_code="" xxxx_code="amen"/>
+        <language locale_code="bren" name="British English" xxx_code="" xxxx_code="bren"/>
+        <language locale_code="de" name="German" xxx_code="deu" xxxx_code="germ"/>
+        <language locale_code="it" name="Italian" xxx_code="ita" xxxx_code="ital"/>
+        <language locale_code="fr" name="French" xxx_code="fra" xxxx_code="fren"/>
+        <language locale_code="es" name="Spanish" xxx_code="esp" xxxx_code="span"/>
+        <language locale_code="zh_TW" name="Chinese Traditional" xxx_code="cht" xxxx_code=""/>
+        <language locale_code="zh_CN" name="Chinese Simplified" xxx_code="chs" xxxx_code=""/>
+        <language locale_code="sv" name="Swedish" xxx_code="" xxxx_code="swed"/>
+        <language locale_code="sw" name="Swahili" xxx_code="" xxxx_code="swah"/>
+        <language locale_code="ag" name="Argentinian" xxx_code="" xxxx_code="arge"/>
+        <language locale_code="sq" name="Albanian" xxx_code="sqi" xxxx_code="alba"/>
+        <language locale_code="tl" name="Filipino" xxx_code="tgl" xxxx_code="fili"/>
+        <language locale_code="my" name="Burmese" xxx_code="mya" xxxx_code="burm"/>
+        <language locale_code="tn" name="Tswana" xxx_code="tsn" xxxx_code="tswa"/>
+        <language locale_code="sn" name="Shona" xxx_code="sna" xxxx_code="shon"/>
+        <language locale_code="id" name="Indonesian" xxx_code="ind" xxxx_code="indo"/>
+        <language locale_code="cs" name="Czech" xxx_code="" xxxx_code="czec"/>
+    </lanuages_map>
+</data>

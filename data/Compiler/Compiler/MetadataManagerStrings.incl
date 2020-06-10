@@ -1,0 +1,109 @@
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataExtKey &metaData) {
+	serialize(mgr, string, metaData.DictId);
+	serialize(mgr, string, metaData.Key);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataAbstractResource &metaData) {
+	serialize(mgr, string, metaData.ExtKey);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataArticleEventHandler &metaData) {
+	serialize(mgr, string, metaData.JSString);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataCrosswordItem &metaData) {
+	serialize(mgr, string, metaData.Answer);
+	serialize(mgr, string, metaData.Init);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataExternArticle &metaData) {
+	serialize(mgr, string, metaData.ExtKey);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataHide &metaData) {
+	serialize(mgr, string, metaData.Label);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataImage &metaData) {
+	serialize(mgr, string, metaData.ExtKey);
+	serialize(mgr, string, metaData.FullExtKey);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataImageArea &metaData) {
+	serialize(mgr, string, metaData.Id);
+	serialize(mgr, string, metaData.ActionScript);
+	serialize(mgr, string, metaData.Coords);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataInfoBlock &metaData) {
+	serialize(mgr, string, metaData.Type);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataInteractiveObject &metaData) {
+	serialize(mgr, string, metaData.Id);
+	serialize(mgr, string, metaData.StartingPos);
+	serialize(mgr, string, metaData.StartingSize);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataLabel &metaData) {
+	serialize(mgr, string, metaData.Data);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataLink &metaData) {
+	serialize(mgr, string, metaData.Title);
+	serialize(mgr, string, metaData.Label);
+	serialize(mgr, string, metaData.ExtKey);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataList &metaData) {
+	serialize(mgr, string, metaData.Marker);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataMapElement &metaData) {
+	serialize(mgr, string, metaData.Name);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataPopupArticle &metaData) {
+	serialize(mgr, string, metaData.Title);
+	serialize(mgr, string, metaData.Label);
+	serialize(mgr, string, metaData.ExtKey);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataPopupImage &metaData) {
+	serialize(mgr, string, metaData.ExtKey);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataScene3D &metaData) {
+	serialize(mgr, string, metaData.ExtKey);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataManagedSwitch &metaData) {
+	serialize(mgr, string, metaData.Label);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataSlideShow &metaData) {
+	serialize(mgr, string, metaData.TimeStep);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataSound &metaData) {
+	serialize(mgr, string, metaData.Lang);
+	serialize(mgr, string, metaData.ExtKey);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataSwitch &metaData) {
+	serialize(mgr, string, metaData.Label);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataTestControl &metaData) {
+	serialize(mgr, string, metaData.Checklist);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataTestInput &metaData) {
+	serialize(mgr, string, metaData.Group);
+	serialize(mgr, string, metaData.Answers);
+	serialize(mgr, string, metaData.Initial);
+	serialize(mgr, string, metaData.Id);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataTestSpear &metaData) {
+	serialize(mgr, string, metaData.Id);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataTestTarget &metaData) {
+	serialize(mgr, string, metaData.Id);
+	serialize(mgr, string, metaData.Links);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataTestToken &metaData) {
+	serialize(mgr, string, metaData.Group);
+	serialize(mgr, string, metaData.Text);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataTimeLineItem &metaData) {
+	serialize(mgr, string, metaData.ExtKey);
+	serialize(mgr, string, metaData.Id);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataUiElement &metaData) {
+	serialize(mgr, string, metaData.Type);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataUrl &metaData) {
+	serialize(mgr, string, metaData.Src);
+}
+void serialize(const MetadataManager &mgr, EmbeddedString &string, TMetadataVideoSource &metaData) {
+	serialize(mgr, string, metaData.ExtKey);
+}
+enum : uint32_t { MaxFieldCount = 4 };
