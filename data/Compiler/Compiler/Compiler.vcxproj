@@ -102,7 +102,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <EnablePREfast>false</EnablePREfast>
-      <AdditionalIncludeDirectories>../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -127,7 +127,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <EnablePREfast>false</EnablePREfast>
-      <AdditionalIncludeDirectories>../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -148,7 +148,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -174,7 +174,7 @@
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -233,10 +233,10 @@
     <ClCompile Include="XmlTagContent.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Engine\SldDefines.h" />
-    <ClInclude Include="..\..\..\Engine\SldMetadataTypes.h" />
-    <ClInclude Include="..\..\..\Engine\SldPlatform.h" />
-    <ClInclude Include="..\..\..\Engine\SldTypeDefs.h" />
+    <ClInclude Include="../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldDefines.h" />
+    <ClInclude Include="../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldMetadataTypes.h" />
+    <ClInclude Include="../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldPlatform.h" />
+    <ClInclude Include="../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldTypeDefs.h" />
     <ClInclude Include="AbstractItemContainer.h" />
     <ClInclude Include="AbstractItemManager.h" />
     <ClInclude Include="allocators.h" />
@@ -304,21 +304,21 @@
     <None Include="CSSProperties.incl" />
     <CustomBuild Include="MetadataManagerStrings.incl.in.py">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">python MetadataManagerStrings.incl.in.py ../../../Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">python MetadataManagerStrings.incl.in.py ../../../Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">python MetadataManagerStrings.incl.in.py ../../../Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">python MetadataManagerStrings.incl.in.py ../../../Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">python MetadataManagerStrings.incl.in.py ../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">python MetadataManagerStrings.incl.in.py ../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">python MetadataManagerStrings.incl.in.py ../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">python MetadataManagerStrings.incl.in.py ../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldMetadataTypes.h MetadataManagerStrings.incl</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">MetadataManagerStrings.incl</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">MetadataManagerStrings.incl</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">MetadataManagerStrings.incl</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">MetadataManagerStrings.incl</Outputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">../../../Engine/SldMetadataTypes.h</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldMetadataTypes.h</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">false</LinkObjects>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">../../../Engine/SldMetadataTypes.h</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldMetadataTypes.h</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">false</LinkObjects>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">../../../Engine/SldMetadataTypes.h</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldMetadataTypes.h</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">false</LinkObjects>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">../../../Engine/SldMetadataTypes.h</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">../../../slovoed/libraries/shdd.engine.components.sdc/Engine/SldMetadataTypes.h</AdditionalInputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">Generating MetadataManagerStrings.incl</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">Generating MetadataManagerStrings.incl</Message>
@@ -327,10 +327,10 @@
     </CustomBuild>
     <CustomBuild Include="CSSProperties.incl.py">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">python %(Identity) ../../../Engine/ %(Filename)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">python %(Identity) ../../../Engine/ %(Filename)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">python %(Identity) ../../../Engine/ %(Filename)</Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">python %(Identity) ../../../Engine/ %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">python %(Identity) ../../../slovoed/libraries/shdd.engine.components.sdc/Engine/ %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">python %(Identity) ../../../slovoed/libraries/shdd.engine.components.sdc/Engine/ %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">python %(Identity) ../../../slovoed/libraries/shdd.engine.components.sdc/Engine/ %(Filename)</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">python %(Identity) ../../../slovoed/libraries/shdd.engine.components.sdc/Engine/ %(Filename)</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">%(Filename)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">%(Filename)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">%(Filename)</Outputs>
@@ -339,10 +339,10 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">Generating %(Filename)</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">Generating %(Filename)</Message>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">Generating %(Filename)</Message>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">../../../Engine/sld_css_props.py</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">../../../Engine/sld_css_props.py</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">../../../Engine/sld_css_props.py</AdditionalInputs>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">../../../Engine/sld_css_props.py</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|Win32'">../../../slovoed/libraries/shdd.engine.components.sdc/Engine/sld_css_props.py</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|Win32'">../../../slovoed/libraries/shdd.engine.components.sdc/Engine/sld_css_props.py</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release_v140|x64'">../../../slovoed/libraries/shdd.engine.components.sdc/Engine/sld_css_props.py</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug_v140|x64'">../../../slovoed/libraries/shdd.engine.components.sdc/Engine/sld_css_props.py</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
